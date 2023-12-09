@@ -1,4 +1,4 @@
-package com.example.street_talk
+package com.mateuszkasprzak.street_talk
 
 import io.flutter.embedding.android.FlutterActivity
 
