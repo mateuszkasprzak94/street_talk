@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:street_talk/app/drawer/drawer.dart';
 
 class ColloquialismsPage extends StatefulWidget {
   const ColloquialismsPage({super.key});
@@ -12,7 +14,6 @@ class _ColloquialismsPageState extends State<ColloquialismsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Kolokwializmy'),
         centerTitle: true,
         leading: Transform.scale(
           scale: 1.6,
@@ -25,26 +26,30 @@ class _ColloquialismsPageState extends State<ColloquialismsPage> {
           ),
         ),
         bottom: PreferredSize(
-          preferredSize: const Size.fromHeight(50),
+          preferredSize: const Size.fromHeight(70),
           child: Container(
-            margin: const EdgeInsets.symmetric(horizontal: 9),
-            height: 50,
+            height: 70,
             width: double.infinity,
             decoration: const BoxDecoration(
-              border: Border(
-                top: BorderSide(color: Color(0xFFc60b1e)),
-                bottom: BorderSide(color: Color(0xFFc60b1e)),
-              ),
+              color: Color(0xFFc60b1e),
             ),
-            child: const Center(
-                child: Text(
-                    'Tutaj nauczysz się jak kolokwialnie wyrażać emocje !')),
+            child: Column(children: [
+              Text(
+                'Kolokwializmy',
+                style: GoogleFonts.bebasNeue(color: Colors.white, fontSize: 25),
+              ),
+              Text(
+                'Tutaj nauczysz się jak kolokwialnie wyrażać emocje !',
+                style: GoogleFonts.lora(color: Colors.white),
+              ),
+            ]),
           ),
         ),
       ),
       body: const Center(
         child: Text('Colloquialisms Page'),
       ),
+      endDrawer: NavigationDrawerWidget(),
     );
   }
 }

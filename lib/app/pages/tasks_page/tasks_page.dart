@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:street_talk/app/drawer/drawer.dart';
 
 class TasksPage extends StatefulWidget {
   const TasksPage({super.key});
@@ -12,7 +14,6 @@ class _TasksPageState extends State<TasksPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Zadania'),
         centerTitle: true,
         leading: Transform.scale(
           scale: 1.6,
@@ -25,29 +26,30 @@ class _TasksPageState extends State<TasksPage> {
           ),
         ),
         bottom: PreferredSize(
-          preferredSize: const Size.fromHeight(50),
+          preferredSize: const Size.fromHeight(70),
           child: Container(
-            margin: const EdgeInsets.symmetric(horizontal: 9),
-            height: 50,
+            height: 70,
             width: double.infinity,
             decoration: const BoxDecoration(
-              border: Border(
-                top: BorderSide(color: Color(0xFFc60b1e)),
-                bottom: BorderSide(color: Color(0xFFc60b1e)),
-              ),
+              color: Color(0xFFc60b1e),
             ),
-            child: const Center(
-                child: Text(
-                    'Tutaj możesz przetestować swoją wiedzę, powodzenia !')),
+            child: Column(children: [
+              Text(
+                'Zadania',
+                style: GoogleFonts.bebasNeue(color: Colors.white, fontSize: 25),
+              ),
+              Text(
+                'Tutaj możesz przetestować swoją wiedzę, powodzenia !',
+                style: GoogleFonts.lora(color: Colors.white),
+              ),
+            ]),
           ),
         ),
       ),
       body: const Center(
         child: Text('Tasks Page'),
       ),
+      endDrawer: NavigationDrawerWidget(),
     );
   }
 }
-
-
-// Tutaj możesz przetestować swoją wiedze, powodzenia !
