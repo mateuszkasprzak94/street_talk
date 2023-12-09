@@ -26,5 +26,5 @@ flutter:
 
   
   assets:
-    - assets/assets_homepage
+    - assets/assets_homepage/
 
