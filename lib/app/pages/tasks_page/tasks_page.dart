@@ -10,10 +10,44 @@ class TasksPage extends StatefulWidget {
 class _TasksPageState extends State<TasksPage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Zadania'),
+        centerTitle: true,
+        leading: Transform.scale(
+          scale: 1.6,
+          child: Container(
+            margin: const EdgeInsets.only(left: 15),
+            alignment: Alignment.center,
+            child: Image.asset(
+              'assets/flag/flag.png',
+            ),
+          ),
+        ),
+        bottom: PreferredSize(
+          preferredSize: const Size.fromHeight(50),
+          child: Container(
+            margin: const EdgeInsets.symmetric(horizontal: 9),
+            height: 50,
+            width: double.infinity,
+            decoration: const BoxDecoration(
+              border: Border(
+                top: BorderSide(color: Color(0xffffc400)),
+                bottom: BorderSide(color: Color(0xffffc400)),
+              ),
+            ),
+            child: const Center(
+                child: Text(
+                    'Tutaj możesz przetestować swoją wiedzę, powodzenia !')),
+          ),
+        ),
+      ),
+      body: const Center(
         child: Text('Tasks Page'),
       ),
     );
   }
 }
+
+
+// Tutaj możesz przetestować swoją wiedze, powodzenia !
