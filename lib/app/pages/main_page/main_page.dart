@@ -32,6 +32,8 @@ class _MainPageState extends State<MainPage> {
             currentIndex = newIndex;
           });
         },
+        selectedItemColor: const Color(0xFFc60b1e),
+        unselectedItemColor: Colors.grey,
         iconSize: 30,
         selectedFontSize: 13,
         unselectedFontSize: 13,

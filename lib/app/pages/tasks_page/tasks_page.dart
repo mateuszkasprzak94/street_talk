@@ -32,8 +32,8 @@ class _TasksPageState extends State<TasksPage> {
             width: double.infinity,
             decoration: const BoxDecoration(
               border: Border(
-                top: BorderSide(color: Color(0xffffc400)),
-                bottom: BorderSide(color: Color(0xffffc400)),
+                top: BorderSide(color: Color(0xFFc60b1e)),
+                bottom: BorderSide(color: Color(0xFFc60b1e)),
               ),
             ),
             child: const Center(
