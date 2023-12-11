@@ -13,6 +13,7 @@ class ColloquialismsPage extends StatefulWidget {
 class _ColloquialismsPageState extends State<ColloquialismsPage> {
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -37,11 +38,13 @@ class _ColloquialismsPageState extends State<ColloquialismsPage> {
             child: Column(children: [
               Text(
                 'Kolokwializmy',
-                style: GoogleFonts.bebasNeue(color: Colors.white, fontSize: 25),
+                style: GoogleFonts.bebasNeue(
+                    color: Colors.white, fontSize: screenWidth / 12),
               ),
               Text(
                 'Tutaj nauczysz się jak kolokwialnie wyrażać emocje !',
-                style: GoogleFonts.lora(color: Colors.white),
+                style: GoogleFonts.lora(
+                    color: Colors.white, fontSize: screenWidth / 27),
               ),
             ]),
           ),
@@ -57,7 +60,7 @@ class _ColloquialismsPageState extends State<ColloquialismsPage> {
           ColloquialismsButtonWidget(
             image: Image.asset('assets/images/street.jpg'),
             polishTitle: 'Hiszpański prosto z ulicy',
-            spanishTitle: 'Español directo de la calle.',
+            spanishTitle: 'Español directo de la calle',
           ),
           ColloquialismsButtonWidget(
             image: Image.asset('assets/images/situation.jpg'),

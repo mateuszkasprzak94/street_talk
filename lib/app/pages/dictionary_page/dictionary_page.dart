@@ -14,6 +14,7 @@ final controller = TextEditingController();
 class _DictionaryPageState extends State<DictionaryPage> {
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
     controller.addListener(() => setState(() {}));
     return Scaffold(
       appBar: AppBar(
@@ -39,7 +40,8 @@ class _DictionaryPageState extends State<DictionaryPage> {
             child: Column(children: [
               Text(
                 'Słownik',
-                style: GoogleFonts.bebasNeue(color: Colors.white, fontSize: 25),
+                style: GoogleFonts.bebasNeue(
+                    color: Colors.white, fontSize: screenWidth / 12),
               ),
               Text(
                 'Niby wszystko wiem ale jednak sprawdze :)',
@@ -52,7 +54,7 @@ class _DictionaryPageState extends State<DictionaryPage> {
       body: Center(
         child: Column(
           children: [
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextField(

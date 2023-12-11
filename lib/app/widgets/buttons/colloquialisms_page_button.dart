@@ -15,6 +15,7 @@ class ColloquialismsButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 20) +
           const EdgeInsets.only(top: 10),
@@ -56,7 +57,7 @@ class ColloquialismsButtonWidget extends StatelessWidget {
               Text(
                 spanishTitle,
                 style: GoogleFonts.lora(
-                    fontSize: 20,
+                    fontSize: screenWidth / 19,
                     fontStyle: FontStyle.italic,
                     color: Colors.grey),
               )

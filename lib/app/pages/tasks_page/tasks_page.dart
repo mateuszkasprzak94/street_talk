@@ -12,6 +12,7 @@ class TasksPage extends StatefulWidget {
 class _TasksPageState extends State<TasksPage> {
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -36,11 +37,13 @@ class _TasksPageState extends State<TasksPage> {
             child: Column(children: [
               Text(
                 'Zadania',
-                style: GoogleFonts.bebasNeue(color: Colors.white, fontSize: 25),
+                style: GoogleFonts.bebasNeue(
+                    color: Colors.white, fontSize: screenWidth / 12),
               ),
               Text(
                 'Tutaj możesz przetestować swoją wiedzę, powodzenia !',
-                style: GoogleFonts.lora(color: Colors.white),
+                style: GoogleFonts.lora(
+                    color: Colors.white, fontSize: screenWidth / 28),
               ),
             ]),
           ),
