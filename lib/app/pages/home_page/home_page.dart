@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:street_talk/app/drawer/drawer.dart';
+import 'package:street_talk/app/widgets/drawer/drawer.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -47,7 +47,7 @@ class _HomePageState extends State<HomePage> {
               fit: BoxFit.fitHeight),
         ),
       ),
-      endDrawer: NavigationDrawerWidget(),
+      endDrawer: const NavigationDrawerWidget(),
     );
   }
 }

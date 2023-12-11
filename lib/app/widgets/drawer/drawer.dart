@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:street_talk/app/drawer/drawer_content/about_spain/about_spain.dart';
 import 'package:street_talk/app/drawer/drawer_content/favourites/favourites.dart';
+import 'package:street_talk/app/drawer/drawer_content/fun_facts/fun_facts.dart';
+import 'package:street_talk/app/drawer/drawer_content/verbs/verbs.dart';
 import 'package:street_talk/app/pages/main_page/main_page.dart';
 
 class NavigationDrawerWidget extends StatelessWidget {
@@ -39,7 +42,7 @@ class NavigationDrawerWidget extends StatelessWidget {
           children: [
             ListTile(
               leading: const Icon(Icons.home_outlined),
-              title: const Text('Home'),
+              title: const Text('Strona główna'),
               onTap: () {
                 Navigator.of(context).pushReplacement(
                   MaterialPageRoute(
@@ -51,17 +54,44 @@ class NavigationDrawerWidget extends StatelessWidget {
             ListTile(
               leading: const Icon(Icons.access_time),
               title: const Text('Odmiana czasowników'),
-              onTap: () {},
+              onTap: () {
+                // close navigation drawer before
+                Navigator.pop(context);
+
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const VerbsPage(),
+                  ),
+                );
+              },
             ),
             ListTile(
               leading: const Icon(Icons.map_outlined),
               title: const Text('O Hiszpanii'),
-              onTap: () {},
+              onTap: () {
+                // close navigation drawer before
+                Navigator.pop(context);
+
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const AboutSpainPage(),
+                  ),
+                );
+              },
             ),
             ListTile(
               leading: const Icon(Icons.question_mark),
               title: const Text('Ciekawostki'),
-              onTap: () {},
+              onTap: () {
+                // close navigation drawer before
+                Navigator.pop(context);
+
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const FunFactsPage(),
+                  ),
+                );
+              },
             ),
             ListTile(
               leading: const Icon(Icons.favorite_border),

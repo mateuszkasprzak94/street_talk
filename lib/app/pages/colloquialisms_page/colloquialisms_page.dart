@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:street_talk/app/drawer/drawer.dart';
+import 'package:street_talk/app/widgets/drawer/drawer.dart';
 
 class ColloquialismsPage extends StatefulWidget {
   const ColloquialismsPage({super.key});

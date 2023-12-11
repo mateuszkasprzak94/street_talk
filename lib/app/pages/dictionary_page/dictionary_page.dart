@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:street_talk/app/drawer/drawer.dart';
+import 'package:street_talk/app/widgets/drawer/drawer.dart';
 
 class DictionaryPage extends StatefulWidget {
   const DictionaryPage({super.key});
@@ -9,9 +9,12 @@ class DictionaryPage extends StatefulWidget {
   State<DictionaryPage> createState() => _DictionaryPageState();
 }
 
+final controller = TextEditingController();
+
 class _DictionaryPageState extends State<DictionaryPage> {
   @override
   Widget build(BuildContext context) {
+    controller.addListener(() => setState(() {}));
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -47,7 +50,35 @@ class _DictionaryPageState extends State<DictionaryPage> {
         ),
       ),
       body: Center(
-        child: Text('Dictionary Page'),
+        child: Column(
+          children: [
+            SizedBox(height: 10),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextField(
+                controller: controller,
+                decoration: InputDecoration(
+                  contentPadding: const EdgeInsets.all(10),
+                  labelText: 'Szukaj',
+                  hintText: 'Wpisz słowo, którego szukasz',
+                  prefixIcon: controller.text.isEmpty
+                      ? const Icon(Icons.search)
+                      : const Icon(
+                          Icons.check,
+                          color: Colors.green,
+                        ),
+                  suffixIcon: controller.text.isEmpty
+                      ? Container(width: 0)
+                      : IconButton(
+                          onPressed: () => controller.clear(),
+                          icon: const Icon(Icons.close)),
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                ),
+              ),
+            )
+          ],
+        ),
       ),
       endDrawer: NavigationDrawerWidget(),
     );
