@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:street_talk/app/widgets/buttons/colloquialisms_page_button.dart';
 import 'package:street_talk/app/widgets/drawer/drawer.dart';
 
 class ColloquialismsPage extends StatefulWidget {
@@ -46,10 +47,31 @@ class _ColloquialismsPageState extends State<ColloquialismsPage> {
           ),
         ),
       ),
-      body: const Center(
-        child: Text('Colloquialisms Page'),
+      body: ListView(
+        children: [
+          ColloquialismsButtonWidget(
+            image: Image.asset('assets/images/bull.jpg'),
+            polishTitle: 'Jak wyrazić emocje',
+            spanishTitle: 'Cómo expresar emociones',
+          ),
+          ColloquialismsButtonWidget(
+            image: Image.asset('assets/images/street.jpg'),
+            polishTitle: 'Hiszpański prosto z ulicy',
+            spanishTitle: 'Español directo de la calle.',
+          ),
+          ColloquialismsButtonWidget(
+            image: Image.asset('assets/images/situation.jpg'),
+            polishTitle: 'Na konkretną sytuacje',
+            spanishTitle: 'Para una situación específica',
+          ),
+          ColloquialismsButtonWidget(
+            image: Image.asset('assets/images/goodbye.jpg'),
+            polishTitle: 'Przywitania i pożegnania',
+            spanishTitle: 'Saludos y despedidas',
+          ),
+        ],
       ),
-      endDrawer: NavigationDrawerWidget(),
+      endDrawer: const NavigationDrawerWidget(),
     );
   }
 }

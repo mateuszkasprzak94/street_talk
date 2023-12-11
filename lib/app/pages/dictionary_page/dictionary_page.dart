@@ -61,12 +61,7 @@ class _DictionaryPageState extends State<DictionaryPage> {
                   contentPadding: const EdgeInsets.all(10),
                   labelText: 'Szukaj',
                   hintText: 'Wpisz słowo, którego szukasz',
-                  prefixIcon: controller.text.isEmpty
-                      ? const Icon(Icons.search)
-                      : const Icon(
-                          Icons.check,
-                          color: Colors.green,
-                        ),
+                  prefixIcon: const Icon(Icons.search),
                   suffixIcon: controller.text.isEmpty
                       ? Container(width: 0)
                       : IconButton(
@@ -80,7 +75,7 @@ class _DictionaryPageState extends State<DictionaryPage> {
           ],
         ),
       ),
-      endDrawer: NavigationDrawerWidget(),
+      endDrawer: const NavigationDrawerWidget(),
     );
   }
 }

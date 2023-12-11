@@ -29,4 +29,5 @@ flutter:
   assets:
     - assets/assets_homepage/
     - assets/flag/
+    - assets/images/
 
