@@ -12,7 +12,7 @@ class _FunFactsPageState extends State<FunFactsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Ciekawostki'),
+        title: const Text('Ciekawostki'),
       ),
     );
   }

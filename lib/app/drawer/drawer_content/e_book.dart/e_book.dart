@@ -12,7 +12,7 @@ class _EBookPageState extends State<EBookPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('E-Booki do nauki'),
+        title: const Text('E-Booki do nauki'),
       ),
     );
   }

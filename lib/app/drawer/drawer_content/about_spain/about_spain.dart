@@ -12,7 +12,7 @@ class _AboutSpainPageState extends State<AboutSpainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('O Hiszpanii'),
+        title: const Text('O Hiszpanii'),
       ),
     );
   }

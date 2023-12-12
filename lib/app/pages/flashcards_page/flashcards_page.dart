@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:street_talk/app/widgets/drawer/drawer.dart';
 
-class TasksPage extends StatefulWidget {
-  const TasksPage({super.key});
+class FlashCardsPage extends StatefulWidget {
+  const FlashCardsPage({super.key});
 
   @override
-  State<TasksPage> createState() => _TasksPageState();
+  State<FlashCardsPage> createState() => _FlashCardsPageState();
 }
 
-class _TasksPageState extends State<TasksPage> {
+class _FlashCardsPageState extends State<FlashCardsPage> {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
@@ -36,12 +36,12 @@ class _TasksPageState extends State<TasksPage> {
             ),
             child: Column(children: [
               Text(
-                'Zadania',
+                'Fiszki',
                 style: GoogleFonts.bebasNeue(
                     color: Colors.white, fontSize: screenWidth / 12),
               ),
               Text(
-                'Tutaj możesz przetestować swoją wiedzę, powodzenia !',
+                'Testuj swoją wiedzę – powodzenia z fiszkami!',
                 style: GoogleFonts.lora(
                     color: Colors.white, fontSize: screenWidth / 28),
               ),
@@ -50,7 +50,7 @@ class _TasksPageState extends State<TasksPage> {
         ),
       ),
       body: const Center(
-        child: Text('Tasks Page'),
+        child: Text('Fiszki'),
       ),
       endDrawer: const NavigationDrawerWidget(),
     );

@@ -12,7 +12,7 @@ class _VerbsPageState extends State<VerbsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Odmiana czasowników'),
+        title: const Text('Odmiana czasowników'),
       ),
     );
   }

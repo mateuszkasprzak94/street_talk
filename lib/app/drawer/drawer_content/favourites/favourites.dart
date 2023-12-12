@@ -12,7 +12,7 @@ class _FavouritesPageState extends State<FavouritesPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Ulubione'),
+        title: const Text('Ulubione'),
       ),
     );
   }

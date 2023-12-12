@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:street_talk/app/pages/colloquialisms_page/colloquialisms_page.dart';
 import 'package:street_talk/app/pages/dictionary_page/dictionary_page.dart';
+import 'package:street_talk/app/pages/flashcards_page/flashcards_page.dart';
 import 'package:street_talk/app/pages/home_page/home_page.dart';
 import 'package:street_talk/app/pages/tasks_page/tasks_page.dart';
 
@@ -17,7 +18,8 @@ class _MainPageState extends State<MainPage> {
     HomePage(),
     ColloquialismsPage(),
     TasksPage(),
-    DictionaryPage()
+    FlashCardsPage(),
+    DictionaryPage(),
   ];
 
   @override
@@ -35,8 +37,8 @@ class _MainPageState extends State<MainPage> {
         selectedItemColor: const Color(0xFFc60b1e),
         unselectedItemColor: Colors.grey,
         iconSize: 30,
-        selectedFontSize: 13,
-        unselectedFontSize: 13,
+        selectedFontSize: 10,
+        unselectedFontSize: 10,
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -49,6 +51,10 @@ class _MainPageState extends State<MainPage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.assignment),
             label: 'Zadania',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.collections_bookmark),
+            label: 'Fiszki',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.book),
