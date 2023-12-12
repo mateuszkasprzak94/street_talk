@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:street_talk/app/drawer/drawer_content/about_spain/about_spain.dart';
+import 'package:street_talk/app/drawer/drawer_content/e_book.dart/e_book.dart';
 import 'package:street_talk/app/drawer/drawer_content/favourites/favourites.dart';
 import 'package:street_talk/app/drawer/drawer_content/fun_facts/fun_facts.dart';
 import 'package:street_talk/app/drawer/drawer_content/verbs/verbs.dart';
@@ -139,7 +140,7 @@ class NavigationDrawerWidget extends StatelessWidget {
 
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => const FavouritesPage(),
+                    builder: (context) => const EBookPage(),
                   ),
                 );
               },
