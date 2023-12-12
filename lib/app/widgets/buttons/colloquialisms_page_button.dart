@@ -6,12 +6,14 @@ class ColloquialismsButtonWidget extends StatelessWidget {
     required this.image,
     required this.polishTitle,
     required this.spanishTitle,
+    required this.onPressed,
     super.key,
   });
 
   final Image image;
   final String polishTitle;
   final String spanishTitle;
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -64,13 +66,8 @@ class ColloquialismsButtonWidget extends StatelessWidget {
             ],
           ),
         ),
-        InkWell(
-          onTap: () {},
-          child: const Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Icon(Icons.arrow_forward_ios),
-          ),
-        )
+        IconButton(
+            onPressed: onPressed, icon: const Icon(Icons.arrow_forward_ios))
       ]),
     );
   }
