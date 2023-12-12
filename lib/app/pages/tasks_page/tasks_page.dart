@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:street_talk/app/widgets/drawer/drawer.dart';
+import 'package:street_talk/app/widgets/tasks_listview/tasks_listview.dart';
 
 class TasksPage extends StatefulWidget {
   const TasksPage({super.key});
@@ -10,6 +11,15 @@ class TasksPage extends StatefulWidget {
 }
 
 class _TasksPageState extends State<TasksPage> {
+  final controllerPage = PageController(initialPage: 0);
+
+  @override
+  void dispose() {
+    controllerPage.dispose();
+
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
@@ -49,8 +59,14 @@ class _TasksPageState extends State<TasksPage> {
           ),
         ),
       ),
-      body: const Center(
-        child: Text('Tasks Page'),
+      body: PageView(
+        physics: const NeverScrollableScrollPhysics(),
+        controller: controllerPage,
+        children: [
+          TasksListView(controllerPage: controllerPage),
+          TasksListView(controllerPage: controllerPage),
+          TasksListView(controllerPage: controllerPage),
+        ],
       ),
       endDrawer: const NavigationDrawerWidget(),
     );
