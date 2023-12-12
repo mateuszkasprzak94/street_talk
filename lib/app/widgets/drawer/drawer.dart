@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:street_talk/app/drawer/drawer_content/about_spain/about_spain.dart';
 import 'package:street_talk/app/drawer/drawer_content/favourites/favourites.dart';
 import 'package:street_talk/app/drawer/drawer_content/fun_facts/fun_facts.dart';
@@ -28,17 +29,39 @@ class NavigationDrawerWidget extends StatelessWidget {
   Widget buildHeader(BuildContext context) => Container(
         color: const Color(0xFFc60b1e),
         padding: EdgeInsets.only(
-          top: MediaQuery.of(context).padding.top,
-        ),
-        child: const Column(
-          children: [],
+            top: MediaQuery.of(context).padding.top, bottom: 24),
+        child: Column(
+          children: [
+            const CircleAvatar(
+              radius: 70,
+              backgroundImage: AssetImage('assets/images/logo.jpg'),
+            ),
+            const SizedBox(height: 15),
+            Text(
+              'StreetTalk:',
+              style: GoogleFonts.lora(
+                  letterSpacing: 1,
+                  fontSize: MediaQuery.of(context).size.width / 11,
+                  color: Colors.white),
+            ),
+            Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+              Text(
+                'Język Hiszpański Kolokwialnie',
+                style: GoogleFonts.lora(
+                  fontWeight: FontWeight.w500,
+                  fontSize: MediaQuery.of(context).size.width / 20,
+                  color: Colors.white,
+                ),
+              ),
+            ])
+          ],
         ),
       );
 
   Widget buildMenuItems(BuildContext context) => Container(
-        padding: const EdgeInsets.all(24),
+        padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
         child: Wrap(
-          runSpacing: 16,
+          runSpacing: 15,
           children: [
             ListTile(
               leading: const Icon(Icons.home_outlined),
@@ -96,6 +119,20 @@ class NavigationDrawerWidget extends StatelessWidget {
             ListTile(
               leading: const Icon(Icons.favorite_border),
               title: const Text('Ulubione'),
+              onTap: () {
+                // close navigation drawer before
+                Navigator.pop(context);
+
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const FavouritesPage(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.school),
+              title: const Text('E-booki do nauki'),
               onTap: () {
                 // close navigation drawer before
                 Navigator.pop(context);
