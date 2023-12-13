@@ -11,11 +11,11 @@ class TasksPage extends StatefulWidget {
 }
 
 class _TasksPageState extends State<TasksPage> {
-  final controllerPage = PageController(initialPage: 0);
+  final controllerTaskPage = PageController(initialPage: 0);
 
   @override
   void dispose() {
-    controllerPage.dispose();
+    controllerTaskPage.dispose();
 
     super.dispose();
   }
@@ -61,11 +61,11 @@ class _TasksPageState extends State<TasksPage> {
       ),
       body: PageView(
         physics: const NeverScrollableScrollPhysics(),
-        controller: controllerPage,
+        controller: controllerTaskPage,
         children: [
-          TasksListView(controllerPage: controllerPage),
-          TasksListView(controllerPage: controllerPage),
-          TasksListView(controllerPage: controllerPage),
+          TasksListView(controllerTaskPage: controllerTaskPage),
+          TasksListView(controllerTaskPage: controllerTaskPage),
+          TasksListView(controllerTaskPage: controllerTaskPage),
         ],
       ),
       endDrawer: const NavigationDrawerWidget(),

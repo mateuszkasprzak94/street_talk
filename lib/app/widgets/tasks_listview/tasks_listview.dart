@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 class TasksListView extends StatelessWidget {
   const TasksListView({
     super.key,
-    required this.controllerPage,
+    required this.controllerTaskPage,
   });
 
-  final PageController controllerPage;
+  final PageController controllerTaskPage;
 
   @override
   Widget build(BuildContext context) {
@@ -75,13 +75,13 @@ class TasksListView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             IconButton(
-              onPressed: () => controllerPage.previousPage(
+              onPressed: () => controllerTaskPage.previousPage(
                   duration: const Duration(seconds: 1),
                   curve: Curves.easeInOut),
               icon: const Icon(Icons.arrow_back_ios),
             ),
             IconButton(
-              onPressed: () => controllerPage.nextPage(
+              onPressed: () => controllerTaskPage.nextPage(
                   duration: const Duration(seconds: 1),
                   curve: Curves.easeInOut),
               icon: const Icon(Icons.arrow_forward_ios),
