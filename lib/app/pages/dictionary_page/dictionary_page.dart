@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:street_talk/app/widgets/drawer/drawer.dart';
+import 'package:translator/translator.dart';
 
 class DictionaryPage extends StatefulWidget {
   const DictionaryPage({super.key});
@@ -12,6 +13,7 @@ class DictionaryPage extends StatefulWidget {
 final controller = TextEditingController();
 
 class _DictionaryPageState extends State<DictionaryPage> {
+  String translated = 'Translated';
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
@@ -72,7 +74,23 @@ class _DictionaryPageState extends State<DictionaryPage> {
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10)),
                 ),
+                onChanged: (controller) async {
+                  final translation = await controller.translate(
+                    from: 'pl',
+                    to: 'es',
+                  );
+                  setState(() {
+                    translated = translation.text;
+                  });
+                },
               ),
+            ),
+            Text(
+              translated,
+              style: TextStyle(
+                  fontSize: 36,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.lightBlueAccent),
             )
           ],
         ),
