@@ -50,7 +50,7 @@ class _MainPageState extends State<MainPage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.assignment),
-            label: 'Zadania',
+            label: 'Ćwieczenia',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.collections_bookmark),
