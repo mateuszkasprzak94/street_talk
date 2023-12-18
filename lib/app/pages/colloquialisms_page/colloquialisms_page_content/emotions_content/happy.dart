@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:street_talk/app/pages/colloquialisms_page/colloquialisms_page_content/emotions_content/text_for_emotions_content/text_for_emotions_content.dart';
 import 'package:street_talk/app/widgets/colloquialisms_content/emotions_card_content_widget.dart';
 
 class HappyContent extends StatelessWidget {
@@ -22,10 +23,10 @@ class HappyContent extends StatelessWidget {
                 ),
               ),
             ),
-            const Expanded(
+            Expanded(
               child: Text(
-                '5. Radość / Entuzjazm',
-                style: TextStyle(
+                happyTitle,
+                style: const TextStyle(
                     fontSize: 25,
                     fontStyle: FontStyle.italic,
                     color: Color.fromARGB(255, 131, 250, 34),
@@ -42,43 +43,36 @@ class HappyContent extends StatelessWidget {
           indent: 11,
           endIndent: 11,
         ),
-        const EmotionCardContentWidget(
-          title: '¡Qué guay! / ¡Qué chulo! / Chachi',
-          titleTranslation:
-              'używamy aby wyrazić, że coś nam się bardzo podoba, coś jest super, świetne, wspaniałe, itp.',
-          exampleOne:
-              '- Tu amiga es muy guay, ¡me lo he pasado genial con ella!',
-          exampleTwo: '',
-          exampleColor: Color.fromARGB(255, 131, 250, 34),
+        EmotionCardContentWidget(
+          title: happyWord1,
+          titleTranslation: happyTranslation1,
+          exampleOne: happyExampleOne1,
+          exampleTwo: happyExampleTwo1,
+          exampleColor: const Color.fromARGB(255, 131, 250, 34),
         ),
         _divider(),
-        const EmotionCardContentWidget(
-          title: '¡Cómo mola!',
-          titleTranslation:
-              'to wyrażenie może być używane w takim samym kontekście jak powyżej, gdy chcemy powiedzieć, że coś nam się podoba',
-          exampleOne: '- ¿Qué te parecen mis gafas nuevas?',
-          exampleTwo: '- ¡Cómo molan!',
-          exampleColor: Color.fromARGB(255, 131, 250, 34),
+        EmotionCardContentWidget(
+          title: happyWord2,
+          titleTranslation: happyTranslation2,
+          exampleOne: happyExampleOne2,
+          exampleTwo: happyExampleTwo2,
+          exampleColor: const Color.fromARGB(255, 131, 250, 34),
         ),
         _divider(),
-        const EmotionCardContentWidget(
-          title: '¡Qué pasada! ',
-          titleTranslation:
-              'używamy w odniesieniu do czegoś wyjątkowo dobrego, niesamowitego, a nawet zaskakującego',
-          exampleOne:
-              '- Mira, mi tía hizo esta colcha a mano y solo tardó dos días.',
-          exampleTwo: '- ¡Qué pasada! ¡Es súper bonita!',
-          exampleColor: Color.fromARGB(255, 131, 250, 34),
+        EmotionCardContentWidget(
+          title: happyWord3,
+          titleTranslation: happyTranslation3,
+          exampleOne: happyExampleOne3,
+          exampleTwo: happyExampleTwo3,
+          exampleColor: const Color.fromARGB(255, 131, 250, 34),
         ),
         _divider(),
-        const EmotionCardContentWidget(
-          title: '¡Es la caña! / ¡Es lo más! ',
-          titleTranslation:
-              'wyrażenia te są synonimem „bycia świetnym, niezwykłym”, czymś, co jest „super topowe”',
-          exampleOne: '- ¿Has conocido ya al nuevo profesor de matemáticas?',
-          exampleTwo:
-              '- Sí, ¡es la caña! / ¡Es lo más! Es súper simpático y gracioso.',
-          exampleColor: Color.fromARGB(255, 131, 250, 34),
+        EmotionCardContentWidget(
+          title: happyWord4,
+          titleTranslation: happyTranslation4,
+          exampleOne: happyExampleOne4,
+          exampleTwo: happyExampleTwo4,
+          exampleColor: const Color.fromARGB(255, 131, 250, 34),
         ),
       ],
     );

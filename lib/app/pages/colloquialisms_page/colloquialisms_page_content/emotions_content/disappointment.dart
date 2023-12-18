@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:street_talk/app/pages/colloquialisms_page/colloquialisms_page_content/emotions_content/text_for_emotions_content/text_for_emotions_content.dart';
 import 'package:street_talk/app/widgets/colloquialisms_content/emotions_card_content_widget.dart';
 
 class DisappointmentContent extends StatelessWidget {
@@ -23,10 +24,10 @@ class DisappointmentContent extends StatelessWidget {
                 ),
               ),
             ),
-            const Expanded(
+            Expanded(
               child: Text(
-                '4. Rozczarowanie',
-                style: TextStyle(
+                disappointmentTitle,
+                style: const TextStyle(
                     fontSize: 25,
                     fontStyle: FontStyle.italic,
                     color: Color.fromARGB(179, 11, 108, 198),
@@ -43,24 +44,20 @@ class DisappointmentContent extends StatelessWidget {
           indent: 11,
           endIndent: 11,
         ),
-        const EmotionCardContentWidget(
-          title: '¡Vaya palo! ',
-          titleTranslation:
-              'gdy ktoś mówi, że przydarzyło mu się coś złego lub przeżył rozczarowanie, używamy tego wyrażenia aby wyrazić empatię, a także potwierdzić że sytuacja rzeczywiście była nieciekawa',
-          exampleOne:
-              '- Suspendió el examen y no puede hacer la carrera que le gusta. ¡Vaya palo!',
-          exampleTwo: '',
-          exampleColor: Color.fromARGB(179, 11, 108, 198),
+        EmotionCardContentWidget(
+          title: disappointmentWord1,
+          titleTranslation: disappointmentTranslation1,
+          exampleOne: disappointmentExampleOne1,
+          exampleTwo: disappointmentExampleTwo1,
+          exampleColor: const Color.fromARGB(179, 11, 108, 198),
         ),
         _divider(),
-        const EmotionCardContentWidget(
-          title: '¡Vaya chasco! ',
-          titleTranslation:
-              'wyrażenie o podobnym znaczeniu do „Co za rozczarowanie!”',
-          exampleOne: '- Mañana juega la Juventus',
-          exampleTwo:
-              '- Sí, pero no emiten el partido en España               - ¡Pues vaya chasco!',
-          exampleColor: Color.fromARGB(179, 11, 108, 198),
+        EmotionCardContentWidget(
+          title: disappointmentWord2,
+          titleTranslation: disappointmentTranslation2,
+          exampleOne: disappointmentExampleOne2,
+          exampleTwo: disappointmentExampleTwo2,
+          exampleColor: const Color.fromARGB(179, 11, 108, 198),
         ),
         _divider(),
       ],

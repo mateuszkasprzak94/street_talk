@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:street_talk/app/pages/colloquialisms_page/colloquialisms_page_content/emotions_content/text_for_emotions_content/text_for_emotions_content.dart';
 import 'package:street_talk/app/widgets/colloquialisms_content/emotions_card_content_widget.dart';
 
 class AngryContent extends StatelessWidget {
@@ -21,10 +22,10 @@ class AngryContent extends StatelessWidget {
                   image: DecorationImage(
                       image: AssetImage('assets/emotions_images/angry.jpg'))),
             ),
-            const Expanded(
+            Expanded(
               child: Text(
-                '2. Złość / Irytacja',
-                style: TextStyle(
+                angryTitle,
+                style: const TextStyle(
                     fontSize: 25,
                     fontStyle: FontStyle.italic,
                     color: Color.fromARGB(255, 241, 11, 34),
@@ -41,38 +42,35 @@ class AngryContent extends StatelessWidget {
           indent: 11,
           endIndent: 11,
         ),
-        const EmotionCardContentWidget(
-          title: '¡Vaya tela!',
-          titleTranslation:
-              'używamy, aby zareagować na coś, co mówi nam druga osoba lub na wiadomość, która nas negatywnie zaskakuje, szokuje, denerwuje, oburza',
-          exampleOne: '- Vaya tela lo de Pedro, ¿no?',
-          exampleTwo: '',
+        EmotionCardContentWidget(
+          title: angryWord1,
+          titleTranslation: angryTranslation1,
+          exampleOne: angryExampleOne1,
+          exampleTwo: angryExampleTwo1,
           exampleColor: Color.fromARGB(255, 241, 11, 34),
         ),
         _divider(),
-        const EmotionCardContentWidget(
-          title: '¡Qué coraje! / ¡Qué rabia!',
-          titleTranslation: 'używamy, aby wyrazić złość lub irytację',
-          exampleOne: '- He perdido el tren y no voy a poder ir a la cena...',
-          exampleTwo: '- ¡Qué dices! Aggg ¡¡¡qué rabia/qué coraje!!!',
+        EmotionCardContentWidget(
+          title: angryWord2,
+          titleTranslation: angryTranslation2,
+          exampleOne: angryExampleOne2,
+          exampleTwo: angryExampleTwo2,
           exampleColor: Color.fromARGB(255, 241, 11, 34),
         ),
         _divider(),
-        const EmotionCardContentWidget(
-          title: '¡Vaya mierda! / ¡Qué putada!',
-          titleTranslation:
-              'te dwa wyrażenia wyrażają złość, wściekłość, ale z nutą rozczarowania',
-          exampleOne:
-              '- No voy a poder ir a la fiesta porque se me ha estropeado el coche.',
-          exampleTwo: '- Vaya mierda/Qué putada tío...',
+        EmotionCardContentWidget(
+          title: angryWord3,
+          titleTranslation: angryTranslation3,
+          exampleOne: angryExampleOne3,
+          exampleTwo: angryExampleTwo3,
           exampleColor: Color.fromARGB(255, 241, 11, 34),
         ),
         _divider(),
-        const EmotionCardContentWidget(
-          title: '¡Qué barbaridad! ',
-          titleTranslation: 'może wyrażać oburzenie, zdziwienie, zszokowanie ',
-          exampleOne: '¡Qué barbaridad! No puedo creer lo que acabo de ver.',
-          exampleTwo: '',
+        EmotionCardContentWidget(
+          title: angryWord4,
+          titleTranslation: angryTranslation4,
+          exampleOne: angryExampleOne4,
+          exampleTwo: angryExampleTwo4,
           exampleColor: Color.fromARGB(255, 241, 11, 34),
         ),
         _divider(),

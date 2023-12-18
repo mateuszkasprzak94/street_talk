@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:street_talk/app/pages/colloquialisms_page/colloquialisms_page_content/emotions_content/text_for_emotions_content/text_for_emotions_content.dart';
 import 'package:street_talk/app/widgets/colloquialisms_content/emotions_card_content_widget.dart';
 
 class AgreeContent extends StatelessWidget {
@@ -23,10 +24,10 @@ class AgreeContent extends StatelessWidget {
                 ),
               ),
             ),
-            const Expanded(
+            Expanded(
               child: Text(
-                '3. Zgadzanie się z czymś / z kimś',
-                style: TextStyle(
+                agreeTitle,
+                style: const TextStyle(
                     fontSize: 25,
                     fontStyle: FontStyle.italic,
                     color: Color.fromARGB(255, 11, 198, 36),
@@ -43,30 +44,28 @@ class AgreeContent extends StatelessWidget {
           indent: 11,
           endIndent: 11,
         ),
-        const EmotionCardContentWidget(
-          title: 'Ya ves',
-          titleTranslation:
-              'używamy aby powiedzieć, że się z kimś zgadzamy. Synonim do „pues sí',
-          exampleOne: '- Tengo unas ganas de que llegue el verano…',
-          exampleTwo: '- ¡Ya ves! ¡Yo tampoco puedo esperar!',
-          exampleColor: Color.fromARGB(255, 11, 198, 36),
+        EmotionCardContentWidget(
+          title: agreeWord1,
+          titleTranslation: agreeTranslation1,
+          exampleOne: agreeExampleOne1,
+          exampleTwo: agreeExampleTwo1,
+          exampleColor: const Color.fromARGB(255, 11, 198, 36),
         ),
         _divider(),
-        const EmotionCardContentWidget(
-          title: 'Ya te digo',
-          titleTranslation: 'używa się tak samo jak „Ya ves”',
-          exampleOne: '- Hace un frío increíble.',
-          exampleTwo: '-Ya te digo, tengo la calefacción a tope.',
-          exampleColor: Color.fromARGB(255, 11, 198, 36),
+        EmotionCardContentWidget(
+          title: agreeWord2,
+          titleTranslation: agreeTranslation2,
+          exampleOne: agreeExampleOne2,
+          exampleTwo: agreeExampleTwo2,
+          exampleColor: const Color.fromARGB(255, 11, 198, 36),
         ),
         _divider(),
-        const EmotionCardContentWidget(
-          title: 'Total',
-          titleTranslation:
-              'używamy gdy chcemy powiedzieć, że całkowicie się zgadzamy z tym co powiedział nasz rozmówca',
-          exampleOne: '- Creo que Valeria ha sido demasiado dura con Enrique.',
-          exampleTwo: '- Total. Debería de haber sido más amable.',
-          exampleColor: Color.fromARGB(255, 11, 198, 36),
+        EmotionCardContentWidget(
+          title: agreeWord3,
+          titleTranslation: agreeTranslation3,
+          exampleOne: agreeExampleOne3,
+          exampleTwo: agreeExampleTwo3,
+          exampleColor: const Color.fromARGB(255, 11, 198, 36),
         ),
         _divider(),
       ],

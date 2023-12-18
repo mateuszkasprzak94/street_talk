@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:street_talk/app/pages/colloquialisms_page/colloquialisms_page_content/emotions_content/text_for_emotions_content/text_for_emotions_content.dart';
 import 'package:street_talk/app/widgets/colloquialisms_content/emotions_card_content_widget.dart';
 
 class ResignationContent extends StatelessWidget {
@@ -22,10 +23,10 @@ class ResignationContent extends StatelessWidget {
                 ),
               ),
             ),
-            const Expanded(
+            Expanded(
               child: Text(
-                '7. Rezygnacja',
-                style: TextStyle(
+                resignationTitle,
+                style: const TextStyle(
                     fontSize: 25,
                     fontStyle: FontStyle.italic,
                     color: Color.fromARGB(255, 64, 81, 136),
@@ -42,44 +43,36 @@ class ResignationContent extends StatelessWidget {
           indent: 11,
           endIndent: 11,
         ),
-        const EmotionCardContentWidget(
-          title: 'Qué le vamos a hacer',
-          titleTranslation:
-              'jest to wyrażenie retoryczne lub pytanie, które oznacza rezygnację w obliczu sytuacji, na którą nie mamy wpływu i która jest uważana za nieuniknioną.',
-          exampleOne:
-              '- Perderás la mitad de tus tierras, pero qué le vamos a hacer.',
-          exampleTwo: '',
-          exampleColor: Color.fromARGB(255, 64, 81, 136),
+        EmotionCardContentWidget(
+          title: resignationWord1,
+          titleTranslation: resignationTranslation1,
+          exampleOne: resignationExampleOne1,
+          exampleTwo: resignationExampleTwo1,
+          exampleColor: const Color.fromARGB(255, 64, 81, 136),
         ),
         _divider(),
-        const EmotionCardContentWidget(
-          title: 'Es lo que hay',
-          titleTranslation:
-              'wyrażenie używane, gdy trzeba zadowolić się tym, co jest w danej chwili, ponieważ nie ma innego wyjścia, jak tylko to zaakceptować.',
-          exampleOne:
-              '- Me parece fatal que te paguen tan poco por tu trabajo.',
-          exampleTwo: '- Ya, pero bueno, es lo que hay...',
-          exampleColor: Color.fromARGB(255, 64, 81, 136),
+        EmotionCardContentWidget(
+          title: resignationWord2,
+          titleTranslation: resignationTranslation2,
+          exampleOne: resignationExampleOne2,
+          exampleTwo: resignationExampleTwo2,
+          exampleColor: const Color.fromARGB(255, 64, 81, 136),
         ),
         _divider(),
-        const EmotionCardContentWidget(
-          title: 'No queda otra / No me queda otra',
-          titleTranslation:
-              'wyrażenia tego używa się do przedstawienia czegoś jako jedynej możliwej alternatywy w trudnej sytuacji lub czegoś, co jest obowiązkowe w danych okolicznościach.',
-          exampleOne:
-              '- Tengo muchas deudas, tendré que conseguir un segundo trabajo. No me queda otra.',
-          exampleTwo: '',
-          exampleColor: Color.fromARGB(255, 64, 81, 136),
+        EmotionCardContentWidget(
+          title: resignationWord3,
+          titleTranslation: resignationTranslation3,
+          exampleOne: resignationExampleOne3,
+          exampleTwo: resignationExampleTwo3,
+          exampleColor: const Color.fromARGB(255, 64, 81, 136),
         ),
         _divider(),
-        const EmotionCardContentWidget(
-          title: '¡Qué remedio!',
-          titleTranslation:
-              'używa się go, gdy sytuacja jest jedynym dostępnym rozwiązaniem lub opcją, czymś nieuniknionym.',
-          exampleOne: '- No me apetece nada ir a la fiesta.',
-          exampleTwo:
-              '- A mí tampoco, pero ¡qué remedio! Nos ha invitado y tenemos que ir.',
-          exampleColor: Color.fromARGB(255, 64, 81, 136),
+        EmotionCardContentWidget(
+          title: resignationWord4,
+          titleTranslation: resignationTranslation4,
+          exampleOne: resignationExampleOne4,
+          exampleTwo: resignationExampleTwo4,
+          exampleColor: const Color.fromARGB(255, 64, 81, 136),
         ),
       ],
     );

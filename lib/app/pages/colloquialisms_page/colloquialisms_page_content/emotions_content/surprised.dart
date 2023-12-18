@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:street_talk/app/pages/colloquialisms_page/colloquialisms_page_content/emotions_content/text_for_emotions_content/text_for_emotions_content.dart';
 import 'package:street_talk/app/widgets/colloquialisms_content/emotions_card_content_widget.dart';
 
 class SurprisedContent extends StatelessWidget {
@@ -22,10 +23,10 @@ class SurprisedContent extends StatelessWidget {
                       image:
                           AssetImage('assets/emotions_images/surprised.jpg'))),
             ),
-            const Expanded(
+            Expanded(
               child: Text(
-                '1. Zdziwienie / Zaskoczenie',
-                style: TextStyle(
+                surprisedTitle,
+                style: const TextStyle(
                     fontSize: 25,
                     fontStyle: FontStyle.italic,
                     color: Color.fromARGB(202, 175, 12, 180),
@@ -42,87 +43,76 @@ class SurprisedContent extends StatelessWidget {
           indent: 11,
           endIndent: 11,
         ),
-        const EmotionCardContentWidget(
-          title: '¡Hala!',
-          titleTranslation:
-              'jest to wykrzyknienie używane, aby wyrazić zdziwienie, chociaż używa się go również do wyrażenia wsparcia',
-          exampleOne:
-              '- Me han regalado un viaje de avión a Valencia por mi cumpleaños.',
-          exampleTwo:
-              '- ¡Hala! ¡Felicidades! ¡Disfrútalo muchísimo! Valencia es una ciudad fantástica.',
-          exampleColor: Color.fromARGB(202, 175, 12, 180),
+        EmotionCardContentWidget(
+          title: surprisedWord1,
+          titleTranslation: surprisedTranslation1,
+          exampleOne: surprisedExampleOne1,
+          exampleTwo: surprisedExampleTwo1,
+          exampleColor: const Color.fromARGB(202, 175, 12, 180),
         ),
         _divider(),
-        const EmotionCardContentWidget(
-          title: '¡Anda!',
-          titleTranslation:
-              'używamy tego wykrzyknienia, aby wyrazić podziw lub zaskoczenie, a także zachęcić do zrobienia czegoś',
-          exampleOne: '- Ya no quedan donuts de chocolate en la pastelería.',
-          exampleTwo: '- ¡Anda! Y yo que tenía ganas de probarlos hoy.',
-          exampleColor: Color.fromARGB(202, 175, 12, 180),
+        EmotionCardContentWidget(
+          title: surprisedWord2,
+          titleTranslation: surprisedTranslation2,
+          exampleOne: surprisedExampleOne2,
+          exampleTwo: surprisedExampleTwo2,
+          exampleColor: const Color.fromARGB(202, 175, 12, 180),
         ),
         _divider(),
-        const EmotionCardContentWidget(
-          title: '¡Qué dices!',
-          titleTranslation:
-              'używamy, aby wyrazić zdziwienie i dezorientację w związku z tym, co mówi nam nasz rozmówca',
-          exampleOne: '- ¡Mi perra ha tenido cachorritos!',
-          exampleTwo:
-              '- ¡Qué dices! Pero, si no me habías contado que estaba preñada.',
-          exampleColor: Color.fromARGB(202, 175, 12, 180),
+        EmotionCardContentWidget(
+          title: surprisedWord3,
+          titleTranslation: surprisedTranslation3,
+          exampleOne: surprisedExampleOne3,
+          exampleTwo: surprisedExampleTwo3,
+          exampleColor: const Color.fromARGB(202, 175, 12, 180),
         ),
         _divider(),
-        const EmotionCardContentWidget(
-          title: '¿Pero qué me estás contando?',
-          titleTranslation:
-              'używamy gdy chcemy wyrazić totalny szok lub zdziwienie tym, co właśnie nam ogłoszono',
-          exampleOne: '- ¡Me voy a casar el mes que viene!',
-          exampleTwo: '- ¿Pero qué me estás contando?',
-          exampleColor: Color.fromARGB(202, 175, 12, 180),
+        EmotionCardContentWidget(
+          title: surprisedWord4,
+          titleTranslation: surprisedTranslation4,
+          exampleOne: surprisedExampleOne4,
+          exampleTwo: surprisedExampleTwo4,
+          exampleColor: const Color.fromARGB(202, 175, 12, 180),
         ),
         _divider(),
-        const EmotionCardContentWidget(
-          title: '¡Qué fuerte!',
-          titleTranslation: 'używamy w takich samych sytuacjach jak powyżej',
-          exampleOne:
-              '-¿Te has enterado de que Ana y Pedro están saliendo juntos?',
-          exampleTwo: '-¡Qué fuerte! Pero si siempre se han llevado fatal.',
-          exampleColor: Color.fromARGB(202, 175, 12, 180),
+        EmotionCardContentWidget(
+          title: surprisedWord5,
+          titleTranslation: surprisedTranslation5,
+          exampleOne: surprisedExampleOne5,
+          exampleTwo: surprisedExampleTwo5,
+          exampleColor: const Color.fromARGB(202, 175, 12, 180),
         ),
         _divider(),
-        const EmotionCardContentWidget(
-          title: '¡No me digas!',
-          titleTranslation:
-              'używamy wtedy gdy cos wydaje się nam nieprawdopodobne lub zadziwiające ',
-          exampleOne: '-Este año vamos de vacaciones a África.',
-          exampleTwo: '-¡No me digas! ¿Y eso?',
-          exampleColor: Color.fromARGB(202, 175, 12, 180),
+        EmotionCardContentWidget(
+          title: surprisedWord6,
+          titleTranslation: surprisedTranslation6,
+          exampleOne: surprisedExampleOne6,
+          exampleTwo: surprisedExampleTwo6,
+          exampleColor: const Color.fromARGB(202, 175, 12, 180),
         ),
         _divider(),
-        const EmotionCardContentWidget(
-          title: 'Estoy flipando / Yo flipo / Flipo en colores',
-          titleTranslation:
-              'używamy w sytuacjach gdy jesteśmy bardzo zaskoczeni. Może być używane w kontekście pozytywnym lub negatywnym',
-          exampleOne: '-No me esperaba para nada esa noticia.',
-          exampleTwo: '-Ni yo, estoy flipando. ',
-          exampleColor: Color.fromARGB(202, 175, 12, 180),
+        EmotionCardContentWidget(
+          title: surprisedWord7,
+          titleTranslation: surprisedTranslation7,
+          exampleOne: surprisedExampleOne7,
+          exampleTwo: surprisedExampleTwo7,
+          exampleColor: const Color.fromARGB(202, 175, 12, 180),
         ),
         _divider(),
-        const EmotionCardContentWidget(
-          title: '¡Venga ya! / ¡Venga yaaa!',
-          titleTranslation: 'używamy, gdy jest nam ciężko w coś uwierzyć',
-          exampleOne: '- ¿Sabes que han despedido a Irene de su trabajo?',
-          exampleTwo: '- ¡Venga ya! Pero si estaba súper bien, ¿no?',
-          exampleColor: Color.fromARGB(202, 175, 12, 180),
+        EmotionCardContentWidget(
+          title: surprisedWord8,
+          titleTranslation: surprisedTranslation8,
+          exampleOne: surprisedExampleOne8,
+          exampleTwo: surprisedExampleTwo8,
+          exampleColor: const Color.fromARGB(202, 175, 12, 180),
         ),
         _divider(),
-        const EmotionCardContentWidget(
-          title: 'No jodas / No me jodas',
-          titleTranslation:
-              'używamy, żeby wyrazić niedowierzanie względem czegoś co zostało powiedziane lub zrobione ',
-          exampleOne: '- Creo que he dejado mi chaqueta en el bar.',
-          exampleTwo: '- ¡No me jodas!',
-          exampleColor: Color.fromARGB(202, 175, 12, 180),
+        EmotionCardContentWidget(
+          title: surprisedWord9,
+          titleTranslation: surprisedTranslation9,
+          exampleOne: surprisedExampleOne9,
+          exampleTwo: surprisedExampleTwo9,
+          exampleColor: const Color.fromARGB(202, 175, 12, 180),
         ),
         _divider(),
       ],
