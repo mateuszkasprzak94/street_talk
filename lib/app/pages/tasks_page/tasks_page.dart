@@ -46,7 +46,7 @@ class _TasksPageState extends State<TasksPage> {
             ),
             child: Column(children: [
               Text(
-                'Zadania',
+                'Ćwieczenia',
                 style: GoogleFonts.bebasNeue(
                     color: Colors.white, fontSize: screenWidth / 12),
               ),

@@ -13,7 +13,7 @@ class DictionaryPage extends StatefulWidget {
 final controller = TextEditingController();
 
 class _DictionaryPageState extends State<DictionaryPage> {
-  String translated = 'Translated';
+  String translated = '';
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
@@ -85,12 +85,13 @@ class _DictionaryPageState extends State<DictionaryPage> {
                 },
               ),
             ),
+            const SizedBox(height: 20),
             Text(
               translated,
-              style: TextStyle(
+              style: const TextStyle(
                   fontSize: 36,
                   fontWeight: FontWeight.bold,
-                  color: Colors.lightBlueAccent),
+                  color: Color(0xFFc60b1e)),
             )
           ],
         ),
