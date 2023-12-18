@@ -62,21 +62,24 @@ class _FlashCardsPageState extends State<FlashCardsPage> {
         ),
       ),
       body: PageView(
+        onPageChanged: (index) {
+          print("index is ${index}");
+        },
         controller: controllerFlashPage,
         children: [
-          _page('słowo', 'word'),
-          _page('pies', 'dog'),
-          _page('kot', 'cat'),
-          _page('drzewo', 'tree'),
-          _page('samochód', 'car'),
-          _page('dwa', 'two'),
+          _page(0, context, 'słowo', 'word'),
+          _page(1, context, 'pies', 'dog'),
+          _page(2, context, 'kot', 'cat'),
+          _page(3, context, 'drzewo', 'tree'),
+          _page(4, context, 'samochód', 'car'),
+          _page(5, context, 'dwa', 'two'),
         ],
       ),
       endDrawer: const NavigationDrawerWidget(),
     );
   }
 
-  Column _page(String word, String translation) {
+  Column _page(int index, BuildContext context, String word, translation) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
