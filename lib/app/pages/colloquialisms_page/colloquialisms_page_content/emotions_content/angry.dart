@@ -47,7 +47,7 @@ class AngryContent extends StatelessWidget {
           titleTranslation: angryTranslation1,
           exampleOne: angryExampleOne1,
           exampleTwo: angryExampleTwo1,
-          exampleColor: Color.fromARGB(255, 241, 11, 34),
+          exampleColor: const Color.fromARGB(255, 241, 11, 34),
         ),
         _divider(),
         EmotionCardContentWidget(
@@ -55,7 +55,7 @@ class AngryContent extends StatelessWidget {
           titleTranslation: angryTranslation2,
           exampleOne: angryExampleOne2,
           exampleTwo: angryExampleTwo2,
-          exampleColor: Color.fromARGB(255, 241, 11, 34),
+          exampleColor: const Color.fromARGB(255, 241, 11, 34),
         ),
         _divider(),
         EmotionCardContentWidget(
@@ -63,7 +63,7 @@ class AngryContent extends StatelessWidget {
           titleTranslation: angryTranslation3,
           exampleOne: angryExampleOne3,
           exampleTwo: angryExampleTwo3,
-          exampleColor: Color.fromARGB(255, 241, 11, 34),
+          exampleColor: const Color.fromARGB(255, 241, 11, 34),
         ),
         _divider(),
         EmotionCardContentWidget(
@@ -71,7 +71,7 @@ class AngryContent extends StatelessWidget {
           titleTranslation: angryTranslation4,
           exampleOne: angryExampleOne4,
           exampleTwo: angryExampleTwo4,
-          exampleColor: Color.fromARGB(255, 241, 11, 34),
+          exampleColor: const Color.fromARGB(255, 241, 11, 34),
         ),
         _divider(),
       ],

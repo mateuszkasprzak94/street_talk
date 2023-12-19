@@ -48,7 +48,7 @@ class BoredomContent extends StatelessWidget {
           titleTranslation: boredTranslation1,
           exampleOne: boredExampleOne1,
           exampleTwo: boredExampleTwo1,
-          exampleColor: Color.fromARGB(255, 192, 47, 11),
+          exampleColor: const Color.fromARGB(255, 192, 47, 11),
         ),
         _divider(),
         EmotionCardContentWidget(
@@ -56,7 +56,7 @@ class BoredomContent extends StatelessWidget {
           titleTranslation: boredTranslation2,
           exampleOne: boredExampleOne2,
           exampleTwo: boredExampleTwo2,
-          exampleColor: Color.fromARGB(255, 192, 47, 11),
+          exampleColor: const Color.fromARGB(255, 192, 47, 11),
         ),
         _divider(),
         EmotionCardContentWidget(
@@ -64,7 +64,7 @@ class BoredomContent extends StatelessWidget {
           titleTranslation: boredTranslation3,
           exampleOne: boredExampleOne3,
           exampleTwo: boredExampleTwo3,
-          exampleColor: Color.fromARGB(255, 192, 47, 11),
+          exampleColor: const Color.fromARGB(255, 192, 47, 11),
         ),
         _divider(),
       ],
