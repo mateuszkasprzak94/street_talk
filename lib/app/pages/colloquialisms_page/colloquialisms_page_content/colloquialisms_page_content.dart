@@ -11,29 +11,14 @@ import 'package:street_talk/app/pages/colloquialisms_page/colloquialisms_page_co
 import 'package:street_talk/app/pages/colloquialisms_page/colloquialisms_page_content/emotions_content/resignation.dart';
 import 'package:street_talk/app/pages/colloquialisms_page/colloquialisms_page_content/emotions_content/surprised.dart';
 
-class ColloquialismsPageContent extends StatefulWidget {
+class ColloquialismsPageContent extends StatelessWidget {
   const ColloquialismsPageContent({super.key});
-
-  @override
-  State<ColloquialismsPageContent> createState() =>
-      _ColloquialismsPageContentState();
-}
-
-class _ColloquialismsPageContentState extends State<ColloquialismsPageContent> {
-  final controllerEmotionsPage = PageController(initialPage: 0);
-
-  @override
-  void dispose() {
-    controllerEmotionsPage.dispose();
-
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     return BlocProvider(
-      create: (context) => ColloquialismsPageCubit(),
+      create: (context) => ColloquialismsPageCubit()..start(),
       child: BlocBuilder<ColloquialismsPageCubit, ColloquialismsPageState>(
         builder: (context, state) {
           return Scaffold(
@@ -76,7 +61,7 @@ class _ColloquialismsPageContentState extends State<ColloquialismsPageContent> {
                     state.page = index;
                     context.read<ColloquialismsPageCubit>().changePage();
                   },
-                  controller: controllerEmotionsPage,
+                  controller: state.controllerEmotionsPage,
                   children: const [
                     SurprisedContent(),
                     AngryContent(),
@@ -94,9 +79,9 @@ class _ColloquialismsPageContentState extends State<ColloquialismsPageContent> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   decorator: DotsDecorator(
                     color: Colors.grey,
-                    activeColor: const Color(0xFFe78d01),
+                    activeColor: const Color(0xFFc60b1e),
                     size: const Size.square(8),
-                    activeSize: const Size(10, 8),
+                    activeSize: const Size(11, 8),
                     activeShape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5),
                     ),
