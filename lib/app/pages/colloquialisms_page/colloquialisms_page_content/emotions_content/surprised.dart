@@ -11,7 +11,7 @@ class SurprisedContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       children: [
-        const SizedBox(height: 20),
+        const SizedBox(height: 40),
         Row(
           children: [
             Container(
