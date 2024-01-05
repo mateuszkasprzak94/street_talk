@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:street_talk/app/models/flashcards_model.dart';
 import 'package:street_talk/app/pages/flashcards_page/cubit/flashcards_cubit.dart';
 import 'package:street_talk/app/widgets/drawer/drawer.dart';
 
@@ -11,7 +12,7 @@ class FlashCardsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     return BlocProvider(
-      create: (context) => FlashcardsCubit(5)..start(),
+      create: (context) => FlashCardsCubit()..start(),
       child: Scaffold(
         appBar: AppBar(
           centerTitle: true,
@@ -48,17 +49,20 @@ class FlashCardsPage extends StatelessWidget {
             ),
           ),
         ),
-        body: BlocBuilder<FlashcardsCubit, FlashcardsState>(
+        body: BlocBuilder<FlashCardsCubit, FlashCardsState>(
           builder: (context, state) {
             return PageView(
               controller: state.controllerFlashPage,
               children: const [
-                PageViewContent(word: 'słowo', translation: 'word'),
-                PageViewContent(word: 'pies', translation: 'dog'),
-                PageViewContent(word: 'kot', translation: 'cat'),
-                PageViewContent(word: 'drzewo', translation: 'tree'),
-                PageViewContent(word: 'samochód', translation: 'car'),
-                PageViewContent(word: 'dwa', translation: 'two'),
+                PageViewContent(
+                    word: 'słowo', translation: 'word', pageIndex: 0),
+                PageViewContent(word: 'pies', translation: 'dog', pageIndex: 1),
+                PageViewContent(word: 'kot', translation: 'cat', pageIndex: 2),
+                PageViewContent(
+                    word: 'drzewo', translation: 'tree', pageIndex: 3),
+                PageViewContent(
+                    word: 'samochód', translation: 'car', pageIndex: 4),
+                PageViewContent(word: 'dwa', translation: 'two', pageIndex: 5),
               ],
             );
           },
@@ -74,15 +78,19 @@ class PageViewContent extends StatelessWidget {
     super.key,
     required this.word,
     required this.translation,
+    required this.pageIndex,
   });
 
   final String word;
   final String translation;
+  final int pageIndex;
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<FlashcardsCubit, FlashcardsState>(
+    return BlocBuilder<FlashCardsCubit, FlashCardsState>(
       builder: (context, state) {
+        final FlashCardsModel flashCardsModel =
+            state.flashCardsModel[pageIndex];
         return Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -96,7 +104,7 @@ class PageViewContent extends StatelessWidget {
               height: 50,
               child: Align(
                 alignment: Alignment.center,
-                child: state.isTranslationVisible
+                child: flashCardsModel.isTranslationVisible
                     ? Text(
                         translation,
                         style:
@@ -107,8 +115,8 @@ class PageViewContent extends StatelessWidget {
                             backgroundColor: Colors.grey),
                         onPressed: () {
                           context
-                              .read<FlashcardsCubit>()
-                              .toggleTranslationVisibility();
+                              .read<FlashCardsCubit>()
+                              .toggleTranslationVisibility(pageIndex);
                         },
                         child: const Text(
                           'Pokaż tłumaczenie',
@@ -125,30 +133,32 @@ class PageViewContent extends StatelessWidget {
                   splashColor: Colors.transparent,
                   highlightColor: Colors.transparent,
                   onPressed: () {
-                    context
-                        .read<FlashcardsCubit>()
-                        .updateSadIconColor(!state.sadIconColor, false);
+                    context.read<FlashCardsCubit>().updateSadIconColor(
+                        pageIndex, !flashCardsModel.sadIconColor, false);
                   },
                   icon: ImageIcon(
                     const AssetImage(
                       'assets/custom_icons/sad.png',
                     ),
-                    color: state.sadIconColor ? Colors.red : Colors.black,
+                    color: flashCardsModel.sadIconColor
+                        ? Colors.red
+                        : Colors.black,
                   ),
                 ),
                 IconButton(
                   splashColor: Colors.transparent,
                   highlightColor: Colors.transparent,
                   onPressed: () {
-                    context
-                        .read<FlashcardsCubit>()
-                        .updateSmileIconColor(!state.smileIconColor, false);
+                    context.read<FlashCardsCubit>().updateSmileIconColor(
+                        pageIndex, !flashCardsModel.smileIconColor, false);
                   },
                   icon: ImageIcon(
                     const AssetImage(
                       'assets/custom_icons/smile.png',
                     ),
-                    color: state.smileIconColor ? Colors.green : Colors.black,
+                    color: flashCardsModel.smileIconColor
+                        ? Colors.green
+                        : Colors.black,
                   ),
                 ),
               ],
@@ -161,13 +171,13 @@ class PageViewContent extends StatelessWidget {
                   children: [
                     IconButton(
                       onPressed: () {
-                        context.read<FlashcardsCubit>().previusPage();
+                        context.read<FlashCardsCubit>().previusPage();
                       },
                       icon: const Icon(Icons.arrow_back_ios),
                     ),
                     IconButton(
                       onPressed: () {
-                        context.read<FlashcardsCubit>().nextPage();
+                        context.read<FlashCardsCubit>().nextPage();
                       },
                       icon: const Icon(Icons.arrow_forward_ios),
                     ),

@@ -1,13 +1,23 @@
 class FlashCardsModel {
   FlashCardsModel({
-    required this.isTranslationVisible,
-    required this.sadIconColor,
-    required this.smileIconColor,
-    required this.page,
+    this.isTranslationVisible = false,
+    this.sadIconColor = false,
+    this.smileIconColor = false,
   });
 
-  bool isTranslationVisible;
-  bool sadIconColor;
-  bool smileIconColor;
-  int page;
+  final bool isTranslationVisible;
+  final bool sadIconColor;
+  final bool smileIconColor;
+
+  FlashCardsModel copyWith({
+    bool? isTranslationVisible,
+    bool? sadIconColor,
+    bool? smileIconColor,
+  }) {
+    return FlashCardsModel(
+      isTranslationVisible: isTranslationVisible ?? this.isTranslationVisible,
+      sadIconColor: sadIconColor ?? this.sadIconColor,
+      smileIconColor: smileIconColor ?? this.smileIconColor,
+    );
+  }
 }

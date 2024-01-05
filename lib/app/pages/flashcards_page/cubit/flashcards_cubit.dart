@@ -1,52 +1,66 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:street_talk/app/models/flashcards_model.dart';
 
 part 'flashcards_state.dart';
 
-class FlashcardsCubit extends Cubit<FlashcardsState> {
-  FlashcardsCubit(int pageCount) : super(FlashcardsState());
+class FlashCardsCubit extends Cubit<FlashCardsState> {
+  FlashCardsCubit() : super(FlashCardsState(flashCardsModel: []));
 
   Future<void> start() async {
     final PageController pageController = PageController(initialPage: 0);
+    final List<FlashCardsModel> initialPageStates = List.generate(
+      99,
+      (index) => FlashCardsModel(),
+    );
     emit(
-      FlashcardsState(
-          isTranslationVisible: false,
-          sadIconColor: false,
-          smileIconColor: false,
+      FlashCardsState(
+          flashCardsModel: initialPageStates,
           controllerFlashPage: pageController),
     );
   }
 
-  Future<void> toggleTranslationVisibility() async {
-    emit(state.copyWith(isTranslationVisible: !state.isTranslationVisible));
+  Future<void> toggleTranslationVisibility(int pageIndex) async {
+    final List<FlashCardsModel> updatedPageStates =
+        List.from(state.flashCardsModel);
+    updatedPageStates[pageIndex] = updatedPageStates[pageIndex].copyWith(
+      isTranslationVisible: !updatedPageStates[pageIndex].isTranslationVisible,
+    );
+    emit(state.copyWith(flashCardsModel: updatedPageStates));
   }
 
   Future<void> updateSadIconColor(
-      bool newSadIconColor, bool newSmileIconColor) async {
-    emit(state.copyWith(
+      int pageIndex, bool newSadIconColor, bool newSmileIconColor) async {
+    final List<FlashCardsModel> updatedPageStates =
+        List.from(state.flashCardsModel);
+    updatedPageStates[pageIndex] = updatedPageStates[pageIndex].copyWith(
       sadIconColor: newSadIconColor,
       smileIconColor: newSmileIconColor,
-    ));
+    );
+    emit(state.copyWith(flashCardsModel: updatedPageStates));
   }
 
   Future<void> updateSmileIconColor(
-      bool newSmileIconColor, bool newSadIconColor) async {
-    emit(state.copyWith(
+      int pageIndex, bool newSmileIconColor, bool newSadIconColor) async {
+    final List<FlashCardsModel> updatedPageStates =
+        List.from(state.flashCardsModel);
+    updatedPageStates[pageIndex] = updatedPageStates[pageIndex].copyWith(
       smileIconColor: newSmileIconColor,
       sadIconColor: newSadIconColor,
-    ));
+    );
+    emit(state.copyWith(flashCardsModel: updatedPageStates));
   }
 
   Future<void> previusPage() async {
     await state.controllerFlashPage?.previousPage(
-      duration: const Duration(seconds: 1),
+      duration: const Duration(milliseconds: 500),
       curve: Curves.easeInOut,
     );
   }
 
   Future<void> nextPage() async {
     await state.controllerFlashPage?.nextPage(
-      duration: const Duration(seconds: 1),
+      duration: const Duration(milliseconds: 500),
       curve: Curves.easeInOut,
     );
   }

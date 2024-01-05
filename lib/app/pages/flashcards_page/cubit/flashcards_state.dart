@@ -1,29 +1,25 @@
 part of 'flashcards_cubit.dart';
 
-class FlashcardsState {
-  FlashcardsState({
-    this.isTranslationVisible = false,
-    this.sadIconColor = false,
-    this.smileIconColor = false,
+class FlashCardsState {
+  final List<FlashCardsModel> flashCardsModel;
+  final PageController? controllerFlashPage;
+  final int currentIndex;
+
+  FlashCardsState({
+    required this.flashCardsModel,
     this.controllerFlashPage,
+    this.currentIndex = 0,
   });
 
-  final bool isTranslationVisible;
-  final bool sadIconColor;
-  final bool smileIconColor;
-  final PageController? controllerFlashPage;
-
-  FlashcardsState copyWith({
-    bool? isTranslationVisible,
-    bool? sadIconColor,
-    bool? smileIconColor,
+  FlashCardsState copyWith({
+    List<FlashCardsModel>? flashCardsModel,
     PageController? controllerFlashPage,
+    int? currentIndex,
   }) {
-    return FlashcardsState(
-      isTranslationVisible: isTranslationVisible ?? this.isTranslationVisible,
-      sadIconColor: sadIconColor ?? this.sadIconColor,
-      smileIconColor: smileIconColor ?? this.smileIconColor,
+    return FlashCardsState(
+      flashCardsModel: flashCardsModel ?? this.flashCardsModel,
       controllerFlashPage: controllerFlashPage ?? this.controllerFlashPage,
+      currentIndex: currentIndex ?? this.currentIndex,
     );
   }
 }

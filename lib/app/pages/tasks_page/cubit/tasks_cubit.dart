@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:street_talk/app/core/enums.dart';
 
 part 'tasks_state.dart';
 
@@ -9,7 +10,10 @@ class TasksCubit extends Cubit<TasksState> {
   Future<void> start() async {
     final PageController pageController = PageController(initialPage: 0);
     emit(
-      TasksState(controllerTaskPage: pageController),
+      TasksState(
+        controllerTaskPage: pageController,
+        status: Status.loading,
+      ),
     );
   }
 

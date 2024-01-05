@@ -11,6 +11,7 @@ class TasksListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       children: [
+        const SizedBox(height: 20),
         Container(
           padding: const EdgeInsets.all(15),
           width: double.infinity,
