@@ -9,11 +9,15 @@ class ColloquialismsPageCubit extends Cubit<ColloquialismsPageState> {
   Future<void> start() async {
     final PageController pageControllerEmotions =
         PageController(initialPage: 0);
-    emit(ColloquialismsPageState(
-        controllerEmotionsPage: pageControllerEmotions, page: 0));
+    emit(
+      ColloquialismsPageState(
+          controllerEmotionsPage: pageControllerEmotions, page: 0),
+    );
   }
 
   Future<void> changePage() async {
-    emit(ColloquialismsPageState(page: state.page));
+    emit(
+      ColloquialismsPageState(page: state.page),
+    );
   }
 }

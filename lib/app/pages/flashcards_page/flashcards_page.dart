@@ -52,31 +52,13 @@ class FlashCardsPage extends StatelessWidget {
           builder: (context, state) {
             return PageView(
               controller: state.controllerFlashPage,
-              children: [
-                PageViewContent(
-                    controllerFlashPage: state.controllerFlashPage,
-                    word: 'słowo',
-                    translation: 'word'),
-                PageViewContent(
-                    controllerFlashPage: state.controllerFlashPage,
-                    word: 'pies',
-                    translation: 'dog'),
-                PageViewContent(
-                    controllerFlashPage: state.controllerFlashPage,
-                    word: 'kot',
-                    translation: 'cat'),
-                PageViewContent(
-                    controllerFlashPage: state.controllerFlashPage,
-                    word: 'drzewo',
-                    translation: 'tree'),
-                PageViewContent(
-                    controllerFlashPage: state.controllerFlashPage,
-                    word: 'samochód',
-                    translation: 'car'),
-                PageViewContent(
-                    controllerFlashPage: state.controllerFlashPage,
-                    word: 'dwa',
-                    translation: 'two'),
+              children: const [
+                PageViewContent(word: 'słowo', translation: 'word'),
+                PageViewContent(word: 'pies', translation: 'dog'),
+                PageViewContent(word: 'kot', translation: 'cat'),
+                PageViewContent(word: 'drzewo', translation: 'tree'),
+                PageViewContent(word: 'samochód', translation: 'car'),
+                PageViewContent(word: 'dwa', translation: 'two'),
               ],
             );
           },
@@ -90,12 +72,10 @@ class FlashCardsPage extends StatelessWidget {
 class PageViewContent extends StatelessWidget {
   const PageViewContent({
     super.key,
-    required this.controllerFlashPage,
     required this.word,
     required this.translation,
   });
 
-  final PageController? controllerFlashPage;
   final String word;
   final String translation;
 

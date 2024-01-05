@@ -1,22 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:street_talk/app/pages/tasks_page/cubit/tasks_cubit.dart';
 
 class TasksListView extends StatelessWidget {
   const TasksListView({
     super.key,
-    required this.controllerTaskPage,
   });
-
-  final PageController controllerTaskPage;
 
   @override
   Widget build(BuildContext context) {
     return ListView(
       children: [
         Container(
-          padding: const EdgeInsets.all(20),
+          padding: const EdgeInsets.all(15),
           width: double.infinity,
           height: 1000,
-          margin: const EdgeInsets.all(15),
+          margin: const EdgeInsets.all(10),
           decoration: BoxDecoration(
             borderRadius: const BorderRadius.all(Radius.circular(20)),
             border: Border.all(
@@ -75,15 +74,15 @@ class TasksListView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             IconButton(
-              onPressed: () => controllerTaskPage.previousPage(
-                  duration: const Duration(seconds: 1),
-                  curve: Curves.easeInOut),
+              onPressed: () {
+                context.read<TasksCubit>().previusPage();
+              },
               icon: const Icon(Icons.arrow_back_ios),
             ),
             IconButton(
-              onPressed: () => controllerTaskPage.nextPage(
-                  duration: const Duration(seconds: 1),
-                  curve: Curves.easeInOut),
+              onPressed: () {
+                context.read<TasksCubit>().nextPage();
+              },
               icon: const Icon(Icons.arrow_forward_ios),
             ),
           ],

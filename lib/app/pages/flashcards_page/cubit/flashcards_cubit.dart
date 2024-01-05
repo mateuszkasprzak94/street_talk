@@ -57,20 +57,3 @@ class FlashcardsCubit extends Cubit<FlashcardsState> {
     return super.close();
   }
 }
-
-  
-
-// void toggleTranslationVisibility(int pageIndex) {
-//   final List<FlashCardsModel> updatedPages = List.from(state.pages);
-//   updatedPages[pageIndex].isTranslationVisible = !updatedPages[pageIndex].isTranslationVisible;
-//   emit(state.copyWith(pages: updatedPages));
-// }
-
-// final controllerFlashPage = PageController(initialPage: 0);
-
-// @override
-// void dispose() {
-//   controllerFlashPage.dispose();
-
-//   super.dispose();
-// }
