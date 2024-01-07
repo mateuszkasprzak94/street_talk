@@ -10,7 +10,7 @@ class FlashCardsCubit extends Cubit<FlashCardsState> {
   Future<void> start() async {
     final PageController pageController = PageController(initialPage: 0);
     final List<FlashCardsModel> initialPageStates = List.generate(
-      99,
+      100,
       (index) => FlashCardsModel(),
     );
     emit(
