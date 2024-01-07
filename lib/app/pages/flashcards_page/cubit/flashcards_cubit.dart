@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:street_talk/app/models/flashcards_model.dart';
@@ -8,11 +10,16 @@ class FlashCardsCubit extends Cubit<FlashCardsState> {
   FlashCardsCubit() : super(FlashCardsState(flashCardsModel: []));
 
   Future<void> start() async {
-    final PageController pageController = PageController(initialPage: 0);
     final List<FlashCardsModel> initialPageStates = List.generate(
-      100,
+      97,
       (index) => FlashCardsModel(),
     );
+
+    final random = Random();
+    final randomIndex = random.nextInt(initialPageStates.length);
+
+    final PageController pageController =
+        PageController(initialPage: randomIndex);
     emit(
       FlashCardsState(
           flashCardsModel: initialPageStates,
