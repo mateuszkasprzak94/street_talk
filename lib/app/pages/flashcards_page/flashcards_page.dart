@@ -53,6 +53,7 @@ class FlashCardsPage extends StatelessWidget {
           children: [
             const SizedBox(height: 20),
             FloatingActionButton.large(
+              heroTag: 'btn1',
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
@@ -68,6 +69,7 @@ class FlashCardsPage extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             FloatingActionButton.large(
+              heroTag: 'btn2',
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
@@ -83,6 +85,7 @@ class FlashCardsPage extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             FloatingActionButton.large(
+              heroTag: 'btn3',
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
