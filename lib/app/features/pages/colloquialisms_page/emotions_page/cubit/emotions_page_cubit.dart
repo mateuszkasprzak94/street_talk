@@ -3,7 +3,7 @@ import 'package:street_talk/app/core/enums.dart';
 import 'package:street_talk/app/domain/models/emotions_name_model.dart';
 import 'package:street_talk/app/domain/repositories/emotions_name_repository.dart';
 
-part 'colloquialisms_page_state.dart';
+part 'emotions_page_state.dart';
 
 class ColloquialismsPageCubit extends Cubit<ColloquialismsPageState> {
   ColloquialismsPageCubit({required this.emotionsNameRepository})

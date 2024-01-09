@@ -5,7 +5,8 @@ import 'package:street_talk/app/core/enums.dart';
 import 'package:street_talk/app/data/remote_data_sources/emotions_name_remote_data_sorce.dart';
 import 'package:street_talk/app/domain/models/emotions_name_model.dart';
 import 'package:street_talk/app/domain/repositories/emotions_name_repository.dart';
-import 'package:street_talk/app/features/pages/colloquialisms_page/colloquialisms_page_content/cubit/colloquialisms_page_cubit.dart';
+import 'package:street_talk/app/features/pages/colloquialisms_page/emotions_page/cubit/emotions_page_cubit.dart';
+import 'package:street_talk/app/features/pages/colloquialisms_page/emotions_page/emotions_content/emotions_content.dart';
 
 class ColloquialismsPageContent extends StatelessWidget {
   const ColloquialismsPageContent({super.key});
@@ -101,7 +102,13 @@ class EmotionsButtonWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (_) => EmotionsContentPage(model: model),
+          ),
+        );
+      },
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 20) +
             const EdgeInsets.only(top: 10),

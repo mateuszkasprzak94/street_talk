@@ -1,4 +1,4 @@
-part of 'colloquialisms_page_cubit.dart';
+part of 'emotions_page_cubit.dart';
 
 class ColloquialismsPageState {
   ColloquialismsPageState({

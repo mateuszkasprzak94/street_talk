@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:street_talk/app/features/pages/colloquialisms_page/colloquialisms_page_content/colloquialisms_page_content.dart';
+import 'package:street_talk/app/features/pages/colloquialisms_page/emotions_page/emotions_page.dart';
 import 'package:street_talk/app/widgets/buttons/colloquialisms_page_button.dart';
 import 'package:street_talk/app/widgets/drawer/drawer.dart';
 
