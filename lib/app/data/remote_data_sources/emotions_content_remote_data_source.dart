@@ -13,8 +13,8 @@ class EmotionsContentMockedDataSource {
             '- ¡Hala! ¡Felicidades! ¡Disfrútalo muchísimo! Valencia es una ciudad fantástica.',
       },
       {
-        'id': 1,
-        'emotion_id': 2,
+        'id': 2,
+        'emotion_id': 1,
         'word': '¡Anda!',
         'word_translation':
             'używamy tego wykrzyknienia, aby wyrazić podziw lub zaskoczenie, a także zachęcić do zrobienia czegoś',
@@ -22,8 +22,8 @@ class EmotionsContentMockedDataSource {
         'example_two': '- ¡Anda! Y yo que tenía ganas de probarlos hoy.',
       },
       {
-        'id': 1,
-        'emotion_id': 3,
+        'id': 3,
+        'emotion_id': 1,
         'word': '¡Qué dices!',
         'word_translation':
             'używamy, aby wyrazić zdziwienie i dezorientację w związku z tym, co mówi nam nasz rozmówca',
@@ -32,8 +32,8 @@ class EmotionsContentMockedDataSource {
             '- ¡Qué dices! Pero, si no me habías contado que estaba preñada.',
       },
       {
-        'id': 1,
-        'emotion_id': 4,
+        'id': 4,
+        'emotion_id': 1,
         'word': '¿Pero qué me estás contando?',
         'word_translation':
             'używamy gdy chcemy wyrazić totalny szok lub zdziwienie tym, co właśnie nam ogłoszono',
@@ -41,8 +41,8 @@ class EmotionsContentMockedDataSource {
         'example_two': '- ¿Pero qué me estás contando?',
       },
       {
-        'id': 1,
-        'emotion_id': 5,
+        'id': 5,
+        'emotion_id': 1,
         'word': '¡Qué fuerte!',
         'word_translation': 'używamy w takich samych sytuacjach jak powyżej',
         'example_one':
@@ -50,8 +50,8 @@ class EmotionsContentMockedDataSource {
         'example_two': '-¡Qué fuerte! Pero si siempre se han llevado fatal.',
       },
       {
-        'id': 1,
-        'emotion_id': 6,
+        'id': 6,
+        'emotion_id': 1,
         'word': '¡No me digas!',
         'word_translation':
             'używamy wtedy gdy cos wydaje się nam nieprawdopodobne lub zadziwiające',
@@ -59,8 +59,8 @@ class EmotionsContentMockedDataSource {
         'example_two': '-¡No me digas! ¿Y eso?',
       },
       {
-        'id': 1,
-        'emotion_id': 7,
+        'id': 7,
+        'emotion_id': 1,
         'word': 'Estoy flipando / Yo flipo / Flipo en colores',
         'word_translation':
             'używamy w sytuacjach gdy jesteśmy bardzo zaskoczeni. Może być używane w kontekście pozytywnym lub negatywnym',
@@ -68,16 +68,16 @@ class EmotionsContentMockedDataSource {
         'example_two': '-Ni yo, estoy flipando.',
       },
       {
-        'id': 1,
-        'emotion_id': 8,
+        'id': 8,
+        'emotion_id': 1,
         'word': '¡Venga ya! / ¡Venga yaaa!',
         'word_translation': 'używamy, gdy jest nam ciężko w coś uwierzyć',
         'example_one': '- ¿Sabes que han despedido a Irene de su trabajo?',
         'example_two': '- ¡Venga ya! Pero si estaba súper bien, ¿no?',
       },
       {
-        'id': 1,
-        'emotion_id': 9,
+        'id': 9,
+        'emotion_id': 1,
         'word': 'No jodas / No me jodas',
         'word_translation':
             'używamy, żeby wyrazić niedowierzanie względem czegoś co zostało powiedziane lub zrobione',
