@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:street_talk/app/pages/main_page/main_page.dart';
+import 'package:street_talk/app/features/pages/main_page/main_page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

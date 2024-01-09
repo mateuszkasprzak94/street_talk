@@ -3,38 +3,38 @@ class EmotionsNameMockedDataSource {
     return [
       {
         'id': 1,
-        'emotion_name': 'Zdziwienie / Zaskoczenie',
-        'emotion_name_translation': 'Sorpresa',
+        'emotion': 'Zdziwienie / Zaskoczenie',
+        'emotion_translation': 'Sorpresa',
       },
       {
         'id': 2,
-        'emotion_name': 'Złość / Irytacja',
-        'emotion_name_translation': 'Ira / Irritación',
+        'emotion': 'Złość / Irytacja',
+        'emotion_translation': 'Ira / Irritación',
       },
       {
         'id': 3,
-        'emotion_name': 'Zgadzanie się z czymś / z kimś',
-        'emotion_name_translation': 'Estar de acuerdo con algo/alguien',
+        'emotion': 'Zgadzanie się z czymś / z kimś',
+        'emotion_translation': 'Estar de acuerdo con algo/alguien',
       },
       {
         'id': 4,
-        'emotion_name': 'Rozczarowanie',
-        'emotion_name_translation': 'Decepción',
+        'emotion': 'Rozczarowanie',
+        'emotion_translation': 'Decepción',
       },
       {
         'id': 5,
-        'emotion_name': 'Radość / Entuzjazm',
-        'emotion_name_translation': 'Alegría/Entusiasmo',
+        'emotion': 'Radość / Entuzjazm',
+        'emotion_translation': 'Alegría/Entusiasmo',
       },
       {
         'id': 6,
-        'emotion_name': 'Znudzenie',
-        'emotion_name_translation': 'Aburrimiento',
+        'emotion': 'Znudzenie',
+        'emotion_translation': 'Aburrimiento',
       },
       {
         'id': 7,
-        'emotion_name': 'Rezygnacja',
-        'emotion_name_translation': 'Resignación',
+        'emotion': 'Rezygnacja',
+        'emotion_translation': 'Resignación',
       },
     ];
   }

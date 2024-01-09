@@ -5,7 +5,7 @@ import 'package:street_talk/app/drawer/drawer_content/e_book.dart/e_book.dart';
 import 'package:street_talk/app/drawer/drawer_content/favourites/favourites.dart';
 import 'package:street_talk/app/drawer/drawer_content/fun_facts/fun_facts.dart';
 import 'package:street_talk/app/drawer/drawer_content/verbs/verbs.dart';
-import 'package:street_talk/app/pages/main_page/main_page.dart';
+import 'package:street_talk/app/features/pages/main_page/main_page.dart';
 
 class NavigationDrawerWidget extends StatelessWidget {
   const NavigationDrawerWidget({

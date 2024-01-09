@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:street_talk/app/pages/tasks_page/cubit/tasks_cubit.dart';
+import 'package:street_talk/app/features/pages/tasks_page/cubit/tasks_cubit.dart';
 
 class TasksListView extends StatelessWidget {
   const TasksListView({
