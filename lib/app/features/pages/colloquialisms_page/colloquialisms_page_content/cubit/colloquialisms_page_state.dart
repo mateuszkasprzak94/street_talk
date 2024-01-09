@@ -2,10 +2,12 @@ part of 'colloquialisms_page_cubit.dart';
 
 class ColloquialismsPageState {
   ColloquialismsPageState({
-    this.page = 0,
-    this.controllerEmotionsPage,
+    this.results = const [],
+    this.status = Status.initial,
+    this.errorMessage,
   });
 
-  int page;
-  final PageController? controllerEmotionsPage;
+  final List<EmotionsNameModel> results;
+  final Status status;
+  final String? errorMessage;
 }

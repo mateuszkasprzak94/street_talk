@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:street_talk/app/core/enums.dart';
+import 'package:street_talk/app/data/remote_data_sources/emotions_name_remote_data_sorce.dart';
+import 'package:street_talk/app/domain/models/emotions_name_model.dart';
+import 'package:street_talk/app/domain/repositories/emotions_name_repository.dart';
 import 'package:street_talk/app/features/pages/colloquialisms_page/colloquialisms_page_content/cubit/colloquialisms_page_cubit.dart';
 
 class ColloquialismsPageContent extends StatelessWidget {
@@ -9,70 +13,95 @@ class ColloquialismsPageContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
-    return BlocProvider(
-      create: (context) => ColloquialismsPageCubit()..start(),
-      child: BlocBuilder<ColloquialismsPageCubit, ColloquialismsPageState>(
-        builder: (context, state) {
-          return Scaffold(
-              appBar: AppBar(
-                centerTitle: true,
-                actions: const [
-                  Padding(
-                    padding: EdgeInsets.only(right: 10),
-                    child: CircleAvatar(
-                      radius: 30,
-                      foregroundImage: AssetImage('assets/images/logo.jpg'),
-                    ),
-                  )
-                ],
-                bottom: PreferredSize(
-                  preferredSize: const Size.fromHeight(70),
-                  child: Container(
-                    height: 60,
-                    width: double.infinity,
-                    decoration: const BoxDecoration(
-                      color: Color(0xFFc60b1e),
-                    ),
-                    child: Center(
-                      child: Text(
-                        'Jak wyrażać emocje',
-                        style: GoogleFonts.bebasNeue(
-                            letterSpacing: 2,
-                            color: Colors.white,
-                            fontSize: screenWidth / 12),
-                      ),
-                    ),
-                  ),
+    return Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
+          actions: const [
+            Padding(
+              padding: EdgeInsets.only(right: 10),
+              child: CircleAvatar(
+                radius: 30,
+                foregroundImage: AssetImage('assets/images/logo.jpg'),
+              ),
+            )
+          ],
+          bottom: PreferredSize(
+            preferredSize: const Size.fromHeight(70),
+            child: Container(
+              height: 60,
+              width: double.infinity,
+              decoration: const BoxDecoration(
+                color: Color(0xFFc60b1e),
+              ),
+              child: Center(
+                child: Text(
+                  'Jak wyrażać emocje',
+                  style: GoogleFonts.bebasNeue(
+                      letterSpacing: 2,
+                      color: Colors.white,
+                      fontSize: screenWidth / 12),
                 ),
               ),
-              body: Column(
-                children: [],
-              ));
-        },
-      ),
-    );
+            ),
+          ),
+        ),
+        body: BlocProvider<ColloquialismsPageCubit>(
+          create: (context) {
+            return ColloquialismsPageCubit(
+              emotionsNameRepository: EmotionsNameRepository(
+                remoteDataSource: EmotionsNameMockedDataSource(),
+              ),
+            )..start();
+          },
+          child: BlocBuilder<ColloquialismsPageCubit, ColloquialismsPageState>(
+            builder: (context, state) {
+              switch (state.status) {
+                case Status.initial:
+                  return const Center(
+                    child: Text('Initial state'),
+                  );
+                case Status.loading:
+                  return const Center(
+                    child: CircularProgressIndicator(),
+                  );
+                case Status.success:
+                  return ListView(
+                    children: [
+                      for (final emotion in state.results)
+                        EmotionsButtonWidget(
+                          model: emotion,
+                        ),
+                    ],
+                  );
+                case Status.error:
+                  return Center(
+                    child: Text(
+                      state.errorMessage ?? 'Unknown error',
+                      style: TextStyle(
+                        color: Theme.of(context).colorScheme.error,
+                      ),
+                    ),
+                  );
+              }
+            },
+          ),
+        ));
   }
 }
 
 class EmotionsButtonWidget extends StatelessWidget {
   const EmotionsButtonWidget({
-    required this.image,
-    required this.polishTitle,
-    required this.spanishTitle,
-    required this.onPressed,
+    required this.model,
     super.key,
   });
 
-  final Image image;
-  final String polishTitle;
-  final String spanishTitle;
-  final VoidCallback onPressed;
+  final EmotionsNameModel model;
 
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     return InkWell(
-      onTap: onPressed,
+      onTap: () {},
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 20) +
             const EdgeInsets.only(top: 10),
@@ -98,7 +127,7 @@ class EmotionsButtonWidget extends StatelessWidget {
                 child: SizedBox(
                   height: 90,
                   width: 90,
-                  child: image,
+                  child: Image.asset(model.image),
                 ),
               ),
             ],
@@ -108,11 +137,11 @@ class EmotionsButtonWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Text(
-                  polishTitle,
+                  model.emotion,
                   style: GoogleFonts.lora(fontSize: 25),
                 ),
                 Text(
-                  spanishTitle,
+                  model.emotionTranslation,
                   style: GoogleFonts.lora(
                       fontSize: screenWidth / 19,
                       fontStyle: FontStyle.italic,

@@ -1,23 +1,34 @@
 import 'package:bloc/bloc.dart';
-import 'package:flutter/material.dart';
+import 'package:street_talk/app/core/enums.dart';
+import 'package:street_talk/app/domain/models/emotions_name_model.dart';
+import 'package:street_talk/app/domain/repositories/emotions_name_repository.dart';
 
 part 'colloquialisms_page_state.dart';
 
 class ColloquialismsPageCubit extends Cubit<ColloquialismsPageState> {
-  ColloquialismsPageCubit() : super(ColloquialismsPageState());
+  ColloquialismsPageCubit({required this.emotionsNameRepository})
+      : super(ColloquialismsPageState());
+
+  final EmotionsNameRepository emotionsNameRepository;
 
   Future<void> start() async {
-    final PageController pageControllerEmotions =
-        PageController(initialPage: 0);
     emit(
       ColloquialismsPageState(
-          controllerEmotionsPage: pageControllerEmotions, page: 0),
+        status: Status.loading,
+      ),
     );
-  }
-
-  Future<void> changePage() async {
-    emit(
-      ColloquialismsPageState(page: state.page),
-    );
+    try {
+      final results = await emotionsNameRepository.getEmotionsName();
+      emit(
+        ColloquialismsPageState(status: Status.success, results: results),
+      );
+    } catch (error) {
+      emit(
+        ColloquialismsPageState(
+          status: Status.error,
+          errorMessage: error.toString(),
+        ),
+      );
+    }
   }
 }
