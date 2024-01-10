@@ -1,4 +1,4 @@
-class SituationMockedDataSource {
+class StreetMockedDataSource {
   Future<List<Map<String, dynamic>>?> getStreetData() async {
     return [
       {
