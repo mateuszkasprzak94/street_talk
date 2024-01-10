@@ -69,6 +69,11 @@ class EmotionsContentPage extends StatelessWidget {
                     child: CircularProgressIndicator(),
                   );
                 case Status.success:
+                  if (state.results.isEmpty) {
+                    return const Center(
+                      child: Text('No data found'),
+                    );
+                  }
                   return ListView(
                     children: [
                       for (final emotion in state.results)
@@ -103,8 +108,10 @@ class _EmotionsItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final color = getEmotionColor(model.emotionId);
     return Column(
       children: [
+        const SizedBox(height: 15),
         Container(
           margin: const EdgeInsets.all(10),
           width: double.infinity,
@@ -169,7 +176,7 @@ class _EmotionsItemWidget extends StatelessWidget {
                 padding: const EdgeInsets.all(5),
                 margin: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  color: Colors.red,
+                  color: color,
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Column(
@@ -212,5 +219,26 @@ class _EmotionsItemWidget extends StatelessWidget {
         )
       ],
     );
+  }
+}
+
+Color getEmotionColor(int emotionId) {
+  switch (emotionId) {
+    case 1:
+      return const Color.fromARGB(202, 175, 12, 180);
+    case 2:
+      return const Color.fromARGB(255, 241, 11, 34);
+    case 3:
+      return const Color.fromARGB(255, 11, 198, 36);
+    case 4:
+      return const Color.fromARGB(179, 11, 108, 198);
+    case 5:
+      return const Color.fromARGB(255, 131, 250, 34);
+    case 6:
+      return const Color.fromARGB(255, 192, 47, 11);
+    case 7:
+      return const Color.fromARGB(255, 64, 81, 136);
+    default:
+      return Colors.black;
   }
 }
