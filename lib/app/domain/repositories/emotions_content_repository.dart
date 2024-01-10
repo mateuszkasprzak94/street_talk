@@ -1,4 +1,4 @@
-import 'package:street_talk/app/data/remote_data_sources/emotions_content_remote_data_source.dart';
+import 'package:street_talk/app/data/remote_data_sources/emotions_page_data_source/emotions_content_remote_data_source.dart';
 import 'package:street_talk/app/domain/models/emotions_content_model.dart';
 
 class EmotionsContentRepository {

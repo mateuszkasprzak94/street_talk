@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:street_talk/app/core/enums/enums.dart';
-import 'package:street_talk/app/data/remote_data_sources/emotions_content_remote_data_source.dart';
+import 'package:street_talk/app/data/remote_data_sources/emotions_page_data_source/emotions_content_remote_data_source.dart';
 import 'package:street_talk/app/domain/models/emotions_content_model.dart';
 import 'package:street_talk/app/domain/models/emotions_name_model.dart';
 import 'package:street_talk/app/domain/repositories/emotions_content_repository.dart';
