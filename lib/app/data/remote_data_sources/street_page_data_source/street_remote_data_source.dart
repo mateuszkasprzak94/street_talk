@@ -32,9 +32,9 @@ class StreetMockedDataSource {
         'word': '4. Enrollarse/ enrollarse más que las persianas',
         'word_translation': 'rozwlekać się/ gadać jak najęty',
         'example_one':
-            'Carmen se enrolla más que las persianas, sobre todo cuando se trata de cocina. Empieza a hablar y no para.',
+            '- Carmen se enrolla más que las persianas, sobre todo cuando se trata de cocina. Empieza a hablar y no para.',
         'example_two':
-            'Mi problema es que, a veces, cuando me toca explicar algo me enrollo tanto que ni siquiera yo sé de qué se trata. ',
+            '- Mi problema es que, a veces, cuando me toca explicar algo me enrollo tanto que ni siquiera yo sé de qué se trata. ',
       },
       {
         'id': 5,
