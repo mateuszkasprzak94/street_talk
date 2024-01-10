@@ -5,26 +5,26 @@ import 'package:street_talk/app/domain/repositories/emotions_name_repository.dar
 
 part 'emotions_page_state.dart';
 
-class ColloquialismsPageCubit extends Cubit<ColloquialismsPageState> {
-  ColloquialismsPageCubit({required this.emotionsNameRepository})
-      : super(ColloquialismsPageState());
+class EmotionsPageCubit extends Cubit<EmotionsPageState> {
+  EmotionsPageCubit({required this.emotionsNameRepository})
+      : super(EmotionsPageState());
 
   final EmotionsNameRepository emotionsNameRepository;
 
   Future<void> start() async {
     emit(
-      ColloquialismsPageState(
+      EmotionsPageState(
         status: Status.loading,
       ),
     );
     try {
       final results = await emotionsNameRepository.getEmotionsName();
       emit(
-        ColloquialismsPageState(status: Status.success, results: results),
+        EmotionsPageState(status: Status.success, results: results),
       );
     } catch (error) {
       emit(
-        ColloquialismsPageState(
+        EmotionsPageState(
           status: Status.error,
           errorMessage: error.toString(),
         ),

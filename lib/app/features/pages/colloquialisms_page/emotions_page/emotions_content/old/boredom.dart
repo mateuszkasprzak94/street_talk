@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:street_talk/app/features/pages/colloquialisms_page/colloquialisms_page_content/emotions_content/text_for_emotions_content/text_for_emotions_content.dart';
+import 'package:street_talk/app/features/pages/colloquialisms_page/emotions_page/emotions_content/text_for_emotions_content/text_for_emotions_content.dart';
 import 'package:street_talk/app/widgets/colloquialisms_content/emotions_card_content_widget.dart';
 
-class ResignationContent extends StatelessWidget {
-  const ResignationContent({
+class BoredomContent extends StatelessWidget {
+  const BoredomContent({
     super.key,
   });
   @override
@@ -19,17 +19,17 @@ class ResignationContent extends StatelessWidget {
               height: 200,
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('assets/emotions_images/resignation.jpg'),
+                  image: AssetImage('assets/emotions_images/bored.jpg'),
                 ),
               ),
             ),
             Expanded(
               child: Text(
-                resignationTitle,
+                boredTitle,
                 style: const TextStyle(
                     fontSize: 25,
                     fontStyle: FontStyle.italic,
-                    color: Color.fromARGB(255, 64, 81, 136),
+                    color: Color.fromARGB(255, 192, 47, 11),
                     fontWeight: FontWeight.bold),
               ),
             ),
@@ -44,36 +44,29 @@ class ResignationContent extends StatelessWidget {
           endIndent: 11,
         ),
         EmotionCardContentWidget(
-          title: resignationWord1,
-          titleTranslation: resignationTranslation1,
-          exampleOne: resignationExampleOne1,
-          exampleTwo: resignationExampleTwo1,
-          exampleColor: const Color.fromARGB(255, 64, 81, 136),
+          title: boredWord1,
+          titleTranslation: boredTranslation1,
+          exampleOne: boredExampleOne1,
+          exampleTwo: boredExampleTwo1,
+          exampleColor: const Color.fromARGB(255, 192, 47, 11),
         ),
         _divider(),
         EmotionCardContentWidget(
-          title: resignationWord2,
-          titleTranslation: resignationTranslation2,
-          exampleOne: resignationExampleOne2,
-          exampleTwo: resignationExampleTwo2,
-          exampleColor: const Color.fromARGB(255, 64, 81, 136),
+          title: boredWord2,
+          titleTranslation: boredTranslation2,
+          exampleOne: boredExampleOne2,
+          exampleTwo: boredExampleTwo2,
+          exampleColor: const Color.fromARGB(255, 192, 47, 11),
         ),
         _divider(),
         EmotionCardContentWidget(
-          title: resignationWord3,
-          titleTranslation: resignationTranslation3,
-          exampleOne: resignationExampleOne3,
-          exampleTwo: resignationExampleTwo3,
-          exampleColor: const Color.fromARGB(255, 64, 81, 136),
+          title: boredWord3,
+          titleTranslation: boredTranslation3,
+          exampleOne: boredExampleOne3,
+          exampleTwo: boredExampleTwo3,
+          exampleColor: const Color.fromARGB(255, 192, 47, 11),
         ),
         _divider(),
-        EmotionCardContentWidget(
-          title: resignationWord4,
-          titleTranslation: resignationTranslation4,
-          exampleOne: resignationExampleOne4,
-          exampleTwo: resignationExampleTwo4,
-          exampleColor: const Color.fromARGB(255, 64, 81, 136),
-        ),
       ],
     );
   }

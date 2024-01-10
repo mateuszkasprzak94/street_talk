@@ -6,7 +6,8 @@ class EmotionsContentRepository {
 
   final EmotionsContentMockedDataSource remoteDataSource;
 
-  Future<List<EmotionsContentModel>> getEmotionsContent() async {
+  Future<List<EmotionsContentModel>> getContentForEmotionId(
+      int emotionId) async {
     final json = await remoteDataSource.getEmotionsContent();
     if (json == null) {
       return [];

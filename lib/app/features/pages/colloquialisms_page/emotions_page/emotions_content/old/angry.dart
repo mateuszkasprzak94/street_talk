@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:street_talk/app/features/pages/colloquialisms_page/colloquialisms_page_content/emotions_content/text_for_emotions_content/text_for_emotions_content.dart';
+import 'package:street_talk/app/features/pages/colloquialisms_page/emotions_page/emotions_content/text_for_emotions_content/text_for_emotions_content.dart';
 import 'package:street_talk/app/widgets/colloquialisms_content/emotions_card_content_widget.dart';
 
-class AgreeContent extends StatelessWidget {
-  const AgreeContent({
+class AngryContent extends StatelessWidget {
+  const AngryContent({
     super.key,
   });
 
@@ -19,18 +19,16 @@ class AgreeContent extends StatelessWidget {
               width: 200,
               height: 200,
               decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('assets/emotions_images/agree.jpg'),
-                ),
-              ),
+                  image: DecorationImage(
+                      image: AssetImage('assets/emotions_images/angry.jpg'))),
             ),
             Expanded(
               child: Text(
-                agreeTitle,
+                angryTitle,
                 style: const TextStyle(
                     fontSize: 25,
                     fontStyle: FontStyle.italic,
-                    color: Color.fromARGB(255, 11, 198, 36),
+                    color: Color.fromARGB(255, 241, 11, 34),
                     fontWeight: FontWeight.bold),
               ),
             ),
@@ -45,27 +43,35 @@ class AgreeContent extends StatelessWidget {
           endIndent: 11,
         ),
         EmotionCardContentWidget(
-          title: agreeWord1,
-          titleTranslation: agreeTranslation1,
-          exampleOne: agreeExampleOne1,
-          exampleTwo: agreeExampleTwo1,
-          exampleColor: const Color.fromARGB(255, 11, 198, 36),
+          title: angryWord1,
+          titleTranslation: angryTranslation1,
+          exampleOne: angryExampleOne1,
+          exampleTwo: angryExampleTwo1,
+          exampleColor: const Color.fromARGB(255, 241, 11, 34),
         ),
         _divider(),
         EmotionCardContentWidget(
-          title: agreeWord2,
-          titleTranslation: agreeTranslation2,
-          exampleOne: agreeExampleOne2,
-          exampleTwo: agreeExampleTwo2,
-          exampleColor: const Color.fromARGB(255, 11, 198, 36),
+          title: angryWord2,
+          titleTranslation: angryTranslation2,
+          exampleOne: angryExampleOne2,
+          exampleTwo: angryExampleTwo2,
+          exampleColor: const Color.fromARGB(255, 241, 11, 34),
         ),
         _divider(),
         EmotionCardContentWidget(
-          title: agreeWord3,
-          titleTranslation: agreeTranslation3,
-          exampleOne: agreeExampleOne3,
-          exampleTwo: agreeExampleTwo3,
-          exampleColor: const Color.fromARGB(255, 11, 198, 36),
+          title: angryWord3,
+          titleTranslation: angryTranslation3,
+          exampleOne: angryExampleOne3,
+          exampleTwo: angryExampleTwo3,
+          exampleColor: const Color.fromARGB(255, 241, 11, 34),
+        ),
+        _divider(),
+        EmotionCardContentWidget(
+          title: angryWord4,
+          titleTranslation: angryTranslation4,
+          exampleOne: angryExampleOne4,
+          exampleTwo: angryExampleTwo4,
+          exampleColor: const Color.fromARGB(255, 241, 11, 34),
         ),
         _divider(),
       ],

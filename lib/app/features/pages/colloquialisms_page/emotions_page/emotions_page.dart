@@ -8,8 +8,8 @@ import 'package:street_talk/app/domain/repositories/emotions_name_repository.dar
 import 'package:street_talk/app/features/pages/colloquialisms_page/emotions_page/cubit/emotions_page_cubit.dart';
 import 'package:street_talk/app/features/pages/colloquialisms_page/emotions_page/emotions_content/emotions_content.dart';
 
-class ColloquialismsPageContent extends StatelessWidget {
-  const ColloquialismsPageContent({super.key});
+class EmotionsPage extends StatelessWidget {
+  const EmotionsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -46,15 +46,15 @@ class ColloquialismsPageContent extends StatelessWidget {
             ),
           ),
         ),
-        body: BlocProvider<ColloquialismsPageCubit>(
+        body: BlocProvider<EmotionsPageCubit>(
           create: (context) {
-            return ColloquialismsPageCubit(
+            return EmotionsPageCubit(
               emotionsNameRepository: EmotionsNameRepository(
                 remoteDataSource: EmotionsNameMockedDataSource(),
               ),
             )..start();
           },
-          child: BlocBuilder<ColloquialismsPageCubit, ColloquialismsPageState>(
+          child: BlocBuilder<EmotionsPageCubit, EmotionsPageState>(
             builder: (context, state) {
               switch (state.status) {
                 case Status.initial:
@@ -105,7 +105,7 @@ class EmotionsButtonWidget extends StatelessWidget {
       onTap: () {
         Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (_) => EmotionsContentPage(model: model),
+            builder: (_) => EmotionsContentPage(name: model),
           ),
         );
       },

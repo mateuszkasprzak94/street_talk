@@ -1,7 +1,7 @@
 part of 'emotions_page_cubit.dart';
 
-class ColloquialismsPageState {
-  ColloquialismsPageState({
+class EmotionsPageState {
+  EmotionsPageState({
     this.results = const [],
     this.status = Status.initial,
     this.errorMessage,

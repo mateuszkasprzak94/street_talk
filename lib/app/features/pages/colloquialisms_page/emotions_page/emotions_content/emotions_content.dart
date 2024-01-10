@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:street_talk/app/core/enums.dart';
-import 'package:street_talk/app/data/remote_data_sources/emotions_name_remote_data_sorce.dart';
+import 'package:street_talk/app/data/remote_data_sources/emotions_content_remote_data_source.dart';
+import 'package:street_talk/app/domain/models/emotions_content_model.dart';
 import 'package:street_talk/app/domain/models/emotions_name_model.dart';
-import 'package:street_talk/app/domain/repositories/emotions_name_repository.dart';
-import 'package:street_talk/app/features/pages/colloquialisms_page/emotions_page/cubit/emotions_page_cubit.dart';
+import 'package:street_talk/app/domain/repositories/emotions_content_repository.dart';
+import 'package:street_talk/app/features/pages/colloquialisms_page/emotions_page/emotions_content/cubit/emotions_content_cubit.dart';
 
 class EmotionsContentPage extends StatelessWidget {
-  const EmotionsContentPage({super.key, required this.model});
+  const EmotionsContentPage({super.key, required this.name});
 
-  final EmotionsNameModel model;
+  final EmotionsNameModel name;
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +39,7 @@ class EmotionsContentPage extends StatelessWidget {
               ),
               child: Center(
                 child: Text(
-                  model.emotion,
+                  name.emotion,
                   style: GoogleFonts.bebasNeue(
                       letterSpacing: 2,
                       color: Colors.white,
@@ -47,15 +49,15 @@ class EmotionsContentPage extends StatelessWidget {
             ),
           ),
         ),
-        body: BlocProvider<ColloquialismsPageCubit>(
+        body: BlocProvider<EmotionsContentCubit>(
           create: (context) {
-            return ColloquialismsPageCubit(
-              emotionsNameRepository: EmotionsNameRepository(
-                remoteDataSource: EmotionsNameMockedDataSource(),
+            return EmotionsContentCubit(
+              emotionsContentRepository: EmotionsContentRepository(
+                remoteDataSource: EmotionsContentMockedDataSource(),
               ),
-            )..start();
+            )..fetchData(emotionId: name.id);
           },
-          child: BlocBuilder<ColloquialismsPageCubit, ColloquialismsPageState>(
+          child: BlocBuilder<EmotionsContentCubit, EmotionsContentState>(
             builder: (context, state) {
               switch (state.status) {
                 case Status.initial:
@@ -70,7 +72,7 @@ class EmotionsContentPage extends StatelessWidget {
                   return ListView(
                     children: [
                       for (final emotion in state.results)
-                        EmotionsButtonWidget(
+                        _EmotionsItemWidget(
                           model: emotion,
                         ),
                     ],
@@ -91,73 +93,124 @@ class EmotionsContentPage extends StatelessWidget {
   }
 }
 
-class EmotionsButtonWidget extends StatelessWidget {
-  const EmotionsButtonWidget({
+class _EmotionsItemWidget extends StatelessWidget {
+  const _EmotionsItemWidget({
+    Key? key,
     required this.model,
-    super.key,
-  });
+  }) : super(key: key);
 
-  final EmotionsNameModel model;
+  final EmotionsContentModel model;
 
   @override
   Widget build(BuildContext context) {
-    double screenWidth = MediaQuery.of(context).size.width;
-    return InkWell(
-      onTap: () {},
-      child: Container(
-        margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 20) +
-            const EdgeInsets.only(top: 10),
-        width: double.infinity,
-        height: 200,
-        decoration: BoxDecoration(
-          border: Border.all(color: Colors.grey),
-          color: Colors.white,
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.1),
-              spreadRadius: 5,
-              blurRadius: 7,
-              offset: const Offset(4, 8),
+    return Column(
+      children: [
+        Container(
+          margin: const EdgeInsets.all(10),
+          width: double.infinity,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            border: Border.all(color: Colors.grey),
+            borderRadius: const BorderRadius.all(
+              Radius.circular(20),
             ),
-          ],
-        ),
-        child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
-          Column(
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.1),
+                spreadRadius: 5,
+                blurRadius: 7,
+                offset: const Offset(4, 8),
+              ),
+            ],
+          ),
+          child: Column(
             children: [
+              const Padding(
+                padding: EdgeInsets.all(8.0),
+                child: FaIcon(
+                  FontAwesomeIcons.mapPin,
+                  color: Colors.green,
+                ),
+              ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: SizedBox(
-                  height: 90,
-                  width: 90,
-                  child: Image.asset(model.image),
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Text(
+                  model.word,
+                  style: const TextStyle(
+                    fontSize: 35,
+                  ),
+                ),
+              ),
+              const Divider(
+                thickness: 1,
+                color: Color(0xFFc60b1e),
+                indent: 70,
+                endIndent: 70,
+              ),
+              Container(
+                margin: const EdgeInsets.symmetric(horizontal: 5),
+                child: Text(
+                  model.wordTranslation,
+                  style: TextStyle(
+                    color: Colors.grey.shade500,
+                    fontSize: 14,
+                    fontStyle: FontStyle.italic,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+              const Divider(
+                thickness: 1,
+                color: Color(0xFFc60b1e),
+                indent: 70,
+                endIndent: 70,
+              ),
+              Container(
+                padding: const EdgeInsets.all(5),
+                margin: const EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  color: Colors.red,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Column(
+                  children: [
+                    const Text(
+                      'EJEMPLO',
+                      style: TextStyle(
+                          letterSpacing: 2,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 13,
+                          color: Colors.black),
+                    ),
+                    const SizedBox(height: 9),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          model.exampleOne,
+                          style: const TextStyle(color: Colors.white),
+                        ),
+                        const SizedBox(height: 8),
+                        Text(
+                          model.exampleTwo,
+                          style: const TextStyle(color: Colors.white),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
               ),
             ],
           ),
-          Expanded(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Text(
-                  model.emotion,
-                  style: GoogleFonts.lora(fontSize: 25),
-                ),
-                Text(
-                  model.emotionTranslation,
-                  style: GoogleFonts.lora(
-                      fontSize: screenWidth / 19,
-                      fontStyle: FontStyle.italic,
-                      color: Colors.grey),
-                )
-              ],
-            ),
-          ),
-          const Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Icon(Icons.arrow_forward_ios),
-          )
-        ]),
-      ),
+        ),
+        const Divider(
+          height: 50,
+          thickness: 5,
+          color: Colors.grey,
+          indent: 150,
+          endIndent: 150,
+        )
+      ],
     );
   }
 }

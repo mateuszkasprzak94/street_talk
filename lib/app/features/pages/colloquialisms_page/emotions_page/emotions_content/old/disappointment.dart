@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:street_talk/app/features/pages/colloquialisms_page/colloquialisms_page_content/emotions_content/text_for_emotions_content/text_for_emotions_content.dart';
+import 'package:street_talk/app/features/pages/colloquialisms_page/emotions_page/emotions_content/text_for_emotions_content/text_for_emotions_content.dart';
 import 'package:street_talk/app/widgets/colloquialisms_content/emotions_card_content_widget.dart';
 
-class BoredomContent extends StatelessWidget {
-  const BoredomContent({
+class DisappointmentContent extends StatelessWidget {
+  const DisappointmentContent({
     super.key,
   });
   @override
@@ -19,17 +19,18 @@ class BoredomContent extends StatelessWidget {
               height: 200,
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('assets/emotions_images/bored.jpg'),
+                  image:
+                      AssetImage('assets/emotions_images/disappointment.jpg'),
                 ),
               ),
             ),
             Expanded(
               child: Text(
-                boredTitle,
+                disappointmentTitle,
                 style: const TextStyle(
                     fontSize: 25,
                     fontStyle: FontStyle.italic,
-                    color: Color.fromARGB(255, 192, 47, 11),
+                    color: Color.fromARGB(179, 11, 108, 198),
                     fontWeight: FontWeight.bold),
               ),
             ),
@@ -44,27 +45,19 @@ class BoredomContent extends StatelessWidget {
           endIndent: 11,
         ),
         EmotionCardContentWidget(
-          title: boredWord1,
-          titleTranslation: boredTranslation1,
-          exampleOne: boredExampleOne1,
-          exampleTwo: boredExampleTwo1,
-          exampleColor: const Color.fromARGB(255, 192, 47, 11),
+          title: disappointmentWord1,
+          titleTranslation: disappointmentTranslation1,
+          exampleOne: disappointmentExampleOne1,
+          exampleTwo: disappointmentExampleTwo1,
+          exampleColor: const Color.fromARGB(179, 11, 108, 198),
         ),
         _divider(),
         EmotionCardContentWidget(
-          title: boredWord2,
-          titleTranslation: boredTranslation2,
-          exampleOne: boredExampleOne2,
-          exampleTwo: boredExampleTwo2,
-          exampleColor: const Color.fromARGB(255, 192, 47, 11),
-        ),
-        _divider(),
-        EmotionCardContentWidget(
-          title: boredWord3,
-          titleTranslation: boredTranslation3,
-          exampleOne: boredExampleOne3,
-          exampleTwo: boredExampleTwo3,
-          exampleColor: const Color.fromARGB(255, 192, 47, 11),
+          title: disappointmentWord2,
+          titleTranslation: disappointmentTranslation2,
+          exampleOne: disappointmentExampleOne2,
+          exampleTwo: disappointmentExampleTwo2,
+          exampleColor: const Color.fromARGB(179, 11, 108, 198),
         ),
         _divider(),
       ],

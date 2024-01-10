@@ -60,7 +60,7 @@ class _ColloquialismsPageState extends State<ColloquialismsPage> {
             onPressed: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (_) => const ColloquialismsPageContent(),
+                  builder: (_) => const EmotionsPage(),
                 ),
               );
             },
@@ -72,7 +72,7 @@ class _ColloquialismsPageState extends State<ColloquialismsPage> {
             onPressed: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (_) => const ColloquialismsPageContent(),
+                  builder: (_) => const EmotionsPage(),
                 ),
               );
             },
@@ -84,7 +84,7 @@ class _ColloquialismsPageState extends State<ColloquialismsPage> {
             onPressed: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (_) => const ColloquialismsPageContent(),
+                  builder: (_) => const EmotionsPage(),
                 ),
               );
             },
@@ -96,7 +96,7 @@ class _ColloquialismsPageState extends State<ColloquialismsPage> {
             onPressed: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (_) => const ColloquialismsPageContent(),
+                  builder: (_) => const EmotionsPage(),
                 ),
               );
             },

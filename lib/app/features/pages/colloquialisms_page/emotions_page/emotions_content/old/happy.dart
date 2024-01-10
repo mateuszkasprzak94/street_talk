@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:street_talk/app/features/pages/colloquialisms_page/colloquialisms_page_content/emotions_content/text_for_emotions_content/text_for_emotions_content.dart';
+import 'package:street_talk/app/features/pages/colloquialisms_page/emotions_page/emotions_content/text_for_emotions_content/text_for_emotions_content.dart';
 import 'package:street_talk/app/widgets/colloquialisms_content/emotions_card_content_widget.dart';
 
-class DisappointmentContent extends StatelessWidget {
-  const DisappointmentContent({
+class HappyContent extends StatelessWidget {
+  const HappyContent({
     super.key,
   });
   @override
@@ -19,18 +19,17 @@ class DisappointmentContent extends StatelessWidget {
               height: 200,
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image:
-                      AssetImage('assets/emotions_images/disappointment.jpg'),
+                  image: AssetImage('assets/emotions_images/happy.jpg'),
                 ),
               ),
             ),
             Expanded(
               child: Text(
-                disappointmentTitle,
+                happyTitle,
                 style: const TextStyle(
                     fontSize: 25,
                     fontStyle: FontStyle.italic,
-                    color: Color.fromARGB(179, 11, 108, 198),
+                    color: Color.fromARGB(255, 131, 250, 34),
                     fontWeight: FontWeight.bold),
               ),
             ),
@@ -45,21 +44,36 @@ class DisappointmentContent extends StatelessWidget {
           endIndent: 11,
         ),
         EmotionCardContentWidget(
-          title: disappointmentWord1,
-          titleTranslation: disappointmentTranslation1,
-          exampleOne: disappointmentExampleOne1,
-          exampleTwo: disappointmentExampleTwo1,
-          exampleColor: const Color.fromARGB(179, 11, 108, 198),
+          title: happyWord1,
+          titleTranslation: happyTranslation1,
+          exampleOne: happyExampleOne1,
+          exampleTwo: happyExampleTwo1,
+          exampleColor: const Color.fromARGB(255, 131, 250, 34),
         ),
         _divider(),
         EmotionCardContentWidget(
-          title: disappointmentWord2,
-          titleTranslation: disappointmentTranslation2,
-          exampleOne: disappointmentExampleOne2,
-          exampleTwo: disappointmentExampleTwo2,
-          exampleColor: const Color.fromARGB(179, 11, 108, 198),
+          title: happyWord2,
+          titleTranslation: happyTranslation2,
+          exampleOne: happyExampleOne2,
+          exampleTwo: happyExampleTwo2,
+          exampleColor: const Color.fromARGB(255, 131, 250, 34),
         ),
         _divider(),
+        EmotionCardContentWidget(
+          title: happyWord3,
+          titleTranslation: happyTranslation3,
+          exampleOne: happyExampleOne3,
+          exampleTwo: happyExampleTwo3,
+          exampleColor: const Color.fromARGB(255, 131, 250, 34),
+        ),
+        _divider(),
+        EmotionCardContentWidget(
+          title: happyWord4,
+          titleTranslation: happyTranslation4,
+          exampleOne: happyExampleOne4,
+          exampleTwo: happyExampleTwo4,
+          exampleColor: const Color.fromARGB(255, 131, 250, 34),
+        ),
       ],
     );
   }
