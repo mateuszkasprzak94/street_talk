@@ -1,3 +1,5 @@
+import 'package:dio/dio.dart';
+
 class EmotionsContentMockedDataSource {
   Future<List<Map<String, dynamic>>?> getEmotionsContent() async {
     return [
@@ -85,5 +87,18 @@ class EmotionsContentMockedDataSource {
         'example_two': '- ¡No me jodas!',
       },
     ];
+  }
+}
+
+// API DATA SOURCE
+
+class EmotionsContentDataSource {
+  Future<List<Map<String, dynamic>>?> getEmotionsContent() async {
+    final response = await Dio().get<List<dynamic>>('link');
+    final listDynamic = response.data;
+    if (listDynamic == null) {
+      return null;
+    }
+    return listDynamic.map((e) => e as Map<String, dynamic>).toList();
   }
 }

@@ -12,6 +12,11 @@ class EmotionsContentRepository {
     if (json == null) {
       return [];
     }
-    return json.map((item) => EmotionsContentModel.fromJson(item)).toList();
+    final allEmotions =
+        json.map((item) => EmotionsContentModel.fromJson(item)).toList();
+
+    return allEmotions
+        .where((emotion) => emotion.emotionId == emotionId)
+        .toList();
   }
 }
