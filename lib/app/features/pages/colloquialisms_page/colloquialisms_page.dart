@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:street_talk/app/features/pages/colloquialisms_page/emotions_page/emotions_page.dart';
 import 'package:street_talk/app/features/pages/colloquialisms_page/situation_page/situation_page_content.dart';
 import 'package:street_talk/app/features/pages/colloquialisms_page/street_page/street_page_content.dart';
+import 'package:street_talk/app/features/pages/colloquialisms_page/welcome_goodbye_page/welcome_goodbye_page_content.dart';
 import 'package:street_talk/app/widgets/buttons/colloquialisms_page_button.dart';
 import 'package:street_talk/app/widgets/drawer/drawer.dart';
 
@@ -98,7 +99,7 @@ class _ColloquialismsPageState extends State<ColloquialismsPage> {
             onPressed: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (_) => const EmotionsPage(),
+                  builder: (_) => const WelcomeGoodbyePage(),
                 ),
               );
             },
