@@ -38,7 +38,7 @@ class SituationPage extends StatelessWidget {
               ),
               child: Center(
                 child: Text(
-                  'Hiszpański prosto z ulicy',
+                  'Na konkretną sytuacje',
                   style: GoogleFonts.bebasNeue(
                       letterSpacing: 2,
                       color: Colors.white,
@@ -193,12 +193,14 @@ class _SituationItemWidget extends StatelessWidget {
                       children: [
                         Text(
                           model.exampleOne,
-                          style: const TextStyle(color: Colors.white),
+                          style: const TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.bold),
                         ),
                         const SizedBox(height: 8),
                         Text(
                           model.exampleTwo,
-                          style: const TextStyle(color: Colors.white),
+                          style: const TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.bold),
                         ),
                       ],
                     ),

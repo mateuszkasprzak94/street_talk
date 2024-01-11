@@ -176,33 +176,33 @@ class _WelcomeGoodbyeItemWidget extends StatelessWidget {
                         Text(
                           '${model.exampleOne} - ${model.exampleOneTranslation}',
                           style: const TextStyle(
-                            color: Colors.white,
-                            fontStyle: FontStyle.italic,
-                          ),
+                              color: Colors.white,
+                              fontStyle: FontStyle.italic,
+                              fontWeight: FontWeight.bold),
                         ),
                         const SizedBox(height: 8),
                         Text(
                           '${model.exampleTwo} - ${model.exampleTwoTranslation}',
                           style: const TextStyle(
-                            color: Colors.white,
-                            fontStyle: FontStyle.italic,
-                          ),
+                              color: Colors.white,
+                              fontStyle: FontStyle.italic,
+                              fontWeight: FontWeight.bold),
                         ),
                         const SizedBox(height: 8),
                         Text(
                           '${model.exampleThree} - ${model.exampleThreeTranslation}',
                           style: const TextStyle(
-                            color: Colors.white,
-                            fontStyle: FontStyle.italic,
-                          ),
+                              color: Colors.white,
+                              fontStyle: FontStyle.italic,
+                              fontWeight: FontWeight.bold),
                         ),
                         const SizedBox(height: 8),
                         Text(
                           '${model.exampleFour} - ${model.exampleFourTranslation}',
                           style: const TextStyle(
-                            color: Colors.white,
-                            fontStyle: FontStyle.italic,
-                          ),
+                              color: Colors.white,
+                              fontStyle: FontStyle.italic,
+                              fontWeight: FontWeight.bold),
                         ),
                         const SizedBox(height: 8),
                       ],
