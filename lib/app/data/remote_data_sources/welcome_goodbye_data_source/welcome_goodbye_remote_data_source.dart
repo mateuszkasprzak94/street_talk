@@ -3,7 +3,7 @@ class WelcomeGoodbyeMockedDataSource {
     return [
       {
         'id': 1,
-        'word': 'Kolokwialne przywitania',
+        'title': 'Kolokwialne przywitania',
         'example_one': '1. ¿Qué pasa?',
         'example_one_translation': 'Co tam?/ Jak tam?',
         'example_two': '2. ¿Cómo va?/ ¿Cómo te va?/ ¿ Qué tal te va? ',
@@ -24,7 +24,7 @@ class WelcomeGoodbyeMockedDataSource {
       },
       {
         'id': 2,
-        'word': 'Kolokwialne odpowiedzi na przywitania',
+        'title': 'Kolokwialne odpowiedzi na przywitania',
         'example_one': '1. Tirando, ¿y tú?',
         'example_one_translation': 'Leci, a u Ciebie? ',
         'example_two': '2. Sin novedad, ¿y tú?',
@@ -44,7 +44,7 @@ class WelcomeGoodbyeMockedDataSource {
       },
       {
         'id': 3,
-        'word': 'Kolokwialne pożegnania',
+        'title': 'Kolokwialne pożegnania',
         'example_one': '1. Hasta luego',
         'example_one_translation': 'Na razie',
         'example_two': '2. Hasta la próxima',
