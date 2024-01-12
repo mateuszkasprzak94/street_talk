@@ -5,12 +5,13 @@ part 'situations_model.g.dart';
 
 @freezed
 class SituationModel with _$SituationModel {
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory SituationModel(
     int id,
     String word,
-    @JsonKey(name: 'word_translation') String wordTranslation,
-    @JsonKey(name: 'example_one') String exampleOne,
-    @JsonKey(name: 'example_two') String exampleTwo,
+    String wordTranslation,
+    String exampleOne,
+    String exampleTwo,
   ) = _SituationModel;
 
   factory SituationModel.fromJson(Map<String, dynamic> json) =>

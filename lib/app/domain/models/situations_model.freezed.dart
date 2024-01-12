@@ -22,11 +22,8 @@ SituationModel _$SituationModelFromJson(Map<String, dynamic> json) {
 mixin _$SituationModel {
   int get id => throw _privateConstructorUsedError;
   String get word => throw _privateConstructorUsedError;
-  @JsonKey(name: 'word_translation')
   String get wordTranslation => throw _privateConstructorUsedError;
-  @JsonKey(name: 'example_one')
   String get exampleOne => throw _privateConstructorUsedError;
-  @JsonKey(name: 'example_two')
   String get exampleTwo => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -44,9 +41,9 @@ abstract class $SituationModelCopyWith<$Res> {
   $Res call(
       {int id,
       String word,
-      @JsonKey(name: 'word_translation') String wordTranslation,
-      @JsonKey(name: 'example_one') String exampleOne,
-      @JsonKey(name: 'example_two') String exampleTwo});
+      String wordTranslation,
+      String exampleOne,
+      String exampleTwo});
 }
 
 /// @nodoc
@@ -104,9 +101,9 @@ abstract class _$$SituationModelImplCopyWith<$Res>
   $Res call(
       {int id,
       String word,
-      @JsonKey(name: 'word_translation') String wordTranslation,
-      @JsonKey(name: 'example_one') String exampleOne,
-      @JsonKey(name: 'example_two') String exampleTwo});
+      String wordTranslation,
+      String exampleOne,
+      String exampleTwo});
 }
 
 /// @nodoc
@@ -152,14 +149,11 @@ class __$$SituationModelImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$SituationModelImpl implements _SituationModel {
-  _$SituationModelImpl(
-      this.id,
-      this.word,
-      @JsonKey(name: 'word_translation') this.wordTranslation,
-      @JsonKey(name: 'example_one') this.exampleOne,
-      @JsonKey(name: 'example_two') this.exampleTwo);
+  _$SituationModelImpl(this.id, this.word, this.wordTranslation,
+      this.exampleOne, this.exampleTwo);
 
   factory _$SituationModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$SituationModelImplFromJson(json);
@@ -169,13 +163,10 @@ class _$SituationModelImpl implements _SituationModel {
   @override
   final String word;
   @override
-  @JsonKey(name: 'word_translation')
   final String wordTranslation;
   @override
-  @JsonKey(name: 'example_one')
   final String exampleOne;
   @override
-  @JsonKey(name: 'example_two')
   final String exampleTwo;
 
   @override
@@ -220,12 +211,11 @@ class _$SituationModelImpl implements _SituationModel {
 
 abstract class _SituationModel implements SituationModel {
   factory _SituationModel(
-          final int id,
-          final String word,
-          @JsonKey(name: 'word_translation') final String wordTranslation,
-          @JsonKey(name: 'example_one') final String exampleOne,
-          @JsonKey(name: 'example_two') final String exampleTwo) =
-      _$SituationModelImpl;
+      final int id,
+      final String word,
+      final String wordTranslation,
+      final String exampleOne,
+      final String exampleTwo) = _$SituationModelImpl;
 
   factory _SituationModel.fromJson(Map<String, dynamic> json) =
       _$SituationModelImpl.fromJson;
@@ -235,13 +225,10 @@ abstract class _SituationModel implements SituationModel {
   @override
   String get word;
   @override
-  @JsonKey(name: 'word_translation')
   String get wordTranslation;
   @override
-  @JsonKey(name: 'example_one')
   String get exampleOne;
   @override
-  @JsonKey(name: 'example_two')
   String get exampleTwo;
   @override
   @JsonKey(ignore: true)

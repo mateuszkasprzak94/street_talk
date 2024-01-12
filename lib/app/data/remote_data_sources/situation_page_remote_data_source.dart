@@ -1,6 +1,3 @@
-import 'package:injectable/injectable.dart';
-
-@injectable
 class SituationMockedDataSource {
   Future<List<Map<String, dynamic>>?> getSituationData() async {
     return [

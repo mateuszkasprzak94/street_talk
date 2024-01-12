@@ -5,13 +5,14 @@ part 'emotions_content_model.g.dart';
 
 @freezed
 class EmotionsContentModel with _$EmotionsContentModel {
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory EmotionsContentModel(
     int id,
-    @JsonKey(name: 'emotion_id') int emotionId,
+    int emotionId,
     String word,
-    @JsonKey(name: 'word_translation') String wordTranslation,
-    @JsonKey(name: 'example_one') String exampleOne,
-    @JsonKey(name: 'example_two') String exampleTwo,
+    String wordTranslation,
+    String exampleOne,
+    String exampleTwo,
   ) = _EmotionsContentModel;
 
   factory EmotionsContentModel.fromJson(Map<String, dynamic> json) =>

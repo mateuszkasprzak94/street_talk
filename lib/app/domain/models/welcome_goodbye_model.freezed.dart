@@ -22,37 +22,21 @@ WelcomeGoodbyeModel _$WelcomeGoodbyeModelFromJson(Map<String, dynamic> json) {
 mixin _$WelcomeGoodbyeModel {
   int get id => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
-  @JsonKey(name: 'example_one')
   String get exampleOne => throw _privateConstructorUsedError;
-  @JsonKey(name: 'example_one_translation')
   String get exampleOneTranslation => throw _privateConstructorUsedError;
-  @JsonKey(name: 'example_two')
   String get exampleTwo => throw _privateConstructorUsedError;
-  @JsonKey(name: 'example_two_translation')
   String get exampleTwoTranslation => throw _privateConstructorUsedError;
-  @JsonKey(name: 'example_three')
   String get exampleThree => throw _privateConstructorUsedError;
-  @JsonKey(name: 'example_three_translation')
   String get exampleThreeTranslation => throw _privateConstructorUsedError;
-  @JsonKey(name: 'example_four')
   String get exampleFour => throw _privateConstructorUsedError;
-  @JsonKey(name: 'example_four_translation')
   String get exampleFourTranslation => throw _privateConstructorUsedError;
-  @JsonKey(name: 'example_five')
   String get exampleFive => throw _privateConstructorUsedError;
-  @JsonKey(name: 'example_five_translation')
   String get exampleFiveTranslation => throw _privateConstructorUsedError;
-  @JsonKey(name: 'example_six')
   String get exampleSix => throw _privateConstructorUsedError;
-  @JsonKey(name: 'example_six_translation')
   String get exampleSixTranslation => throw _privateConstructorUsedError;
-  @JsonKey(name: 'example_seven')
   String get exampleSeven => throw _privateConstructorUsedError;
-  @JsonKey(name: 'example_seven_translation')
   String get exampleSevenTranslation => throw _privateConstructorUsedError;
-  @JsonKey(name: 'example_eight')
   String get exampleEight => throw _privateConstructorUsedError;
-  @JsonKey(name: 'example_eight_translation')
   String get exampleEightTranslation => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -70,24 +54,21 @@ abstract class $WelcomeGoodbyeModelCopyWith<$Res> {
   $Res call(
       {int id,
       String title,
-      @JsonKey(name: 'example_one') String exampleOne,
-      @JsonKey(name: 'example_one_translation') String exampleOneTranslation,
-      @JsonKey(name: 'example_two') String exampleTwo,
-      @JsonKey(name: 'example_two_translation') String exampleTwoTranslation,
-      @JsonKey(name: 'example_three') String exampleThree,
-      @JsonKey(name: 'example_three_translation')
+      String exampleOne,
+      String exampleOneTranslation,
+      String exampleTwo,
+      String exampleTwoTranslation,
+      String exampleThree,
       String exampleThreeTranslation,
-      @JsonKey(name: 'example_four') String exampleFour,
-      @JsonKey(name: 'example_four_translation') String exampleFourTranslation,
-      @JsonKey(name: 'example_five') String exampleFive,
-      @JsonKey(name: 'example_five_translation') String exampleFiveTranslation,
-      @JsonKey(name: 'example_six') String exampleSix,
-      @JsonKey(name: 'example_six_translation') String exampleSixTranslation,
-      @JsonKey(name: 'example_seven') String exampleSeven,
-      @JsonKey(name: 'example_seven_translation')
+      String exampleFour,
+      String exampleFourTranslation,
+      String exampleFive,
+      String exampleFiveTranslation,
+      String exampleSix,
+      String exampleSixTranslation,
+      String exampleSeven,
       String exampleSevenTranslation,
-      @JsonKey(name: 'example_eight') String exampleEight,
-      @JsonKey(name: 'example_eight_translation')
+      String exampleEight,
       String exampleEightTranslation});
 }
 
@@ -211,24 +192,21 @@ abstract class _$$WelcomeGoodbyeModelImplCopyWith<$Res>
   $Res call(
       {int id,
       String title,
-      @JsonKey(name: 'example_one') String exampleOne,
-      @JsonKey(name: 'example_one_translation') String exampleOneTranslation,
-      @JsonKey(name: 'example_two') String exampleTwo,
-      @JsonKey(name: 'example_two_translation') String exampleTwoTranslation,
-      @JsonKey(name: 'example_three') String exampleThree,
-      @JsonKey(name: 'example_three_translation')
+      String exampleOne,
+      String exampleOneTranslation,
+      String exampleTwo,
+      String exampleTwoTranslation,
+      String exampleThree,
       String exampleThreeTranslation,
-      @JsonKey(name: 'example_four') String exampleFour,
-      @JsonKey(name: 'example_four_translation') String exampleFourTranslation,
-      @JsonKey(name: 'example_five') String exampleFive,
-      @JsonKey(name: 'example_five_translation') String exampleFiveTranslation,
-      @JsonKey(name: 'example_six') String exampleSix,
-      @JsonKey(name: 'example_six_translation') String exampleSixTranslation,
-      @JsonKey(name: 'example_seven') String exampleSeven,
-      @JsonKey(name: 'example_seven_translation')
+      String exampleFour,
+      String exampleFourTranslation,
+      String exampleFive,
+      String exampleFiveTranslation,
+      String exampleSix,
+      String exampleSixTranslation,
+      String exampleSeven,
       String exampleSevenTranslation,
-      @JsonKey(name: 'example_eight') String exampleEight,
-      @JsonKey(name: 'example_eight_translation')
+      String exampleEight,
       String exampleEightTranslation});
 }
 
@@ -340,27 +318,28 @@ class __$$WelcomeGoodbyeModelImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$WelcomeGoodbyeModelImpl implements _WelcomeGoodbyeModel {
   _$WelcomeGoodbyeModelImpl(
       this.id,
       this.title,
-      @JsonKey(name: 'example_one') this.exampleOne,
-      @JsonKey(name: 'example_one_translation') this.exampleOneTranslation,
-      @JsonKey(name: 'example_two') this.exampleTwo,
-      @JsonKey(name: 'example_two_translation') this.exampleTwoTranslation,
-      @JsonKey(name: 'example_three') this.exampleThree,
-      @JsonKey(name: 'example_three_translation') this.exampleThreeTranslation,
-      @JsonKey(name: 'example_four') this.exampleFour,
-      @JsonKey(name: 'example_four_translation') this.exampleFourTranslation,
-      @JsonKey(name: 'example_five') this.exampleFive,
-      @JsonKey(name: 'example_five_translation') this.exampleFiveTranslation,
-      @JsonKey(name: 'example_six') this.exampleSix,
-      @JsonKey(name: 'example_six_translation') this.exampleSixTranslation,
-      @JsonKey(name: 'example_seven') this.exampleSeven,
-      @JsonKey(name: 'example_seven_translation') this.exampleSevenTranslation,
-      @JsonKey(name: 'example_eight') this.exampleEight,
-      @JsonKey(name: 'example_eight_translation') this.exampleEightTranslation);
+      this.exampleOne,
+      this.exampleOneTranslation,
+      this.exampleTwo,
+      this.exampleTwoTranslation,
+      this.exampleThree,
+      this.exampleThreeTranslation,
+      this.exampleFour,
+      this.exampleFourTranslation,
+      this.exampleFive,
+      this.exampleFiveTranslation,
+      this.exampleSix,
+      this.exampleSixTranslation,
+      this.exampleSeven,
+      this.exampleSevenTranslation,
+      this.exampleEight,
+      this.exampleEightTranslation);
 
   factory _$WelcomeGoodbyeModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$WelcomeGoodbyeModelImplFromJson(json);
@@ -370,52 +349,36 @@ class _$WelcomeGoodbyeModelImpl implements _WelcomeGoodbyeModel {
   @override
   final String title;
   @override
-  @JsonKey(name: 'example_one')
   final String exampleOne;
   @override
-  @JsonKey(name: 'example_one_translation')
   final String exampleOneTranslation;
   @override
-  @JsonKey(name: 'example_two')
   final String exampleTwo;
   @override
-  @JsonKey(name: 'example_two_translation')
   final String exampleTwoTranslation;
   @override
-  @JsonKey(name: 'example_three')
   final String exampleThree;
   @override
-  @JsonKey(name: 'example_three_translation')
   final String exampleThreeTranslation;
   @override
-  @JsonKey(name: 'example_four')
   final String exampleFour;
   @override
-  @JsonKey(name: 'example_four_translation')
   final String exampleFourTranslation;
   @override
-  @JsonKey(name: 'example_five')
   final String exampleFive;
   @override
-  @JsonKey(name: 'example_five_translation')
   final String exampleFiveTranslation;
   @override
-  @JsonKey(name: 'example_six')
   final String exampleSix;
   @override
-  @JsonKey(name: 'example_six_translation')
   final String exampleSixTranslation;
   @override
-  @JsonKey(name: 'example_seven')
   final String exampleSeven;
   @override
-  @JsonKey(name: 'example_seven_translation')
   final String exampleSevenTranslation;
   @override
-  @JsonKey(name: 'example_eight')
   final String exampleEight;
   @override
-  @JsonKey(name: 'example_eight_translation')
   final String exampleEightTranslation;
 
   @override
@@ -509,29 +472,21 @@ abstract class _WelcomeGoodbyeModel implements WelcomeGoodbyeModel {
   factory _WelcomeGoodbyeModel(
       final int id,
       final String title,
-      @JsonKey(name: 'example_one') final String exampleOne,
-      @JsonKey(name: 'example_one_translation')
+      final String exampleOne,
       final String exampleOneTranslation,
-      @JsonKey(name: 'example_two') final String exampleTwo,
-      @JsonKey(name: 'example_two_translation')
+      final String exampleTwo,
       final String exampleTwoTranslation,
-      @JsonKey(name: 'example_three') final String exampleThree,
-      @JsonKey(name: 'example_three_translation')
+      final String exampleThree,
       final String exampleThreeTranslation,
-      @JsonKey(name: 'example_four') final String exampleFour,
-      @JsonKey(name: 'example_four_translation')
+      final String exampleFour,
       final String exampleFourTranslation,
-      @JsonKey(name: 'example_five') final String exampleFive,
-      @JsonKey(name: 'example_five_translation')
+      final String exampleFive,
       final String exampleFiveTranslation,
-      @JsonKey(name: 'example_six') final String exampleSix,
-      @JsonKey(name: 'example_six_translation')
+      final String exampleSix,
       final String exampleSixTranslation,
-      @JsonKey(name: 'example_seven') final String exampleSeven,
-      @JsonKey(name: 'example_seven_translation')
+      final String exampleSeven,
       final String exampleSevenTranslation,
-      @JsonKey(name: 'example_eight') final String exampleEight,
-      @JsonKey(name: 'example_eight_translation')
+      final String exampleEight,
       final String exampleEightTranslation) = _$WelcomeGoodbyeModelImpl;
 
   factory _WelcomeGoodbyeModel.fromJson(Map<String, dynamic> json) =
@@ -542,52 +497,36 @@ abstract class _WelcomeGoodbyeModel implements WelcomeGoodbyeModel {
   @override
   String get title;
   @override
-  @JsonKey(name: 'example_one')
   String get exampleOne;
   @override
-  @JsonKey(name: 'example_one_translation')
   String get exampleOneTranslation;
   @override
-  @JsonKey(name: 'example_two')
   String get exampleTwo;
   @override
-  @JsonKey(name: 'example_two_translation')
   String get exampleTwoTranslation;
   @override
-  @JsonKey(name: 'example_three')
   String get exampleThree;
   @override
-  @JsonKey(name: 'example_three_translation')
   String get exampleThreeTranslation;
   @override
-  @JsonKey(name: 'example_four')
   String get exampleFour;
   @override
-  @JsonKey(name: 'example_four_translation')
   String get exampleFourTranslation;
   @override
-  @JsonKey(name: 'example_five')
   String get exampleFive;
   @override
-  @JsonKey(name: 'example_five_translation')
   String get exampleFiveTranslation;
   @override
-  @JsonKey(name: 'example_six')
   String get exampleSix;
   @override
-  @JsonKey(name: 'example_six_translation')
   String get exampleSixTranslation;
   @override
-  @JsonKey(name: 'example_seven')
   String get exampleSeven;
   @override
-  @JsonKey(name: 'example_seven_translation')
   String get exampleSevenTranslation;
   @override
-  @JsonKey(name: 'example_eight')
   String get exampleEight;
   @override
-  @JsonKey(name: 'example_eight_translation')
   String get exampleEightTranslation;
   @override
   @JsonKey(ignore: true)

@@ -22,11 +22,8 @@ StreetModel _$StreetModelFromJson(Map<String, dynamic> json) {
 mixin _$StreetModel {
   int get id => throw _privateConstructorUsedError;
   String get word => throw _privateConstructorUsedError;
-  @JsonKey(name: 'word_translation')
   String get wordTranslation => throw _privateConstructorUsedError;
-  @JsonKey(name: 'example_one')
   String get exampleOne => throw _privateConstructorUsedError;
-  @JsonKey(name: 'example_two')
   String get exampleTwo => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -44,9 +41,9 @@ abstract class $StreetModelCopyWith<$Res> {
   $Res call(
       {int id,
       String word,
-      @JsonKey(name: 'word_translation') String wordTranslation,
-      @JsonKey(name: 'example_one') String exampleOne,
-      @JsonKey(name: 'example_two') String exampleTwo});
+      String wordTranslation,
+      String exampleOne,
+      String exampleTwo});
 }
 
 /// @nodoc
@@ -104,9 +101,9 @@ abstract class _$$StreetModelImplCopyWith<$Res>
   $Res call(
       {int id,
       String word,
-      @JsonKey(name: 'word_translation') String wordTranslation,
-      @JsonKey(name: 'example_one') String exampleOne,
-      @JsonKey(name: 'example_two') String exampleTwo});
+      String wordTranslation,
+      String exampleOne,
+      String exampleTwo});
 }
 
 /// @nodoc
@@ -152,14 +149,11 @@ class __$$StreetModelImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$StreetModelImpl implements _StreetModel {
-  _$StreetModelImpl(
-      this.id,
-      this.word,
-      @JsonKey(name: 'word_translation') this.wordTranslation,
-      @JsonKey(name: 'example_one') this.exampleOne,
-      @JsonKey(name: 'example_two') this.exampleTwo);
+  _$StreetModelImpl(this.id, this.word, this.wordTranslation, this.exampleOne,
+      this.exampleTwo);
 
   factory _$StreetModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$StreetModelImplFromJson(json);
@@ -169,13 +163,10 @@ class _$StreetModelImpl implements _StreetModel {
   @override
   final String word;
   @override
-  @JsonKey(name: 'word_translation')
   final String wordTranslation;
   @override
-  @JsonKey(name: 'example_one')
   final String exampleOne;
   @override
-  @JsonKey(name: 'example_two')
   final String exampleTwo;
 
   @override
@@ -219,12 +210,11 @@ class _$StreetModelImpl implements _StreetModel {
 
 abstract class _StreetModel implements StreetModel {
   factory _StreetModel(
-          final int id,
-          final String word,
-          @JsonKey(name: 'word_translation') final String wordTranslation,
-          @JsonKey(name: 'example_one') final String exampleOne,
-          @JsonKey(name: 'example_two') final String exampleTwo) =
-      _$StreetModelImpl;
+      final int id,
+      final String word,
+      final String wordTranslation,
+      final String exampleOne,
+      final String exampleTwo) = _$StreetModelImpl;
 
   factory _StreetModel.fromJson(Map<String, dynamic> json) =
       _$StreetModelImpl.fromJson;
@@ -234,13 +224,10 @@ abstract class _StreetModel implements StreetModel {
   @override
   String get word;
   @override
-  @JsonKey(name: 'word_translation')
   String get wordTranslation;
   @override
-  @JsonKey(name: 'example_one')
   String get exampleOne;
   @override
-  @JsonKey(name: 'example_two')
   String get exampleTwo;
   @override
   @JsonKey(ignore: true)

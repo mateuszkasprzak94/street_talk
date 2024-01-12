@@ -23,7 +23,6 @@ mixin _$EmotionsNameModel {
   int get id => throw _privateConstructorUsedError;
   String get image => throw _privateConstructorUsedError;
   String get emotion => throw _privateConstructorUsedError;
-  @JsonKey(name: 'emotion_translation')
   String get emotionTranslation => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -38,11 +37,7 @@ abstract class $EmotionsNameModelCopyWith<$Res> {
           EmotionsNameModel value, $Res Function(EmotionsNameModel) then) =
       _$EmotionsNameModelCopyWithImpl<$Res, EmotionsNameModel>;
   @useResult
-  $Res call(
-      {int id,
-      String image,
-      String emotion,
-      @JsonKey(name: 'emotion_translation') String emotionTranslation});
+  $Res call({int id, String image, String emotion, String emotionTranslation});
 }
 
 /// @nodoc
@@ -92,11 +87,7 @@ abstract class _$$EmotionsNameModelImplCopyWith<$Res>
       __$$EmotionsNameModelImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {int id,
-      String image,
-      String emotion,
-      @JsonKey(name: 'emotion_translation') String emotionTranslation});
+  $Res call({int id, String image, String emotion, String emotionTranslation});
 }
 
 /// @nodoc
@@ -137,10 +128,11 @@ class __$$EmotionsNameModelImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$EmotionsNameModelImpl implements _EmotionsNameModel {
-  _$EmotionsNameModelImpl(this.id, this.image, this.emotion,
-      @JsonKey(name: 'emotion_translation') this.emotionTranslation);
+  _$EmotionsNameModelImpl(
+      this.id, this.image, this.emotion, this.emotionTranslation);
 
   factory _$EmotionsNameModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$EmotionsNameModelImplFromJson(json);
@@ -152,7 +144,6 @@ class _$EmotionsNameModelImpl implements _EmotionsNameModel {
   @override
   final String emotion;
   @override
-  @JsonKey(name: 'emotion_translation')
   final String emotionTranslation;
 
   @override
@@ -197,7 +188,6 @@ abstract class _EmotionsNameModel implements EmotionsNameModel {
       final int id,
       final String image,
       final String emotion,
-      @JsonKey(name: 'emotion_translation')
       final String emotionTranslation) = _$EmotionsNameModelImpl;
 
   factory _EmotionsNameModel.fromJson(Map<String, dynamic> json) =
@@ -210,7 +200,6 @@ abstract class _EmotionsNameModel implements EmotionsNameModel {
   @override
   String get emotion;
   @override
-  @JsonKey(name: 'emotion_translation')
   String get emotionTranslation;
   @override
   @JsonKey(ignore: true)

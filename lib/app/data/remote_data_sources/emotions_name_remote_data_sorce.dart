@@ -1,7 +1,3 @@
-import 'package:dio/dio.dart';
-import 'package:injectable/injectable.dart';
-
-@injectable
 class EmotionsNameMockedDataSource {
   Future<List<Map<String, dynamic>>?> getEmotionsName() async {
     return [
@@ -53,13 +49,13 @@ class EmotionsNameMockedDataSource {
 
 // API DATA SOURCE
 
-class EmotionsContentDataSource {
-  Future<List<Map<String, dynamic>>?> getEmotionsName() async {
-    final response = await Dio().get<List<dynamic>>('link');
-    final listDynamic = response.data;
-    if (listDynamic == null) {
-      return null;
-    }
-    return listDynamic.map((e) => e as Map<String, dynamic>).toList();
-  }
-}
+// class EmotionsContentDataSource {
+//   Future<List<Map<String, dynamic>>?> getEmotionsName() async {
+//     final response = await Dio().get<List<dynamic>>('link');
+//     final listDynamic = response.data;
+//     if (listDynamic == null) {
+//       return null;
+//     }
+//     return listDynamic.map((e) => e as Map<String, dynamic>).toList();
+//   }
+// }
