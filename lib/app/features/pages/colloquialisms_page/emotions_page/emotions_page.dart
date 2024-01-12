@@ -129,13 +129,13 @@ class EmotionsButtonWidget extends StatelessWidget {
         child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: SizedBox(
-              height: 200,
-              width: 145,
-              child: Image.asset(
-                model.image,
-                fit: BoxFit.fill,
-              ),
+            child: CircleAvatar(
+              foregroundImage: AssetImage(model.image),
+              radius: 70,
+              //  Image.asset(
+              //   model.image,
+              //   fit: BoxFit.fill,
+              // ),
             ),
           ),
           Expanded(
@@ -144,7 +144,7 @@ class EmotionsButtonWidget extends StatelessWidget {
               children: [
                 Text(
                   model.emotion,
-                  style: GoogleFonts.lora(fontSize: screenWidth / 21),
+                  style: GoogleFonts.lora(fontSize: screenWidth / 19),
                 ),
                 Text(
                   model.emotionTranslation,

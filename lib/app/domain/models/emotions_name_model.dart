@@ -1,3 +1,8 @@
+import 'package:json_annotation/json_annotation.dart';
+
+part 'emotions_name_model.g.dart';
+
+@JsonSerializable()
 class EmotionsNameModel {
   const EmotionsNameModel({
     required this.id,
@@ -9,11 +14,12 @@ class EmotionsNameModel {
   final int id;
   final String image;
   final String emotion;
+
+  @JsonKey(name: 'emotion_translation')
   final String emotionTranslation;
 
-  EmotionsNameModel.fromJson(Map<String, dynamic> json)
-      : id = json['id'],
-        image = json['image'],
-        emotion = json['emotion'],
-        emotionTranslation = json['emotion_translation'];
+  factory EmotionsNameModel.fromJson(Map<String, dynamic> json) =>
+      _$EmotionsNameModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$EmotionsNameModelToJson(this);
 }
