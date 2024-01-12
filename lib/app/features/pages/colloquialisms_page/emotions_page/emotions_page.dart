@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:street_talk/app/core/enums/enums.dart';
-import 'package:street_talk/app/data/remote_data_sources/emotions_name_remote_data_sorce.dart';
 import 'package:street_talk/app/domain/models/emotions_name_model.dart';
-import 'package:street_talk/app/domain/repositories/emotions_name_repository.dart';
 import 'package:street_talk/app/features/pages/colloquialisms_page/emotions_page/cubit/emotions_page_cubit.dart';
 import 'package:street_talk/app/features/pages/colloquialisms_page/emotions_page/emotions_content/emotions_content.dart';
+import 'package:street_talk/app/injection_container.dart';
 
 class EmotionsPage extends StatelessWidget {
   const EmotionsPage({super.key});
@@ -48,11 +47,7 @@ class EmotionsPage extends StatelessWidget {
         ),
         body: BlocProvider<EmotionsPageCubit>(
           create: (context) {
-            return EmotionsPageCubit(
-              emotionsNameRepository: EmotionsNameRepository(
-                remoteDataSource: EmotionsNameMockedDataSource(),
-              ),
-            )..start();
+            return getIt()..start();
           },
           child: BlocBuilder<EmotionsPageCubit, EmotionsPageState>(
             builder: (context, state) {

@@ -3,11 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:street_talk/app/core/enums/enums.dart';
-import 'package:street_talk/app/data/remote_data_sources/emotions_content_remote_data_source.dart';
 import 'package:street_talk/app/domain/models/emotions_content_model.dart';
 import 'package:street_talk/app/domain/models/emotions_name_model.dart';
-import 'package:street_talk/app/domain/repositories/emotions_content_repository.dart';
 import 'package:street_talk/app/features/pages/colloquialisms_page/emotions_page/emotions_content/cubit/emotions_content_cubit.dart';
+import 'package:street_talk/app/injection_container.dart';
 
 class EmotionsContentPage extends StatelessWidget {
   const EmotionsContentPage({super.key, required this.name});
@@ -51,11 +50,7 @@ class EmotionsContentPage extends StatelessWidget {
         ),
         body: BlocProvider<EmotionsContentCubit>(
           create: (context) {
-            return EmotionsContentCubit(
-              emotionsContentRepository: EmotionsContentRepository(
-                remoteDataSource: EmotionsContentMockedDataSource(),
-              ),
-            )..fetchData(emotionId: name.id);
+            return getIt()..fetchData(emotionId: name.id);
           },
           child: BlocBuilder<EmotionsContentCubit, EmotionsContentState>(
             builder: (context, state) {

@@ -3,10 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:street_talk/app/core/enums/enums.dart';
-import 'package:street_talk/app/data/remote_data_sources/street_remote_data_source.dart';
 import 'package:street_talk/app/domain/models/street_model.dart';
-import 'package:street_talk/app/domain/repositories/street_repository.dart';
 import 'package:street_talk/app/features/pages/colloquialisms_page/street_page/cubit/street_cubit.dart';
+import 'package:street_talk/app/injection_container.dart';
 
 class StreetPage extends StatelessWidget {
   const StreetPage({
@@ -50,11 +49,7 @@ class StreetPage extends StatelessWidget {
         ),
         body: BlocProvider<StreetCubit>(
           create: (context) {
-            return StreetCubit(
-              streetRepository: StreetRepository(
-                remoteDataSource: StreetMockedDataSource(),
-              ),
-            )..start();
+            return getIt()..start();
           },
           child: BlocBuilder<StreetCubit, StreetState>(
             builder: (context, state) {

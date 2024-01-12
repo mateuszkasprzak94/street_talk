@@ -3,10 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:street_talk/app/core/enums/enums.dart';
-import 'package:street_talk/app/data/remote_data_sources/situation_page_remote_data_source.dart';
 import 'package:street_talk/app/domain/models/situations_model.dart';
-import 'package:street_talk/app/domain/repositories/situations_reposiotry.dart';
 import 'package:street_talk/app/features/pages/colloquialisms_page/situation_page/cubit/situation_cubit.dart';
+import 'package:street_talk/app/injection_container.dart';
 
 class SituationPage extends StatelessWidget {
   const SituationPage({
@@ -50,11 +49,7 @@ class SituationPage extends StatelessWidget {
         ),
         body: BlocProvider<SituationCubit>(
           create: (context) {
-            return SituationCubit(
-              situationRepository: SituationRepository(
-                remoteDataSource: SituationMockedDataSource(),
-              ),
-            )..start();
+            return getIt()..start();
           },
           child: BlocBuilder<SituationCubit, SituationState>(
             builder: (context, state) {

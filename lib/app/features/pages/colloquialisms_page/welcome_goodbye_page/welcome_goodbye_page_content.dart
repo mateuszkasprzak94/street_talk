@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:street_talk/app/core/enums/enums.dart';
-import 'package:street_talk/app/data/remote_data_sources/welcome_goodbye_remote_data_source.dart';
 import 'package:street_talk/app/domain/models/welcome_goodbye_model.dart';
-import 'package:street_talk/app/domain/repositories/welcome_goodybe_repository.dart';
 import 'package:street_talk/app/features/pages/colloquialisms_page/welcome_goodbye_page/cubit/welcome_goodbye_cubit.dart';
+import 'package:street_talk/app/injection_container.dart';
 
 class WelcomeGoodbyePage extends StatelessWidget {
   const WelcomeGoodbyePage({
@@ -49,12 +48,7 @@ class WelcomeGoodbyePage extends StatelessWidget {
         ),
         body: BlocProvider<WelcomeGoodbyeCubit>(
           create: (context) {
-            return WelcomeGoodbyeCubit(
-              welcomeGoobyeRepository: WelcomeGoodbyeRepository(
-                welcomeGoodbyeMockedDataSource:
-                    WelcomeGoodbyeMockedDataSource(),
-              ),
-            )..start();
+            return getIt()..start();
           },
           child: BlocBuilder<WelcomeGoodbyeCubit, WelcomeGoodbyeState>(
             builder: (context, state) {
