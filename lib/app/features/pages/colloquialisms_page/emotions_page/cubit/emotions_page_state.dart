@@ -1,13 +1,10 @@
 part of 'emotions_page_cubit.dart';
 
-class EmotionsPageState {
-  EmotionsPageState({
-    this.results = const [],
-    this.status = Status.initial,
-    this.errorMessage,
-  });
-
-  final List<EmotionsNameModel> results;
-  final Status status;
-  final String? errorMessage;
+@freezed
+class EmotionsPageState with _$EmotionsPageState {
+  factory EmotionsPageState({
+    @Default([]) List<EmotionsNameModel> results,
+    @Default(Status.initial) Status status,
+    String? errorMessage,
+  }) = _EmotionsPageState;
 }

@@ -1,13 +1,10 @@
 part of 'situation_cubit.dart';
 
-class SituationState {
-  SituationState({
-    this.results = const [],
-    this.status = Status.initial,
-    this.errorMessage,
-  });
-
-  final List<SituationModel> results;
-  final Status status;
-  final String? errorMessage;
+@freezed
+class SituationState with _$SituationState {
+  factory SituationState({
+    @Default([]) List<SituationModel> results,
+    @Default(Status.initial) Status status,
+    String? errorMessage,
+  }) = _SituationState;
 }

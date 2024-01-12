@@ -1,13 +1,10 @@
 part of 'street_cubit.dart';
 
-class StreetState {
-  StreetState({
-    this.results = const [],
-    this.status = Status.initial,
-    this.errorMessage,
-  });
-
-  final List<StreetModel> results;
-  final Status status;
-  final String? errorMessage;
+@freezed
+class StreetState with _$StreetState {
+  factory StreetState({
+    @Default([]) List<StreetModel> results,
+    @Default(Status.initial) Status status,
+    String? errorMessage,
+  }) = _StreetState;
 }
