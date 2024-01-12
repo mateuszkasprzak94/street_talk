@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:injectable/injectable.dart';
 import 'package:street_talk/app/core/enums/enums.dart';
 import 'package:street_talk/app/domain/models/welcome_goodbye_model.dart';
 import 'package:street_talk/app/domain/repositories/welcome_goodybe_repository.dart';
@@ -7,6 +8,7 @@ import 'package:street_talk/app/domain/repositories/welcome_goodybe_repository.d
 part 'welcome_goodbye_cubit.freezed.dart';
 part 'welcome_goodbye_state.dart';
 
+@injectable
 class WelcomeGoodbyeCubit extends Cubit<WelcomeGoodbyeState> {
   WelcomeGoodbyeCubit({required this.welcomeGoobyeRepository})
       : super(WelcomeGoodbyeState());

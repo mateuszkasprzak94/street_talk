@@ -1,6 +1,8 @@
+import 'package:injectable/injectable.dart';
 import 'package:street_talk/app/data/remote_data_sources/emotions_name_remote_data_sorce.dart';
 import 'package:street_talk/app/domain/models/emotions_name_model.dart';
 
+@injectable
 class EmotionsNameRepository {
   EmotionsNameRepository({required this.remoteDataSource});
 

@@ -1,3 +1,6 @@
+import 'package:injectable/injectable.dart';
+
+@injectable
 class WelcomeGoodbyeMockedDataSource {
   Future<List<Map<String, dynamic>>?> getWelcomeGoodbyeData() async {
     return [

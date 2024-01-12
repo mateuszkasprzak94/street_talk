@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:injectable/injectable.dart';
 import 'package:street_talk/app/core/enums/enums.dart';
 import 'package:street_talk/app/domain/models/situations_model.dart';
 import 'package:street_talk/app/domain/repositories/situations_reposiotry.dart';
@@ -7,6 +8,7 @@ import 'package:street_talk/app/domain/repositories/situations_reposiotry.dart';
 part 'situation_cubit.freezed.dart';
 part 'situation_state.dart';
 
+@injectable
 class SituationCubit extends Cubit<SituationState> {
   SituationCubit({required this.situationRepository}) : super(SituationState());
 

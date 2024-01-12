@@ -1,3 +1,6 @@
+import 'package:injectable/injectable.dart';
+
+@injectable
 class StreetMockedDataSource {
   Future<List<Map<String, dynamic>>?> getStreetData() async {
     return [

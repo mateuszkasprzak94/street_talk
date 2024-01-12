@@ -1,6 +1,8 @@
+import 'package:injectable/injectable.dart';
 import 'package:street_talk/app/data/remote_data_sources/situation_page_remote_data_source.dart';
 import 'package:street_talk/app/domain/models/situations_model.dart';
 
+@injectable
 class SituationRepository {
   SituationRepository({required this.remoteDataSource});
 
