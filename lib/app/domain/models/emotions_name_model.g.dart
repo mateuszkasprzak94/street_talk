@@ -6,15 +6,17 @@ part of 'emotions_name_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-EmotionsNameModel _$EmotionsNameModelFromJson(Map<String, dynamic> json) =>
-    EmotionsNameModel(
-      id: json['id'] as int,
-      image: json['image'] as String,
-      emotion: json['emotion'] as String,
-      emotionTranslation: json['emotion_translation'] as String,
+_$EmotionsNameModelImpl _$$EmotionsNameModelImplFromJson(
+        Map<String, dynamic> json) =>
+    _$EmotionsNameModelImpl(
+      json['id'] as int,
+      json['image'] as String,
+      json['emotion'] as String,
+      json['emotion_translation'] as String,
     );
 
-Map<String, dynamic> _$EmotionsNameModelToJson(EmotionsNameModel instance) =>
+Map<String, dynamic> _$$EmotionsNameModelImplToJson(
+        _$EmotionsNameModelImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'image': instance.image,

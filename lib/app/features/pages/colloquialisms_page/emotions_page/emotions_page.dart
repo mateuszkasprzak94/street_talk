@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:street_talk/app/core/enums/enums.dart';
-import 'package:street_talk/app/data/remote_data_sources/emotions_page_data_source/emotions_name_remote_data_sorce.dart';
+import 'package:street_talk/app/data/remote_data_sources/emotions_name_remote_data_sorce.dart';
 import 'package:street_talk/app/domain/models/emotions_name_model.dart';
 import 'package:street_talk/app/domain/repositories/emotions_name_repository.dart';
 import 'package:street_talk/app/features/pages/colloquialisms_page/emotions_page/cubit/emotions_page_cubit.dart';

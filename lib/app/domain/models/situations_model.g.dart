@@ -6,16 +6,17 @@ part of 'situations_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-SituationModel _$SituationModelFromJson(Map<String, dynamic> json) =>
-    SituationModel(
-      id: json['id'] as int,
-      word: json['word'] as String,
-      wordTranslation: json['word_translation'] as String,
-      exampleOne: json['example_one'] as String,
-      exampleTwo: json['example_two'] as String,
+_$SituationModelImpl _$$SituationModelImplFromJson(Map<String, dynamic> json) =>
+    _$SituationModelImpl(
+      json['id'] as int,
+      json['word'] as String,
+      json['word_translation'] as String,
+      json['example_one'] as String,
+      json['example_two'] as String,
     );
 
-Map<String, dynamic> _$SituationModelToJson(SituationModel instance) =>
+Map<String, dynamic> _$$SituationModelImplToJson(
+        _$SituationModelImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'word': instance.word,

@@ -6,30 +6,31 @@ part of 'welcome_goodbye_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-WelcomeGoodbyeModel _$WelcomeGoodbyeModelFromJson(Map<String, dynamic> json) =>
-    WelcomeGoodbyeModel(
-      id: json['id'] as int,
-      title: json['title'] as String,
-      exampleOne: json['example_one'] as String,
-      exampleOneTranslation: json['example_one_translation'] as String,
-      exampleTwo: json['example_two'] as String,
-      exampleTwoTranslation: json['example_two_translation'] as String,
-      exampleThree: json['example_three'] as String,
-      exampleThreeTranslation: json['example_three_translation'] as String,
-      exampleFour: json['example_four'] as String,
-      exampleFourTranslation: json['example_four_translation'] as String,
-      exampleFive: json['example_five'] as String,
-      exampleFiveTranslation: json['example_five_translation'] as String,
-      exampleSix: json['example_six'] as String,
-      exampleSixTranslation: json['example_six_translation'] as String,
-      exampleSeven: json['example_seven'] as String,
-      exampleSevenTranslation: json['example_seven_translation'] as String,
-      exampleEight: json['example_eight'] as String,
-      exampleEightTranslation: json['example_eight_translation'] as String,
+_$WelcomeGoodbyeModelImpl _$$WelcomeGoodbyeModelImplFromJson(
+        Map<String, dynamic> json) =>
+    _$WelcomeGoodbyeModelImpl(
+      json['id'] as int,
+      json['title'] as String,
+      json['example_one'] as String,
+      json['example_one_translation'] as String,
+      json['example_two'] as String,
+      json['example_two_translation'] as String,
+      json['example_three'] as String,
+      json['example_three_translation'] as String,
+      json['example_four'] as String,
+      json['example_four_translation'] as String,
+      json['example_five'] as String,
+      json['example_five_translation'] as String,
+      json['example_six'] as String,
+      json['example_six_translation'] as String,
+      json['example_seven'] as String,
+      json['example_seven_translation'] as String,
+      json['example_eight'] as String,
+      json['example_eight_translation'] as String,
     );
 
-Map<String, dynamic> _$WelcomeGoodbyeModelToJson(
-        WelcomeGoodbyeModel instance) =>
+Map<String, dynamic> _$$WelcomeGoodbyeModelImplToJson(
+        _$WelcomeGoodbyeModelImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'title': instance.title,
