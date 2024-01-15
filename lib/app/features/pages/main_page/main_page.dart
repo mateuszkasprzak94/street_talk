@@ -6,7 +6,8 @@ import 'package:street_talk/app/features/pages/home_page/home_page.dart';
 import 'package:street_talk/app/features/pages/tasks_page/tasks_page.dart';
 
 class MainPage extends StatefulWidget {
-  const MainPage({super.key});
+  final int? index;
+  const MainPage({super.key, this.index});
 
   @override
   State<MainPage> createState() => _MainPageState();
@@ -14,6 +15,15 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   int currentIndex = 0;
+
+  @override
+  void initState() {
+    super.initState();
+
+    // Set the initial index based on the widget's parameter if provided
+    currentIndex = widget.index ?? 0;
+  }
+
   final screens = const [
     HomePage(),
     ColloquialismsPage(),

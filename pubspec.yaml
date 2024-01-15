@@ -26,6 +26,9 @@ dependencies:
   freezed_annotation: ^2.4.1
   get_it: ^7.6.6
   injectable: ^2.3.2
+  firebase_core: ^2.24.2
+  firebase_messaging: ^14.7.10
+  flutter_local_notifications: ^16.3.0
 
 dev_dependencies:
   flutter_test:
