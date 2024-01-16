@@ -3,7 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:street_talk/app/features/pages/tasks_page/cubit/tasks_cubit.dart';
 import 'package:street_talk/app/widgets/drawer/drawer.dart';
-import 'package:street_talk/app/widgets/tasks_listview/tasks_listview.dart';
+import 'package:street_talk/app/widgets/tasks_listview/tasks_listview_page_one/tasks_listview_page_one.dart';
+import 'package:street_talk/app/widgets/tasks_listview/tasks_listview_page_three/tasks_listview_page_three.dart';
+import 'package:street_talk/app/widgets/tasks_listview/tasks_listview_page_two/tasks_listview_page_two.dart';
 
 class TasksPage extends StatelessWidget {
   const TasksPage({super.key});
@@ -55,9 +57,9 @@ class TasksPage extends StatelessWidget {
               physics: const NeverScrollableScrollPhysics(),
               controller: state.controllerTaskPage,
               children: const [
-                TasksListView(),
-                TasksListView(),
-                TasksListView(),
+                TasksOne(),
+                TasksTwo(),
+                TasksThree(),
               ],
             ),
           );

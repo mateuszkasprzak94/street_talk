@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:street_talk/app/features/pages/tasks_page/cubit/tasks_cubit.dart';
 
-class TasksListView extends StatelessWidget {
-  const TasksListView({
+class TasksTwo extends StatelessWidget {
+  const TasksTwo({
     super.key,
   });
 
@@ -18,10 +18,19 @@ class TasksListView extends StatelessWidget {
           height: 1000,
           margin: const EdgeInsets.all(10),
           decoration: BoxDecoration(
+            color: Colors.white,
             borderRadius: const BorderRadius.all(Radius.circular(20)),
             border: Border.all(
               color: const Color(0xFFc60b1e),
             ),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.1),
+                spreadRadius: 5,
+                blurRadius: 7,
+                offset: const Offset(4, 8),
+              ),
+            ],
           ),
           child: const Column(
             children: [
