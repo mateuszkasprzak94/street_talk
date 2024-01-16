@@ -4,7 +4,6 @@ import 'package:street_talk/app/drawer/drawer_content/about_spain/about_spain.da
 import 'package:street_talk/app/drawer/drawer_content/e_book/e_book.dart';
 import 'package:street_talk/app/drawer/drawer_content/favourites/favourites.dart';
 import 'package:street_talk/app/drawer/drawer_content/fun_facts/fun_facts.dart';
-import 'package:street_talk/app/drawer/drawer_content/verbs/verbs.dart';
 import 'package:street_talk/app/features/pages/main_page/main_page.dart';
 
 class NavigationDrawerWidget extends StatelessWidget {
@@ -71,20 +70,6 @@ class NavigationDrawerWidget extends StatelessWidget {
                 Navigator.of(context).pushReplacement(
                   MaterialPageRoute(
                     builder: (context) => const MainPage(),
-                  ),
-                );
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.access_time),
-              title: const Text('Odmiana czasowników'),
-              onTap: () {
-                // close navigation drawer before
-                Navigator.pop(context);
-
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => const VerbsPage(),
                   ),
                 );
               },
