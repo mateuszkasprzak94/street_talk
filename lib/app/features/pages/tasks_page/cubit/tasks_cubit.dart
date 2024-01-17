@@ -1,6 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:street_talk/app/core/enums/enums.dart';
+import 'package:street_talk/app/domain/models/exercise_question_model.dart';
 
 part 'tasks_state.dart';
 

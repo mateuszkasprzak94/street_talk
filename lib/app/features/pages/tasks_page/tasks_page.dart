@@ -12,6 +12,7 @@ class TasksPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
+
     return BlocProvider(
       create: (context) => TasksCubit()..start(),
       child: BlocBuilder<TasksCubit, TasksState>(

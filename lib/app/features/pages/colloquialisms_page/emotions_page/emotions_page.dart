@@ -127,10 +127,6 @@ class EmotionsButtonWidget extends StatelessWidget {
             child: CircleAvatar(
               foregroundImage: AssetImage(model.image),
               radius: 70,
-              //  Image.asset(
-              //   model.image,
-              //   fit: BoxFit.fill,
-              // ),
             ),
           ),
           Expanded(
