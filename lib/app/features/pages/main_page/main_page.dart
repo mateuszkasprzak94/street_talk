@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:street_talk/app/core/constants/constants.dart';
 import 'package:street_talk/app/features/pages/colloquialisms_page/colloquialisms_page.dart';
 import 'package:street_talk/app/features/pages/dictionary_page/dictionary_page.dart';
 import 'package:street_talk/app/features/pages/flashcards_page/flashcards_page.dart';
@@ -44,7 +45,7 @@ class _MainPageState extends State<MainPage> {
             currentIndex = newIndex;
           });
         },
-        selectedItemColor: const Color(0xFFc60b1e),
+        selectedItemColor: kRedColor,
         unselectedItemColor: Colors.grey,
         iconSize: 30,
         selectedFontSize: 10,

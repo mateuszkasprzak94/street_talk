@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:street_talk/app/core/constants/constants.dart';
 import 'package:street_talk/app/features/pages/flashcards_page/flashcards_sets_page/flashcards_sets_page_content/set_one/set_one.dart';
 import 'package:street_talk/app/features/pages/flashcards_page/flashcards_sets_page/flashcards_sets_page_content/set_three/set_three.dart';
 import 'package:street_talk/app/features/pages/flashcards_page/flashcards_sets_page/flashcards_sets_page_content/set_two/set_two.dart';
@@ -31,7 +32,7 @@ class FlashCardsPage extends StatelessWidget {
             height: 70,
             width: double.infinity,
             decoration: const BoxDecoration(
-              color: Color(0xFFc60b1e),
+              color: kRedColor,
             ),
             child: Column(children: [
               Text(
@@ -63,7 +64,7 @@ class FlashCardsPage extends StatelessWidget {
                     ),
                   );
                 },
-                backgroundColor: const Color(0xFFc60b1e),
+                backgroundColor: kRedColor,
                 child: const Text(
                   'Zestaw 1',
                   style: TextStyle(color: Colors.white),
@@ -81,7 +82,7 @@ class FlashCardsPage extends StatelessWidget {
                     ),
                   );
                 },
-                backgroundColor: const Color(0xFFc60b1e),
+                backgroundColor: kRedColor,
                 child: const Text(
                   'Zestaw 2',
                   style: TextStyle(color: Colors.white),
@@ -99,7 +100,7 @@ class FlashCardsPage extends StatelessWidget {
                     ),
                   );
                 },
-                backgroundColor: const Color(0xFFc60b1e),
+                backgroundColor: kRedColor,
                 child: const Text(
                   'Zestaw 3',
                   style: TextStyle(color: Colors.white),

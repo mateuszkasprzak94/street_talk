@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:street_talk/app/core/constants/constants.dart';
 import 'package:street_talk/app/domain/models/exercise_question_model.dart';
 import 'package:street_talk/app/features/pages/tasks_page/cubit/tasks_cubit.dart';
 import 'package:street_talk/app/widgets/tasks_listview/tasks_listview_page_one/tasks_listview_page_one_data.dart';
@@ -74,7 +75,7 @@ class _TasksOneState extends State<TasksOne> {
             color: Colors.white,
             borderRadius: const BorderRadius.all(Radius.circular(20)),
             border: Border.all(
-              color: const Color(0xFFc60b1e),
+              color: kRedColor,
             ),
             boxShadow: [
               BoxShadow(
@@ -134,7 +135,7 @@ class _TasksOneState extends State<TasksOne> {
                         width: 250,
                         decoration: BoxDecoration(
                           border: Border.all(
-                            color: const Color(0xFFc60b1e),
+                            color: kRedColor,
                           ),
                           color: Colors.white,
                           boxShadow: [
@@ -151,14 +152,14 @@ class _TasksOneState extends State<TasksOne> {
                           children: [
                             const Icon(
                               Icons.menu_book_sharp,
-                              color: Color(0xFFc60b1e),
+                              color: kRedColor,
                               size: 37,
                             ),
                             Text(
                               'Comprobar',
                               style: GoogleFonts.lora(
                                 fontSize: 22,
-                                color: const Color(0xFFc60b1e),
+                                color: kRedColor,
                               ),
                             ),
                           ],

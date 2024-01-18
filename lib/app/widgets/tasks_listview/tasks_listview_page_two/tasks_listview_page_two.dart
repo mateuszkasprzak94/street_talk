@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:street_talk/app/core/constants/constants.dart';
 import 'package:street_talk/app/features/pages/tasks_page/cubit/tasks_cubit.dart';
 
 class TasksTwo extends StatelessWidget {
@@ -21,7 +22,7 @@ class TasksTwo extends StatelessWidget {
             color: Colors.white,
             borderRadius: const BorderRadius.all(Radius.circular(20)),
             border: Border.all(
-              color: const Color(0xFFc60b1e),
+              color: kRedColor,
             ),
             boxShadow: [
               BoxShadow(

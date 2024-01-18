@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:street_talk/app/core/constants/constants.dart';
 import 'package:street_talk/app/core/enums/enums.dart';
 import 'package:street_talk/app/domain/models/street_model.dart';
 import 'package:street_talk/app/features/pages/colloquialisms_page/street_page/cubit/street_cubit.dart';
@@ -33,7 +34,7 @@ class StreetPage extends StatelessWidget {
               height: 60,
               width: double.infinity,
               decoration: const BoxDecoration(
-                color: Color(0xFFc60b1e),
+                color: kRedColor,
               ),
               child: Center(
                 child: Text(
@@ -143,7 +144,7 @@ class _StreetItemWidget extends StatelessWidget {
               ),
               const Divider(
                 thickness: 1,
-                color: Color(0xFFc60b1e),
+                color: kRedColor,
                 indent: 70,
                 endIndent: 70,
               ),
@@ -161,7 +162,7 @@ class _StreetItemWidget extends StatelessWidget {
               ),
               const Divider(
                 thickness: 1,
-                color: Color(0xFFc60b1e),
+                color: kRedColor,
                 indent: 70,
                 endIndent: 70,
               ),

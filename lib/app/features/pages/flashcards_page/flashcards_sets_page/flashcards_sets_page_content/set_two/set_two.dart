@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:street_talk/app/core/constants/constants.dart';
 import 'package:street_talk/app/features/pages/flashcards_page/flashcards_sets_page/flashcards_sets_page_content/set_two/cubit/set_two_cubit.dart';
 import 'package:street_talk/app/widgets/flash_cards_column/flash_cards_content.dart';
 
@@ -32,7 +33,7 @@ class FlashCardsSetTwo extends StatelessWidget {
                   height: 60,
                   width: double.infinity,
                   decoration: const BoxDecoration(
-                    color: Color(0xFFc60b1e),
+                    color: kRedColor,
                   ),
                   child: Center(
                     child: Text(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:street_talk/app/core/constants/constants.dart';
 
 class EmotionCardContentWidget extends StatelessWidget {
   const EmotionCardContentWidget({
@@ -55,7 +56,7 @@ class EmotionCardContentWidget extends StatelessWidget {
           ),
           const Divider(
             thickness: 1,
-            color: Color(0xFFc60b1e),
+            color: kRedColor,
             indent: 70,
             endIndent: 70,
           ),
@@ -75,7 +76,7 @@ class EmotionCardContentWidget extends StatelessWidget {
           ),
           const Divider(
             thickness: 1,
-            color: Color(0xFFc60b1e),
+            color: kRedColor,
             indent: 70,
             endIndent: 70,
           ),

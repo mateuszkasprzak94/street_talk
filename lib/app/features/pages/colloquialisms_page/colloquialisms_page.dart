@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:street_talk/app/core/constants/constants.dart';
 import 'package:street_talk/app/features/pages/colloquialisms_page/emotions_page/emotions_page.dart';
 import 'package:street_talk/app/features/pages/colloquialisms_page/situation_page/situation_page_content.dart';
 import 'package:street_talk/app/features/pages/colloquialisms_page/street_page/street_page_content.dart';
@@ -37,7 +38,7 @@ class _ColloquialismsPageState extends State<ColloquialismsPage> {
             height: 70,
             width: double.infinity,
             decoration: const BoxDecoration(
-              color: Color(0xFFc60b1e),
+              color: kRedColor,
             ),
             child: Column(children: [
               Text(

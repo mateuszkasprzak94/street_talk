@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:street_talk/app/core/constants/constants.dart';
 import 'package:street_talk/app/features/pages/tasks_page/cubit/tasks_cubit.dart';
 import 'package:street_talk/app/widgets/drawer/drawer.dart';
 import 'package:street_talk/app/widgets/tasks_listview/tasks_listview_page_one/tasks_listview_page_one.dart';
@@ -37,7 +38,7 @@ class TasksPage extends StatelessWidget {
                   height: 70,
                   width: double.infinity,
                   decoration: const BoxDecoration(
-                    color: Color(0xFFc60b1e),
+                    color: kRedColor,
                   ),
                   child: Column(children: [
                     Text(

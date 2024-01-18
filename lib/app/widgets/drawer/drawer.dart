@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:street_talk/app/core/constants/constants.dart';
 import 'package:street_talk/app/drawer/drawer_content/about_spain/about_spain.dart';
 import 'package:street_talk/app/drawer/drawer_content/e_book/e_book.dart';
 import 'package:street_talk/app/drawer/drawer_content/favourites/favourites.dart';
@@ -27,7 +28,7 @@ class NavigationDrawerWidget extends StatelessWidget {
   }
 
   Widget buildHeader(BuildContext context) => Container(
-        color: const Color(0xFFc60b1e),
+        color: kRedColor,
         padding: EdgeInsets.only(
             top: MediaQuery.of(context).padding.top, bottom: 24),
         child: Column(

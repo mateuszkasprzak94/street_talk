@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:street_talk/app/core/constants/constants.dart';
 import 'package:street_talk/app/core/enums/enums.dart';
 import 'package:street_talk/app/domain/models/emotions_name_model.dart';
 import 'package:street_talk/app/features/pages/colloquialisms_page/emotions_page/cubit/emotions_page_cubit.dart';
@@ -31,7 +32,7 @@ class EmotionsPage extends StatelessWidget {
               height: 60,
               width: double.infinity,
               decoration: const BoxDecoration(
-                color: Color(0xFFc60b1e),
+                color: kRedColor,
               ),
               child: Center(
                 child: Text(
