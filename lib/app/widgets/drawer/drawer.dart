@@ -4,7 +4,7 @@ import 'package:street_talk/app/core/constants/constants.dart';
 import 'package:street_talk/app/drawer/drawer_content/about_spain/about_spain.dart';
 import 'package:street_talk/app/drawer/drawer_content/e_book/e_book.dart';
 import 'package:street_talk/app/drawer/drawer_content/favourites/favourites.dart';
-import 'package:street_talk/app/drawer/drawer_content/fun_facts/fun_facts.dart';
+import 'package:street_talk/app/drawer/drawer_content/quiz/quiz.dart';
 import 'package:street_talk/app/features/pages/main_page/main_page.dart';
 
 class NavigationDrawerWidget extends StatelessWidget {
@@ -90,8 +90,8 @@ class NavigationDrawerWidget extends StatelessWidget {
               },
             ),
             ListTile(
-              leading: const Icon(Icons.question_mark),
-              title: const Text('Ciekawostki'),
+              leading: const Icon(Icons.lightbulb_outline),
+              title: const Text('Quiz'),
               onTap: () {
                 // close navigation drawer before
                 Navigator.pop(context);
