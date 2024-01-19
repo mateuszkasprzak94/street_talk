@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:street_talk/app/core/constants/constants.dart';
+import 'package:street_talk/app/widgets/quiz/custom_close_button.dart';
 
 class QuizHomePage extends StatefulWidget {
   const QuizHomePage({super.key});
@@ -16,6 +17,7 @@ class _QuizHomePageState extends State<QuizHomePage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
+        leading: const CustomCloseButton(),
         actions: const [
           Padding(
             padding: EdgeInsets.only(right: 10),
@@ -43,6 +45,21 @@ class _QuizHomePageState extends State<QuizHomePage> {
               ),
             ),
           ),
+        ),
+      ),
+      body: Container(
+        margin: const EdgeInsets.only(left: 20, right: 20, top: 40, bottom: 10),
+        child: ListView(
+          children: [
+            Text(
+              '¡Vamos a jugar!',
+              style: GoogleFonts.alike(
+                fontSize: 35,
+                fontWeight: FontWeight.w800,
+                color: const Color.fromARGB(230, 254, 190, 0),
+              ),
+            ),
+          ],
         ),
       ),
     );
