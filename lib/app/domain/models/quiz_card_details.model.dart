@@ -25,7 +25,7 @@ const double opacity = 0.5;
 final List<QuizCardDetail> quizCardDetailList = [
   QuizCardDetail(
       title: 'Kultura i Społeczeństwo',
-      iconName: '',
+      iconName: 'assets/quiz/culture.png',
       gradientsColor: [
         const Color(0xff0846a3),
         const Color(0xff387ee8),
@@ -35,8 +35,8 @@ final List<QuizCardDetail> quizCardDetailList = [
       category: 'kultura_i_społeczeństwo',
       iconTag: 'kultura_icon'),
   QuizCardDetail(
-      title: 'Film i Muzyka',
-      iconName: '',
+      title: 'Muzyka',
+      iconName: 'assets/quiz/music.png',
       gradientsColor: [
         const Color(0xfff2bd05),
         const Color(0xffe6c657),
@@ -47,7 +47,7 @@ final List<QuizCardDetail> quizCardDetailList = [
       iconTag: 'film_icon'),
   QuizCardDetail(
       title: 'Historia i Sztuka',
-      iconName: '',
+      iconName: 'assets/quiz/history.png',
       gradientsColor: [
         const Color(0xff089e44),
         const Color(0xff3dd178),
@@ -58,7 +58,7 @@ final List<QuizCardDetail> quizCardDetailList = [
       iconTag: 'historia_icon'),
   QuizCardDetail(
       title: 'Wiedza Ogólna',
-      iconName: '',
+      iconName: 'assets/quiz/knowledge.png',
       gradientsColor: [
         const Color(0xff395c91),
         const Color(0xff75aafa),
@@ -69,24 +69,24 @@ final List<QuizCardDetail> quizCardDetailList = [
       iconTag: 'wiedza_icon'),
   QuizCardDetail(
       title: 'Jedzenie i Picie',
-      iconName: '',
-      gradientsColor: [
-        const Color(0xff0846a3),
-        const Color(0xff387ee8),
-      ],
-      shadowColor: const Color(0xff387ee8).withOpacity(opacity),
-      textColor: const Color(0xff0846a3),
-      category: 'jedzenie_i_picie',
-      iconTag: 'jedzenie_icon'),
-  QuizCardDetail(
-      title: 'Filmy',
-      iconName: '',
+      iconName: 'assets/quiz/food.png',
       gradientsColor: [
         const Color(0xffd6182e),
         const Color(0xffed475a),
       ],
       shadowColor: const Color(0xffed475a).withOpacity(opacity),
       textColor: const Color(0xffd6182e),
+      category: 'jedzenie_i_picie',
+      iconTag: 'jedzenie_icon'),
+  QuizCardDetail(
+      title: 'Filmy i telewizja',
+      iconName: 'assets/quiz/tv.png',
+      gradientsColor: [
+        const Color(0xff0846a3),
+        const Color(0xff387ee8),
+      ],
+      shadowColor: const Color(0xff387ee8).withOpacity(opacity),
+      textColor: const Color(0xff0846a3),
       category: 'filmy',
       iconTag: 'filmy_icon'),
 ];

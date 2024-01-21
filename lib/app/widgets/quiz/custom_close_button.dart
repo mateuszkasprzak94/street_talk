@@ -13,7 +13,10 @@ class CustomCloseButton extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           shape: BoxShape.circle,
-          border: Border.all(color: kRedColor),
+          border: Border.all(
+            color: kRedColor,
+            width: 4,
+          ),
         ),
         child: GestureDetector(
           onTap: () {
@@ -21,8 +24,8 @@ class CustomCloseButton extends StatelessWidget {
           },
           child: const Icon(
             Icons.close_rounded,
-            color: kYellowColor,
-            size: 30,
+            color: kRedColor,
+            size: 25,
           ),
         ),
       ),
