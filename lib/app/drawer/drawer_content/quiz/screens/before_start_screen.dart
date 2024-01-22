@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:street_talk/app/domain/models/quiz_card_details.model.dart';
+import 'package:street_talk/app/drawer/drawer_content/quiz/screens/loading_screen.dart';
 import 'package:street_talk/app/widgets/quiz/custom_close_button.dart';
 
 class BeforeStartScreen extends StatelessWidget {
@@ -64,31 +65,43 @@ class BeforeStartScreen extends StatelessWidget {
                     color: Colors.white.withOpacity(0.55),
                   ),
                 ),
-                SizedBox(height: 50),
-                Container(
-                  height: 50,
-                  width: MediaQuery.of(context).size.width,
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                    color: quizCardDetailList[selectedIndex].shadowColor,
-                    borderRadius: BorderRadius.circular(10),
-                    boxShadow: [
-                      BoxShadow(
-                        offset: const Offset(3, 3),
-                        blurRadius: 3,
-                        color: Colors.white.withOpacity(0.3),
+                const SizedBox(height: 50),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => LoadingScreen(
+                          index: selectedIndex,
+                        ),
                       ),
-                    ],
-                    border: Border.all(
-                      color: Colors.white,
+                    );
+                  },
+                  child: Container(
+                    height: 50,
+                    width: MediaQuery.of(context).size.width,
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      color: quizCardDetailList[selectedIndex].shadowColor,
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                          offset: const Offset(3, 3),
+                          blurRadius: 3,
+                          color: Colors.white.withOpacity(0.3),
+                        ),
+                      ],
+                      border: Border.all(
+                        color: Colors.white,
+                      ),
                     ),
-                  ),
-                  child: const Text(
-                    'Zaczynam!',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold,
+                    child: const Text(
+                      'Zaczynam!',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),
