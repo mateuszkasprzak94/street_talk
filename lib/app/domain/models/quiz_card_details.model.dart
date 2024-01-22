@@ -60,11 +60,11 @@ final List<QuizCardDetail> quizCardDetailList = [
       title: 'Wiedza Ogólna',
       iconName: 'assets/quiz/knowledge.png',
       gradientsColor: [
-        const Color(0xff395c91),
-        const Color(0xff75aafa),
+        const Color(0xffd97014),
+        const Color(0xfff2a057),
       ],
-      shadowColor: const Color(0xff75aafa).withOpacity(opacity),
-      textColor: const Color(0xff395c91),
+      shadowColor: const Color(0xfff2a057).withOpacity(opacity),
+      textColor: const Color(0xffd97014),
       category: 'wiedza_ogolna',
       iconTag: 'wiedza_icon'),
   QuizCardDetail(
@@ -79,14 +79,14 @@ final List<QuizCardDetail> quizCardDetailList = [
       category: 'jedzenie_i_picie',
       iconTag: 'jedzenie_icon'),
   QuizCardDetail(
-      title: 'Filmy i telewizja',
+      title: 'Filmy i Telewizja',
       iconName: 'assets/quiz/tv.png',
       gradientsColor: [
-        const Color(0xff0846a3),
-        const Color(0xff387ee8),
+        const Color(0xff1c0654),
+        const Color(0xff3c2a70),
       ],
-      shadowColor: const Color(0xff387ee8).withOpacity(opacity),
-      textColor: const Color(0xff0846a3),
+      shadowColor: const Color(0xff3c2a70).withOpacity(opacity),
+      textColor: const Color(0xff3c2a70),
       category: 'filmy',
       iconTag: 'filmy_icon'),
 ];

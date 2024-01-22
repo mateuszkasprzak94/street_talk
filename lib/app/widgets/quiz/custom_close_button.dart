@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:street_talk/app/core/constants/constants.dart';
 
 class CustomCloseButton extends StatelessWidget {
   const CustomCloseButton({
@@ -14,7 +13,7 @@ class CustomCloseButton extends StatelessWidget {
         decoration: BoxDecoration(
           shape: BoxShape.circle,
           border: Border.all(
-            color: kRedColor,
+            color: Colors.black.withOpacity(0.5),
             width: 4,
           ),
         ),
@@ -22,9 +21,9 @@ class CustomCloseButton extends StatelessWidget {
           onTap: () {
             Navigator.pop(context);
           },
-          child: const Icon(
+          child: Icon(
             Icons.close_rounded,
-            color: kRedColor,
+            color: Colors.black.withOpacity(0.5),
             size: 25,
           ),
         ),

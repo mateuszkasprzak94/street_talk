@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:street_talk/app/domain/models/quiz_card_details.model.dart';
-import 'package:street_talk/app/features/pages/home_page/home_page.dart';
+import 'package:street_talk/app/drawer/drawer_content/quiz/screens/before_start_screen.dart';
 
 class QuizListCard extends StatelessWidget {
   const QuizListCard(this.index, {super.key});
@@ -15,7 +15,10 @@ class QuizListCard extends StatelessWidget {
         onTap: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => HomePage()),
+            MaterialPageRoute(
+                builder: (context) => BeforeStartScreen(
+                      selectedIndex: index,
+                    )),
           );
         },
         child: Stack(
