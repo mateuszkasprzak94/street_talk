@@ -18,12 +18,14 @@ class FlashCardsPage extends StatelessWidget {
         centerTitle: true,
         leading: Transform.scale(
           scale: 1.6,
-          child: Container(
-            margin: const EdgeInsets.only(left: 15),
-            alignment: Alignment.center,
-            child: Image.asset(
-              'assets/flag/flag.png',
-            ),
+          child: Animate(
+            child: Container(
+              margin: const EdgeInsets.only(left: 15),
+              alignment: Alignment.center,
+              child: Image.asset(
+                'assets/flag/flag.png',
+              ),
+            ).animate().fade(delay: 300.ms, duration: 500.ms).slideX(),
           ),
         ),
         bottom: PreferredSize(
@@ -55,21 +57,22 @@ class FlashCardsPage extends StatelessWidget {
           children: [
             const SizedBox(height: 20),
             Animate(
-                child: FloatingActionButton.large(
-              heroTag: 'btn1',
-              onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (_) => const FlashCardsSetOne(),
-                  ),
-                );
-              },
-              backgroundColor: kRedColor,
-              child: const Text(
-                'Zestaw 1',
-                style: TextStyle(color: kRedColor),
-              ).animate(delay: 1200.ms).tint(color: Colors.white),
-            ).animate().fade(delay: 400.ms, duration: 900.ms).scale().then()),
+              child: FloatingActionButton.large(
+                heroTag: 'btn1',
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => const FlashCardsSetOne(),
+                    ),
+                  );
+                },
+                backgroundColor: kRedColor,
+                child: const Text(
+                  'Zestaw 1',
+                  style: TextStyle(color: kRedColor),
+                ).animate(delay: 1200.ms).tint(color: Colors.white),
+              ).animate().fade(delay: 400.ms, duration: 900.ms).scale(),
+            ),
             const SizedBox(height: 20),
             Animate(
               child: FloatingActionButton.large(
@@ -86,7 +89,7 @@ class FlashCardsPage extends StatelessWidget {
                   'Zestaw 2',
                   style: TextStyle(color: kRedColor),
                 ).animate(delay: 1600.ms).tint(color: Colors.white),
-              ).animate().fade(delay: 800.ms, duration: 900.ms).scale().move(),
+              ).animate().fade(delay: 800.ms, duration: 900.ms).scale(),
             ),
             const SizedBox(height: 20),
             Animate(
@@ -104,7 +107,7 @@ class FlashCardsPage extends StatelessWidget {
                   'Zestaw 3',
                   style: TextStyle(color: kRedColor),
                 ).animate(delay: 2000.ms).tint(color: Colors.white),
-              ).animate().fade(delay: 1200.ms, duration: 900.ms).scale().move(),
+              ).animate().fade(delay: 1200.ms, duration: 900.ms).scale(),
             ),
           ],
         ),

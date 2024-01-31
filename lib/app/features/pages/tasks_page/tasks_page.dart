@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:street_talk/app/core/constants/constants.dart';
@@ -24,12 +25,14 @@ class TasksPage extends StatelessWidget {
               centerTitle: true,
               leading: Transform.scale(
                 scale: 1.6,
-                child: Container(
-                  margin: const EdgeInsets.only(left: 15),
-                  alignment: Alignment.center,
-                  child: Image.asset(
-                    'assets/flag/flag.png',
-                  ),
+                child: Animate(
+                  child: Container(
+                    margin: const EdgeInsets.only(left: 15),
+                    alignment: Alignment.center,
+                    child: Image.asset(
+                      'assets/flag/flag.png',
+                    ),
+                  ).animate().fade(delay: 300.ms, duration: 500.ms).slideX(),
                 ),
               ),
               bottom: PreferredSize(
