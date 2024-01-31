@@ -1,5 +1,6 @@
 // SET_ONE
 
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:street_talk/app/domain/models/flashcards_model.dart';
@@ -34,9 +35,10 @@ class SetOnePageViewContent extends StatelessWidget {
                 height: 200,
                 child: Align(
                   alignment: Alignment.center,
-                  child: Text(
+                  child: AutoSizeText(
                     word,
                     style: const TextStyle(fontSize: 40),
+                    maxLines: 1,
                   ),
                 ),
               ),
@@ -159,14 +161,15 @@ class SetTwoPageViewContent extends StatelessWidget {
           children: [
             const SizedBox(height: 100),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: SizedBox(
                 height: 200,
                 child: Align(
                   alignment: Alignment.center,
-                  child: Text(
+                  child: AutoSizeText(
                     word,
                     style: const TextStyle(fontSize: 40),
+                    maxLines: 1,
                   ),
                 ),
               ),
@@ -294,9 +297,10 @@ class SetThreePageViewContent extends StatelessWidget {
                 height: 200,
                 child: Align(
                   alignment: Alignment.center,
-                  child: Text(
+                  child: AutoSizeText(
                     word,
                     style: const TextStyle(fontSize: 40),
+                    maxLines: 1,
                   ),
                 ),
               ),
