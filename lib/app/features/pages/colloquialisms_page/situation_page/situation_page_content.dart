@@ -1,6 +1,6 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:street_talk/app/core/constants/constants.dart';
 import 'package:street_talk/app/core/enums/enums.dart';
@@ -126,20 +126,25 @@ class _SituationItemWidget extends StatelessWidget {
           ),
           child: Column(
             children: [
-              const Padding(
-                padding: EdgeInsets.all(8.0),
-                child: FaIcon(
-                  FontAwesomeIcons.mapPin,
-                  color: Colors.green,
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  model.id.toString(),
+                  style: const TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      fontStyle: FontStyle.italic,
+                      color: Colors.green),
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: Text(
+                child: AutoSizeText(
                   model.word,
                   style: const TextStyle(
                     fontSize: 35,
                   ),
+                  maxLines: 1,
                 ),
               ),
               const Divider(
@@ -149,8 +154,8 @@ class _SituationItemWidget extends StatelessWidget {
                 endIndent: 70,
               ),
               Container(
-                margin: const EdgeInsets.symmetric(horizontal: 5),
-                child: Text(
+                margin: const EdgeInsets.symmetric(horizontal: 10),
+                child: AutoSizeText(
                   model.wordTranslation,
                   style: TextStyle(
                     color: Colors.grey.shade500,
@@ -158,6 +163,7 @@ class _SituationItemWidget extends StatelessWidget {
                     fontStyle: FontStyle.italic,
                     fontWeight: FontWeight.w500,
                   ),
+                  maxLines: 2,
                 ),
               ),
               const Divider(
@@ -167,6 +173,7 @@ class _SituationItemWidget extends StatelessWidget {
                 endIndent: 70,
               ),
               Container(
+                width: double.infinity,
                 padding: const EdgeInsets.all(5),
                 margin: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
@@ -184,19 +191,27 @@ class _SituationItemWidget extends StatelessWidget {
                           color: Colors.black),
                     ),
                     const SizedBox(height: 9),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                    Row(
                       children: [
-                        Text(
-                          model.exampleOne,
-                          style: const TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.bold),
-                        ),
-                        const SizedBox(height: 8),
-                        Text(
-                          model.exampleTwo,
-                          style: const TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.bold),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                model.exampleOne,
+                                style: const TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              const SizedBox(height: 8),
+                              Text(
+                                model.exampleTwo,
+                                style: const TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
                         ),
                       ],
                     ),

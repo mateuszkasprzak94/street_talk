@@ -46,8 +46,8 @@ class EmotionsContentMockedDataSource {
         'word': '¡Qué fuerte!',
         'word_translation': 'używamy w takich samych sytuacjach jak powyżej',
         'example_one':
-            '-¿Te has enterado de que Ana y Pedro están saliendo juntos?',
-        'example_two': '-¡Qué fuerte! Pero si siempre se han llevado fatal.',
+            '- ¿Te has enterado de que Ana y Pedro están saliendo juntos?',
+        'example_two': '- ¡Qué fuerte! Pero si siempre se han llevado fatal.',
       },
       {
         'id': 6,
@@ -55,8 +55,8 @@ class EmotionsContentMockedDataSource {
         'word': '¡No me digas!',
         'word_translation':
             'używamy wtedy gdy cos wydaje się nam nieprawdopodobne lub zadziwiające',
-        'example_one': '-Este año vamos de vacaciones a África.',
-        'example_two': '-¡No me digas! ¿Y eso?',
+        'example_one': '- Este año vamos de vacaciones a África.',
+        'example_two': '- ¡No me digas! ¿Y eso?',
       },
       {
         'id': 7,
@@ -64,8 +64,8 @@ class EmotionsContentMockedDataSource {
         'word': 'Estoy flipando / Yo flipo / Flipo en colores',
         'word_translation':
             'używamy w sytuacjach gdy jesteśmy bardzo zaskoczeni. Może być używane w kontekście pozytywnym lub negatywnym',
-        'example_one': '-No me esperaba para nada esa noticia.',
-        'example_two': '-Ni yo, estoy flipando.',
+        'example_one': '- No me esperaba para nada esa noticia.',
+        'example_two': '- Ni yo, estoy flipando.',
       },
       {
         'id': 8,
@@ -116,7 +116,7 @@ class EmotionsContentMockedDataSource {
         'emotion_id': 2,
         'word': '¡Qué barbaridad!',
         'word_translation': 'może wyrażać oburzenie, zdziwienie, zszokowanie',
-        'example_one': '¡Qué barbaridad! No puedo creer lo que acabo de ver.',
+        'example_one': '- ¡Qué barbaridad! No puedo creer lo que acabo de ver.',
         'example_two': '',
       },
       {
@@ -134,7 +134,7 @@ class EmotionsContentMockedDataSource {
         'word': 'Ya te digo',
         'word_translation': 'używa się tak samo jak „Ya ves”',
         'example_one': '- Hace un frío increíble.',
-        'example_two': '-Ya te digo, tengo la calefacción a tope.',
+        'example_two': '- Ya te digo, tengo la calefacción a tope.',
       },
       {
         'id': 16,

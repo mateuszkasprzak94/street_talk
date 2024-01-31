@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -134,11 +135,12 @@ class _WelcomeGoodbyeItemWidget extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: Text(
+                child: AutoSizeText(
                   model.title,
                   style: const TextStyle(
-                    fontSize: 30,
+                    fontSize: 28,
                   ),
+                  maxLines: 2,
                 ),
               ),
               const Divider(
@@ -148,6 +150,7 @@ class _WelcomeGoodbyeItemWidget extends StatelessWidget {
                 endIndent: 60,
               ),
               Container(
+                width: double.infinity,
                 padding: const EdgeInsets.all(5),
                 margin: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
@@ -165,41 +168,47 @@ class _WelcomeGoodbyeItemWidget extends StatelessWidget {
                           color: Colors.black),
                     ),
                     const SizedBox(height: 9),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                    Row(
                       children: [
-                        Text(
-                          '${model.exampleOne} - ${model.exampleOneTranslation}',
-                          style: const TextStyle(
-                              color: Colors.white,
-                              fontStyle: FontStyle.italic,
-                              fontWeight: FontWeight.bold),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                '${model.exampleOne} - ${model.exampleOneTranslation}',
+                                style: const TextStyle(
+                                    color: Colors.white,
+                                    fontStyle: FontStyle.italic,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              const SizedBox(height: 8),
+                              Text(
+                                '${model.exampleTwo} - ${model.exampleTwoTranslation}',
+                                style: const TextStyle(
+                                    color: Colors.white,
+                                    fontStyle: FontStyle.italic,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              const SizedBox(height: 8),
+                              Text(
+                                '${model.exampleThree} - ${model.exampleThreeTranslation}',
+                                style: const TextStyle(
+                                    color: Colors.white,
+                                    fontStyle: FontStyle.italic,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              const SizedBox(height: 8),
+                              Text(
+                                '${model.exampleFour} - ${model.exampleFourTranslation}',
+                                style: const TextStyle(
+                                    color: Colors.white,
+                                    fontStyle: FontStyle.italic,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              const SizedBox(height: 8),
+                            ],
+                          ),
                         ),
-                        const SizedBox(height: 8),
-                        Text(
-                          '${model.exampleTwo} - ${model.exampleTwoTranslation}',
-                          style: const TextStyle(
-                              color: Colors.white,
-                              fontStyle: FontStyle.italic,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        const SizedBox(height: 8),
-                        Text(
-                          '${model.exampleThree} - ${model.exampleThreeTranslation}',
-                          style: const TextStyle(
-                              color: Colors.white,
-                              fontStyle: FontStyle.italic,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        const SizedBox(height: 8),
-                        Text(
-                          '${model.exampleFour} - ${model.exampleFourTranslation}',
-                          style: const TextStyle(
-                              color: Colors.white,
-                              fontStyle: FontStyle.italic,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        const SizedBox(height: 8),
                       ],
                     ),
                   ],

@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -137,38 +138,41 @@ class _EmotionsItemWidget extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: Text(
+                child: AutoSizeText(
                   model.word,
                   style: const TextStyle(
                     fontSize: 35,
                   ),
+                  maxLines: 2,
                 ),
               ),
               const Divider(
-                thickness: 1,
+                thickness: 1.7,
                 color: kRedColor,
                 indent: 70,
                 endIndent: 70,
               ),
               Container(
-                margin: const EdgeInsets.symmetric(horizontal: 5),
-                child: Text(
+                margin: const EdgeInsets.symmetric(horizontal: 10),
+                child: AutoSizeText(
                   model.wordTranslation,
                   style: TextStyle(
-                    color: Colors.grey.shade500,
+                    color: Colors.grey.shade600,
                     fontSize: 14,
                     fontStyle: FontStyle.italic,
                     fontWeight: FontWeight.w500,
                   ),
+                  maxLines: 3,
                 ),
               ),
               const Divider(
-                thickness: 1,
+                thickness: 1.7,
                 color: kRedColor,
                 indent: 70,
                 endIndent: 70,
               ),
               Container(
+                width: double.infinity,
                 padding: const EdgeInsets.all(5),
                 margin: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
@@ -186,19 +190,27 @@ class _EmotionsItemWidget extends StatelessWidget {
                           color: Colors.black),
                     ),
                     const SizedBox(height: 9),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                    Row(
                       children: [
-                        Text(
-                          model.exampleOne,
-                          style: const TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.bold),
-                        ),
-                        const SizedBox(height: 8),
-                        Text(
-                          model.exampleTwo,
-                          style: const TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.bold),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                model.exampleOne,
+                                style: const TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              const SizedBox(height: 8),
+                              Text(
+                                model.exampleTwo,
+                                style: const TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
                         ),
                       ],
                     ),
