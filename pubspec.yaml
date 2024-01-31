@@ -30,6 +30,10 @@ dependencies:
   firebase_messaging: ^14.7.10
   flutter_local_notifications: ^16.3.0
   flutter_animate: ^4.4.0
+  loading_animation_widget: ^1.2.0+4
+  circular_countdown_timer: ^0.2.3
+  fl_score_bar: ^0.2.4
+  auto_size_text: ^3.0.0
 
 dev_dependencies:
   flutter_test:
@@ -59,4 +63,4 @@ flutter:
     - assets/images/
     - assets/custom_icons/
     - assets/emotions_images/
-    - assets/verbs/
+    - assets/quiz/

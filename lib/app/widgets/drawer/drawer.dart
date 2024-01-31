@@ -4,7 +4,7 @@ import 'package:street_talk/app/core/constants/constants.dart';
 import 'package:street_talk/app/drawer/drawer_content/about_spain/about_spain.dart';
 import 'package:street_talk/app/drawer/drawer_content/e_book/e_book.dart';
 import 'package:street_talk/app/drawer/drawer_content/favourites/favourites.dart';
-import 'package:street_talk/app/drawer/drawer_content/quiz/quiz.dart';
+import 'package:street_talk/app/drawer/drawer_content/quiz/quiz_home_page.dart';
 import 'package:street_talk/app/features/pages/main_page/main_page.dart';
 
 class NavigationDrawerWidget extends StatelessWidget {
@@ -98,7 +98,7 @@ class NavigationDrawerWidget extends StatelessWidget {
 
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => const FunFactsPage(),
+                    builder: (context) => const QuizHomePage(),
                   ),
                 );
               },
