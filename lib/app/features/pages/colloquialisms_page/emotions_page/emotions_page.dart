@@ -109,7 +109,7 @@ class EmotionsButtonWidget extends StatelessWidget {
         margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 20) +
             const EdgeInsets.only(top: 10),
         width: double.infinity,
-        height: 200,
+        height: 150,
         decoration: BoxDecoration(
           border: Border.all(color: Colors.grey),
           color: Colors.white,
@@ -124,10 +124,10 @@ class EmotionsButtonWidget extends StatelessWidget {
         ),
         child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.symmetric(horizontal: 15),
             child: CircleAvatar(
               foregroundImage: AssetImage(model.image),
-              radius: 70,
+              radius: 50,
             ),
           ),
           Expanded(
