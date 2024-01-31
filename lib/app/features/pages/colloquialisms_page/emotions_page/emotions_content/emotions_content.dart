@@ -225,13 +225,13 @@ Color getEmotionColor(int emotionId) {
     case 1:
       return const Color.fromARGB(202, 175, 12, 180);
     case 2:
-      return const Color.fromARGB(255, 241, 11, 34);
+      return const Color.fromARGB(251, 212, 4, 25);
     case 3:
       return const Color.fromARGB(255, 11, 198, 36);
     case 4:
       return const Color.fromARGB(179, 11, 108, 198);
     case 5:
-      return const Color.fromARGB(255, 131, 250, 34);
+      return const Color.fromARGB(255, 125, 212, 53);
     case 6:
       return const Color.fromARGB(255, 192, 47, 11);
     case 7:
