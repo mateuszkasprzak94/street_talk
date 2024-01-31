@@ -37,7 +37,6 @@ class QuizCubit extends Cubit<QuizState> {
     }
   }
 
-  List<QuizQuestionModel> _questionList = [];
   int _score = 0;
 
   List<String> getShuffledOptions(
@@ -48,12 +47,6 @@ class QuizCubit extends Cubit<QuizState> {
     options.addAll(question.incorrectAnswer);
     options.shuffle();
     return options;
-  }
-
-  bool isCorrect(int i, int selectedOption) {
-    if (_questionList[i].incorrectAnswer[selectedOption] ==
-        _questionList[i].correctAnswer) return true;
-    return false;
   }
 
   void increaseScore() {
