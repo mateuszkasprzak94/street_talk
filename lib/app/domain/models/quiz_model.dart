@@ -1,10 +1,19 @@
-class QuizQuestionModel {
-  final String question;
-  final List<String> options;
-  final String correctAnswer;
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-  QuizQuestionModel(
-      {required this.question,
-      required this.options,
-      required this.correctAnswer});
+part 'quiz_model.freezed.dart';
+part 'quiz_model.g.dart';
+
+@freezed
+class QuizQuestionModel with _$QuizQuestionModel {
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  factory QuizQuestionModel(
+    String category,
+    String id,
+    String question,
+    List<String> incorrectAnswer,
+    String correctAnswer,
+  ) = _QuizQuestionModel;
+
+  factory QuizQuestionModel.fromJson(Map<String, dynamic> json) =>
+      _$QuizQuestionModelFromJson(json);
 }

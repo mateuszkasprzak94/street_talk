@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:street_talk/app/core/constants/constants.dart';
-import 'package:street_talk/app/domain/models/quiz_card_details.model.dart';
+import 'package:street_talk/app/domain/models/quiz_card_details_model.dart';
 import 'package:street_talk/app/widgets/quiz/custom_close_button.dart';
 import 'package:street_talk/app/widgets/quiz/list_card.dart';
 
@@ -80,7 +80,8 @@ class _QuizHomePageState extends State<QuizHomePage> {
                 itemBuilder: (context, index) {
                   return QuizListCard(index);
                 },
-              )
+              ),
+              const SizedBox(height: 20),
             ],
           ),
         ),

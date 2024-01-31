@@ -24,7 +24,10 @@ class EmotionsContentCubit extends Cubit<EmotionsContentState> {
       final results =
           await emotionsContentRepository.getContentForEmotionId(emotionId);
       emit(
-        EmotionsContentState(status: Status.success, results: results),
+        EmotionsContentState(
+          status: Status.success,
+          results: results,
+        ),
       );
     } catch (error) {
       emit(

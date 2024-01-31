@@ -43,7 +43,7 @@ final List<QuizCardDetail> quizCardDetailList = [
       ],
       shadowColor: const Color(0xffe6c657).withOpacity(opacity),
       textColor: const Color(0xfff2bd05),
-      category: 'film_i_muzyka',
+      category: 'muzyka',
       iconTag: 'film_icon'),
   QuizCardDetail(
       title: 'Historia i Sztuka',
@@ -87,6 +87,6 @@ final List<QuizCardDetail> quizCardDetailList = [
       ],
       shadowColor: const Color(0xff3c2a70).withOpacity(opacity),
       textColor: const Color(0xff3c2a70),
-      category: 'filmy',
+      category: 'filmy_i_telewizja',
       iconTag: 'filmy_icon'),
 ];

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:street_talk/app/domain/models/quiz_card_details.model.dart';
+import 'package:street_talk/app/domain/models/quiz_card_details_model.dart';
 import 'package:street_talk/app/drawer/drawer_content/quiz/screens/loading_screen.dart';
 import 'package:street_talk/app/widgets/quiz/custom_close_button.dart';
 
