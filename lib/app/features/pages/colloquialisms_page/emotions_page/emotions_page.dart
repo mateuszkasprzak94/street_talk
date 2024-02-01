@@ -62,7 +62,10 @@ class EmotionsPage extends StatelessWidget {
                     child: CircularProgressIndicator(),
                   );
                 case Status.success:
-                  return ListView(
+                  return ListWheelScrollView(
+                    physics: const FixedExtentScrollPhysics(),
+                    diameterRatio: 1,
+                    itemExtent: 200,
                     children: [
                       for (final emotion in state.results)
                         EmotionsButtonWidget(
