@@ -7,6 +7,7 @@ import 'package:street_talk/app/core/enums/enums.dart';
 import 'package:street_talk/app/domain/models/welcome_goodbye_model.dart';
 import 'package:street_talk/app/features/pages/colloquialisms_page/welcome_goodbye_page/cubit/welcome_goodbye_cubit.dart';
 import 'package:street_talk/app/injection_container.dart';
+import 'package:street_talk/app/widgets/quiz/custom_close_button.dart';
 
 class WelcomeGoodbyePage extends StatelessWidget {
   const WelcomeGoodbyePage({
@@ -18,6 +19,7 @@ class WelcomeGoodbyePage extends StatelessWidget {
     double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
         appBar: AppBar(
+          leading: const CustomCloseButton(),
           centerTitle: true,
           actions: const [
             Padding(
@@ -135,12 +137,14 @@ class _WelcomeGoodbyeItemWidget extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: AutoSizeText(
-                  model.title,
-                  style: const TextStyle(
-                    fontSize: 28,
+                child: Center(
+                  child: AutoSizeText(
+                    model.title,
+                    style: const TextStyle(
+                      fontSize: 28,
+                    ),
+                    maxLines: 2,
                   ),
-                  maxLines: 2,
                 ),
               ),
               const Divider(

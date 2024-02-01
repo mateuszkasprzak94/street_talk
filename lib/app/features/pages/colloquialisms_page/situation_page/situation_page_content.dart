@@ -1,4 +1,5 @@
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -7,6 +8,7 @@ import 'package:street_talk/app/core/enums/enums.dart';
 import 'package:street_talk/app/domain/models/situations_model.dart';
 import 'package:street_talk/app/features/pages/colloquialisms_page/situation_page/cubit/situation_cubit.dart';
 import 'package:street_talk/app/injection_container.dart';
+import 'package:street_talk/app/widgets/quiz/custom_close_button.dart';
 
 class SituationPage extends StatelessWidget {
   const SituationPage({
@@ -18,6 +20,7 @@ class SituationPage extends StatelessWidget {
     double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
         appBar: AppBar(
+          leading: const CustomCloseButton(),
           centerTitle: true,
           actions: const [
             Padding(
@@ -69,13 +72,18 @@ class SituationPage extends StatelessWidget {
                       child: Text('No data found'),
                     );
                   }
-                  return ListView(
-                    children: [
+                  return CarouselSlider(
+                    items: [
                       for (final emotion in state.results)
                         _SituationItemWidget(
                           model: emotion,
                         ),
                     ],
+                    options: CarouselOptions(
+                      autoPlay: false,
+                      aspectRatio: 0.6,
+                      enlargeCenterPage: true,
+                    ),
                   );
                 case Status.error:
                   return Center(
@@ -104,9 +112,11 @@ class _SituationItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         const SizedBox(height: 15),
         Container(
+          height: 410,
           margin: const EdgeInsets.all(10),
           width: double.infinity,
           decoration: BoxDecoration(
@@ -137,14 +147,19 @@ class _SituationItemWidget extends StatelessWidget {
                       color: Colors.green),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: AutoSizeText(
-                  model.word,
-                  style: const TextStyle(
-                    fontSize: 35,
+              SizedBox(
+                height: 100,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                  child: Center(
+                    child: AutoSizeText(
+                      model.word,
+                      style: const TextStyle(
+                        fontSize: 35,
+                      ),
+                      maxLines: 2,
+                    ),
                   ),
-                  maxLines: 1,
                 ),
               ),
               const Divider(
@@ -153,81 +168,89 @@ class _SituationItemWidget extends StatelessWidget {
                 indent: 70,
                 endIndent: 70,
               ),
-              Container(
-                margin: const EdgeInsets.symmetric(horizontal: 10),
-                child: AutoSizeText(
-                  model.wordTranslation,
-                  style: TextStyle(
-                    color: Colors.grey.shade500,
-                    fontSize: 14,
-                    fontStyle: FontStyle.italic,
-                    fontWeight: FontWeight.w500,
-                  ),
-                  maxLines: 2,
-                ),
-              ),
-              const Divider(
-                thickness: 1,
-                color: kRedColor,
-                indent: 70,
-                endIndent: 70,
-              ),
-              Container(
-                width: double.infinity,
-                padding: const EdgeInsets.all(5),
-                margin: const EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                  color: Colors.amber,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Column(
-                  children: [
-                    const Text(
-                      'EJEMPLO',
+              SizedBox(
+                height: 40,
+                child: Center(
+                  child: Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 10),
+                    child: AutoSizeText(
+                      model.wordTranslation,
                       style: TextStyle(
-                          letterSpacing: 2,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 13,
-                          color: Colors.black),
+                        color: Colors.grey.shade500,
+                        fontSize: 14,
+                        fontStyle: FontStyle.italic,
+                        fontWeight: FontWeight.w500,
+                      ),
+                      maxLines: 2,
                     ),
-                    const SizedBox(height: 9),
-                    Row(
-                      children: [
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                model.exampleOne,
-                                style: const TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              const SizedBox(height: 8),
-                              Text(
-                                model.exampleTwo,
-                                style: const TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            ],
+                  ),
+                ),
+              ),
+              const Divider(
+                thickness: 1,
+                color: kRedColor,
+                indent: 70,
+                endIndent: 70,
+              ),
+              SizedBox(
+                height: 190,
+                child: Container(
+                  width: double.infinity,
+                  padding: const EdgeInsets.all(5),
+                  margin: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    color: Colors.amber,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Column(
+                    children: [
+                      const Text(
+                        'EJEMPLO',
+                        style: TextStyle(
+                            letterSpacing: 2,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 13,
+                            color: Colors.black),
+                      ),
+                      const SizedBox(height: 9),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  model.exampleOne,
+                                  style: const TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                const SizedBox(height: 8),
+                                Text(
+                                  model.exampleTwo,
+                                  style: const TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
-                  ],
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],
           ),
         ),
-        const Divider(
-          height: 50,
-          thickness: 5,
-          color: Colors.grey,
-          indent: 150,
-          endIndent: 150,
-        )
+        // const Divider(
+        //   height: 50,
+        //   thickness: 5,
+        //   color: Colors.grey,
+        //   indent: 150,
+        //   endIndent: 150,
+        // )
       ],
     );
   }

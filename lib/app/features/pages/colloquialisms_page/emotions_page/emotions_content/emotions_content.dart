@@ -1,4 +1,5 @@
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -9,6 +10,7 @@ import 'package:street_talk/app/domain/models/emotions_content_model.dart';
 import 'package:street_talk/app/domain/models/emotions_name_model.dart';
 import 'package:street_talk/app/features/pages/colloquialisms_page/emotions_page/emotions_content/cubit/emotions_content_cubit.dart';
 import 'package:street_talk/app/injection_container.dart';
+import 'package:street_talk/app/widgets/quiz/custom_close_button.dart';
 
 class EmotionsContentPage extends StatelessWidget {
   const EmotionsContentPage({super.key, required this.name});
@@ -20,6 +22,7 @@ class EmotionsContentPage extends StatelessWidget {
     double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
         appBar: AppBar(
+          leading: const CustomCloseButton(),
           centerTitle: true,
           actions: const [
             Padding(
@@ -71,13 +74,18 @@ class EmotionsContentPage extends StatelessWidget {
                       child: Text('No data found'),
                     );
                   }
-                  return ListView(
-                    children: [
+                  return CarouselSlider(
+                    items: [
                       for (final emotion in state.results)
                         _EmotionsItemWidget(
                           model: emotion,
                         ),
                     ],
+                    options: CarouselOptions(
+                      autoPlay: false,
+                      aspectRatio: 0.7,
+                      enlargeCenterPage: true,
+                    ),
                   );
                 case Status.error:
                   return Center(
@@ -107,10 +115,11 @@ class _EmotionsItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final color = getEmotionColor(model.emotionId);
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const SizedBox(height: 15),
         Container(
           margin: const EdgeInsets.all(10),
+          height: 400,
           width: double.infinity,
           decoration: BoxDecoration(
             color: Colors.white,
@@ -136,14 +145,19 @@ class _EmotionsItemWidget extends StatelessWidget {
                   color: Colors.green,
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: AutoSizeText(
-                  model.word,
-                  style: const TextStyle(
-                    fontSize: 35,
+              SizedBox(
+                height: 100,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: Center(
+                    child: AutoSizeText(
+                      model.word,
+                      style: const TextStyle(
+                        fontSize: 35,
+                      ),
+                      maxLines: 2,
+                    ),
                   ),
-                  maxLines: 2,
                 ),
               ),
               const Divider(
@@ -152,81 +166,95 @@ class _EmotionsItemWidget extends StatelessWidget {
                 indent: 70,
                 endIndent: 70,
               ),
-              Container(
-                margin: const EdgeInsets.symmetric(horizontal: 10),
-                child: AutoSizeText(
-                  model.wordTranslation,
-                  style: TextStyle(
-                    color: Colors.grey.shade600,
-                    fontSize: 14,
-                    fontStyle: FontStyle.italic,
-                    fontWeight: FontWeight.w500,
-                  ),
-                  maxLines: 3,
-                ),
-              ),
-              const Divider(
-                thickness: 1.7,
-                color: kRedColor,
-                indent: 70,
-                endIndent: 70,
-              ),
-              Container(
-                width: double.infinity,
-                padding: const EdgeInsets.all(5),
-                margin: const EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                  color: color,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Column(
-                  children: [
-                    const Text(
-                      'EJEMPLO',
+              SizedBox(
+                height: 60,
+                child: Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 10),
+                  child: Center(
+                    child: AutoSizeText(
+                      model.wordTranslation,
                       style: TextStyle(
-                          letterSpacing: 2,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 13,
-                          color: Colors.black),
+                        color: Colors.grey.shade600,
+                        fontSize: 14,
+                        fontStyle: FontStyle.italic,
+                        fontWeight: FontWeight.w500,
+                      ),
+                      maxLines: 3,
+                      minFontSize: 14,
                     ),
-                    const SizedBox(height: 9),
-                    Row(
-                      children: [
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                model.exampleOne,
-                                style: const TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              const SizedBox(height: 8),
-                              Text(
-                                model.exampleTwo,
-                                style: const TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            ],
+                  ),
+                ),
+              ),
+              const Divider(
+                thickness: 1.7,
+                color: kRedColor,
+                indent: 70,
+                endIndent: 70,
+              ),
+              SizedBox(
+                height: 166,
+                child: Container(
+                  width: double.infinity,
+                  padding: const EdgeInsets.all(5),
+                  margin: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    color: color,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Column(
+                    children: [
+                      const Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            'EJEMPLO',
+                            style: TextStyle(
+                                letterSpacing: 2,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 13,
+                                color: Colors.black),
                           ),
-                        ),
-                      ],
-                    ),
-                  ],
+                        ],
+                      ),
+                      const SizedBox(height: 9),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  model.exampleOne,
+                                  style: const TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                const SizedBox(height: 8),
+                                Text(
+                                  model.exampleTwo,
+                                  style: const TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],
           ),
         ),
-        const Divider(
-          height: 50,
-          thickness: 5,
-          color: Colors.grey,
-          indent: 150,
-          endIndent: 150,
-        )
+        // const Divider(
+        //   height: 50,
+        //   thickness: 5,
+        //   color: Colors.grey,
+        //   indent: 100,
+        //   endIndent: 100,
+        // )
       ],
     );
   }

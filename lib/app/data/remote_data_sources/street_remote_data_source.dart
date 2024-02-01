@@ -46,7 +46,7 @@ class StreetMockedDataSource {
       },
       {
         'id': 6,
-        'word': ' Cada dos por tres',
+        'word': 'Cada dos por tres',
         'word_translation': '(robić coś) bardzo często',
         'example_one':
             '- Me ha estado llamando cada dos por tres desde que le envié el mensaje.',

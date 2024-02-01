@@ -7,6 +7,7 @@ import 'package:street_talk/app/domain/models/emotions_name_model.dart';
 import 'package:street_talk/app/features/pages/colloquialisms_page/emotions_page/cubit/emotions_page_cubit.dart';
 import 'package:street_talk/app/features/pages/colloquialisms_page/emotions_page/emotions_content/emotions_content.dart';
 import 'package:street_talk/app/injection_container.dart';
+import 'package:street_talk/app/widgets/quiz/custom_close_button.dart';
 
 class EmotionsPage extends StatelessWidget {
   const EmotionsPage({super.key});
@@ -16,6 +17,7 @@ class EmotionsPage extends StatelessWidget {
     double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
         appBar: AppBar(
+          leading: const CustomCloseButton(),
           centerTitle: true,
           actions: const [
             Padding(

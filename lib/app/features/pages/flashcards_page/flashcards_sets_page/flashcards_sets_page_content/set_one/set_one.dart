@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:street_talk/app/core/constants/constants.dart';
 import 'package:street_talk/app/features/pages/flashcards_page/flashcards_sets_page/flashcards_sets_page_content/set_one/cubit/set_one_cubit.dart';
 import 'package:street_talk/app/widgets/flash_cards_column/flash_cards_content.dart';
+import 'package:street_talk/app/widgets/quiz/custom_close_button.dart';
 
 class FlashCardsSetOne extends StatelessWidget {
   const FlashCardsSetOne({super.key});
@@ -17,6 +18,7 @@ class FlashCardsSetOne extends StatelessWidget {
         builder: (context, state) {
           return Scaffold(
             appBar: AppBar(
+              leading: const CustomCloseButton(),
               centerTitle: true,
               actions: const [
                 Padding(
