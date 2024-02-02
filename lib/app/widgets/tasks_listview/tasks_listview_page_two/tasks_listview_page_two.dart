@@ -34,49 +34,24 @@ class TasksTwo extends StatelessWidget {
             ],
           ),
           child: const Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                  '1. Zadanie Zadanie _______ Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie '),
-              SizedBox(height: 5),
+                  '1. La oficina de turismo  (          ) , tienes que cruzar toda la ciudad para llegar'),
+              SizedBox(height: 20),
+              Text('2. (         ) , he dejado las llaves en casa.'),
+              SizedBox(height: 20),
               Text(
-                  '1. Zadanie Zadanie Zadanie Zadanie Zadanie _______ Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie '),
-              SizedBox(height: 5),
-              Text(
-                  '1. Zadanie Zadanie Zadanie _______ Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie '),
-              SizedBox(height: 5),
-              Text(
-                  '1. Zadanie Zadanie Zadanie Zadanie _______ Zadanie Zadanie Zadanie Zadanie  Zadanie Zadanie '),
-              SizedBox(height: 5),
-              Text(
-                  '1. Zadanie Zadanie Zadanie Zadanie _______ Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie '),
-              SizedBox(height: 5),
-              Text(
-                  '1. Zadanie Zadanie Zadanie Zadanie _______ Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie '),
-              SizedBox(height: 5),
-              Text(
-                  '1. Zadanie Zadanie Zadanie Zadanie _______ Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie '),
-              SizedBox(height: 5),
-              Text(
-                  '1. Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie _______ Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie '),
-              SizedBox(height: 5),
-              Text(
-                  '1. Zadanie Zadanie Zadanie Zadanie Zadanie _______ Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie '),
-              SizedBox(height: 5),
-              Text(
-                  '1. Zadanie Zadanie Zadanie Zadanie _______ Zadanie Zadanie Zadanie Zadanie Zadanie '),
-              SizedBox(height: 5),
-              Text(
-                  '1. Zadanie Zadanie Zadanie Zadanie _______ Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie '),
-              SizedBox(height: 5),
-              Text(
-                  '1. Zadanie Zadanie Zadanie Zadanie Zadanie _______ Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie '),
-              SizedBox(height: 5),
-              Text(
-                  '1. Zadanie Zadanie Zadanie Zadanie _______ Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie '),
-              SizedBox(height: 5),
-              Text(
-                  '1. Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie Zadanie _______ Zadanie Zadanie '),
-              SizedBox(height: 5),
+                  '3. ¡Tu hermano  (         ) ! Ha conseguido un trabajo de actor con un director muy famoso.'),
+              SizedBox(height: 20),
+              Text('4. Ayer perdí mi trabajo y  (         )'),
+              SizedBox(height: 20),
+              Text('5. Estaba tan cansada que dormí doce horas (         )'),
+              SizedBox(height: 20),
+              Text('6. (           ) con lo que te ha dicho, no me lo creo.'),
+              SizedBox(height: 20),
+              Text('7. Hala,  (        ) con la burrada que le has dicho'),
+              SizedBox(height: 20),
             ],
           ),
         ),

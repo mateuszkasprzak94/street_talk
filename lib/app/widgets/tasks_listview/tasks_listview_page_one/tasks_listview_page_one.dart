@@ -16,47 +16,6 @@ class TasksOne extends StatefulWidget {
 }
 
 class _TasksOneState extends State<TasksOne> {
-  List<ExerciseQuestionModel> questions = [
-    ExerciseQuestionModel(
-      text: '1',
-      options: ['ni fu ni fa', 'opcja 2', 'opcja 3'],
-      correctAnswerIndex: 0,
-    ),
-    ExerciseQuestionModel(
-        text: '2',
-        options: ['opcja 1', 'metió la pata', 'opcja 3'],
-        correctAnswerIndex: 1),
-    ExerciseQuestionModel(
-      text: '3',
-      options: ['ni fu ni fa', 'opcja 2', 'tirarse del barco'],
-      correctAnswerIndex: 2,
-    ),
-    ExerciseQuestionModel(
-        text: '4',
-        options: ['ni fu ni fa', 'opcja 2', 'cagado'],
-        correctAnswerIndex: 2),
-    ExerciseQuestionModel(
-        text: '5',
-        options: ['La verdad sea dicha', 'opcja 2', 'opcja 3'],
-        correctAnswerIndex: 0),
-    ExerciseQuestionModel(
-        text: '6',
-        options: ['La verdad sea dicha', 'tirarle los trastos', 'opcja 3'],
-        correctAnswerIndex: 1),
-    ExerciseQuestionModel(
-        text: '7',
-        options: ['La verdad sea dicha', 'no le hizo caso', 'opcja 3'],
-        correctAnswerIndex: 1),
-    ExerciseQuestionModel(
-        text: '8',
-        options: ['La verdad sea dicha', 'opcja 2', 'echarle la bronca'],
-        correctAnswerIndex: 2),
-    ExerciseQuestionModel(
-        text: '9',
-        options: ['hacerle frente a la situación', 'opcja 2', 'opcja 3'],
-        correctAnswerIndex: 0),
-  ];
-
   List<int?> userAnswers = List.filled(9, null);
   bool showResults = false;
   bool allAnswers = false;
@@ -122,11 +81,34 @@ class _TasksOneState extends State<TasksOne> {
                   const SizedBox(height: 30),
                   InkWell(
                     onTap: () {
-                      {
+                      if (userAnswers.every((answer) => answer != null)) {
+                        // Set showResults to true only when all questions are answered
                         setState(() {
                           showResults = true;
                         });
+
+                        // Show results
                         checkAnswersAndShowResult();
+                      } else {
+                        // If not all questions are answered, show a message
+                        showDialog(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return AlertDialog(
+                              title: const Text('Uwaga'),
+                              content: const Text(
+                                  'Musisz udzielić odpowiedzi na wszystkie pytania, aby sprawdzić wyniki.'),
+                              actions: [
+                                TextButton(
+                                  onPressed: () {
+                                    Navigator.of(context).pop();
+                                  },
+                                  child: const Text('OK'),
+                                ),
+                              ],
+                            );
+                          },
+                        );
                       }
                     },
                     child: Center(
@@ -170,14 +152,54 @@ class _TasksOneState extends State<TasksOne> {
                   const SizedBox(height: 50),
                   if (showResults &&
                       userAnswers.every((answer) => answer != null))
-                    Center(
-                      child: Text(
-                        'Wynik: ${userAnswers.asMap().entries.where((entry) => entry.value == questions[entry.key].correctAnswerIndex).length}/${questions.length}',
-                        style: const TextStyle(
-                            color: Colors.black,
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold),
-                      ),
+                    Column(
+                      children: [
+                        Center(
+                          child: Text(
+                            'Wynik: ${userAnswers.asMap().entries.where((entry) => entry.value == questions[entry.key].correctAnswerIndex).length}/${questions.length}',
+                            style: const TextStyle(
+                                color: Colors.black,
+                                fontSize: 25,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        const Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Odpowiedzi:',
+                              style: TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.w600),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 10),
+                        const Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('1. ni fu ni fa'),
+                            SizedBox(height: 5),
+                            Text('2. metió la pata'),
+                            SizedBox(height: 5),
+                            Text('3. tirarse del barco'),
+                            SizedBox(height: 5),
+                            Text('4. cagado '),
+                            SizedBox(height: 5),
+                            Text('5. La verdad sea dicha'),
+                            SizedBox(height: 5),
+                            Text('6. tirarle los trastos'),
+                            SizedBox(height: 5),
+                            Text('7. no le hizo caso'),
+                            SizedBox(height: 5),
+                            Text('8. echarle la bronca'),
+                            SizedBox(height: 5),
+                            Text('9. hacerle frente a la situación '),
+                          ],
+                        ),
+                      ],
                     ),
                 ],
               ),
@@ -227,26 +249,6 @@ class _TasksOneState extends State<TasksOne> {
               'Poprawne odpowiedzi: $correctAnswersCount/${questions.length}',
               style: const TextStyle(fontSize: 18),
             ),
-            actions: [
-              TextButton(
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-                child: const Text('OK'),
-              ),
-            ],
-          );
-        },
-      );
-    } else {
-      // Komunikat, gdy użytkownik nie udzielił wszystkich odpowiedzi
-      showDialog(
-        context: context,
-        builder: (BuildContext context) {
-          return AlertDialog(
-            title: const Text('Uwaga'),
-            content: const Text(
-                'Musisz udzielić odpowiedzi na wszystkie pytania, aby sprawdzić wyniki.'),
             actions: [
               TextButton(
                 onPressed: () {
