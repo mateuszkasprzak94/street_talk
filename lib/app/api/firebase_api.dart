@@ -20,6 +20,7 @@ class FirebaseApi {
     description: 'This channel is used for important notifications',
     importance: Importance.defaultImportance,
   );
+
   final _localNotifications = FlutterLocalNotificationsPlugin();
 
   // function to initialize notifications
@@ -47,7 +48,7 @@ class FirebaseApi {
 
     // navigate to new screen when message is received and user taps notification
     navigatorKey.currentState?.pushNamed(
-      '/notification_screen_flashcards',
+      '/notification_screen_quiz',
       arguments: message,
     );
   }

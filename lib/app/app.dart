@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:street_talk/app/drawer/drawer_content/quiz/quiz_home_page.dart';
 import 'package:street_talk/app/features/pages/main_page/main_page.dart';
 
 final navigatorKey = GlobalKey<NavigatorState>();
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
       home: const MainPage(),
       navigatorKey: navigatorKey,
       routes: {
+        '/notification_screen_quiz': (context) => const QuizHomePage(),
         '/notification_screen_flashcards': (context) =>
             const MainPage(index: 3),
         '/notification_screen_colloquialisms': (context) =>
