@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
@@ -12,10 +14,18 @@ import 'package:street_talk/app/features/pages/colloquialisms_page/emotions_page
 import 'package:street_talk/app/injection_container.dart';
 import 'package:street_talk/app/widgets/quiz/custom_close_button.dart';
 
-class EmotionsContentPage extends StatelessWidget {
+class EmotionsContentPage extends StatefulWidget {
   const EmotionsContentPage({super.key, required this.name});
 
   final EmotionsNameModel name;
+
+  @override
+  State<EmotionsContentPage> createState() => _EmotionsContentPageState();
+}
+
+class _EmotionsContentPageState extends State<EmotionsContentPage> {
+  final CarouselController _controller = CarouselController();
+  int currentPage = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +53,7 @@ class EmotionsContentPage extends StatelessWidget {
               ),
               child: Center(
                 child: Text(
-                  name.emotion,
+                  widget.name.emotion,
                   style: GoogleFonts.bebasNeue(
                       letterSpacing: 2,
                       color: Colors.white,
@@ -55,7 +65,7 @@ class EmotionsContentPage extends StatelessWidget {
         ),
         body: BlocProvider<EmotionsContentCubit>(
           create: (context) {
-            return getIt()..fetchData(emotionId: name.id);
+            return getIt()..fetchData(emotionId: widget.name.id);
           },
           child: BlocBuilder<EmotionsContentCubit, EmotionsContentState>(
             builder: (context, state) {
@@ -74,18 +84,52 @@ class EmotionsContentPage extends StatelessWidget {
                       child: Text('No data found'),
                     );
                   }
-                  return CarouselSlider(
-                    items: [
-                      for (final emotion in state.results)
-                        _EmotionsItemWidget(
-                          model: emotion,
+                  return Column(
+                    children: [
+                      CarouselSlider(
+                        carouselController: _controller,
+                        items: [
+                          for (final emotion in state.results)
+                            _EmotionsItemWidget(
+                              model: emotion,
+                            ),
+                        ],
+                        options: CarouselOptions(
+                          autoPlay: false,
+                          aspectRatio: 0.75,
+                          enlargeCenterPage: true,
+                          onPageChanged: (index, reason) {
+                            setState(() {
+                              currentPage = index;
+                            });
+                          },
                         ),
+                      ),
+                      ElevatedButton(
+                        onPressed: () {
+                          int randomPageIndex;
+                          do {
+                            randomPageIndex =
+                                Random().nextInt(state.results.length);
+                          } while (randomPageIndex == currentPage);
+
+                          _controller.animateToPage(randomPageIndex);
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: getEmotionColor(widget.name.id),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                        ),
+                        child: const Text(
+                          'Losowo',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
                     ],
-                    options: CarouselOptions(
-                      autoPlay: false,
-                      aspectRatio: 0.7,
-                      enlargeCenterPage: true,
-                    ),
                   );
                 case Status.error:
                   return Center(
@@ -248,13 +292,6 @@ class _EmotionsItemWidget extends StatelessWidget {
             ],
           ),
         ),
-        // const Divider(
-        //   height: 50,
-        //   thickness: 5,
-        //   color: Colors.grey,
-        //   indent: 100,
-        //   endIndent: 100,
-        // )
       ],
     );
   }

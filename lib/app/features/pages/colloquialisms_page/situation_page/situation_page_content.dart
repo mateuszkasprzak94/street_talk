@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
@@ -10,10 +12,18 @@ import 'package:street_talk/app/features/pages/colloquialisms_page/situation_pag
 import 'package:street_talk/app/injection_container.dart';
 import 'package:street_talk/app/widgets/quiz/custom_close_button.dart';
 
-class SituationPage extends StatelessWidget {
+class SituationPage extends StatefulWidget {
   const SituationPage({
     super.key,
   });
+
+  @override
+  State<SituationPage> createState() => _SituationPageState();
+}
+
+class _SituationPageState extends State<SituationPage> {
+  final CarouselController _controller = CarouselController();
+  int currentPage = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -72,18 +82,52 @@ class SituationPage extends StatelessWidget {
                       child: Text('No data found'),
                     );
                   }
-                  return CarouselSlider(
-                    items: [
-                      for (final emotion in state.results)
-                        _SituationItemWidget(
-                          model: emotion,
+                  return Column(
+                    children: [
+                      CarouselSlider(
+                        carouselController: _controller,
+                        items: [
+                          for (final emotion in state.results)
+                            _SituationItemWidget(
+                              model: emotion,
+                            ),
+                        ],
+                        options: CarouselOptions(
+                          autoPlay: false,
+                          aspectRatio: 0.75,
+                          enlargeCenterPage: true,
+                          onPageChanged: (index, reason) {
+                            setState(() {
+                              currentPage = index;
+                            });
+                          },
                         ),
+                      ),
+                      ElevatedButton(
+                        onPressed: () {
+                          int randomPageIndex;
+                          do {
+                            randomPageIndex =
+                                Random().nextInt(state.results.length);
+                          } while (randomPageIndex == currentPage);
+
+                          _controller.animateToPage(randomPageIndex);
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: kRedColor,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                        ),
+                        child: const Text(
+                          'Losowo',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
                     ],
-                    options: CarouselOptions(
-                      autoPlay: false,
-                      aspectRatio: 0.6,
-                      enlargeCenterPage: true,
-                    ),
                   );
                 case Status.error:
                   return Center(
