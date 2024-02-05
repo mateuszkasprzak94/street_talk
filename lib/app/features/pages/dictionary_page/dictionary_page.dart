@@ -43,7 +43,11 @@ class _DictionaryPageState extends State<DictionaryPage> {
               height: 70,
               width: double.infinity,
               decoration: const BoxDecoration(
-                color: kRedColor,
+                gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: kRedGradient,
+                ),
               ),
               child: Column(children: [
                 Text(
