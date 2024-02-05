@@ -25,7 +25,7 @@ class FlashCardsPage extends StatelessWidget {
               child: Image.asset(
                 'assets/flag/flag.png',
               ),
-            ).animate().fade(delay: 300.ms, duration: 500.ms).slideX(),
+            ).animate().fade(delay: 300.ms, duration: 1000.ms).scale(),
           ),
         ),
         bottom: PreferredSize(
