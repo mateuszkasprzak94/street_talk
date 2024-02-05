@@ -61,7 +61,7 @@ class _ColloquialismsPageState extends State<ColloquialismsPage> {
       body: ListView(
         children: [
           ColloquialismsButtonWidget(
-            image: Image.asset('assets/images/bull.jpg'),
+            image: Image.asset('assets/images/bull_no_bg.png'),
             polishTitle: 'Jak wyrazić emocje',
             spanishTitle: 'Cómo expresar emociones',
             onPressed: () {
@@ -73,7 +73,7 @@ class _ColloquialismsPageState extends State<ColloquialismsPage> {
             },
           ),
           ColloquialismsButtonWidget(
-            image: Image.asset('assets/images/street.jpg'),
+            image: Image.asset('assets/images/street_no_bg.png'),
             polishTitle: 'Hiszpański prosto z ulicy',
             spanishTitle: 'Español directo de la calle',
             onPressed: () {
@@ -85,7 +85,7 @@ class _ColloquialismsPageState extends State<ColloquialismsPage> {
             },
           ),
           ColloquialismsButtonWidget(
-            image: Image.asset('assets/images/situation.jpg'),
+            image: Image.asset('assets/images/situation_no_bg.png'),
             polishTitle: 'Na konkretną sytuacje',
             spanishTitle: 'Para una situación específica',
             onPressed: () {
