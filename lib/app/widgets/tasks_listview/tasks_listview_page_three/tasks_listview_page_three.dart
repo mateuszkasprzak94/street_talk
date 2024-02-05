@@ -36,6 +36,9 @@ class _TasksThreeState extends State<TasksThree> {
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
+
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: ListView(
@@ -43,8 +46,8 @@ class _TasksThreeState extends State<TasksThree> {
           const SizedBox(height: 20),
           Container(
             padding: const EdgeInsets.all(15),
-            width: double.infinity,
-            height: 2250,
+            width: screenWidth,
+            height: screenHeight * 3,
             margin: const EdgeInsets.all(10),
             decoration: BoxDecoration(
               color: Colors.white,

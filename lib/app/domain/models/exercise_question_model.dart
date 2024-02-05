@@ -392,7 +392,7 @@ final List<ExerciseThreeDetails> exerciseDetails = [
         children: [
           const TextSpan(
             text:
-                '9.	A pesar de las sugerencias del grupo sobre qué hacer el fin de semana, Marta decidió',
+                'A pesar de las sugerencias del grupo sobre qué hacer el fin de semana, Marta decidió',
             style: TextStyle(
               color: Colors.black,
               fontSize: 20,

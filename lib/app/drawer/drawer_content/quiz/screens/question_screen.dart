@@ -83,6 +83,9 @@ class _QuizQuestionScreenState extends State<QuizQuestionScreen> {
                       shuffledOptions = quizCubit.getShuffledOptions(model[i]);
                     }
 
+                    int correctIndex =
+                        shuffledOptions.indexOf(model[i].correctAnswer);
+
                     List<Widget> allOptions = [];
 
                     for (int j = 0; j < shuffledOptions.length; j++) {
@@ -101,6 +104,7 @@ class _QuizQuestionScreenState extends State<QuizQuestionScreen> {
                           } else {
                             setState(() {
                               optionColor[j] = Colors.red;
+                              optionColor[correctIndex] = Colors.green;
                               isAbsorbing = true;
                             });
                           }
