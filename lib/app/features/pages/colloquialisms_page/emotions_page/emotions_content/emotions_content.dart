@@ -30,6 +30,7 @@ class _EmotionsContentPageState extends State<EmotionsContentPage> {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
         appBar: AppBar(
           leading: const CustomCloseButton(),
@@ -96,7 +97,7 @@ class _EmotionsContentPageState extends State<EmotionsContentPage> {
                         ],
                         options: CarouselOptions(
                           autoPlay: false,
-                          aspectRatio: 0.75,
+                          aspectRatio: screenHeight / 1100,
                           enlargeCenterPage: true,
                           onPageChanged: (index, reason) {
                             setState(() {

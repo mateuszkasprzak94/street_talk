@@ -82,7 +82,8 @@ class _SituationPageState extends State<SituationPage> {
                       child: Text('No data found'),
                     );
                   }
-                  return Column(
+                  return Stack(
+                    alignment: Alignment.bottomCenter,
                     children: [
                       CarouselSlider(
                         carouselController: _controller,
@@ -94,7 +95,7 @@ class _SituationPageState extends State<SituationPage> {
                         ],
                         options: CarouselOptions(
                           autoPlay: false,
-                          aspectRatio: 0.75,
+                          aspectRatio: 0.65,
                           enlargeCenterPage: true,
                           onPageChanged: (index, reason) {
                             setState(() {
@@ -158,7 +159,6 @@ class _SituationItemWidget extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const SizedBox(height: 15),
         Container(
           height: 410,
           margin: const EdgeInsets.all(10),

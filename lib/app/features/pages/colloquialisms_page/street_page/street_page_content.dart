@@ -28,7 +28,6 @@ class _StreetPageState extends State<StreetPage> {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
-    // double screenHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
         appBar: AppBar(
@@ -84,7 +83,8 @@ class _StreetPageState extends State<StreetPage> {
                       child: Text('No data found'),
                     );
                   }
-                  return Column(
+                  return Stack(
+                    alignment: Alignment.bottomCenter,
                     children: [
                       CarouselSlider(
                         carouselController: _controller,
@@ -96,7 +96,7 @@ class _StreetPageState extends State<StreetPage> {
                         ],
                         options: CarouselOptions(
                           autoPlay: false,
-                          aspectRatio: 0.69,
+                          aspectRatio: 0.65,
                           enlargeCenterPage: true,
                           onPageChanged: (index, reason) {
                             setState(() {
@@ -160,9 +160,8 @@ class _StreetItemWidget extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const SizedBox(height: 15),
         Container(
-          height: 450,
+          height: 430,
           margin: const EdgeInsets.all(10),
           width: double.infinity,
           decoration: BoxDecoration(
@@ -187,7 +186,7 @@ class _StreetItemWidget extends StatelessWidget {
                 child: Text(
                   model.id.toString(),
                   style: const TextStyle(
-                      fontSize: 20,
+                      fontSize: 18,
                       fontWeight: FontWeight.bold,
                       fontStyle: FontStyle.italic,
                       color: Colors.green),
@@ -201,7 +200,7 @@ class _StreetItemWidget extends StatelessWidget {
                     child: AutoSizeText(
                       model.word,
                       style: const TextStyle(
-                        fontSize: 35,
+                        fontSize: 30,
                       ),
                       maxLines: 2,
                     ),
@@ -239,7 +238,7 @@ class _StreetItemWidget extends StatelessWidget {
                 endIndent: 50,
               ),
               SizedBox(
-                height: 230,
+                height: 200,
                 child: Container(
                   width: double.infinity,
                   padding: const EdgeInsets.all(5),
@@ -269,14 +268,16 @@ class _StreetItemWidget extends StatelessWidget {
                                   model.exampleOne,
                                   style: const TextStyle(
                                       color: Colors.white,
-                                      fontWeight: FontWeight.bold),
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 12),
                                 ),
                                 const SizedBox(height: 8),
                                 Text(
                                   model.exampleTwo,
                                   style: const TextStyle(
                                       color: Colors.white,
-                                      fontWeight: FontWeight.bold),
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 12),
                                 ),
                               ],
                             ),
@@ -290,13 +291,6 @@ class _StreetItemWidget extends StatelessWidget {
             ],
           ),
         ),
-        // const Divider(
-        //   height: 50,
-        //   thickness: 5,
-        //   color: Colors.grey,
-        //   indent: 150,
-        //   endIndent: 150,
-        // )
       ],
     );
   }
