@@ -37,7 +37,7 @@ class _TasksThreeState extends State<TasksThree> {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
-    double screenHeight = MediaQuery.of(context).size.height;
+    // double screenHeight = MediaQuery.of(context).size.height;
 
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
@@ -47,7 +47,7 @@ class _TasksThreeState extends State<TasksThree> {
           Container(
             padding: const EdgeInsets.all(15),
             width: screenWidth,
-            height: screenHeight * 3,
+            // height: screenHeight * 3,
             margin: const EdgeInsets.all(10),
             decoration: BoxDecoration(
               color: Colors.white,
@@ -112,6 +112,7 @@ class _TasksThreeState extends State<TasksThree> {
                     ),
                   ),
                 ),
+                const SizedBox(height: 50),
               ],
             ),
           ),
@@ -153,11 +154,11 @@ class Visible extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(20.0),
       child: SizedBox(
-        height: 20,
+        height: 25,
         child: Text(
           answer,
           style: const TextStyle(
-              color: Colors.green, fontStyle: FontStyle.italic, fontSize: 15),
+              color: Colors.green, fontStyle: FontStyle.italic, fontSize: 18),
         ),
       ),
     );
@@ -187,7 +188,7 @@ List<Widget> buildExercise() {
           if (isVisible == true)
             Visible(answer: exerciseDetails[j].answer)
           else
-            const SizedBox(height: 60)
+            const SizedBox(height: 65)
         ],
       ),
     );

@@ -28,7 +28,7 @@ class _TasksOneState extends State<TasksOne> {
         Container(
           padding: const EdgeInsets.all(35),
           width: double.infinity,
-          height: 3500,
+          // height: 3500,
           margin: const EdgeInsets.all(10),
           decoration: BoxDecoration(
             color: Colors.white,
