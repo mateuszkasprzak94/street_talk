@@ -57,7 +57,7 @@ final List<EventCardDetail> eventCardDetailList = [
       iconTag: 'wine_icon'),
   EventCardDetail(
       title: 'Fiesta de la Mercè',
-      iconAssetName: 'assets/assets_events/fiesta_de_la_merce',
+      iconAssetName: 'assets/assets_events/fiesta_de_la_merce.jpg',
       category: 'la_merce',
       iconTag: 'merce_icon'),
   EventCardDetail(

@@ -9,52 +9,51 @@ class EventsListCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 200,
-      child: GestureDetector(
-        onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) => BeforeStartScreen(
-                      selectedIndex: index,
-                    )),
-          );
-        },
-        child: Stack(
-          alignment: AlignmentDirectional.topEnd,
-          children: [
-            Container(
-              margin: const EdgeInsets.only(top: 55),
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-              height: 150,
-              width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => BeforeStartScreen(
+                    selectedIndex: index,
+                  )),
+        );
+      },
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+        height: 200,
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(8),
+          child: Stack(
+            children: [
+              Hero(
+                tag: eventCardDetailList[index].iconTag,
+                child: Image.asset(
+                  eventCardDetailList[index].iconAssetName,
+                  fit: BoxFit.cover,
+                  width: MediaQuery.of(context).size.width,
+                ),
               ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    eventCardDetailList[index].title,
-                    style: const TextStyle(
-                      fontSize: 25,
-                      color: Colors.white,
-                      fontWeight: FontWeight.w700,
-                    ),
+              Container(
+                color: Colors.black26,
+                child: Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        eventCardDetailList[index].title,
+                        style: const TextStyle(
+                            fontSize: 18,
+                            color: Colors.white,
+                            fontWeight: FontWeight.w500),
+                      ),
+                      const SizedBox(height: 4),
+                    ],
                   ),
-                ],
+                ),
               ),
-            ),
-            Hero(
-              tag: eventCardDetailList[index].iconTag,
-              child: Image.asset(
-                eventCardDetailList[index].iconAssetName,
-                scale: 3,
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
