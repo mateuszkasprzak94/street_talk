@@ -35,13 +35,15 @@ class _QuizHomePageState extends State<QuizHomePage> {
             height: 60,
             width: double.infinity,
             decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                    begin: Alignment.centerLeft,
-                    end: Alignment.centerRight,
-                    colors: [
+              gradient: LinearGradient(
+                begin: Alignment.centerLeft,
+                end: Alignment.centerRight,
+                colors: [
                   kRedColor,
                   kYellowColor,
-                ])),
+                ],
+              ),
+            ),
             child: Center(
               child: Text(
                 'Pora na QUIZ!',

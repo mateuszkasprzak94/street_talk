@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:street_talk/app/core/constants/constants.dart';
-import 'package:street_talk/app/drawer/drawer_content/about_spain/about_spain.dart';
+import 'package:street_talk/app/drawer/drawer_content/spanish_events/spanish_events.dart';
 import 'package:street_talk/app/drawer/drawer_content/e_book/e_book.dart';
 import 'package:street_talk/app/drawer/drawer_content/favourites/favourites.dart';
 import 'package:street_talk/app/drawer/drawer_content/quiz/quiz_home_page.dart';
@@ -82,15 +82,15 @@ class NavigationDrawerWidget extends StatelessWidget {
               },
             ),
             ListTile(
-              leading: const Icon(Icons.map_outlined),
-              title: const Text('O Hiszpanii'),
+              leading: const Icon(Icons.event),
+              title: const Text('Popularne wydarzenia'),
               onTap: () {
                 // close navigation drawer before
                 Navigator.pop(context);
 
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => const AboutSpainPage(),
+                    builder: (context) => const SpanishEventsPage(),
                   ),
                 );
               },
