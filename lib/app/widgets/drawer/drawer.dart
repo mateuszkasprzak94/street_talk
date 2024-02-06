@@ -28,7 +28,13 @@ class NavigationDrawerWidget extends StatelessWidget {
   }
 
   Widget buildHeader(BuildContext context) => Container(
-        color: kRedColor,
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: kRedGradient,
+          ),
+        ),
         padding: EdgeInsets.only(
             top: MediaQuery.of(context).padding.top, bottom: 24),
         child: Column(
