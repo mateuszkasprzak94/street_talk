@@ -35,7 +35,11 @@ class FlashCardsSetOne extends StatelessWidget {
                   height: 60,
                   width: double.infinity,
                   decoration: const BoxDecoration(
-                    color: kRedColor,
+                    gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      colors: kRedGradient,
+                    ),
                   ),
                   child: Center(
                     child: Text(
