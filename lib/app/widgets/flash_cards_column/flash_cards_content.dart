@@ -70,43 +70,6 @@ class SetOnePageViewContent extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
-            // Row(
-            //   mainAxisAlignment: MainAxisAlignment.center,
-            //   children: [
-            //     IconButton(
-            //       splashColor: Colors.transparent,
-            //       highlightColor: Colors.transparent,
-            //       onPressed: () {
-            //         context.read<SetOneCubit>().updateSadIconColor(
-            //             pageIndex, !flashCardsModel.sadIconColor, false);
-            //       },
-            //       icon: ImageIcon(
-            //         const AssetImage(
-            //           'assets/custom_icons/sad.png',
-            //         ),
-            //         color: flashCardsModel.sadIconColor
-            //             ? Colors.red
-            //             : Colors.black,
-            //       ),
-            //     ),
-            //     IconButton(
-            //       splashColor: Colors.transparent,
-            //       highlightColor: Colors.transparent,
-            //       onPressed: () {
-            //         context.read<SetOneCubit>().updateSmileIconColor(
-            //             pageIndex, !flashCardsModel.smileIconColor, false);
-            //       },
-            //       icon: ImageIcon(
-            //         const AssetImage(
-            //           'assets/custom_icons/smile.png',
-            //         ),
-            //         color: flashCardsModel.smileIconColor
-            //             ? Colors.green
-            //             : Colors.black,
-            //       ),
-            //     ),
-            //   ],
-            // ),
             Expanded(
               child: Align(
                 alignment: Alignment.bottomCenter,
@@ -201,43 +164,6 @@ class SetTwoPageViewContent extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
-            // Row(
-            //   mainAxisAlignment: MainAxisAlignment.center,
-            //   children: [
-            //     IconButton(
-            //       splashColor: Colors.transparent,
-            //       highlightColor: Colors.transparent,
-            //       onPressed: () {
-            //         context.read<SetTwoCubit>().updateSadIconColor(
-            //             pageIndex, !flashCardsModel.sadIconColor, false);
-            //       },
-            //       icon: ImageIcon(
-            //         const AssetImage(
-            //           'assets/custom_icons/sad.png',
-            //         ),
-            //         color: flashCardsModel.sadIconColor
-            //             ? Colors.red
-            //             : Colors.black,
-            //       ),
-            //     ),
-            //     IconButton(
-            //       splashColor: Colors.transparent,
-            //       highlightColor: Colors.transparent,
-            //       onPressed: () {
-            //         context.read<SetTwoCubit>().updateSmileIconColor(
-            //             pageIndex, !flashCardsModel.smileIconColor, false);
-            //       },
-            //       icon: ImageIcon(
-            //         const AssetImage(
-            //           'assets/custom_icons/smile.png',
-            //         ),
-            //         color: flashCardsModel.smileIconColor
-            //             ? Colors.green
-            //             : Colors.black,
-            //       ),
-            //     ),
-            //   ],
-            // ),
             Expanded(
               child: Align(
                 alignment: Alignment.bottomCenter,
@@ -332,43 +258,6 @@ class SetThreePageViewContent extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
-            // Row(
-            //   mainAxisAlignment: MainAxisAlignment.center,
-            //   children: [
-            //     IconButton(
-            //       splashColor: Colors.transparent,
-            //       highlightColor: Colors.transparent,
-            //       onPressed: () {
-            //         context.read<SetTwoCubit>().updateSadIconColor(
-            //             pageIndex, !flashCardsModel.sadIconColor, false);
-            //       },
-            //       icon: ImageIcon(
-            //         const AssetImage(
-            //           'assets/custom_icons/sad.png',
-            //         ),
-            //         color: flashCardsModel.sadIconColor
-            //             ? Colors.red
-            //             : Colors.black,
-            //       ),
-            //     ),
-            //     IconButton(
-            //       splashColor: Colors.transparent,
-            //       highlightColor: Colors.transparent,
-            //       onPressed: () {
-            //         context.read<SetTwoCubit>().updateSmileIconColor(
-            //             pageIndex, !flashCardsModel.smileIconColor, false);
-            //       },
-            //       icon: ImageIcon(
-            //         const AssetImage(
-            //           'assets/custom_icons/smile.png',
-            //         ),
-            //         color: flashCardsModel.smileIconColor
-            //             ? Colors.green
-            //             : Colors.black,
-            //       ),
-            //     ),
-            //   ],
-            // ),
             Expanded(
               child: Align(
                 alignment: Alignment.bottomCenter,

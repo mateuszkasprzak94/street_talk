@@ -71,7 +71,7 @@ class TasksTwo extends StatelessWidget {
                             size: 37,
                           ),
                           Text(
-                            'Pokaż Odpowiedzi',
+                            'Mostrar soluciones',
                             style: GoogleFonts.lora(
                                 fontSize: 15,
                                 color: kRedColor,
@@ -127,16 +127,14 @@ List<Widget> buildExerciseTwo() {
         children: [
           Row(
             children: [
-              Container(
-                child: Text(
-                  exerciseTwoDetails[j].id,
-                  style: const TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20,
-                    fontStyle: FontStyle.italic,
-                  ),
+              Text(
+                exerciseTwoDetails[j].id,
+                style: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                  fontStyle: FontStyle.italic,
                 ),
-              )
+              ),
             ],
           ),
           exerciseTwoDetails[j].title,
@@ -144,10 +142,8 @@ List<Widget> buildExerciseTwo() {
           Row(
             children: [
               Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: optionsWidgets,
-              )
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: optionsWidgets)
             ],
           ),
           const SizedBox(height: 20),
