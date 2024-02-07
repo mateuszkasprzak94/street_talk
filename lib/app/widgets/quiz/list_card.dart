@@ -64,7 +64,6 @@ class QuizListCard extends StatelessWidget {
               tag: quizCardDetailList[index].iconTag,
               child: Image.asset(
                 quizCardDetailList[index].iconName,
-                scale: 3,
               ),
             ),
           ],

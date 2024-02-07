@@ -30,7 +30,6 @@ class EventsListCard extends StatelessWidget {
                 tag: eventCardDetailList[index].iconTag,
                 child: Image.asset(
                   eventCardDetailList[index].iconAssetName,
-                  scale: 3,
                   fit: BoxFit.cover,
                   width: MediaQuery.of(context).size.width,
                 ),

@@ -61,7 +61,7 @@ final List<EventCardDetail> eventCardDetailList = [
       category: 'los_enharinados',
       iconTag: 'enharinados_icon'),
   EventCardDetail(
-      title: 'San Fermín (Bieg Byków w Pampelunie)',
+      title: 'San Fermín',
       iconAssetName: 'assets/assets_events/san_fermin.jpg',
       category: 'san_fermin',
       iconTag: 'fermin_icon'),
