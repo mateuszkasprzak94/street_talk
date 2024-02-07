@@ -39,17 +39,19 @@ import 'package:street_talk/app/domain/repositories/street_repository.dart'
 import 'package:street_talk/app/domain/repositories/welcome_goodybe_repository.dart'
     as _i21;
 import 'package:street_talk/app/drawer/drawer_content/quiz/cubit/quiz_cubit.dart'
+    as _i24;
+import 'package:street_talk/app/drawer/drawer_content/spanish_events/cubit/events_cubit.dart'
     as _i23;
 import 'package:street_talk/app/features/pages/colloquialisms_page/emotions_page/cubit/emotions_page_cubit.dart'
     as _i7;
 import 'package:street_talk/app/features/pages/colloquialisms_page/emotions_page/emotions_content/cubit/emotions_content_cubit.dart'
     as _i22;
 import 'package:street_talk/app/features/pages/colloquialisms_page/situation_page/cubit/situation_cubit.dart'
-    as _i24;
-import 'package:street_talk/app/features/pages/colloquialisms_page/street_page/cubit/street_cubit.dart'
     as _i25;
-import 'package:street_talk/app/features/pages/colloquialisms_page/welcome_goodbye_page/cubit/welcome_goodbye_cubit.dart'
+import 'package:street_talk/app/features/pages/colloquialisms_page/street_page/cubit/street_cubit.dart'
     as _i26;
+import 'package:street_talk/app/features/pages/colloquialisms_page/welcome_goodbye_page/cubit/welcome_goodbye_cubit.dart'
+    as _i27;
 import 'package:street_talk/app/features/pages/flashcards_page/flashcards_sets_page/flashcards_sets_page_content/set_one/cubit/set_one_cubit.dart'
     as _i12;
 import 'package:street_talk/app/features/pages/flashcards_page/flashcards_sets_page/flashcards_sets_page_content/set_three/cubit/set_three_cubit.dart'
@@ -108,13 +110,15 @@ extension GetItInjectableX on _i1.GetIt {
                 gh<_i20.WelcomeGoodbyeMockedDataSource>()));
     gh.factory<_i22.EmotionsContentCubit>(() => _i22.EmotionsContentCubit(
         emotionsContentRepository: gh<_i4.EmotionsContentRepository>()));
-    gh.factory<_i23.QuizCubit>(
-        () => _i23.QuizCubit(quizRepository: gh<_i11.QuizRepository>()));
-    gh.factory<_i24.SituationCubit>(() => _i24.SituationCubit(
+    gh.factory<_i23.EventsCubit>(
+        () => _i23.EventsCubit(eventsRepository: gh<_i9.EventsRepository>()));
+    gh.factory<_i24.QuizCubit>(
+        () => _i24.QuizCubit(quizRepository: gh<_i11.QuizRepository>()));
+    gh.factory<_i25.SituationCubit>(() => _i25.SituationCubit(
         situationRepository: gh<_i16.SituationRepository>()));
-    gh.factory<_i25.StreetCubit>(
-        () => _i25.StreetCubit(streetRepository: gh<_i18.StreetRepository>()));
-    gh.factory<_i26.WelcomeGoodbyeCubit>(() => _i26.WelcomeGoodbyeCubit(
+    gh.factory<_i26.StreetCubit>(
+        () => _i26.StreetCubit(streetRepository: gh<_i18.StreetRepository>()));
+    gh.factory<_i27.WelcomeGoodbyeCubit>(() => _i27.WelcomeGoodbyeCubit(
         welcomeGoobyeRepository: gh<_i21.WelcomeGoodbyeRepository>()));
     return this;
   }
