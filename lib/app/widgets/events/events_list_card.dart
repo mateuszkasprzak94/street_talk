@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:street_talk/app/domain/models/spanish_events_details_model.dart';
-import 'package:street_talk/app/drawer/drawer_content/quiz/screens/before_start_screen.dart';
+import 'package:street_talk/app/drawer/drawer_content/spanish_events/spanish_events_content.dart';
 
 class EventsListCard extends StatelessWidget {
   const EventsListCard(this.index, {super.key});
@@ -14,7 +14,7 @@ class EventsListCard extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-              builder: (context) => BeforeStartScreen(
+              builder: (context) => EventsContent(
                     selectedIndex: index,
                   )),
         );
@@ -30,6 +30,7 @@ class EventsListCard extends StatelessWidget {
                 tag: eventCardDetailList[index].iconTag,
                 child: Image.asset(
                   eventCardDetailList[index].iconAssetName,
+                  scale: 3,
                   fit: BoxFit.cover,
                   width: MediaQuery.of(context).size.width,
                 ),
