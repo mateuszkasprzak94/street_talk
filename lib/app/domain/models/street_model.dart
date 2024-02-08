@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'street_model.freezed.dart';
-part 'street_model.g.dart';
+part 'generated/street_model.freezed.dart';
+part 'generated/street_model.g.dart';
 
 @freezed
 class StreetModel with _$StreetModel {

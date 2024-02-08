@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'emotions_name_model.freezed.dart';
-part 'emotions_name_model.g.dart';
+part 'generated/emotions_name_model.freezed.dart';
+part 'generated/emotions_name_model.g.dart';
 
 @freezed
 class EmotionsNameModel with _$EmotionsNameModel {

@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'welcome_goodbye_model.dart';
+part of '../welcome_goodbye_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator

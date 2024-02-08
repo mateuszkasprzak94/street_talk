@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'situations_model.dart';
+part of '../street_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,12 +14,12 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-SituationModel _$SituationModelFromJson(Map<String, dynamic> json) {
-  return _SituationModel.fromJson(json);
+StreetModel _$StreetModelFromJson(Map<String, dynamic> json) {
+  return _StreetModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$SituationModel {
+mixin _$StreetModel {
   int get id => throw _privateConstructorUsedError;
   String get word => throw _privateConstructorUsedError;
   String get wordTranslation => throw _privateConstructorUsedError;
@@ -28,15 +28,15 @@ mixin _$SituationModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SituationModelCopyWith<SituationModel> get copyWith =>
+  $StreetModelCopyWith<StreetModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $SituationModelCopyWith<$Res> {
-  factory $SituationModelCopyWith(
-          SituationModel value, $Res Function(SituationModel) then) =
-      _$SituationModelCopyWithImpl<$Res, SituationModel>;
+abstract class $StreetModelCopyWith<$Res> {
+  factory $StreetModelCopyWith(
+          StreetModel value, $Res Function(StreetModel) then) =
+      _$StreetModelCopyWithImpl<$Res, StreetModel>;
   @useResult
   $Res call(
       {int id,
@@ -47,9 +47,9 @@ abstract class $SituationModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SituationModelCopyWithImpl<$Res, $Val extends SituationModel>
-    implements $SituationModelCopyWith<$Res> {
-  _$SituationModelCopyWithImpl(this._value, this._then);
+class _$StreetModelCopyWithImpl<$Res, $Val extends StreetModel>
+    implements $StreetModelCopyWith<$Res> {
+  _$StreetModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -91,11 +91,11 @@ class _$SituationModelCopyWithImpl<$Res, $Val extends SituationModel>
 }
 
 /// @nodoc
-abstract class _$$SituationModelImplCopyWith<$Res>
-    implements $SituationModelCopyWith<$Res> {
-  factory _$$SituationModelImplCopyWith(_$SituationModelImpl value,
-          $Res Function(_$SituationModelImpl) then) =
-      __$$SituationModelImplCopyWithImpl<$Res>;
+abstract class _$$StreetModelImplCopyWith<$Res>
+    implements $StreetModelCopyWith<$Res> {
+  factory _$$StreetModelImplCopyWith(
+          _$StreetModelImpl value, $Res Function(_$StreetModelImpl) then) =
+      __$$StreetModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -107,11 +107,11 @@ abstract class _$$SituationModelImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$SituationModelImplCopyWithImpl<$Res>
-    extends _$SituationModelCopyWithImpl<$Res, _$SituationModelImpl>
-    implements _$$SituationModelImplCopyWith<$Res> {
-  __$$SituationModelImplCopyWithImpl(
-      _$SituationModelImpl _value, $Res Function(_$SituationModelImpl) _then)
+class __$$StreetModelImplCopyWithImpl<$Res>
+    extends _$StreetModelCopyWithImpl<$Res, _$StreetModelImpl>
+    implements _$$StreetModelImplCopyWith<$Res> {
+  __$$StreetModelImplCopyWithImpl(
+      _$StreetModelImpl _value, $Res Function(_$StreetModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -123,7 +123,7 @@ class __$$SituationModelImplCopyWithImpl<$Res>
     Object? exampleOne = null,
     Object? exampleTwo = null,
   }) {
-    return _then(_$SituationModelImpl(
+    return _then(_$StreetModelImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -151,12 +151,12 @@ class __$$SituationModelImplCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(fieldRename: FieldRename.snake)
-class _$SituationModelImpl implements _SituationModel {
-  _$SituationModelImpl(this.id, this.word, this.wordTranslation,
-      this.exampleOne, this.exampleTwo);
+class _$StreetModelImpl implements _StreetModel {
+  _$StreetModelImpl(this.id, this.word, this.wordTranslation, this.exampleOne,
+      this.exampleTwo);
 
-  factory _$SituationModelImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SituationModelImplFromJson(json);
+  factory _$StreetModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$StreetModelImplFromJson(json);
 
   @override
   final int id;
@@ -171,14 +171,14 @@ class _$SituationModelImpl implements _SituationModel {
 
   @override
   String toString() {
-    return 'SituationModel(id: $id, word: $word, wordTranslation: $wordTranslation, exampleOne: $exampleOne, exampleTwo: $exampleTwo)';
+    return 'StreetModel(id: $id, word: $word, wordTranslation: $wordTranslation, exampleOne: $exampleOne, exampleTwo: $exampleTwo)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SituationModelImpl &&
+            other is _$StreetModelImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.word, word) || other.word == word) &&
             (identical(other.wordTranslation, wordTranslation) ||
@@ -197,28 +197,27 @@ class _$SituationModelImpl implements _SituationModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$SituationModelImplCopyWith<_$SituationModelImpl> get copyWith =>
-      __$$SituationModelImplCopyWithImpl<_$SituationModelImpl>(
-          this, _$identity);
+  _$$StreetModelImplCopyWith<_$StreetModelImpl> get copyWith =>
+      __$$StreetModelImplCopyWithImpl<_$StreetModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SituationModelImplToJson(
+    return _$$StreetModelImplToJson(
       this,
     );
   }
 }
 
-abstract class _SituationModel implements SituationModel {
-  factory _SituationModel(
+abstract class _StreetModel implements StreetModel {
+  factory _StreetModel(
       final int id,
       final String word,
       final String wordTranslation,
       final String exampleOne,
-      final String exampleTwo) = _$SituationModelImpl;
+      final String exampleTwo) = _$StreetModelImpl;
 
-  factory _SituationModel.fromJson(Map<String, dynamic> json) =
-      _$SituationModelImpl.fromJson;
+  factory _StreetModel.fromJson(Map<String, dynamic> json) =
+      _$StreetModelImpl.fromJson;
 
   @override
   int get id;
@@ -232,6 +231,6 @@ abstract class _SituationModel implements SituationModel {
   String get exampleTwo;
   @override
   @JsonKey(ignore: true)
-  _$$SituationModelImplCopyWith<_$SituationModelImpl> get copyWith =>
+  _$$StreetModelImplCopyWith<_$StreetModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

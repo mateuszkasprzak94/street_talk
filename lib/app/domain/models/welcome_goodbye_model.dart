@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'welcome_goodbye_model.freezed.dart';
-part 'welcome_goodbye_model.g.dart';
+part 'generated/welcome_goodbye_model.freezed.dart';
+part 'generated/welcome_goodbye_model.g.dart';
 
 @freezed
 class WelcomeGoodbyeModel with _$WelcomeGoodbyeModel {

@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'quiz_model.freezed.dart';
-part 'quiz_model.g.dart';
+part 'generated/quiz_model.freezed.dart';
+part 'generated/quiz_model.g.dart';
 
 @freezed
 class QuizQuestionModel with _$QuizQuestionModel {

@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'emotions_content_model.dart';
+part of '../situations_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,14 +14,13 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-EmotionsContentModel _$EmotionsContentModelFromJson(Map<String, dynamic> json) {
-  return _EmotionsContentModel.fromJson(json);
+SituationModel _$SituationModelFromJson(Map<String, dynamic> json) {
+  return _SituationModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$EmotionsContentModel {
+mixin _$SituationModel {
   int get id => throw _privateConstructorUsedError;
-  int get emotionId => throw _privateConstructorUsedError;
   String get word => throw _privateConstructorUsedError;
   String get wordTranslation => throw _privateConstructorUsedError;
   String get exampleOne => throw _privateConstructorUsedError;
@@ -29,19 +28,18 @@ mixin _$EmotionsContentModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $EmotionsContentModelCopyWith<EmotionsContentModel> get copyWith =>
+  $SituationModelCopyWith<SituationModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $EmotionsContentModelCopyWith<$Res> {
-  factory $EmotionsContentModelCopyWith(EmotionsContentModel value,
-          $Res Function(EmotionsContentModel) then) =
-      _$EmotionsContentModelCopyWithImpl<$Res, EmotionsContentModel>;
+abstract class $SituationModelCopyWith<$Res> {
+  factory $SituationModelCopyWith(
+          SituationModel value, $Res Function(SituationModel) then) =
+      _$SituationModelCopyWithImpl<$Res, SituationModel>;
   @useResult
   $Res call(
       {int id,
-      int emotionId,
       String word,
       String wordTranslation,
       String exampleOne,
@@ -49,10 +47,9 @@ abstract class $EmotionsContentModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$EmotionsContentModelCopyWithImpl<$Res,
-        $Val extends EmotionsContentModel>
-    implements $EmotionsContentModelCopyWith<$Res> {
-  _$EmotionsContentModelCopyWithImpl(this._value, this._then);
+class _$SituationModelCopyWithImpl<$Res, $Val extends SituationModel>
+    implements $SituationModelCopyWith<$Res> {
+  _$SituationModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -63,7 +60,6 @@ class _$EmotionsContentModelCopyWithImpl<$Res,
   @override
   $Res call({
     Object? id = null,
-    Object? emotionId = null,
     Object? word = null,
     Object? wordTranslation = null,
     Object? exampleOne = null,
@@ -73,10 +69,6 @@ class _$EmotionsContentModelCopyWithImpl<$Res,
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      emotionId: null == emotionId
-          ? _value.emotionId
-          : emotionId // ignore: cast_nullable_to_non_nullable
               as int,
       word: null == word
           ? _value.word
@@ -99,16 +91,15 @@ class _$EmotionsContentModelCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$EmotionsContentModelImplCopyWith<$Res>
-    implements $EmotionsContentModelCopyWith<$Res> {
-  factory _$$EmotionsContentModelImplCopyWith(_$EmotionsContentModelImpl value,
-          $Res Function(_$EmotionsContentModelImpl) then) =
-      __$$EmotionsContentModelImplCopyWithImpl<$Res>;
+abstract class _$$SituationModelImplCopyWith<$Res>
+    implements $SituationModelCopyWith<$Res> {
+  factory _$$SituationModelImplCopyWith(_$SituationModelImpl value,
+          $Res Function(_$SituationModelImpl) then) =
+      __$$SituationModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {int id,
-      int emotionId,
       String word,
       String wordTranslation,
       String exampleOne,
@@ -116,31 +107,26 @@ abstract class _$$EmotionsContentModelImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$EmotionsContentModelImplCopyWithImpl<$Res>
-    extends _$EmotionsContentModelCopyWithImpl<$Res, _$EmotionsContentModelImpl>
-    implements _$$EmotionsContentModelImplCopyWith<$Res> {
-  __$$EmotionsContentModelImplCopyWithImpl(_$EmotionsContentModelImpl _value,
-      $Res Function(_$EmotionsContentModelImpl) _then)
+class __$$SituationModelImplCopyWithImpl<$Res>
+    extends _$SituationModelCopyWithImpl<$Res, _$SituationModelImpl>
+    implements _$$SituationModelImplCopyWith<$Res> {
+  __$$SituationModelImplCopyWithImpl(
+      _$SituationModelImpl _value, $Res Function(_$SituationModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = null,
-    Object? emotionId = null,
     Object? word = null,
     Object? wordTranslation = null,
     Object? exampleOne = null,
     Object? exampleTwo = null,
   }) {
-    return _then(_$EmotionsContentModelImpl(
+    return _then(_$SituationModelImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      null == emotionId
-          ? _value.emotionId
-          : emotionId // ignore: cast_nullable_to_non_nullable
               as int,
       null == word
           ? _value.word
@@ -165,17 +151,15 @@ class __$$EmotionsContentModelImplCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(fieldRename: FieldRename.snake)
-class _$EmotionsContentModelImpl implements _EmotionsContentModel {
-  _$EmotionsContentModelImpl(this.id, this.emotionId, this.word,
-      this.wordTranslation, this.exampleOne, this.exampleTwo);
+class _$SituationModelImpl implements _SituationModel {
+  _$SituationModelImpl(this.id, this.word, this.wordTranslation,
+      this.exampleOne, this.exampleTwo);
 
-  factory _$EmotionsContentModelImpl.fromJson(Map<String, dynamic> json) =>
-      _$$EmotionsContentModelImplFromJson(json);
+  factory _$SituationModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SituationModelImplFromJson(json);
 
   @override
   final int id;
-  @override
-  final int emotionId;
   @override
   final String word;
   @override
@@ -187,17 +171,15 @@ class _$EmotionsContentModelImpl implements _EmotionsContentModel {
 
   @override
   String toString() {
-    return 'EmotionsContentModel(id: $id, emotionId: $emotionId, word: $word, wordTranslation: $wordTranslation, exampleOne: $exampleOne, exampleTwo: $exampleTwo)';
+    return 'SituationModel(id: $id, word: $word, wordTranslation: $wordTranslation, exampleOne: $exampleOne, exampleTwo: $exampleTwo)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$EmotionsContentModelImpl &&
+            other is _$SituationModelImpl &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.emotionId, emotionId) ||
-                other.emotionId == emotionId) &&
             (identical(other.word, word) || other.word == word) &&
             (identical(other.wordTranslation, wordTranslation) ||
                 other.wordTranslation == wordTranslation) &&
@@ -209,41 +191,37 @@ class _$EmotionsContentModelImpl implements _EmotionsContentModel {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, emotionId, word,
-      wordTranslation, exampleOne, exampleTwo);
+  int get hashCode => Object.hash(
+      runtimeType, id, word, wordTranslation, exampleOne, exampleTwo);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$EmotionsContentModelImplCopyWith<_$EmotionsContentModelImpl>
-      get copyWith =>
-          __$$EmotionsContentModelImplCopyWithImpl<_$EmotionsContentModelImpl>(
-              this, _$identity);
+  _$$SituationModelImplCopyWith<_$SituationModelImpl> get copyWith =>
+      __$$SituationModelImplCopyWithImpl<_$SituationModelImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$EmotionsContentModelImplToJson(
+    return _$$SituationModelImplToJson(
       this,
     );
   }
 }
 
-abstract class _EmotionsContentModel implements EmotionsContentModel {
-  factory _EmotionsContentModel(
+abstract class _SituationModel implements SituationModel {
+  factory _SituationModel(
       final int id,
-      final int emotionId,
       final String word,
       final String wordTranslation,
       final String exampleOne,
-      final String exampleTwo) = _$EmotionsContentModelImpl;
+      final String exampleTwo) = _$SituationModelImpl;
 
-  factory _EmotionsContentModel.fromJson(Map<String, dynamic> json) =
-      _$EmotionsContentModelImpl.fromJson;
+  factory _SituationModel.fromJson(Map<String, dynamic> json) =
+      _$SituationModelImpl.fromJson;
 
   @override
   int get id;
-  @override
-  int get emotionId;
   @override
   String get word;
   @override
@@ -254,6 +232,6 @@ abstract class _EmotionsContentModel implements EmotionsContentModel {
   String get exampleTwo;
   @override
   @JsonKey(ignore: true)
-  _$$EmotionsContentModelImplCopyWith<_$EmotionsContentModelImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$SituationModelImplCopyWith<_$SituationModelImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

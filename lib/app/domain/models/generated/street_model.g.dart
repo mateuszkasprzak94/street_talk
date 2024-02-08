@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'street_model.dart';
+part of '../street_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator

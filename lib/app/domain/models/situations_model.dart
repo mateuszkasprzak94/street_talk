@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'situations_model.freezed.dart';
-part 'situations_model.g.dart';
+part 'generated/situations_model.freezed.dart';
+part 'generated/situations_model.g.dart';
 
 @freezed
 class SituationModel with _$SituationModel {

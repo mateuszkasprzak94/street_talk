@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'emotions_content_model.dart';
+part of '../emotions_content_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
