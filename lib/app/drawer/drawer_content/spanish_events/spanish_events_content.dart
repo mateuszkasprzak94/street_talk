@@ -1,5 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:street_talk/app/core/constants/constants.dart';
@@ -17,6 +18,7 @@ class EventsContent extends StatelessWidget {
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
+            systemOverlayStyle: SystemUiOverlayStyle.light,
             automaticallyImplyLeading: false,
             floating: true,
             expandedHeight: 350,

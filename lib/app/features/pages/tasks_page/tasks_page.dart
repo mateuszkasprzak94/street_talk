@@ -22,6 +22,7 @@ class TasksPage extends StatelessWidget {
           return Scaffold(
             endDrawer: const NavigationDrawerWidget(),
             appBar: AppBar(
+              iconTheme: const IconThemeData(color: kRedDrawer),
               centerTitle: true,
               leading: Transform.scale(
                 scale: 1.6,

@@ -8,6 +8,8 @@ const kRedGradient = [
   Color.fromARGB(255, 109, 6, 16)
 ];
 
+const kRedDrawer = Color.fromARGB(255, 109, 6, 16);
+
 
 
 

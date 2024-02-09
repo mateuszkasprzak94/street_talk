@@ -71,8 +71,14 @@ class NavigationDrawerWidget extends StatelessWidget {
           runSpacing: 15,
           children: [
             ListTile(
-              leading: const Icon(Icons.home_outlined),
-              title: const Text('Strona główna'),
+              leading: const Icon(
+                Icons.home_outlined,
+                color: kRedDrawer,
+              ),
+              title: const Text(
+                'Strona główna',
+                style: TextStyle(color: kRedDrawer),
+              ),
               onTap: () {
                 Navigator.of(context).pushReplacement(
                   MaterialPageRoute(
@@ -82,8 +88,14 @@ class NavigationDrawerWidget extends StatelessWidget {
               },
             ),
             ListTile(
-              leading: const Icon(Icons.event),
-              title: const Text('Popularne wydarzenia'),
+              leading: const Icon(
+                Icons.event,
+                color: kRedDrawer,
+              ),
+              title: const Text(
+                'Popularne wydarzenia',
+                style: TextStyle(color: kRedDrawer),
+              ),
               onTap: () {
                 // close navigation drawer before
                 Navigator.pop(context);
@@ -96,8 +108,14 @@ class NavigationDrawerWidget extends StatelessWidget {
               },
             ),
             ListTile(
-              leading: const Icon(Icons.lightbulb_outline),
-              title: const Text('Quiz'),
+              leading: const Icon(
+                Icons.lightbulb_outline,
+                color: kRedDrawer,
+              ),
+              title: const Text(
+                'Quiz',
+                style: TextStyle(color: kRedDrawer),
+              ),
               onTap: () {
                 // close navigation drawer before
                 Navigator.pop(context);
@@ -110,8 +128,14 @@ class NavigationDrawerWidget extends StatelessWidget {
               },
             ),
             ListTile(
-              leading: const Icon(Icons.favorite_border),
-              title: const Text('Ulubione'),
+              leading: const Icon(
+                Icons.favorite_border,
+                color: kRedDrawer,
+              ),
+              title: const Text(
+                'Ulubione',
+                style: TextStyle(color: kRedDrawer),
+              ),
               onTap: () {
                 // close navigation drawer before
                 Navigator.pop(context);
@@ -124,8 +148,14 @@ class NavigationDrawerWidget extends StatelessWidget {
               },
             ),
             ListTile(
-              leading: const Icon(Icons.school),
-              title: const Text('Materiały edukacyjne'),
+              leading: const Icon(
+                Icons.school,
+                color: kRedDrawer,
+              ),
+              title: const Text(
+                'Materiały edukacyjne',
+                style: TextStyle(color: kRedDrawer),
+              ),
               onTap: () {
                 // close navigation drawer before
                 Navigator.pop(context);

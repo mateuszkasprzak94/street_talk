@@ -15,6 +15,7 @@ class FlashCardsPage extends StatelessWidget {
     double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
+        iconTheme: const IconThemeData(color: kRedDrawer),
         centerTitle: true,
         leading: Transform.scale(
           scale: 1.6,

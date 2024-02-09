@@ -24,6 +24,7 @@ class _DictionaryPageState extends State<DictionaryPage> {
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
         appBar: AppBar(
+          iconTheme: const IconThemeData(color: kRedDrawer),
           centerTitle: true,
           leading: Transform.scale(
             scale: 1.6,
