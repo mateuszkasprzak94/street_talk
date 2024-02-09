@@ -13,10 +13,10 @@ class CustomPopButton extends StatelessWidget {
         Navigator.pop(context);
       },
       child: Container(
-        width: 0.25 * MediaQuery.of(context).size.width,
+        width: 0.15 * MediaQuery.of(context).size.width,
         height: 0.07 * MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
-          color: const Color.fromARGB(167, 255, 255, 255),
+          gradient: LinearGradient(colors: kRedGradient),
           borderRadius: BorderRadius.circular(20),
           boxShadow: [
             BoxShadow(
@@ -26,9 +26,9 @@ class CustomPopButton extends StatelessWidget {
             ),
           ],
         ),
-        child: const Icon(
+        child: Icon(
           Icons.exit_to_app,
-          color: kRedColor,
+          color: Colors.white.withOpacity(0.8),
           size: 35,
         ),
       ),

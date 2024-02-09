@@ -57,7 +57,7 @@ class _SpanishEventsPageState extends State<SpanishEventsPage> {
       body: SingleChildScrollView(
         child: Container(
           margin:
-              const EdgeInsets.only(left: 20, right: 20, top: 40, bottom: 10),
+              const EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
           child: Column(
             children: [
               const SizedBox(height: 20),
