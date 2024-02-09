@@ -13,7 +13,7 @@ class CustomPopButton extends StatelessWidget {
         Navigator.pop(context);
       },
       child: Container(
-        width: 0.15 * MediaQuery.of(context).size.width,
+        width: 0.18 * MediaQuery.of(context).size.width,
         height: 0.07 * MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
           gradient: LinearGradient(colors: kRedGradient),
