@@ -119,7 +119,7 @@ class _SituationPageState extends State<SituationPage> {
                           _controller.animateToPage(randomPageIndex);
                         },
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: kRedColor,
+                          backgroundColor: kRedSecondary,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(50),
                           ),
