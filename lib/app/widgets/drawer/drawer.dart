@@ -162,7 +162,7 @@ class NavigationDrawerWidget extends StatelessWidget {
 
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => const EBookPage(),
+                    builder: (context) => const AnimatedSweepGradient(),
                   ),
                 );
               },
