@@ -1,25 +1,15 @@
 part of 'set_one_cubit.dart';
 
 class SetOneState {
-  final List<FlashCardsModel> setOneModel;
+  final List<FlashCardsDetailModel> items;
   final PageController? controllerFlashPage;
-  final int currentIndex;
+  final Status status;
+  final String? errorMessage;
 
   SetOneState({
-    required this.setOneModel,
+    this.items = const [],
     this.controllerFlashPage,
-    this.currentIndex = 0,
+    this.status = Status.initial,
+    this.errorMessage,
   });
-
-  SetOneState copyWith({
-    List<FlashCardsModel>? setOneModel,
-    PageController? controllerFlashPage,
-    int? currentIndex,
-  }) {
-    return SetOneState(
-      setOneModel: setOneModel ?? this.setOneModel,
-      controllerFlashPage: controllerFlashPage ?? this.controllerFlashPage,
-      currentIndex: currentIndex ?? this.currentIndex,
-    );
-  }
 }

@@ -3,27 +3,30 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:street_talk/app/domain/models/flashcards_set_one_model.dart';
 import 'package:street_talk/app/domain/models/flashcards_model.dart';
-import 'package:street_talk/app/domain/models/flashcards_set_three_model.dart';
-import 'package:street_talk/app/domain/models/flashcards_set_two_model.dart';
 import 'package:street_talk/app/features/pages/flashcards_page/flashcards_sets_page/flashcards_sets_page_content/set_one/cubit/set_one_cubit.dart';
 import 'package:street_talk/app/features/pages/flashcards_page/flashcards_sets_page/flashcards_sets_page_content/set_three/cubit/set_three_cubit.dart';
 import 'package:street_talk/app/features/pages/flashcards_page/flashcards_sets_page/flashcards_sets_page_content/set_two/cubit/set_two_cubit.dart';
 
-class SetOnePageViewContent extends StatelessWidget {
-  const SetOnePageViewContent(
-    this.index, {
+class SetOnePageViewContent extends StatefulWidget {
+  const SetOnePageViewContent({
+    required this.flashModel,
     super.key,
   });
 
-  final int index;
+  final FlashCardsDetailModel flashModel;
+
+  @override
+  State<SetOnePageViewContent> createState() => _SetOnePageViewContentState();
+}
+
+class _SetOnePageViewContentState extends State<SetOnePageViewContent> {
+  bool visibility = false;
 
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<SetOneCubit, SetOneState>(
       builder: (context, state) {
-        final FlashCardsModel flashCardsModel = state.setOneModel[index];
         return Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -35,7 +38,7 @@ class SetOnePageViewContent extends StatelessWidget {
                 child: Align(
                   alignment: Alignment.center,
                   child: AutoSizeText(
-                    flashCardsOneShuffleList[index].word,
+                    widget.flashModel.word,
                     style: const TextStyle(fontSize: 40),
                     maxLines: 1,
                   ),
@@ -47,20 +50,17 @@ class SetOnePageViewContent extends StatelessWidget {
               height: 50,
               child: Align(
                 alignment: Alignment.center,
-                child: flashCardsModel.isTranslationVisible
+                child: visibility
                     ? Text(
-                        flashCardsOneShuffleList[index].translation,
+                        widget.flashModel.translation,
                         style:
                             const TextStyle(fontSize: 30, color: Colors.grey),
                       )
                     : ElevatedButton(
                         style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.grey),
-                        onPressed: () {
-                          context
-                              .read<SetOneCubit>()
-                              .toggleTranslationVisibility(index);
-                        },
+                        onPressed: () =>
+                            setState(() => visibility = !visibility),
                         child: const Text(
                           'Pokaż tłumaczenie',
                           style: TextStyle(color: Colors.white),
@@ -101,19 +101,25 @@ class SetOnePageViewContent extends StatelessWidget {
 
 // SET_TWO
 
-class SetTwoPageViewContent extends StatelessWidget {
-  const SetTwoPageViewContent(
-    this.index, {
+class SetTwoPageViewContent extends StatefulWidget {
+  const SetTwoPageViewContent({
+    required this.flashModel,
     super.key,
   });
 
-  final int index;
+  final FlashCardsDetailModel flashModel;
+
+  @override
+  State<SetTwoPageViewContent> createState() => _SetTwoPageViewContentState();
+}
+
+class _SetTwoPageViewContentState extends State<SetTwoPageViewContent> {
+  bool visibility = false;
 
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<SetTwoCubit, SetTwoState>(
       builder: (context, state) {
-        final FlashCardsModel flashCardsModel = state.setOneModel[index];
         return Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -125,7 +131,7 @@ class SetTwoPageViewContent extends StatelessWidget {
                 child: Align(
                   alignment: Alignment.center,
                   child: AutoSizeText(
-                    flashCardsTwoShuffleList[index].word,
+                    widget.flashModel.word,
                     style: const TextStyle(fontSize: 40),
                     maxLines: 1,
                   ),
@@ -137,20 +143,17 @@ class SetTwoPageViewContent extends StatelessWidget {
               height: 50,
               child: Align(
                 alignment: Alignment.center,
-                child: flashCardsModel.isTranslationVisible
+                child: visibility
                     ? Text(
-                        flashCardsTwoShuffleList[index].translation,
+                        widget.flashModel.translation,
                         style:
                             const TextStyle(fontSize: 30, color: Colors.grey),
                       )
                     : ElevatedButton(
                         style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.grey),
-                        onPressed: () {
-                          context
-                              .read<SetTwoCubit>()
-                              .toggleTranslationVisibility(index);
-                        },
+                        onPressed: () =>
+                            setState(() => visibility = !visibility),
                         child: const Text(
                           'Pokaż tłumaczenie',
                           style: TextStyle(color: Colors.white),
@@ -191,19 +194,25 @@ class SetTwoPageViewContent extends StatelessWidget {
 
 // SET_THREE
 
-class SetThreePageViewContent extends StatelessWidget {
-  const SetThreePageViewContent(
-    this.index, {
+class SetThreePageViewContent extends StatefulWidget {
+  const SetThreePageViewContent({
+    required this.flashModel,
     super.key,
   });
 
-  final int index;
+  final FlashCardsDetailModel flashModel;
 
+  @override
+  State<SetThreePageViewContent> createState() =>
+      _SetThreePageViewContentState();
+}
+
+class _SetThreePageViewContentState extends State<SetThreePageViewContent> {
+  bool visibility = false;
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<SetThreeCubit, SetThreeState>(
       builder: (context, state) {
-        final FlashCardsModel flashCardsModel = state.setOneModel[index];
         return Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -215,7 +224,7 @@ class SetThreePageViewContent extends StatelessWidget {
                 child: Align(
                   alignment: Alignment.center,
                   child: AutoSizeText(
-                    flashCardsThreeShuffleList[index].word,
+                    widget.flashModel.word,
                     style: const TextStyle(fontSize: 40),
                     maxLines: 1,
                   ),
@@ -227,20 +236,17 @@ class SetThreePageViewContent extends StatelessWidget {
               height: 50,
               child: Align(
                 alignment: Alignment.center,
-                child: flashCardsModel.isTranslationVisible
+                child: visibility
                     ? Text(
-                        flashCardsThreeShuffleList[index].translation,
+                        widget.flashModel.translation,
                         style:
                             const TextStyle(fontSize: 30, color: Colors.grey),
                       )
                     : ElevatedButton(
                         style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.grey),
-                        onPressed: () {
-                          context
-                              .read<SetThreeCubit>()
-                              .toggleTranslationVisibility(index);
-                        },
+                        onPressed: () =>
+                            setState(() => visibility = !visibility),
                         child: const Text(
                           'Pokaż tłumaczenie',
                           style: TextStyle(color: Colors.white),
