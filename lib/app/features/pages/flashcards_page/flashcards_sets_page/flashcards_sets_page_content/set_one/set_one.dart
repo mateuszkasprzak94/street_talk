@@ -73,6 +73,7 @@ class FlashCardsSetOne extends StatelessWidget {
                     ),
                   ),
                   body: PageView(
+                    physics: const BouncingScrollPhysics(),
                     controller: state.controllerFlashPage,
                     children: [
                       for (final flashModel in flashModels) ...[

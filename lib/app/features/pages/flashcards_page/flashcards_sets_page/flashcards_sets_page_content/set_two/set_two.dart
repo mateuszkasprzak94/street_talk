@@ -76,6 +76,8 @@ class FlashCardsSetTwo extends StatelessWidget {
                   ),
                 ),
                 body: PageView(
+                  physics: const BouncingScrollPhysics(),
+                  controller: state.controllerFlashPage,
                   children: [
                     for (final flashModel in flashModels) ...[
                       SetTwoPageViewContent(flashModel: flashModel)

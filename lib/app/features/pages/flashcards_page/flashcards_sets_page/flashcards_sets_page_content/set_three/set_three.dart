@@ -76,6 +76,8 @@ class FlashCardsSetThree extends StatelessWidget {
                   ),
                 ),
                 body: PageView(
+                  physics: const BouncingScrollPhysics(),
+                  controller: state.controllerFlashPage,
                   children: [
                     for (final flashModel in flashModels) ...[
                       SetThreePageViewContent(flashModel: flashModel)

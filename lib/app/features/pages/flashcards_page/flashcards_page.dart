@@ -3,6 +3,8 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:street_talk/app/core/constants/constants.dart';
 import 'package:street_talk/app/features/pages/flashcards_page/flashcards_sets_page/flashcards_sets_page_content/set_one/set_one.dart';
+import 'package:street_talk/app/features/pages/flashcards_page/flashcards_sets_page/flashcards_sets_page_content/set_three/set_three.dart';
+import 'package:street_talk/app/features/pages/flashcards_page/flashcards_sets_page/flashcards_sets_page_content/set_two/set_two.dart';
 import 'package:street_talk/app/widgets/drawer/drawer.dart';
 
 class FlashCardsPage extends StatelessWidget {
@@ -90,7 +92,7 @@ class FlashCardsPage extends StatelessWidget {
                 onTap: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (_) => const FlashCardsSetOne(),
+                      builder: (_) => const FlashCardsSetTwo(),
                     ),
                   );
                 },
@@ -116,7 +118,7 @@ class FlashCardsPage extends StatelessWidget {
                 onTap: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (_) => const FlashCardsSetOne(),
+                      builder: (_) => const FlashCardsSetThree(),
                     ),
                   );
                 },
