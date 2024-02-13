@@ -4,7 +4,7 @@ import 'package:street_talk/app/domain/models/welcome_goodbye_model.dart';
 class WelcomeGoodbyeRepository {
   WelcomeGoodbyeRepository({required this.welcomeGoodbyeMockedDataSource});
 
-  final WelcomeGoodbyeMockedDataSource welcomeGoodbyeMockedDataSource;
+  final WelcomeGoodbyeDioDataSource welcomeGoodbyeMockedDataSource;
 
   Future<List<WelcomeGoodbyeModel>> getWelcomeGoodbyeData() async {
     final json = await welcomeGoodbyeMockedDataSource.getWelcomeGoodbyeData();

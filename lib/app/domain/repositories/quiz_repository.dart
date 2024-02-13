@@ -5,7 +5,7 @@ import 'package:street_talk/app/domain/models/quiz_model.dart';
 class QuizRepository {
   QuizRepository({required this.remoteDataSource});
 
-  final QuizQuestionMockedDataSource remoteDataSource;
+  final QuizQuestionDioDataSource remoteDataSource;
 
   Future<List<QuizQuestionModel>> getQuizData(String category) async {
     final json = await remoteDataSource.getQuizContent();

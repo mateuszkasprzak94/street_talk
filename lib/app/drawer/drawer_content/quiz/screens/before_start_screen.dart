@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:street_talk/app/domain/models/quiz_card_details_model.dart';
-import 'package:street_talk/app/drawer/drawer_content/quiz/screens/loading_screen.dart';
+import 'package:street_talk/app/drawer/drawer_content/quiz/screens/question_screen.dart';
 import 'package:street_talk/app/widgets/quiz/custom_close_button.dart';
 
 class BeforeStartScreen extends StatelessWidget {
@@ -71,8 +71,8 @@ class BeforeStartScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => LoadingScreen(
-                          index: selectedIndex,
+                        builder: (context) => QuizQuestionScreen(
+                          categoryIndex: selectedIndex,
                         ),
                       ),
                     );

@@ -28,7 +28,6 @@ class _EmotionsContentPageState extends State<EmotionsContentPage> {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
-    double screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
         appBar: AppBar(
           leading: const CustomCloseButton(),
@@ -87,7 +86,8 @@ class _EmotionsContentPageState extends State<EmotionsContentPage> {
                       child: Text('No data found'),
                     );
                   }
-                  return Column(
+                  return Stack(
+                    alignment: Alignment.bottomCenter,
                     children: [
                       CarouselSlider(
                         carouselController: _controller,
@@ -99,7 +99,7 @@ class _EmotionsContentPageState extends State<EmotionsContentPage> {
                         ],
                         options: CarouselOptions(
                           autoPlay: false,
-                          aspectRatio: screenHeight / 1100,
+                          aspectRatio: 0.65,
                           enlargeCenterPage: true,
                           onPageChanged: (index, reason) {
                             setState(() {

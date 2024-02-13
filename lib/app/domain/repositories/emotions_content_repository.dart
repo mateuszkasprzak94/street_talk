@@ -4,7 +4,7 @@ import 'package:street_talk/app/domain/models/emotions_content_model.dart';
 class EmotionsContentRepository {
   EmotionsContentRepository({required this.remoteDataSource});
 
-  final EmotionsContentMockedDataSource remoteDataSource;
+  final EmotionsContentDioDataSource remoteDataSource;
 
   Future<List<EmotionsContentModel>> getContentForEmotionId(
       int emotionId) async {

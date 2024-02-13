@@ -72,11 +72,11 @@ extension GetItInjectableX on _i1.GetIt {
       environment,
       environmentFilter,
     );
-    gh.factory<_i3.EmotionsContentMockedDataSource>(
-        () => _i3.EmotionsContentMockedDataSource());
+    gh.factory<_i3.EmotionsContentDioDataSource>(
+        () => _i3.EmotionsContentDioDataSource());
     gh.factory<_i4.EmotionsContentRepository>(() =>
         _i4.EmotionsContentRepository(
-            remoteDataSource: gh<_i3.EmotionsContentMockedDataSource>()));
+            remoteDataSource: gh<_i3.EmotionsContentDioDataSource>()));
     gh.factory<_i5.EmotionsNameMockedDataSource>(
         () => _i5.EmotionsNameMockedDataSource());
     gh.factory<_i6.EmotionsNameRepository>(() => _i6.EmotionsNameRepository(
@@ -89,31 +89,30 @@ extension GetItInjectableX on _i1.GetIt {
         () => _i9.FlashCardsThreeRepository());
     gh.factory<_i10.FlashCardsTwoRepository>(
         () => _i10.FlashCardsTwoRepository());
-    gh.factory<_i11.QuizQuestionMockedDataSource>(
-        () => _i11.QuizQuestionMockedDataSource());
+    gh.factory<_i11.QuizQuestionDioDataSource>(
+        () => _i11.QuizQuestionDioDataSource());
     gh.factory<_i12.QuizRepository>(() => _i12.QuizRepository(
-        remoteDataSource: gh<_i11.QuizQuestionMockedDataSource>()));
+        remoteDataSource: gh<_i11.QuizQuestionDioDataSource>()));
     gh.factory<_i13.SetOneCubit>(() => _i13.SetOneCubit(
         flashCardsRepository: gh<_i8.FlashCardsOneRepository>()));
     gh.factory<_i14.SetThreeCubit>(() => _i14.SetThreeCubit(
         flashCardsRepository: gh<_i9.FlashCardsThreeRepository>()));
     gh.factory<_i15.SetTwoCubit>(() => _i15.SetTwoCubit(
         flashCardsRepository: gh<_i10.FlashCardsTwoRepository>()));
-    gh.factory<_i16.SituationMockedDataSource>(
-        () => _i16.SituationMockedDataSource());
+    gh.factory<_i16.SituationDioDataSource>(
+        () => _i16.SituationDioDataSource());
     gh.factory<_i17.SituationRepository>(() => _i17.SituationRepository(
-        remoteDataSource: gh<_i16.SituationMockedDataSource>()));
-    gh.factory<_i18.StreetMockedDataSource>(
-        () => _i18.StreetMockedDataSource());
+        remoteDataSource: gh<_i16.SituationDioDataSource>()));
+    gh.factory<_i18.StreetDioDataSource>(() => _i18.StreetDioDataSource());
     gh.factory<_i19.StreetRepository>(() => _i19.StreetRepository(
-        remoteDataSource: gh<_i18.StreetMockedDataSource>()));
+        remoteDataSource: gh<_i18.StreetDioDataSource>()));
     gh.factory<_i20.TasksCubit>(() => _i20.TasksCubit());
-    gh.factory<_i21.WelcomeGoodbyeMockedDataSource>(
-        () => _i21.WelcomeGoodbyeMockedDataSource());
+    gh.factory<_i21.WelcomeGoodbyeDioDataSource>(
+        () => _i21.WelcomeGoodbyeDioDataSource());
     gh.factory<_i22.WelcomeGoodbyeRepository>(() =>
         _i22.WelcomeGoodbyeRepository(
             welcomeGoodbyeMockedDataSource:
-                gh<_i21.WelcomeGoodbyeMockedDataSource>()));
+                gh<_i21.WelcomeGoodbyeDioDataSource>()));
     gh.factory<_i23.EmotionsContentCubit>(() => _i23.EmotionsContentCubit(
         emotionsContentRepository: gh<_i4.EmotionsContentRepository>()));
     gh.factory<_i24.QuizCubit>(

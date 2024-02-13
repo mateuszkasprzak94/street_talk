@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:street_talk/app/core/constants/constants.dart';
 import 'package:street_talk/app/core/enums/enums.dart';
 import 'package:street_talk/app/features/pages/flashcards_page/flashcards_sets_page/flashcards_sets_page_content/set_one/cubit/set_one_cubit.dart';
@@ -15,86 +14,85 @@ class FlashCardsSetOne extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
-    return BlocProvider<SetOneCubit>(
-      create: (context) => getIt()..start(),
-      child: BlocBuilder<SetOneCubit, SetOneState>(
-        builder: (context, state) {
-          final flashModels = state.items;
-          switch (state.status) {
-            case Status.initial:
-              return const Center(
-                child: Text('Initial state'),
-              );
-            case Status.loading:
-              return Center(
-                child: LoadingAnimationWidget.fourRotatingDots(
-                  color: Colors.white,
-                  size: 50,
-                ),
-              );
-            case Status.success:
-              if (flashModels.isEmpty) {
+    return Scaffold(
+      body: BlocProvider<SetOneCubit>(
+        create: (context) => getIt()..start(),
+        child: BlocBuilder<SetOneCubit, SetOneState>(
+          builder: (context, state) {
+            final flashModels = state.items;
+            switch (state.status) {
+              case Status.initial:
                 return const Center(
-                  child: Text('No data found'),
+                  child: Text('Initial state'),
                 );
-              }
-              return Scaffold(
-                appBar: AppBar(
-                  leading: const CustomCloseButton(),
-                  centerTitle: true,
-                  actions: const [
-                    Padding(
-                      padding: EdgeInsets.only(right: 10),
-                      child: CircleAvatar(
-                        radius: 30,
-                        foregroundImage: AssetImage('assets/images/logo.jpg'),
-                      ),
-                    )
-                  ],
-                  bottom: PreferredSize(
-                    preferredSize: const Size.fromHeight(70),
-                    child: Container(
-                      height: 60,
-                      width: double.infinity,
-                      decoration: const BoxDecoration(
-                        gradient: LinearGradient(
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                          colors: kRedGradient,
+              case Status.loading:
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              case Status.success:
+                if (flashModels.isEmpty) {
+                  return const Center(
+                    child: Text('No data found'),
+                  );
+                }
+                return Scaffold(
+                  appBar: AppBar(
+                    leading: const CustomCloseButton(),
+                    centerTitle: true,
+                    actions: const [
+                      Padding(
+                        padding: EdgeInsets.only(right: 10),
+                        child: CircleAvatar(
+                          radius: 30,
+                          foregroundImage: AssetImage('assets/images/logo.jpg'),
                         ),
-                      ),
-                      child: Center(
-                        child: Text(
-                          'Zestaw 1',
-                          style: GoogleFonts.bebasNeue(
-                              letterSpacing: 2,
-                              color: Colors.white,
-                              fontSize: screenWidth / 12),
+                      )
+                    ],
+                    bottom: PreferredSize(
+                      preferredSize: const Size.fromHeight(70),
+                      child: Container(
+                        height: 60,
+                        width: double.infinity,
+                        decoration: const BoxDecoration(
+                          gradient: LinearGradient(
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                            colors: kRedGradient,
+                          ),
+                        ),
+                        child: Center(
+                          child: Text(
+                            'Zestaw 1',
+                            style: GoogleFonts.bebasNeue(
+                                letterSpacing: 2,
+                                color: Colors.white,
+                                fontSize: screenWidth / 12),
+                          ),
                         ),
                       ),
                     ),
                   ),
-                ),
-                body: PageView(
-                  controller: state.controllerFlashPage,
-                  children: [
-                    for (final flashModel in flashModels) ...[
-                      SetOnePageViewContent(flashModel: flashModel)
+                  body: PageView(
+                    controller: state.controllerFlashPage,
+                    children: [
+                      for (final flashModel in flashModels) ...[
+                        SetOnePageViewContent(flashModel: flashModel)
+                      ],
                     ],
-                  ],
-                ),
-              );
-            case Status.error:
-              return Center(
-                child: Text(
-                  state.errorMessage ?? 'Unknown error',
-                  style: TextStyle(
-                    color: Theme.of(context).colorScheme.error,
                   ),
-                ),
-              );
-          }
-        },
+                );
+              case Status.error:
+                return Center(
+                  child: Text(
+                    state.errorMessage ?? 'Unknown error',
+                    style: TextStyle(
+                      color: Theme.of(context).colorScheme.error,
+                    ),
+                  ),
+                );
+            }
+          },
+        ),
       ),
     );
   }

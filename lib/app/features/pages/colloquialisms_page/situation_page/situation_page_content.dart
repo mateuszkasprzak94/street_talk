@@ -24,6 +24,7 @@ class _SituationPageState extends State<SituationPage> {
   final CarouselController _controller = CarouselController();
   int currentPage = 0;
 
+  @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(

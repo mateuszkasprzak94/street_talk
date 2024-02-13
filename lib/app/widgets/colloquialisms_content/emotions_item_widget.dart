@@ -21,7 +21,6 @@ class EmotionsItemWidget extends StatelessWidget {
       children: [
         Container(
           margin: const EdgeInsets.all(10),
-          height: 400,
           width: double.infinity,
           decoration: BoxDecoration(
             color: Colors.white,

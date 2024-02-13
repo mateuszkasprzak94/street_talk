@@ -4,7 +4,7 @@ import 'package:street_talk/app/domain/models/situations_model.dart';
 class SituationRepository {
   SituationRepository({required this.remoteDataSource});
 
-  final SituationMockedDataSource remoteDataSource;
+  final SituationDioDataSource remoteDataSource;
 
   Future<List<SituationModel>> getSituationData() async {
     final json = await remoteDataSource.getSituationData();
