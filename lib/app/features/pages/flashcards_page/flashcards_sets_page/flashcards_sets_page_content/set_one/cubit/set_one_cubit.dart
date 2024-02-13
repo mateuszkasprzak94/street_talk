@@ -29,7 +29,7 @@ class SetOneCubit extends Cubit<SetOneState> {
         flashCardsRepository.getFlashCardsStream().listen((items) {
       items.shuffle();
       emit(SetOneState(
-        status: Status.loading,
+        status: Status.success,
         items: items,
         controllerFlashPage: pageController,
       ));
