@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:street_talk/app/core/constants/constants.dart';
 import 'package:street_talk/app/features/pages/flashcards_page/flashcards_sets_page/flashcards_sets_page_content/set_one/set_one.dart';
-import 'package:street_talk/app/features/pages/flashcards_page/flashcards_sets_page/flashcards_sets_page_content/set_three/set_three.dart';
-import 'package:street_talk/app/features/pages/flashcards_page/flashcards_sets_page/flashcards_sets_page_content/set_two/set_two.dart';
 import 'package:street_talk/app/widgets/drawer/drawer.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 
 class FlashCardsPage extends StatelessWidget {
   const FlashCardsPage({super.key});
@@ -58,62 +56,88 @@ class FlashCardsPage extends StatelessWidget {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             const SizedBox(height: 20),
             Animate(
-              child: FloatingActionButton.large(
-                heroTag: 'btn1',
-                onPressed: () {
+              child: GestureDetector(
+                onTap: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
                       builder: (_) => const FlashCardsSetOne(),
                     ),
                   );
                 },
-                backgroundColor: kRedColor,
-                child: const Text(
-                  'Zestaw 1',
-                  style: TextStyle(color: kRedColor),
-                ).animate(delay: 1200.ms).tint(color: Colors.white),
-              ).animate().fade(delay: 400.ms, duration: 900.ms).scale(),
+                child: Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 36),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
+                    gradient: const LinearGradient(colors: kRedGradient),
+                  ),
+                  child: const Text(
+                    'Zestaw 1',
+                    style: TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.w500),
+                  )
+                      .animate(delay: 1000.ms)
+                      .fade(delay: 150.ms, duration: 600.ms),
+                ).animate().fade(delay: 200.ms, duration: 700.ms).scale(),
+              ),
             ),
-            const SizedBox(height: 20),
             Animate(
-              child: FloatingActionButton.large(
-                heroTag: 'btn2',
-                onPressed: () {
+              child: GestureDetector(
+                onTap: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (_) => const FlashCardsSetTwo(),
+                      builder: (_) => const FlashCardsSetOne(),
                     ),
                   );
                 },
-                backgroundColor: kRedColor,
-                child: const Text(
-                  'Zestaw 2',
-                  style: TextStyle(color: kRedColor),
-                ).animate(delay: 1600.ms).tint(color: Colors.white),
-              ).animate().fade(delay: 800.ms, duration: 900.ms).scale(),
+                child: Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 36),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
+                    gradient: const LinearGradient(colors: kRedGradient),
+                  ),
+                  child: const Text(
+                    'Zestaw 2',
+                    style: TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.w500),
+                  )
+                      .animate(delay: 1400.ms)
+                      .fade(delay: 150.ms, duration: 600.ms),
+                ).animate().fade(delay: 600.ms, duration: 700.ms).scale(),
+              ),
             ),
-            const SizedBox(height: 20),
             Animate(
-              child: FloatingActionButton.large(
-                heroTag: 'btn3',
-                onPressed: () {
+              child: GestureDetector(
+                onTap: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (_) => const FlashCardsSetThree(),
+                      builder: (_) => const FlashCardsSetOne(),
                     ),
                   );
                 },
-                backgroundColor: kRedColor,
-                child: const Text(
-                  'Zestaw 3',
-                  style: TextStyle(color: kRedColor),
-                ).animate(delay: 2000.ms).tint(color: Colors.white),
-              ).animate().fade(delay: 1200.ms, duration: 900.ms).scale(),
+                child: Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 36),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
+                    gradient: const LinearGradient(colors: kRedGradient),
+                  ),
+                  child: const Text(
+                    'Zestaw 3',
+                    style: TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.w500),
+                  )
+                      .animate(delay: 1800.ms)
+                      .fade(delay: 150.ms, duration: 600.ms),
+                ).animate().fade(delay: 1000.ms, duration: 700.ms).scale(),
+              ),
             ),
+            const SizedBox(height: 20),
           ],
         ),
       ),
