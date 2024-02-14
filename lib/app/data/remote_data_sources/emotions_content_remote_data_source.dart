@@ -1,13 +1,17 @@
 import 'package:dio/dio.dart';
+import 'package:injectable/injectable.dart';
+import 'package:retrofit/retrofit.dart';
+import 'package:street_talk/app/domain/models/emotions_content_model.dart';
 
-class EmotionsContentDioDataSource {
-  Future<List<Map<String, dynamic>>?> getEmotionsContent() async {
-    final response = await Dio()
-        .get<List<dynamic>>('https://api.npoint.io/eca52938c03cba140e45');
-    final listDynamic = response.data;
-    if (listDynamic == null) {
-      return null;
-    }
-    return listDynamic.map((e) => e as Map<String, dynamic>).toList();
-  }
+part 'generated/emotions_content_remote_data_source.g.dart';
+
+@injectable
+@RestApi()
+abstract class EmotionsContentRetrofitDataSource {
+  @factoryMethod
+  factory EmotionsContentRetrofitDataSource(Dio dio) =
+      _EmotionsContentRetrofitDataSource;
+
+  @GET('/eca52938c03cba140e45')
+  Future<List<EmotionsContentModel>> getEmotionsContent();
 }

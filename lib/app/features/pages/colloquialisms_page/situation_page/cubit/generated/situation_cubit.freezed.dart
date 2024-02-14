@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'emotions_page_cubit.dart';
+part of '../situation_cubit.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -12,33 +12,33 @@ part of 'emotions_page_cubit.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$EmotionsPageState {
-  List<EmotionsNameModel> get results => throw _privateConstructorUsedError;
+mixin _$SituationState {
+  List<SituationModel> get results => throw _privateConstructorUsedError;
   Status get status => throw _privateConstructorUsedError;
   String? get errorMessage => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $EmotionsPageStateCopyWith<EmotionsPageState> get copyWith =>
+  $SituationStateCopyWith<SituationState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $EmotionsPageStateCopyWith<$Res> {
-  factory $EmotionsPageStateCopyWith(
-          EmotionsPageState value, $Res Function(EmotionsPageState) then) =
-      _$EmotionsPageStateCopyWithImpl<$Res, EmotionsPageState>;
+abstract class $SituationStateCopyWith<$Res> {
+  factory $SituationStateCopyWith(
+          SituationState value, $Res Function(SituationState) then) =
+      _$SituationStateCopyWithImpl<$Res, SituationState>;
   @useResult
   $Res call(
-      {List<EmotionsNameModel> results, Status status, String? errorMessage});
+      {List<SituationModel> results, Status status, String? errorMessage});
 }
 
 /// @nodoc
-class _$EmotionsPageStateCopyWithImpl<$Res, $Val extends EmotionsPageState>
-    implements $EmotionsPageStateCopyWith<$Res> {
-  _$EmotionsPageStateCopyWithImpl(this._value, this._then);
+class _$SituationStateCopyWithImpl<$Res, $Val extends SituationState>
+    implements $SituationStateCopyWith<$Res> {
+  _$SituationStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -56,7 +56,7 @@ class _$EmotionsPageStateCopyWithImpl<$Res, $Val extends EmotionsPageState>
       results: null == results
           ? _value.results
           : results // ignore: cast_nullable_to_non_nullable
-              as List<EmotionsNameModel>,
+              as List<SituationModel>,
       status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -70,23 +70,23 @@ class _$EmotionsPageStateCopyWithImpl<$Res, $Val extends EmotionsPageState>
 }
 
 /// @nodoc
-abstract class _$$EmotionsPageStateImplCopyWith<$Res>
-    implements $EmotionsPageStateCopyWith<$Res> {
-  factory _$$EmotionsPageStateImplCopyWith(_$EmotionsPageStateImpl value,
-          $Res Function(_$EmotionsPageStateImpl) then) =
-      __$$EmotionsPageStateImplCopyWithImpl<$Res>;
+abstract class _$$SituationStateImplCopyWith<$Res>
+    implements $SituationStateCopyWith<$Res> {
+  factory _$$SituationStateImplCopyWith(_$SituationStateImpl value,
+          $Res Function(_$SituationStateImpl) then) =
+      __$$SituationStateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {List<EmotionsNameModel> results, Status status, String? errorMessage});
+      {List<SituationModel> results, Status status, String? errorMessage});
 }
 
 /// @nodoc
-class __$$EmotionsPageStateImplCopyWithImpl<$Res>
-    extends _$EmotionsPageStateCopyWithImpl<$Res, _$EmotionsPageStateImpl>
-    implements _$$EmotionsPageStateImplCopyWith<$Res> {
-  __$$EmotionsPageStateImplCopyWithImpl(_$EmotionsPageStateImpl _value,
-      $Res Function(_$EmotionsPageStateImpl) _then)
+class __$$SituationStateImplCopyWithImpl<$Res>
+    extends _$SituationStateCopyWithImpl<$Res, _$SituationStateImpl>
+    implements _$$SituationStateImplCopyWith<$Res> {
+  __$$SituationStateImplCopyWithImpl(
+      _$SituationStateImpl _value, $Res Function(_$SituationStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -96,11 +96,11 @@ class __$$EmotionsPageStateImplCopyWithImpl<$Res>
     Object? status = null,
     Object? errorMessage = freezed,
   }) {
-    return _then(_$EmotionsPageStateImpl(
+    return _then(_$SituationStateImpl(
       results: null == results
           ? _value._results
           : results // ignore: cast_nullable_to_non_nullable
-              as List<EmotionsNameModel>,
+              as List<SituationModel>,
       status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -115,17 +115,17 @@ class __$$EmotionsPageStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$EmotionsPageStateImpl implements _EmotionsPageState {
-  _$EmotionsPageStateImpl(
-      {final List<EmotionsNameModel> results = const [],
+class _$SituationStateImpl implements _SituationState {
+  _$SituationStateImpl(
+      {final List<SituationModel> results = const [],
       this.status = Status.initial,
       this.errorMessage})
       : _results = results;
 
-  final List<EmotionsNameModel> _results;
+  final List<SituationModel> _results;
   @override
   @JsonKey()
-  List<EmotionsNameModel> get results {
+  List<SituationModel> get results {
     if (_results is EqualUnmodifiableListView) return _results;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_results);
@@ -139,14 +139,14 @@ class _$EmotionsPageStateImpl implements _EmotionsPageState {
 
   @override
   String toString() {
-    return 'EmotionsPageState(results: $results, status: $status, errorMessage: $errorMessage)';
+    return 'SituationState(results: $results, status: $status, errorMessage: $errorMessage)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$EmotionsPageStateImpl &&
+            other is _$SituationStateImpl &&
             const DeepCollectionEquality().equals(other._results, _results) &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.errorMessage, errorMessage) ||
@@ -160,25 +160,25 @@ class _$EmotionsPageStateImpl implements _EmotionsPageState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$EmotionsPageStateImplCopyWith<_$EmotionsPageStateImpl> get copyWith =>
-      __$$EmotionsPageStateImplCopyWithImpl<_$EmotionsPageStateImpl>(
+  _$$SituationStateImplCopyWith<_$SituationStateImpl> get copyWith =>
+      __$$SituationStateImplCopyWithImpl<_$SituationStateImpl>(
           this, _$identity);
 }
 
-abstract class _EmotionsPageState implements EmotionsPageState {
-  factory _EmotionsPageState(
-      {final List<EmotionsNameModel> results,
+abstract class _SituationState implements SituationState {
+  factory _SituationState(
+      {final List<SituationModel> results,
       final Status status,
-      final String? errorMessage}) = _$EmotionsPageStateImpl;
+      final String? errorMessage}) = _$SituationStateImpl;
 
   @override
-  List<EmotionsNameModel> get results;
+  List<SituationModel> get results;
   @override
   Status get status;
   @override
   String? get errorMessage;
   @override
   @JsonKey(ignore: true)
-  _$$EmotionsPageStateImplCopyWith<_$EmotionsPageStateImpl> get copyWith =>
+  _$$SituationStateImplCopyWith<_$SituationStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

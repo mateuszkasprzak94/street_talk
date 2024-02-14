@@ -5,7 +5,7 @@ import 'package:street_talk/app/core/enums/enums.dart';
 import 'package:street_talk/app/domain/models/welcome_goodbye_model.dart';
 import 'package:street_talk/app/domain/repositories/welcome_goodybe_repository.dart';
 
-part 'welcome_goodbye_cubit.freezed.dart';
+part 'generated/welcome_goodbye_cubit.freezed.dart';
 part 'welcome_goodbye_state.dart';
 
 class WelcomeGoodbyeCubit extends Cubit<WelcomeGoodbyeState> {

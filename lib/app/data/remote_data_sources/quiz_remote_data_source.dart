@@ -1,13 +1,17 @@
 import 'package:dio/dio.dart';
+import 'package:injectable/injectable.dart';
+import 'package:retrofit/retrofit.dart';
+import 'package:street_talk/app/domain/models/quiz_model.dart';
 
-class QuizQuestionDioDataSource {
-  Future<List<Map<String, dynamic>>?> getQuizContent() async {
-    final response = await Dio()
-        .get<List<dynamic>>('https://api.npoint.io/2d6ba7ac1e4da38445a3');
-    final listDynamic = response.data;
-    if (listDynamic == null) {
-      return null;
-    }
-    return listDynamic.map((e) => e as Map<String, dynamic>).toList();
-  }
+part 'generated/quiz_remote_data_source.g.dart';
+
+@injectable
+@RestApi()
+abstract class QuizQuestionRetrofitDataSource {
+  @factoryMethod
+  factory QuizQuestionRetrofitDataSource(Dio dio) =
+      _QuizQuestionRetrofitDataSource;
+
+  @GET('/2d6ba7ac1e4da38445a3')
+  Future<List<QuizQuestionModel>> getQuizContent();
 }

@@ -4,6 +4,7 @@ targets:
       source_gen|combining_builder:
         generate_for:
           - lib/app/domain/models/**.dart
+          - lib/app/data/remote_data_sources/**.dart
         options:
           build_extensions:
             # I want this line to "work":
@@ -22,11 +23,25 @@ targets:
           field_rename: snake
           explicit_to_json: true
       injectable_generator:injectable_builder:  
-        options:  
+        options: 
           auto_register: true  
           # auto registers any class with a name matches the given pattern  
           class_name_pattern:  
-            "DataSource$|Repository$|Cubit$"  
+            "Repository$|Cubit$"  
             # auto registers any class inside a file with a  
             # name matches the given pattern  
-          file_name_pattern: "_data_source$|_repository$|_cubit$"  
+          file_name_pattern: "_repository$|_cubit$"  
+
+# targets:  
+#   $default:  
+#     builders:  
+#       injectable_generator:injectable_builder:  
+#         options:  
+#           auto_register: true  
+#           # auto registers any class with a name matches the given pattern  
+#           class_name_pattern:  
+#             "Repository$|Cubits$"  
+#             # auto registers any class inside a file with a  
+#             # name matches the given pattern  
+#           file_name_pattern: "_repository$|_cubit$"  
+

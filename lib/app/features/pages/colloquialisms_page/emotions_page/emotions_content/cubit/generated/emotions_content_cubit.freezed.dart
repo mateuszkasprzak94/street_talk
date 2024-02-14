@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'welcome_goodbye_cubit.dart';
+part of '../emotions_content_cubit.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -12,33 +12,36 @@ part of 'welcome_goodbye_cubit.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$WelcomeGoodbyeState {
-  List<WelcomeGoodbyeModel> get results => throw _privateConstructorUsedError;
+mixin _$EmotionsContentState {
+  List<EmotionsContentModel> get results => throw _privateConstructorUsedError;
   Status get status => throw _privateConstructorUsedError;
   String? get errorMessage => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $WelcomeGoodbyeStateCopyWith<WelcomeGoodbyeState> get copyWith =>
+  $EmotionsContentStateCopyWith<EmotionsContentState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $WelcomeGoodbyeStateCopyWith<$Res> {
-  factory $WelcomeGoodbyeStateCopyWith(
-          WelcomeGoodbyeState value, $Res Function(WelcomeGoodbyeState) then) =
-      _$WelcomeGoodbyeStateCopyWithImpl<$Res, WelcomeGoodbyeState>;
+abstract class $EmotionsContentStateCopyWith<$Res> {
+  factory $EmotionsContentStateCopyWith(EmotionsContentState value,
+          $Res Function(EmotionsContentState) then) =
+      _$EmotionsContentStateCopyWithImpl<$Res, EmotionsContentState>;
   @useResult
   $Res call(
-      {List<WelcomeGoodbyeModel> results, Status status, String? errorMessage});
+      {List<EmotionsContentModel> results,
+      Status status,
+      String? errorMessage});
 }
 
 /// @nodoc
-class _$WelcomeGoodbyeStateCopyWithImpl<$Res, $Val extends WelcomeGoodbyeState>
-    implements $WelcomeGoodbyeStateCopyWith<$Res> {
-  _$WelcomeGoodbyeStateCopyWithImpl(this._value, this._then);
+class _$EmotionsContentStateCopyWithImpl<$Res,
+        $Val extends EmotionsContentState>
+    implements $EmotionsContentStateCopyWith<$Res> {
+  _$EmotionsContentStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -56,7 +59,7 @@ class _$WelcomeGoodbyeStateCopyWithImpl<$Res, $Val extends WelcomeGoodbyeState>
       results: null == results
           ? _value.results
           : results // ignore: cast_nullable_to_non_nullable
-              as List<WelcomeGoodbyeModel>,
+              as List<EmotionsContentModel>,
       status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -70,23 +73,25 @@ class _$WelcomeGoodbyeStateCopyWithImpl<$Res, $Val extends WelcomeGoodbyeState>
 }
 
 /// @nodoc
-abstract class _$$WelcomeGoodbyeStateImplCopyWith<$Res>
-    implements $WelcomeGoodbyeStateCopyWith<$Res> {
-  factory _$$WelcomeGoodbyeStateImplCopyWith(_$WelcomeGoodbyeStateImpl value,
-          $Res Function(_$WelcomeGoodbyeStateImpl) then) =
-      __$$WelcomeGoodbyeStateImplCopyWithImpl<$Res>;
+abstract class _$$EmotionsContentStateImplCopyWith<$Res>
+    implements $EmotionsContentStateCopyWith<$Res> {
+  factory _$$EmotionsContentStateImplCopyWith(_$EmotionsContentStateImpl value,
+          $Res Function(_$EmotionsContentStateImpl) then) =
+      __$$EmotionsContentStateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {List<WelcomeGoodbyeModel> results, Status status, String? errorMessage});
+      {List<EmotionsContentModel> results,
+      Status status,
+      String? errorMessage});
 }
 
 /// @nodoc
-class __$$WelcomeGoodbyeStateImplCopyWithImpl<$Res>
-    extends _$WelcomeGoodbyeStateCopyWithImpl<$Res, _$WelcomeGoodbyeStateImpl>
-    implements _$$WelcomeGoodbyeStateImplCopyWith<$Res> {
-  __$$WelcomeGoodbyeStateImplCopyWithImpl(_$WelcomeGoodbyeStateImpl _value,
-      $Res Function(_$WelcomeGoodbyeStateImpl) _then)
+class __$$EmotionsContentStateImplCopyWithImpl<$Res>
+    extends _$EmotionsContentStateCopyWithImpl<$Res, _$EmotionsContentStateImpl>
+    implements _$$EmotionsContentStateImplCopyWith<$Res> {
+  __$$EmotionsContentStateImplCopyWithImpl(_$EmotionsContentStateImpl _value,
+      $Res Function(_$EmotionsContentStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -96,11 +101,11 @@ class __$$WelcomeGoodbyeStateImplCopyWithImpl<$Res>
     Object? status = null,
     Object? errorMessage = freezed,
   }) {
-    return _then(_$WelcomeGoodbyeStateImpl(
+    return _then(_$EmotionsContentStateImpl(
       results: null == results
           ? _value._results
           : results // ignore: cast_nullable_to_non_nullable
-              as List<WelcomeGoodbyeModel>,
+              as List<EmotionsContentModel>,
       status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -115,17 +120,17 @@ class __$$WelcomeGoodbyeStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$WelcomeGoodbyeStateImpl implements _WelcomeGoodbyeState {
-  _$WelcomeGoodbyeStateImpl(
-      {final List<WelcomeGoodbyeModel> results = const [],
+class _$EmotionsContentStateImpl implements _EmotionsContentState {
+  _$EmotionsContentStateImpl(
+      {final List<EmotionsContentModel> results = const [],
       this.status = Status.initial,
       this.errorMessage})
       : _results = results;
 
-  final List<WelcomeGoodbyeModel> _results;
+  final List<EmotionsContentModel> _results;
   @override
   @JsonKey()
-  List<WelcomeGoodbyeModel> get results {
+  List<EmotionsContentModel> get results {
     if (_results is EqualUnmodifiableListView) return _results;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_results);
@@ -139,14 +144,14 @@ class _$WelcomeGoodbyeStateImpl implements _WelcomeGoodbyeState {
 
   @override
   String toString() {
-    return 'WelcomeGoodbyeState(results: $results, status: $status, errorMessage: $errorMessage)';
+    return 'EmotionsContentState(results: $results, status: $status, errorMessage: $errorMessage)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$WelcomeGoodbyeStateImpl &&
+            other is _$EmotionsContentStateImpl &&
             const DeepCollectionEquality().equals(other._results, _results) &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.errorMessage, errorMessage) ||
@@ -160,25 +165,26 @@ class _$WelcomeGoodbyeStateImpl implements _WelcomeGoodbyeState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$WelcomeGoodbyeStateImplCopyWith<_$WelcomeGoodbyeStateImpl> get copyWith =>
-      __$$WelcomeGoodbyeStateImplCopyWithImpl<_$WelcomeGoodbyeStateImpl>(
-          this, _$identity);
+  _$$EmotionsContentStateImplCopyWith<_$EmotionsContentStateImpl>
+      get copyWith =>
+          __$$EmotionsContentStateImplCopyWithImpl<_$EmotionsContentStateImpl>(
+              this, _$identity);
 }
 
-abstract class _WelcomeGoodbyeState implements WelcomeGoodbyeState {
-  factory _WelcomeGoodbyeState(
-      {final List<WelcomeGoodbyeModel> results,
+abstract class _EmotionsContentState implements EmotionsContentState {
+  factory _EmotionsContentState(
+      {final List<EmotionsContentModel> results,
       final Status status,
-      final String? errorMessage}) = _$WelcomeGoodbyeStateImpl;
+      final String? errorMessage}) = _$EmotionsContentStateImpl;
 
   @override
-  List<WelcomeGoodbyeModel> get results;
+  List<EmotionsContentModel> get results;
   @override
   Status get status;
   @override
   String? get errorMessage;
   @override
   @JsonKey(ignore: true)
-  _$$WelcomeGoodbyeStateImplCopyWith<_$WelcomeGoodbyeStateImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$EmotionsContentStateImplCopyWith<_$EmotionsContentStateImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

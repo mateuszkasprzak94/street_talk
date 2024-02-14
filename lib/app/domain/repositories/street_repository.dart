@@ -4,13 +4,9 @@ import 'package:street_talk/app/domain/models/street_model.dart';
 class StreetRepository {
   StreetRepository({required this.remoteDataSource});
 
-  final StreetDioDataSource remoteDataSource;
+  final StreetRetrofitDataSource remoteDataSource;
 
   Future<List<StreetModel>> getStreetData() async {
-    final json = await remoteDataSource.getStreetData();
-    if (json == null) {
-      return [];
-    }
-    return json.map((item) => StreetModel.fromJson(item)).toList();
+    return await remoteDataSource.getStreetData();
   }
 }

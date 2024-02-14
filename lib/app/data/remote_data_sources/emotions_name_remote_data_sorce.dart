@@ -1,3 +1,6 @@
+import 'package:injectable/injectable.dart';
+
+@injectable
 class EmotionsNameMockedDataSource {
   Future<List<Map<String, dynamic>>?> getEmotionsName() async {
     return [

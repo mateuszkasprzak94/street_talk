@@ -5,7 +5,7 @@ import 'package:street_talk/app/core/enums/enums.dart';
 import 'package:street_talk/app/domain/models/street_model.dart';
 import 'package:street_talk/app/domain/repositories/street_repository.dart';
 
-part 'street_cubit.freezed.dart';
+part 'generated/street_cubit.freezed.dart';
 part 'street_state.dart';
 
 class StreetCubit extends Cubit<StreetState> {

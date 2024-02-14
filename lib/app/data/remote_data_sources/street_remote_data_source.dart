@@ -1,13 +1,16 @@
 import 'package:dio/dio.dart';
+import 'package:injectable/injectable.dart';
+import 'package:retrofit/retrofit.dart';
+import 'package:street_talk/app/domain/models/street_model.dart';
 
-class StreetDioDataSource {
-  Future<List<Map<String, dynamic>>?> getStreetData() async {
-    final response = await Dio()
-        .get<List<dynamic>>('https://api.npoint.io/015d09380f8b4887bd68');
-    final listDynamic = response.data;
-    if (listDynamic == null) {
-      return null;
-    }
-    return listDynamic.map((e) => e as Map<String, dynamic>).toList();
-  }
+part 'generated/street_remote_data_source.g.dart';
+
+@injectable
+@RestApi()
+abstract class StreetRetrofitDataSource {
+  @factoryMethod
+  factory StreetRetrofitDataSource(Dio dio) = _StreetRetrofitDataSource;
+
+  @GET('/eca52938c03cba140e45')
+  Future<List<StreetModel>> getStreetData();
 }
