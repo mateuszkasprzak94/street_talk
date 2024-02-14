@@ -2,10 +2,12 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:street_talk/app/core/enums/enums.dart';
 import 'package:street_talk/app/domain/models/flashcards_model.dart';
 import 'package:street_talk/app/domain/repositories/flashcards_three_repository.dart';
 
+part 'generated/set_three_cubit.freezed.dart';
 part 'set_three_state.dart';
 
 class SetThreeCubit extends Cubit<SetThreeState> {

@@ -1,8 +1,10 @@
 import 'package:bloc/bloc.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:street_talk/app/core/enums/enums.dart';
 import 'package:street_talk/app/domain/models/quiz_model.dart';
 import 'package:street_talk/app/domain/repositories/quiz_repository.dart';
 
+part 'generated/quiz_cubit.freezed.dart';
 part 'quiz_state.dart';
 
 class QuizCubit extends Cubit<QuizState> {

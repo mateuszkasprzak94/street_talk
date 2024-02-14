@@ -2,10 +2,12 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:street_talk/app/core/enums/enums.dart';
 import 'package:street_talk/app/domain/models/flashcards_model.dart';
 import 'package:street_talk/app/domain/repositories/flashcards_two_repository.dart';
 
+part 'generated/set_two_cubit.freezed.dart';
 part 'set_two_state.dart';
 
 class SetTwoCubit extends Cubit<SetTwoState> {

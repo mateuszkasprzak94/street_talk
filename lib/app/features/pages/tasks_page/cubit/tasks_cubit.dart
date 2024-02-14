@@ -1,8 +1,10 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:street_talk/app/core/enums/enums.dart';
 import 'package:street_talk/app/domain/models/exercise_question_model.dart';
 
+part 'generated/tasks_cubit.freezed.dart';
 part 'tasks_state.dart';
 
 class TasksCubit extends Cubit<TasksState> {

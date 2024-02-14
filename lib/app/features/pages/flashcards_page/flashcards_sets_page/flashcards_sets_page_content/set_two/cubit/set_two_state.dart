@@ -1,17 +1,11 @@
 part of 'set_two_cubit.dart';
 
-class SetTwoState {
-  final List<FlashCardsDetailModel> items;
-  final PageController? controllerFlashPage;
-  final int currentIndex;
-  final Status status;
-  final String? errorMessage;
-
-  SetTwoState({
-    this.items = const [],
-    this.controllerFlashPage,
-    this.currentIndex = 0,
-    this.status = Status.initial,
-    this.errorMessage,
-  });
+@freezed
+class SetTwoState with _$SetTwoState {
+  factory SetTwoState({
+    @Default([]) List<FlashCardsDetailModel> items,
+    PageController? controllerFlashPage,
+    @Default(Status.initial) Status status,
+    String? errorMessage,
+  }) = _SetTwoState;
 }

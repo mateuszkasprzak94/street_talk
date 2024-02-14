@@ -72,8 +72,7 @@ class _AnimatedSweepGradientState extends State<AnimatedSweepGradient>
     super.initState();
     _controller = AnimationController(
       vsync: this,
-      duration:
-          const Duration(seconds: 5), // Adjust animation duration as needed
+      duration: const Duration(seconds: 5),
     )
       ..repeat()
       ..addListener(() {
@@ -135,7 +134,6 @@ class _AnimatedSweepGradientState extends State<AnimatedSweepGradient>
   }
 
   GradientRotation _animatedGradientTransform() {
-    // Animate the gradient rotation from 0 to 2 * pi (full circle)
     return GradientRotation(_controller.value * 2 * math.pi);
   }
 }

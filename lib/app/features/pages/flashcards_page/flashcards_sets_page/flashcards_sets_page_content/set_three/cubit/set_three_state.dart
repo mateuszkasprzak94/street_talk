@@ -1,15 +1,11 @@
 part of 'set_three_cubit.dart';
 
-class SetThreeState {
-  final List<FlashCardsDetailModel> items;
-  final PageController? controllerFlashPage;
-  final Status status;
-  final String? errorMessage;
-
-  SetThreeState({
-    this.items = const [],
-    this.controllerFlashPage,
-    this.status = Status.initial,
-    this.errorMessage,
-  });
+@freezed
+class SetThreeState with _$SetThreeState {
+  factory SetThreeState({
+    @Default([]) List<FlashCardsDetailModel> items,
+    PageController? controllerFlashPage,
+    @Default(Status.initial) Status status,
+    String? errorMessage,
+  }) = _SetThreeState;
 }
