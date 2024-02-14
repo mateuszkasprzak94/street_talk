@@ -41,99 +41,94 @@ class EventsContent extends StatelessWidget {
             ),
           ),
           SliverToBoxAdapter(
-            child: Padding(
-              padding: const EdgeInsets.all(5),
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      Expanded(
-                        child: Padding(
-                          padding: const EdgeInsets.only(
-                              left: 20, bottom: 5, right: 20),
-                          child: Expanded(
-                            child: AutoSizeText(
-                              eventCardDetailList[selectedIndex].title,
-                              maxLines: 2,
-                              style: GoogleFonts.playfairDisplay(
-                                  fontSize: 30, fontWeight: FontWeight.bold),
-                            ),
-                          ),
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.only(
+                            left: 20, bottom: 5, right: 20),
+                        child: AutoSizeText(
+                          eventCardDetailList[selectedIndex].title,
+                          maxLines: 2,
+                          style: GoogleFonts.playfairDisplay(
+                              fontSize: 30, fontWeight: FontWeight.bold),
                         ),
                       ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      const Padding(
-                        padding: EdgeInsets.only(left: 20, right: 10),
-                        child: FaIcon(
-                          FontAwesomeIcons.mapLocationDot,
-                          color: kRedColor,
-                        ),
-                      ),
-                      Text(
-                        eventCardDetailList[selectedIndex].location,
-                        style: const TextStyle(
-                            fontWeight: FontWeight.w400,
-                            fontStyle: FontStyle.italic),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 10),
-                  Padding(
-                    padding: const EdgeInsets.all(10),
-                    child: Text(
-                      eventCardDetailList[selectedIndex].description,
-                      style: GoogleFonts.ptSerif(
-                        fontSize: 17,
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.only(left: 20, right: 10),
+                      child: FaIcon(
+                        FontAwesomeIcons.mapLocationDot,
+                        color: kRedColor,
                       ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 10),
-                    child: Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        'Kluczowe cechy:',
-                        style: GoogleFonts.lora(
-                            fontWeight: FontWeight.bold, fontSize: 20),
-                      ),
+                    Text(
+                      eventCardDetailList[selectedIndex].location,
+                      style: const TextStyle(
+                          fontWeight: FontWeight.w400,
+                          fontStyle: FontStyle.italic),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 10),
+                Padding(
+                  padding: const EdgeInsets.all(10),
+                  child: Text(
+                    eventCardDetailList[selectedIndex].description,
+                    style: GoogleFonts.ptSerif(
+                      fontSize: 17,
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(10),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 10),
+                  child: Align(
+                    alignment: Alignment.centerLeft,
                     child: Text(
-                      eventCardDetailList[selectedIndex].keyFeatures,
+                      'Kluczowe cechy:',
+                      style: GoogleFonts.lora(
+                          fontWeight: FontWeight.bold, fontSize: 20),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(10),
+                  child: Text(
+                    eventCardDetailList[selectedIndex].keyFeatures,
+                    style: GoogleFonts.ptSerif(fontSize: 17),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 10),
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Data:',
+                      style: GoogleFonts.lora(
+                          fontWeight: FontWeight.bold, fontSize: 20),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(10),
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      eventCardDetailList[selectedIndex].date,
                       style: GoogleFonts.ptSerif(fontSize: 17),
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 10),
-                    child: Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        'Data:',
-                        style: GoogleFonts.lora(
-                            fontWeight: FontWeight.bold, fontSize: 20),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(10),
-                    child: Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        eventCardDetailList[selectedIndex].date,
-                        style: GoogleFonts.ptSerif(fontSize: 17),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 10),
-                  const CustomPopButton(),
-                  const SizedBox(height: 10),
-                ],
-              ),
+                ),
+                const SizedBox(height: 10),
+                const CustomPopButton(),
+                const SizedBox(height: 10),
+              ],
             ),
           ),
         ],
