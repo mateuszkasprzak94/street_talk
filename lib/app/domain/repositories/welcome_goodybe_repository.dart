@@ -2,11 +2,11 @@ import 'package:street_talk/app/data/remote_data_sources/welcome_goodbye_remote_
 import 'package:street_talk/app/domain/models/welcome_goodbye_model.dart';
 
 class WelcomeGoodbyeRepository {
-  WelcomeGoodbyeRepository({required this.welcomeGoodbyeMockedDataSource});
+  WelcomeGoodbyeRepository({required this.welcomeGoodbyeDataSource});
 
-  final WelcomeGoodbyeRetrofitDataSource welcomeGoodbyeMockedDataSource;
+  final WelcomeGoodbyeRetrofitDataSource welcomeGoodbyeDataSource;
 
   Future<List<WelcomeGoodbyeModel>> getWelcomeGoodbyeData() async {
-    return await welcomeGoodbyeMockedDataSource.getWelcomeGoodbyeData();
+    return await welcomeGoodbyeDataSource.getWelcomeGoodbyeData();
   }
 }

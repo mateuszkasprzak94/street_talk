@@ -123,7 +123,7 @@ extension GetItInjectableX on _i1.GetIt {
         remoteDataSource: gh<_i18.StreetRetrofitDataSource>()));
     gh.factory<_i24.WelcomeGoodbyeRepository>(() =>
         _i24.WelcomeGoodbyeRepository(
-            welcomeGoodbyeMockedDataSource:
+            welcomeGoodbyeDataSource:
                 gh<_i19.WelcomeGoodbyeRetrofitDataSource>()));
     gh.factory<_i25.EmotionsContentCubit>(() => _i25.EmotionsContentCubit(
         emotionsContentRepository: gh<_i20.EmotionsContentRepository>()));

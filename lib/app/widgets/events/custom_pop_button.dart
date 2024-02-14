@@ -16,7 +16,7 @@ class CustomPopButton extends StatelessWidget {
         width: 0.18 * MediaQuery.of(context).size.width,
         height: 0.07 * MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
-          gradient: LinearGradient(colors: kRedGradient),
+          gradient: const LinearGradient(colors: kRedGradient),
           borderRadius: BorderRadius.circular(20),
           boxShadow: [
             BoxShadow(
