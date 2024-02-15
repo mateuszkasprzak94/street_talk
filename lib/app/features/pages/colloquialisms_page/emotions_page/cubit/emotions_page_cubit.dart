@@ -23,7 +23,10 @@ class EmotionsPageCubit extends Cubit<EmotionsPageState> {
     try {
       final results = await emotionsNameRepository.getEmotionsName();
       emit(
-        EmotionsPageState(status: Status.success, results: results),
+        EmotionsPageState(
+          status: Status.success,
+          results: results,
+        ),
       );
     } catch (error) {
       emit(
