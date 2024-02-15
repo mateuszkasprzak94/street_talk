@@ -1,25 +1,16 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "street_talk",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "street_talk (profile mode)",
+            "name": "street_talk development",
             "request": "launch",
             "type": "dart",
-            "flutterMode": "profile"
         },
         {
-            "name": "street_talk (release mode)",
+            "name": "street_talk production",
             "request": "launch",
             "type": "dart",
-            "flutterMode": "release"
-        }
+            "program": "lib/main_production.dart",
+        },
     ]
 }

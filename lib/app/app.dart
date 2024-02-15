@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:street_talk/app/core/flavor/config.dart';
 import 'package:street_talk/app/drawer/drawer_content/quiz/quiz_home_page.dart';
 import 'package:street_talk/app/features/pages/main_page/main_page.dart';
 
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: Config.debugShowCheckedModeBanner,
       title: 'Flutter Demo',
       theme: ThemeData(
         splashColor: Colors.transparent,
