@@ -49,7 +49,7 @@ class SituationItemWidget extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 100,
+                height: 90,
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 15),
                   child: Center(
@@ -70,7 +70,7 @@ class SituationItemWidget extends StatelessWidget {
                 endIndent: 70,
               ),
               SizedBox(
-                height: 40,
+                height: 50,
                 child: Center(
                   child: Container(
                     margin: const EdgeInsets.symmetric(horizontal: 10),
@@ -82,7 +82,7 @@ class SituationItemWidget extends StatelessWidget {
                         fontStyle: FontStyle.italic,
                         fontWeight: FontWeight.w500,
                       ),
-                      maxLines: 2,
+                      maxLines: 3,
                     ),
                   ),
                 ),
