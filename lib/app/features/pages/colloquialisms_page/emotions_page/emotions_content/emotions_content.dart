@@ -108,8 +108,8 @@ class _EmotionsContentPageState extends State<EmotionsContentPage> {
                           },
                         ),
                       ),
-                      ElevatedButton(
-                        onPressed: () {
+                      GestureDetector(
+                        onTap: () {
                           int randomPageIndex;
                           do {
                             randomPageIndex =
@@ -118,17 +118,28 @@ class _EmotionsContentPageState extends State<EmotionsContentPage> {
 
                           _controller.animateToPage(randomPageIndex);
                         },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: getEmotionColor(widget.name.id),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(50),
-                          ),
-                        ),
-                        child: const Text(
-                          'Losowo',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 10),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              gradient: LinearGradient(
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
+                                colors: getEmotionColorGradient(widget.name.id),
+                              ),
+                              borderRadius: BorderRadius.circular(55),
+                            ),
+                            child: const Padding(
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 20, vertical: 10),
+                              child: Text(
+                                'Losowo',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
                           ),
                         ),
                       ),
@@ -153,20 +164,41 @@ class _EmotionsContentPageState extends State<EmotionsContentPage> {
 Color getEmotionColor(int emotionId) {
   switch (emotionId) {
     case 1:
-      return const Color.fromARGB(202, 175, 12, 180);
+      return const Color.fromARGB(201, 148, 11, 153);
     case 2:
-      return const Color.fromARGB(251, 212, 4, 25);
+      return const Color.fromARGB(250, 141, 3, 17);
     case 3:
-      return const Color.fromARGB(255, 11, 198, 36);
+      return const Color.fromARGB(255, 8, 136, 25);
     case 4:
-      return const Color.fromARGB(179, 11, 108, 198);
+      return const Color.fromARGB(179, 8, 77, 141);
     case 5:
-      return const Color.fromARGB(255, 125, 212, 53);
+      return const Color.fromARGB(255, 87, 150, 36);
     case 6:
-      return const Color.fromARGB(255, 192, 47, 11);
+      return const Color.fromARGB(255, 134, 34, 8);
     case 7:
-      return const Color.fromARGB(255, 64, 81, 136);
+      return const Color.fromARGB(255, 41, 51, 87);
     default:
       return Colors.black;
+  }
+}
+
+List<Color> getEmotionColorGradient(int emotionId) {
+  switch (emotionId) {
+    case 1:
+      return kSurpriseGradient;
+    case 2:
+      return kAngryGradient;
+    case 3:
+      return kAgreeGradient;
+    case 4:
+      return kDissGradient;
+    case 5:
+      return kHappyGradient;
+    case 6:
+      return kBoredGradient;
+    case 7:
+      return kResiGradient;
+    default:
+      return kRedGradient;
   }
 }

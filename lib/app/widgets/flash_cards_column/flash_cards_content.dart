@@ -27,72 +27,74 @@ class _SetOnePageViewContentState extends State<SetOnePageViewContent> {
   Widget build(BuildContext context) {
     return BlocBuilder<SetOneCubit, SetOneState>(
       builder: (context, state) {
-        return Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const SizedBox(height: 100),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: SizedBox(
-                height: 200,
-                child: Align(
-                  alignment: Alignment.center,
-                  child: AutoSizeText(
-                    widget.flashModel.word,
-                    style: const TextStyle(fontSize: 40),
-                    maxLines: 1,
+        return Scaffold(
+          body: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const SizedBox(height: 100),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: SizedBox(
+                  height: 200,
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: AutoSizeText(
+                      widget.flashModel.word,
+                      style: const TextStyle(fontSize: 40),
+                      maxLines: 1,
+                    ),
                   ),
                 ),
               ),
-            ),
-            const SizedBox(height: 15),
-            SizedBox(
-              height: 50,
-              child: Align(
-                alignment: Alignment.center,
-                child: visibility
-                    ? Text(
-                        widget.flashModel.translation,
-                        style:
-                            const TextStyle(fontSize: 30, color: Colors.grey),
-                      )
-                    : ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.grey),
-                        onPressed: () =>
-                            setState(() => visibility = !visibility),
-                        child: const Text(
-                          'Pokaż tłumaczenie',
-                          style: TextStyle(color: Colors.white),
+              const SizedBox(height: 15),
+              SizedBox(
+                height: 50,
+                child: Align(
+                  alignment: Alignment.center,
+                  child: visibility
+                      ? Text(
+                          widget.flashModel.translation,
+                          style:
+                              const TextStyle(fontSize: 30, color: Colors.grey),
+                        )
+                      : ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.grey),
+                          onPressed: () =>
+                              setState(() => visibility = !visibility),
+                          child: const Text(
+                            'Pokaż tłumaczenie',
+                            style: TextStyle(color: Colors.white),
+                          ),
                         ),
-                      ),
-              ),
-            ),
-            const SizedBox(height: 20),
-            Expanded(
-              child: Align(
-                alignment: Alignment.bottomCenter,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    IconButton(
-                      onPressed: () {
-                        context.read<SetOneCubit>().previusPage();
-                      },
-                      icon: const Icon(Icons.arrow_back_ios),
-                    ),
-                    IconButton(
-                      onPressed: () {
-                        context.read<SetOneCubit>().nextPage();
-                      },
-                      icon: const Icon(Icons.arrow_forward_ios),
-                    ),
-                  ],
                 ),
               ),
-            ),
-            const SizedBox(height: 20),
-          ],
+              const SizedBox(height: 20),
+              Expanded(
+                child: Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      IconButton(
+                        onPressed: () {
+                          context.read<SetOneCubit>().previusPage();
+                        },
+                        icon: const Icon(Icons.arrow_back_ios),
+                      ),
+                      IconButton(
+                        onPressed: () {
+                          context.read<SetOneCubit>().nextPage();
+                        },
+                        icon: const Icon(Icons.arrow_forward_ios),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(height: 20),
+            ],
+          ),
         );
       },
     );
@@ -120,72 +122,74 @@ class _SetTwoPageViewContentState extends State<SetTwoPageViewContent> {
   Widget build(BuildContext context) {
     return BlocBuilder<SetTwoCubit, SetTwoState>(
       builder: (context, state) {
-        return Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const SizedBox(height: 100),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: SizedBox(
-                height: 200,
-                child: Align(
-                  alignment: Alignment.center,
-                  child: AutoSizeText(
-                    widget.flashModel.word,
-                    style: const TextStyle(fontSize: 40),
-                    maxLines: 1,
+        return Scaffold(
+          body: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const SizedBox(height: 100),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: SizedBox(
+                  height: 200,
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: AutoSizeText(
+                      widget.flashModel.word,
+                      style: const TextStyle(fontSize: 40),
+                      maxLines: 1,
+                    ),
                   ),
                 ),
               ),
-            ),
-            const SizedBox(height: 15),
-            SizedBox(
-              height: 50,
-              child: Align(
-                alignment: Alignment.center,
-                child: visibility
-                    ? Text(
-                        widget.flashModel.translation,
-                        style:
-                            const TextStyle(fontSize: 30, color: Colors.grey),
-                      )
-                    : ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.grey),
-                        onPressed: () =>
-                            setState(() => visibility = !visibility),
-                        child: const Text(
-                          'Pokaż tłumaczenie',
-                          style: TextStyle(color: Colors.white),
+              const SizedBox(height: 15),
+              SizedBox(
+                height: 50,
+                child: Align(
+                  alignment: Alignment.center,
+                  child: visibility
+                      ? Text(
+                          widget.flashModel.translation,
+                          style:
+                              const TextStyle(fontSize: 30, color: Colors.grey),
+                        )
+                      : ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.grey),
+                          onPressed: () =>
+                              setState(() => visibility = !visibility),
+                          child: const Text(
+                            'Pokaż tłumaczenie',
+                            style: TextStyle(color: Colors.white),
+                          ),
                         ),
-                      ),
-              ),
-            ),
-            const SizedBox(height: 20),
-            Expanded(
-              child: Align(
-                alignment: Alignment.bottomCenter,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    IconButton(
-                      onPressed: () {
-                        context.read<SetTwoCubit>().previusPage();
-                      },
-                      icon: const Icon(Icons.arrow_back_ios),
-                    ),
-                    IconButton(
-                      onPressed: () {
-                        context.read<SetTwoCubit>().nextPage();
-                      },
-                      icon: const Icon(Icons.arrow_forward_ios),
-                    ),
-                  ],
                 ),
               ),
-            ),
-            const SizedBox(height: 20),
-          ],
+              const SizedBox(height: 20),
+              Expanded(
+                child: Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      IconButton(
+                        onPressed: () {
+                          context.read<SetTwoCubit>().previusPage();
+                        },
+                        icon: const Icon(Icons.arrow_back_ios),
+                      ),
+                      IconButton(
+                        onPressed: () {
+                          context.read<SetTwoCubit>().nextPage();
+                        },
+                        icon: const Icon(Icons.arrow_forward_ios),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(height: 20),
+            ],
+          ),
         );
       },
     );
@@ -213,72 +217,74 @@ class _SetThreePageViewContentState extends State<SetThreePageViewContent> {
   Widget build(BuildContext context) {
     return BlocBuilder<SetThreeCubit, SetThreeState>(
       builder: (context, state) {
-        return Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const SizedBox(height: 100),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: SizedBox(
-                height: 200,
-                child: Align(
-                  alignment: Alignment.center,
-                  child: AutoSizeText(
-                    widget.flashModel.word,
-                    style: const TextStyle(fontSize: 40),
-                    maxLines: 1,
+        return Scaffold(
+          body: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const SizedBox(height: 100),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: SizedBox(
+                  height: 200,
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: AutoSizeText(
+                      widget.flashModel.word,
+                      style: const TextStyle(fontSize: 40),
+                      maxLines: 1,
+                    ),
                   ),
                 ),
               ),
-            ),
-            const SizedBox(height: 15),
-            SizedBox(
-              height: 50,
-              child: Align(
-                alignment: Alignment.center,
-                child: visibility
-                    ? Text(
-                        widget.flashModel.translation,
-                        style:
-                            const TextStyle(fontSize: 30, color: Colors.grey),
-                      )
-                    : ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.grey),
-                        onPressed: () =>
-                            setState(() => visibility = !visibility),
-                        child: const Text(
-                          'Pokaż tłumaczenie',
-                          style: TextStyle(color: Colors.white),
+              const SizedBox(height: 15),
+              SizedBox(
+                height: 50,
+                child: Align(
+                  alignment: Alignment.center,
+                  child: visibility
+                      ? Text(
+                          widget.flashModel.translation,
+                          style:
+                              const TextStyle(fontSize: 30, color: Colors.grey),
+                        )
+                      : ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.grey),
+                          onPressed: () =>
+                              setState(() => visibility = !visibility),
+                          child: const Text(
+                            'Pokaż tłumaczenie',
+                            style: TextStyle(color: Colors.white),
+                          ),
                         ),
-                      ),
-              ),
-            ),
-            const SizedBox(height: 20),
-            Expanded(
-              child: Align(
-                alignment: Alignment.bottomCenter,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    IconButton(
-                      onPressed: () {
-                        context.read<SetThreeCubit>().previusPage();
-                      },
-                      icon: const Icon(Icons.arrow_back_ios),
-                    ),
-                    IconButton(
-                      onPressed: () {
-                        context.read<SetThreeCubit>().nextPage();
-                      },
-                      icon: const Icon(Icons.arrow_forward_ios),
-                    ),
-                  ],
                 ),
               ),
-            ),
-            const SizedBox(height: 20),
-          ],
+              const SizedBox(height: 20),
+              Expanded(
+                child: Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      IconButton(
+                        onPressed: () {
+                          context.read<SetThreeCubit>().previusPage();
+                        },
+                        icon: const Icon(Icons.arrow_back_ios),
+                      ),
+                      IconButton(
+                        onPressed: () {
+                          context.read<SetThreeCubit>().nextPage();
+                        },
+                        icon: const Icon(Icons.arrow_forward_ios),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(height: 20),
+            ],
+          ),
         );
       },
     );

@@ -100,7 +100,10 @@ class SituationItemWidget extends StatelessWidget {
                   padding: const EdgeInsets.all(5),
                   margin: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
-                    color: Colors.amber,
+                    gradient: const LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: kSituationGradient),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Column(

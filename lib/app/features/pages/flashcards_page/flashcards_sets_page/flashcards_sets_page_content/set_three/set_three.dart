@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:street_talk/app/core/constants/constants.dart';
 import 'package:street_talk/app/core/enums/enums.dart';
 import 'package:street_talk/app/features/pages/flashcards_page/flashcards_sets_page/flashcards_sets_page_content/set_three/cubit/set_three_cubit.dart';
@@ -26,11 +25,8 @@ class FlashCardsSetThree extends StatelessWidget {
                 child: Text('Initial state'),
               );
             case Status.loading:
-              return Center(
-                child: LoadingAnimationWidget.fourRotatingDots(
-                  color: Colors.white,
-                  size: 50,
-                ),
+              return const Center(
+                child: CircularProgressIndicator(),
               );
             case Status.success:
               if (flashModels.isEmpty) {

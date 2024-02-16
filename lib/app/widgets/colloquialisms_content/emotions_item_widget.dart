@@ -15,7 +15,8 @@ class EmotionsItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final color = getEmotionColor(model.emotionId);
+    final colorGradient = getEmotionColorGradient(model.emotionId);
+    // final color = getEmotionColor(model.emotionId);
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -99,7 +100,10 @@ class EmotionsItemWidget extends StatelessWidget {
                   padding: const EdgeInsets.all(5),
                   margin: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
-                    color: color,
+                    gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: colorGradient),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Column(

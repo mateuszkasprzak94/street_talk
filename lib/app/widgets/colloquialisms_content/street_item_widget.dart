@@ -100,7 +100,10 @@ class StreetItemWidget extends StatelessWidget {
                   padding: const EdgeInsets.all(5),
                   margin: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
-                    color: Colors.grey,
+                    gradient: const LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: kStreetGradient),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Column(

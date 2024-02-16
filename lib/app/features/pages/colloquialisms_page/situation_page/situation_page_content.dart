@@ -107,8 +107,8 @@ class _SituationPageState extends State<SituationPage> {
                           },
                         ),
                       ),
-                      ElevatedButton(
-                        onPressed: () {
+                      GestureDetector(
+                        onTap: () {
                           int randomPageIndex;
                           do {
                             randomPageIndex =
@@ -117,17 +117,28 @@ class _SituationPageState extends State<SituationPage> {
 
                           _controller.animateToPage(randomPageIndex);
                         },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: kRedSecondary,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(50),
-                          ),
-                        ),
-                        child: const Text(
-                          'Losowo',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 10),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              gradient: const LinearGradient(
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
+                                colors: kSituationGradient,
+                              ),
+                              borderRadius: BorderRadius.circular(55),
+                            ),
+                            child: const Padding(
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 20, vertical: 10),
+                              child: Text(
+                                'Losowo',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
                           ),
                         ),
                       ),
