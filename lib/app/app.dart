@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:street_talk/app/core/flavor/config.dart';
+import 'package:street_talk/app/core/enums/config.dart';
 import 'package:street_talk/app/drawer/drawer_content/quiz/quiz_home_page.dart';
 import 'package:street_talk/app/features/pages/main_page/main_page.dart';
 

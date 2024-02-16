@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
-import 'package:street_talk/app/core/flavor/config.dart';
+import 'package:street_talk/app/core/enums/config.dart';
 import 'package:street_talk/app/injection_container.config.dart';
 
 final getIt = GetIt.instance;

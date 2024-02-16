@@ -71,11 +71,11 @@ final List<QuizCardDetail> quizCardDetailList = [
       title: 'Jedzenie i Picie',
       iconName: 'assets/quiz/food.png',
       gradientsColor: [
-        const Color(0xffd6182e),
-        const Color(0xffed475a),
+        const Color.fromARGB(255, 156, 8, 23),
+        const Color.fromARGB(255, 109, 6, 16),
       ],
-      shadowColor: const Color(0xffed475a).withOpacity(opacity),
-      textColor: const Color(0xffd6182e),
+      shadowColor: const Color.fromARGB(255, 109, 6, 16).withOpacity(opacity),
+      textColor: const Color.fromARGB(255, 156, 8, 23),
       category: 'jedzenie_i_picie',
       iconTag: 'jedzenie_icon'),
   QuizCardDetail(
