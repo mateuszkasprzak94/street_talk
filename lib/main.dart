@@ -1,3 +1,4 @@
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:street_talk/app/api/firebase_api.dart';
 import 'package:street_talk/app/app.dart';
@@ -14,5 +15,7 @@ void main() async {
   await FirebaseApi().initNotifications();
 
   configureDependencies();
-  runApp(const MyApp());
+  runApp(
+    MyApp(connectivity: Connectivity()),
+  );
 }

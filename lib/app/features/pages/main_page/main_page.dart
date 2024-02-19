@@ -7,8 +7,9 @@ import 'package:street_talk/app/features/pages/home_page/home_page.dart';
 import 'package:street_talk/app/features/pages/exercise_page/exercise_page.dart';
 
 class MainPage extends StatefulWidget {
-  final int? index;
-  const MainPage({super.key, this.index});
+  const MainPage({
+    super.key,
+  });
 
   @override
   State<MainPage> createState() => _MainPageState();
@@ -20,9 +21,6 @@ class _MainPageState extends State<MainPage> {
   @override
   void initState() {
     super.initState();
-
-    // Set the initial index based on the widget's parameter if provided
-    currentIndex = widget.index ?? 0;
   }
 
   final screens = const [

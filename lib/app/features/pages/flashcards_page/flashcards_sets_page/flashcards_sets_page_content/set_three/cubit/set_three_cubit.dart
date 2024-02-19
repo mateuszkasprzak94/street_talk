@@ -29,11 +29,13 @@ class SetThreeCubit extends Cubit<SetThreeState> {
     _streamSubscription =
         flashCardsRepository.getFlashCardsStream().listen((items) {
       items.shuffle();
-      emit(SetThreeState(
-        status: Status.success,
-        items: items,
-        controllerFlashPage: pageController,
-      ));
+      emit(
+        SetThreeState(
+          status: Status.success,
+          items: items,
+          controllerFlashPage: pageController,
+        ),
+      );
     })
           ..onError((error) {
             emit(

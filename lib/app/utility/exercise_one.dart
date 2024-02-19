@@ -18,7 +18,7 @@ final List<ExerciseOneDetails> exerciseOneDetails = [
         children: [
           const TextSpan(
             text:
-                'Lucía, una estudiante de intercambio, llegó a una nueva escuela. Al principio, todo iba',
+                'Lucía, una estudiante de intercambio, llegó a una nueva escuela. Al principio, iba',
             style: TextStyle(
               color: Colors.black,
               wordSpacing: 20,
@@ -48,7 +48,7 @@ final List<ExerciseOneDetails> exerciseOneDetails = [
           ),
           const TextSpan(
             text:
-                ', se sentía un poco perdida, pero intentaba adaptarse. Un día, durante una clase, Lucía intentó causar una buena primera impresión cuando el profesor le preguntó sobre una lección. Sin embargo,',
+                ', porque se sentía un poco perdida, pero intentaba adaptarse. Un día, durante una clase, Lucía intentó causar una buena primera impresión cuando el profesor le preguntó sobre una lección. Sin embargo,',
             style: TextStyle(
               color: Colors.black,
               wordSpacing: 20,
@@ -95,7 +95,7 @@ final List<ExerciseOneDetails> exerciseOneDetails = [
         children: [
           const TextSpan(
             text:
-                'Los compañeros de clase, en lugar de burlarse, le dijeron que todos cometían errores y que no era necesario',
+                'Sus compañeros de clase, en lugar de burlarse de ella, le dijeron que todos cometían errores y que no era necesario',
             style: TextStyle(
               color: Colors.black,
               wordSpacing: 20,
@@ -272,7 +272,7 @@ final List<ExerciseOneDetails> exerciseOneDetails = [
         children: [
           const TextSpan(
             text:
-                'Días después, el profesor elogió a Lucía por su mejora y le dijo que ',
+                'Días después, el profesor elogió a Lucía por su mejora y le dijo que',
             style: TextStyle(
               color: Colors.black,
               wordSpacing: 20,
@@ -360,40 +360,56 @@ class ExerciseOneQuestionModel {
 List<ExerciseOneQuestionModel> questions = [
   ExerciseOneQuestionModel(
     text: '1.',
-    options: ['ni fu ni fa', 'de maravilla', 'de mal en peor'],
+    options: ['con pies de plomo', 'a un tiro', 'a todo trapo'],
     correctAnswerIndex: 0,
   ),
   ExerciseOneQuestionModel(
       text: '2.',
-      options: ['se lució', 'metió la pata', 'sorprendió a todos'],
+      options: [
+        'echó las campanas al vuelo',
+        'metió la pata',
+        'se quedó embobada'
+      ],
       correctAnswerIndex: 1),
   ExerciseOneQuestionModel(
     text: '3.',
-    options: ['ni fu ni fa', 'opcja 2', 'tirarse del barco'],
-    correctAnswerIndex: 2,
+    options: [
+      'quedarse con la conciencia tranquila',
+      'tirarse del barco',
+      'quitarse un peso de encima'
+    ],
+    correctAnswerIndex: 1,
   ),
   ExerciseOneQuestionModel(
       text: '4.',
-      options: ['ni fu ni fa', 'opcja 2', 'cagado'],
-      correctAnswerIndex: 2),
-  ExerciseOneQuestionModel(
-      text: '5.',
-      options: ['La verdad sea dicha', 'opcja 2', 'opcja 3'],
+      options: ['cagado', 'tirado', 'enganchado'],
       correctAnswerIndex: 0),
   ExerciseOneQuestionModel(
-      text: '6.',
-      options: ['La verdad sea dicha', 'tirarle los trastos', 'opcja 3'],
+      text: '5.',
+      options: ['Vaya', 'La verdad sea dicha', 'Lo dicho'],
       correctAnswerIndex: 1),
+  ExerciseOneQuestionModel(
+      text: '6.',
+      options: [
+        'ir a su rollo',
+        'aportar su granito de arena',
+        'tirarle los trastos'
+      ],
+      correctAnswerIndex: 2),
   ExerciseOneQuestionModel(
       text: '7.',
-      options: ['La verdad sea dicha', 'no le hizo caso', 'opcja 3'],
-      correctAnswerIndex: 1),
+      options: ['no le hizo caso', 'se puso de mala leche', 'se dio a la fuga'],
+      correctAnswerIndex: 0),
   ExerciseOneQuestionModel(
       text: '8.',
-      options: ['La verdad sea dicha', 'opcja 2', 'echarle la bronca'],
+      options: ['tirarle fichas', 'montar un pollo', 'echarle la bronca'],
       correctAnswerIndex: 2),
   ExerciseOneQuestionModel(
       text: '9.',
-      options: ['hacerle frente a la situación', 'opcja 2', 'opcja 3'],
+      options: [
+        'hacerle frente a la situación',
+        'quedarse muerta',
+        'estar tocado'
+      ],
       correctAnswerIndex: 0),
 ];

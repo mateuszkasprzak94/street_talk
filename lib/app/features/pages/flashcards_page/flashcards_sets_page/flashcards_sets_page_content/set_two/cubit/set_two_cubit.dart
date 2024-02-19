@@ -30,11 +30,13 @@ class SetTwoCubit extends Cubit<SetTwoState> {
     _streamSubscription =
         flashCardsRepository.getFlashCardsStream().listen((items) {
       items.shuffle();
-      emit(SetTwoState(
-        status: Status.success,
-        items: items,
-        controllerFlashPage: pageController,
-      ));
+      emit(
+        SetTwoState(
+          status: Status.success,
+          items: items,
+          controllerFlashPage: pageController,
+        ),
+      );
     })
           ..onError((error) {
             emit(

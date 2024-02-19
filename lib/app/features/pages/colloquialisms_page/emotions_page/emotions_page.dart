@@ -53,9 +53,7 @@ class EmotionsPage extends StatelessWidget {
           ),
         ),
         body: BlocProvider<EmotionsPageCubit>(
-          create: (context) {
-            return getIt()..start();
-          },
+          create: (context) => getIt()..start(),
           child: BlocBuilder<EmotionsPageCubit, EmotionsPageState>(
             builder: (context, state) {
               switch (state.status) {

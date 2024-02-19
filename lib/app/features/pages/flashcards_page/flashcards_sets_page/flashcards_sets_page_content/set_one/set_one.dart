@@ -14,7 +14,44 @@ class FlashCardsSetOne extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
+      appBar: AppBar(
+        leading: const CustomCloseButton(),
+        centerTitle: true,
+        actions: const [
+          Padding(
+            padding: EdgeInsets.only(right: 10),
+            child: CircleAvatar(
+              radius: 30,
+              foregroundImage: AssetImage('assets/images/logo.jpg'),
+            ),
+          )
+        ],
+        bottom: PreferredSize(
+          preferredSize: const Size.fromHeight(70),
+          child: Container(
+            height: 60,
+            width: double.infinity,
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: kRedGradient,
+              ),
+            ),
+            child: Center(
+              child: Text(
+                'Zestaw 1',
+                style: GoogleFonts.bebasNeue(
+                    letterSpacing: 2,
+                    color: Colors.white,
+                    fontSize: screenWidth / 12),
+              ),
+            ),
+          ),
+        ),
+      ),
       body: BlocProvider<SetOneCubit>(
         create: (context) => getIt()..start(),
         child: BlocBuilder<SetOneCubit, SetOneState>(
@@ -35,52 +72,14 @@ class FlashCardsSetOne extends StatelessWidget {
                     child: Text('No data found'),
                   );
                 }
-                return Scaffold(
-                  appBar: AppBar(
-                    leading: const CustomCloseButton(),
-                    centerTitle: true,
-                    actions: const [
-                      Padding(
-                        padding: EdgeInsets.only(right: 10),
-                        child: CircleAvatar(
-                          radius: 30,
-                          foregroundImage: AssetImage('assets/images/logo.jpg'),
-                        ),
-                      )
+                return PageView(
+                  physics: const BouncingScrollPhysics(),
+                  controller: state.controllerFlashPage,
+                  children: [
+                    for (final flashModel in flashModels) ...[
+                      SetOnePageViewContent(flashModel: flashModel)
                     ],
-                    bottom: PreferredSize(
-                      preferredSize: const Size.fromHeight(70),
-                      child: Container(
-                        height: 60,
-                        width: double.infinity,
-                        decoration: const BoxDecoration(
-                          gradient: LinearGradient(
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomRight,
-                            colors: kRedGradient,
-                          ),
-                        ),
-                        child: Center(
-                          child: Text(
-                            'Zestaw 1',
-                            style: GoogleFonts.bebasNeue(
-                                letterSpacing: 2,
-                                color: Colors.white,
-                                fontSize: screenWidth / 12),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  body: PageView(
-                    physics: const BouncingScrollPhysics(),
-                    controller: state.controllerFlashPage,
-                    children: [
-                      for (final flashModel in flashModels) ...[
-                        SetOnePageViewContent(flashModel: flashModel)
-                      ],
-                    ],
-                  ),
+                  ],
                 );
               case Status.error:
                 return Center(
