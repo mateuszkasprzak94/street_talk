@@ -2,41 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:street_talk/app/core/constants/constants.dart';
-import 'package:street_talk/app/domain/models/exercise_question_model.dart';
-import 'package:street_talk/app/features/pages/tasks_page/cubit/tasks_cubit.dart';
+import 'package:street_talk/app/features/pages/exercise_page/cubit/exercise_cubit.dart';
+import 'package:street_talk/app/utility/exercise_two.dart';
 
-class TasksThree extends StatefulWidget {
-  const TasksThree({
+class ExerciseTwo extends StatefulWidget {
+  const ExerciseTwo({
     super.key,
   });
 
   @override
-  State<TasksThree> createState() => _TasksThreeState();
+  State<ExerciseTwo> createState() => _ExerciseTwoState();
 }
 
-bool isVisible = false;
-
-class _TasksThreeState extends State<TasksThree> {
-  late TextEditingController textController;
-  String text = '';
-
-  @override
-  void initState() {
-    super.initState();
-    textController = TextEditingController();
-  }
-
-  @override
-  void dispose() {
-    textController.dispose();
-    super.dispose();
-  }
+class _ExerciseTwoState extends State<ExerciseTwo> {
+  bool showResults = false;
 
   @override
   Widget build(BuildContext context) {
-    double screenWidth = MediaQuery.of(context).size.width;
-    // double screenHeight = MediaQuery.of(context).size.height;
-
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: ListView(
@@ -44,8 +26,7 @@ class _TasksThreeState extends State<TasksThree> {
           const SizedBox(height: 20),
           Container(
             padding: const EdgeInsets.all(15),
-            width: screenWidth,
-            // height: screenHeight * 3,
+            width: double.infinity,
             margin: const EdgeInsets.all(10),
             decoration: BoxDecoration(
               color: Colors.white,
@@ -63,13 +44,14 @@ class _TasksThreeState extends State<TasksThree> {
               ],
             ),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                ...buildExerciseTwo(),
                 const SizedBox(height: 20),
-                ...buildExercise(),
                 InkWell(
                   onTap: () {
                     setState(() {
-                      isVisible = !isVisible;
+                      showResults = !showResults;
                     });
                   },
                   child: Center(
@@ -99,7 +81,7 @@ class _TasksThreeState extends State<TasksThree> {
                             size: 37,
                           ),
                           Text(
-                            'Esconder na Ocultar',
+                            'Mostrar soluciones',
                             style: GoogleFonts.lora(
                                 fontSize: 15,
                                 color: kRedColor,
@@ -110,7 +92,61 @@ class _TasksThreeState extends State<TasksThree> {
                     ),
                   ),
                 ),
-                const SizedBox(height: 50),
+                const SizedBox(height: 20),
+                if (showResults)
+                  const Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        '1.   a) está en el quinto pino',
+                        style: TextStyle(
+                          color: Colors.green,
+                        ),
+                      ),
+                      SizedBox(height: 5),
+                      Text(
+                        '2.   b) Me cago en la leche',
+                        style: TextStyle(
+                          color: Colors.green,
+                        ),
+                      ),
+                      SizedBox(height: 5),
+                      Text(
+                        '3.   a) es la leche',
+                        style: TextStyle(
+                          color: Colors.green,
+                        ),
+                      ),
+                      SizedBox(height: 5),
+                      Text(
+                        '4.   b) estoy de bajón',
+                        style: TextStyle(
+                          color: Colors.green,
+                        ),
+                      ),
+                      SizedBox(height: 5),
+                      Text(
+                        '5.   a) del tirón',
+                        style: TextStyle(
+                          color: Colors.green,
+                        ),
+                      ),
+                      SizedBox(height: 5),
+                      Text(
+                        '6.   c) Flipo',
+                        style: TextStyle(
+                          color: Colors.green,
+                        ),
+                      ),
+                      SizedBox(height: 5),
+                      Text(
+                        '7.   b) te has pasado tres pueblos',
+                        style: TextStyle(
+                          color: Colors.green,
+                        ),
+                      ),
+                    ],
+                  ),
               ],
             ),
           ),
@@ -120,13 +156,13 @@ class _TasksThreeState extends State<TasksThree> {
             children: [
               IconButton(
                 onPressed: () {
-                  context.read<TasksCubit>().previusPage();
+                  context.read<ExerciseCubit>().previousPage();
                 },
                 icon: const Icon(Icons.arrow_back_ios),
               ),
               IconButton(
                 onPressed: () {
-                  context.read<TasksCubit>().nextPage();
+                  context.read<ExerciseCubit>().nextPage();
                 },
                 icon: const Icon(Icons.arrow_forward_ios),
               ),
@@ -139,57 +175,46 @@ class _TasksThreeState extends State<TasksThree> {
   }
 }
 
-class Visible extends StatelessWidget {
-  const Visible({
-    required this.answer,
-    super.key,
-  });
+List<Widget> buildExerciseTwo() {
+  List<Widget> allExerciseTwo = [];
 
-  final String answer;
+  for (int j = 0; j < exerciseTwoDetails.length; j++) {
+    List<Widget> optionsWidgets = exerciseTwoDetails[j].options.map((option) {
+      return Text(
+        option,
+        style: const TextStyle(fontStyle: FontStyle.italic, fontSize: 15),
+      );
+    }).toList();
 
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(20.0),
-      child: SizedBox(
-        height: 25,
-        child: Text(
-          answer,
-          style: const TextStyle(
-              color: Colors.green, fontStyle: FontStyle.italic, fontSize: 18),
-        ),
-      ),
-    );
-  }
-}
-
-List<Widget> buildExercise() {
-  List<Widget> allExercise = [];
-
-  for (int j = 0; j < exerciseDetails.length; j++) {
-    allExercise.add(
+    allExerciseTwo.add(
       Column(
         children: [
           Row(
             children: [
               Text(
-                exerciseDetails[j].id,
+                exerciseTwoDetails[j].id,
                 style: const TextStyle(
+                  color: kRedSecondary,
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
                   fontStyle: FontStyle.italic,
                 ),
-              )
+              ),
             ],
           ),
-          exerciseDetails[j].title,
-          if (isVisible == true)
-            Visible(answer: exerciseDetails[j].answer)
-          else
-            const SizedBox(height: 65)
+          exerciseTwoDetails[j].title,
+          const SizedBox(height: 20),
+          Row(
+            children: [
+              Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: optionsWidgets)
+            ],
+          ),
+          const SizedBox(height: 20),
         ],
       ),
     );
   }
-  return allExercise;
+  return allExerciseTwo;
 }

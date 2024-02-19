@@ -4,11 +4,7 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:street_talk/app/app.dart';
 
-Future<void> handleBackgroundMessage(RemoteMessage message) async {
-  // print('Title: ${message.notification?.title}');
-  // print('Body: ${message.notification?.body}');
-  // print('Payload: ${message.data}');
-}
+Future<void> handleBackgroundMessage(RemoteMessage message) async {}
 
 class FirebaseApi {
   // create an instance of Firebase Messaging

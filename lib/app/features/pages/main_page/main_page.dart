@@ -4,7 +4,7 @@ import 'package:street_talk/app/features/pages/colloquialisms_page/colloquialism
 import 'package:street_talk/app/features/pages/dictionary_page/dictionary_page.dart';
 import 'package:street_talk/app/features/pages/flashcards_page/flashcards_page.dart';
 import 'package:street_talk/app/features/pages/home_page/home_page.dart';
-import 'package:street_talk/app/features/pages/tasks_page/tasks_page.dart';
+import 'package:street_talk/app/features/pages/exercise_page/exercise_page.dart';
 
 class MainPage extends StatefulWidget {
   final int? index;
@@ -28,7 +28,7 @@ class _MainPageState extends State<MainPage> {
   final screens = const [
     HomePage(),
     ColloquialismsPage(),
-    TasksPage(),
+    ExercisePage(),
     FlashCardsPage(),
     DictionaryPage(),
   ];
