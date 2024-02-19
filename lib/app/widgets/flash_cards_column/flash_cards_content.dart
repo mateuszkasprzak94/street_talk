@@ -78,7 +78,7 @@ class _SetOnePageViewContentState extends State<SetOnePageViewContent> {
                     children: [
                       IconButton(
                         onPressed: () {
-                          context.read<SetOneCubit>().previusPage();
+                          context.read<SetOneCubit>().previousPage();
                         },
                         icon: const Icon(Icons.arrow_back_ios),
                       ),
@@ -173,7 +173,7 @@ class _SetTwoPageViewContentState extends State<SetTwoPageViewContent> {
                     children: [
                       IconButton(
                         onPressed: () {
-                          context.read<SetTwoCubit>().previusPage();
+                          context.read<SetTwoCubit>().previousPage();
                         },
                         icon: const Icon(Icons.arrow_back_ios),
                       ),
@@ -268,7 +268,7 @@ class _SetThreePageViewContentState extends State<SetThreePageViewContent> {
                     children: [
                       IconButton(
                         onPressed: () {
-                          context.read<SetThreeCubit>().previusPage();
+                          context.read<SetThreeCubit>().previousPage();
                         },
                         icon: const Icon(Icons.arrow_back_ios),
                       ),

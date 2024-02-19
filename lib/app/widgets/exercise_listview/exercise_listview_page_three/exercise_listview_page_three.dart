@@ -2,16 +2,41 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:street_talk/app/core/constants/constants.dart';
-import 'package:street_talk/app/domain/models/exercise_question_model.dart';
-import 'package:street_talk/app/features/pages/tasks_page/cubit/tasks_cubit.dart';
+import 'package:street_talk/app/features/pages/exercise_page/cubit/exercise_cubit.dart';
+import 'package:street_talk/app/utility/exercise_three.dart';
 
-class TasksTwo extends StatelessWidget {
-  const TasksTwo({
+class ExerciseThree extends StatefulWidget {
+  const ExerciseThree({
     super.key,
   });
 
   @override
+  State<ExerciseThree> createState() => _ExerciseThreeState();
+}
+
+bool isVisible = false;
+
+class _ExerciseThreeState extends State<ExerciseThree> {
+  late TextEditingController textController;
+  String text = '';
+
+  @override
+  void initState() {
+    super.initState();
+    textController = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    textController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+    // double screenHeight = MediaQuery.of(context).size.height;
+
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: ListView(
@@ -19,8 +44,8 @@ class TasksTwo extends StatelessWidget {
           const SizedBox(height: 20),
           Container(
             padding: const EdgeInsets.all(15),
-            width: double.infinity,
-            // height: 1000,
+            width: screenWidth,
+            // height: screenHeight * 3,
             margin: const EdgeInsets.all(10),
             decoration: BoxDecoration(
               color: Colors.white,
@@ -38,12 +63,15 @@ class TasksTwo extends StatelessWidget {
               ],
             ),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                ...buildExerciseTwo(),
                 const SizedBox(height: 20),
+                ...buildExercise(),
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    setState(() {
+                      isVisible = !isVisible;
+                    });
+                  },
                   child: Center(
                     child: Container(
                       height: 60,
@@ -71,7 +99,7 @@ class TasksTwo extends StatelessWidget {
                             size: 37,
                           ),
                           Text(
-                            'Mostrar soluciones',
+                            'Esconder na Ocultar',
                             style: GoogleFonts.lora(
                                 fontSize: 15,
                                 color: kRedColor,
@@ -82,7 +110,7 @@ class TasksTwo extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: 50),
               ],
             ),
           ),
@@ -92,13 +120,13 @@ class TasksTwo extends StatelessWidget {
             children: [
               IconButton(
                 onPressed: () {
-                  context.read<TasksCubit>().previusPage();
+                  context.read<ExerciseCubit>().previousPage();
                 },
                 icon: const Icon(Icons.arrow_back_ios),
               ),
               IconButton(
                 onPressed: () {
-                  context.read<TasksCubit>().nextPage();
+                  context.read<ExerciseCubit>().nextPage();
                 },
                 icon: const Icon(Icons.arrow_forward_ios),
               ),
@@ -111,45 +139,58 @@ class TasksTwo extends StatelessWidget {
   }
 }
 
-List<Widget> buildExerciseTwo() {
-  List<Widget> allExerciseTwo = [];
+class Visible extends StatelessWidget {
+  const Visible({
+    required this.answer,
+    super.key,
+  });
 
-  for (int j = 0; j < exerciseTwoDetails.length; j++) {
-    List<Widget> optionsWidgets = exerciseTwoDetails[j].options.map((option) {
-      return Text(
-        option,
-        style: const TextStyle(fontStyle: FontStyle.italic, fontSize: 15),
-      );
-    }).toList();
+  final String answer;
 
-    allExerciseTwo.add(
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(20.0),
+      child: SizedBox(
+        height: 25,
+        child: Text(
+          answer,
+          style: const TextStyle(
+              color: Colors.green, fontStyle: FontStyle.italic, fontSize: 18),
+        ),
+      ),
+    );
+  }
+}
+
+List<Widget> buildExercise() {
+  List<Widget> allExercise = [];
+
+  for (int j = 0; j < exerciseDetails.length; j++) {
+    allExercise.add(
       Column(
         children: [
           Row(
             children: [
               Text(
-                exerciseTwoDetails[j].id,
+                exerciseDetails[j].id,
                 style: const TextStyle(
+                  color: kRedSecondary,
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
                   fontStyle: FontStyle.italic,
                 ),
-              ),
+              )
             ],
           ),
-          exerciseTwoDetails[j].title,
-          const SizedBox(height: 20),
-          Row(
-            children: [
-              Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: optionsWidgets)
-            ],
-          ),
-          const SizedBox(height: 20),
+          exerciseDetails[j].title,
+          if (isVisible == true)
+            Visible(answer: exerciseDetails[j].answer)
+          else
+            const SizedBox(height: 65)
         ],
       ),
     );
   }
-  return allExerciseTwo;
+  return allExercise;
 }

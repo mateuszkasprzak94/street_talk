@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of '../tasks_cubit.dart';
+part of '../exercise_cubit.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,35 +15,32 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$TasksState {
-  List<ExerciseQuestionModel> get exerciseQuestion =>
-      throw _privateConstructorUsedError;
+mixin _$ExerciseState {
   PageController? get controllerTaskPage => throw _privateConstructorUsedError;
   Status get status => throw _privateConstructorUsedError;
   String? get errorMessage => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $TasksStateCopyWith<TasksState> get copyWith =>
+  $ExerciseStateCopyWith<ExerciseState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $TasksStateCopyWith<$Res> {
-  factory $TasksStateCopyWith(
-          TasksState value, $Res Function(TasksState) then) =
-      _$TasksStateCopyWithImpl<$Res, TasksState>;
+abstract class $ExerciseStateCopyWith<$Res> {
+  factory $ExerciseStateCopyWith(
+          ExerciseState value, $Res Function(ExerciseState) then) =
+      _$ExerciseStateCopyWithImpl<$Res, ExerciseState>;
   @useResult
   $Res call(
-      {List<ExerciseQuestionModel> exerciseQuestion,
-      PageController? controllerTaskPage,
+      {PageController? controllerTaskPage,
       Status status,
       String? errorMessage});
 }
 
 /// @nodoc
-class _$TasksStateCopyWithImpl<$Res, $Val extends TasksState>
-    implements $TasksStateCopyWith<$Res> {
-  _$TasksStateCopyWithImpl(this._value, this._then);
+class _$ExerciseStateCopyWithImpl<$Res, $Val extends ExerciseState>
+    implements $ExerciseStateCopyWith<$Res> {
+  _$ExerciseStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -53,16 +50,11 @@ class _$TasksStateCopyWithImpl<$Res, $Val extends TasksState>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? exerciseQuestion = null,
     Object? controllerTaskPage = freezed,
     Object? status = null,
     Object? errorMessage = freezed,
   }) {
     return _then(_value.copyWith(
-      exerciseQuestion: null == exerciseQuestion
-          ? _value.exerciseQuestion
-          : exerciseQuestion // ignore: cast_nullable_to_non_nullable
-              as List<ExerciseQuestionModel>,
       controllerTaskPage: freezed == controllerTaskPage
           ? _value.controllerTaskPage
           : controllerTaskPage // ignore: cast_nullable_to_non_nullable
@@ -80,41 +72,35 @@ class _$TasksStateCopyWithImpl<$Res, $Val extends TasksState>
 }
 
 /// @nodoc
-abstract class _$$TasksStateImplCopyWith<$Res>
-    implements $TasksStateCopyWith<$Res> {
-  factory _$$TasksStateImplCopyWith(
-          _$TasksStateImpl value, $Res Function(_$TasksStateImpl) then) =
-      __$$TasksStateImplCopyWithImpl<$Res>;
+abstract class _$$ExerciseStateImplCopyWith<$Res>
+    implements $ExerciseStateCopyWith<$Res> {
+  factory _$$ExerciseStateImplCopyWith(
+          _$ExerciseStateImpl value, $Res Function(_$ExerciseStateImpl) then) =
+      __$$ExerciseStateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {List<ExerciseQuestionModel> exerciseQuestion,
-      PageController? controllerTaskPage,
+      {PageController? controllerTaskPage,
       Status status,
       String? errorMessage});
 }
 
 /// @nodoc
-class __$$TasksStateImplCopyWithImpl<$Res>
-    extends _$TasksStateCopyWithImpl<$Res, _$TasksStateImpl>
-    implements _$$TasksStateImplCopyWith<$Res> {
-  __$$TasksStateImplCopyWithImpl(
-      _$TasksStateImpl _value, $Res Function(_$TasksStateImpl) _then)
+class __$$ExerciseStateImplCopyWithImpl<$Res>
+    extends _$ExerciseStateCopyWithImpl<$Res, _$ExerciseStateImpl>
+    implements _$$ExerciseStateImplCopyWith<$Res> {
+  __$$ExerciseStateImplCopyWithImpl(
+      _$ExerciseStateImpl _value, $Res Function(_$ExerciseStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? exerciseQuestion = null,
     Object? controllerTaskPage = freezed,
     Object? status = null,
     Object? errorMessage = freezed,
   }) {
-    return _then(_$TasksStateImpl(
-      exerciseQuestion: null == exerciseQuestion
-          ? _value._exerciseQuestion
-          : exerciseQuestion // ignore: cast_nullable_to_non_nullable
-              as List<ExerciseQuestionModel>,
+    return _then(_$ExerciseStateImpl(
       controllerTaskPage: freezed == controllerTaskPage
           ? _value.controllerTaskPage
           : controllerTaskPage // ignore: cast_nullable_to_non_nullable
@@ -133,23 +119,11 @@ class __$$TasksStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$TasksStateImpl implements _TasksState {
-  _$TasksStateImpl(
-      {final List<ExerciseQuestionModel> exerciseQuestion = const [],
-      this.controllerTaskPage,
+class _$ExerciseStateImpl implements _ExerciseState {
+  _$ExerciseStateImpl(
+      {this.controllerTaskPage,
       this.status = Status.initial,
-      this.errorMessage})
-      : _exerciseQuestion = exerciseQuestion;
-
-  final List<ExerciseQuestionModel> _exerciseQuestion;
-  @override
-  @JsonKey()
-  List<ExerciseQuestionModel> get exerciseQuestion {
-    if (_exerciseQuestion is EqualUnmodifiableListView)
-      return _exerciseQuestion;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_exerciseQuestion);
-  }
+      this.errorMessage});
 
   @override
   final PageController? controllerTaskPage;
@@ -161,16 +135,14 @@ class _$TasksStateImpl implements _TasksState {
 
   @override
   String toString() {
-    return 'TasksState(exerciseQuestion: $exerciseQuestion, controllerTaskPage: $controllerTaskPage, status: $status, errorMessage: $errorMessage)';
+    return 'ExerciseState(controllerTaskPage: $controllerTaskPage, status: $status, errorMessage: $errorMessage)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$TasksStateImpl &&
-            const DeepCollectionEquality()
-                .equals(other._exerciseQuestion, _exerciseQuestion) &&
+            other is _$ExerciseStateImpl &&
             (identical(other.controllerTaskPage, controllerTaskPage) ||
                 other.controllerTaskPage == controllerTaskPage) &&
             (identical(other.status, status) || other.status == status) &&
@@ -179,29 +151,22 @@ class _$TasksStateImpl implements _TasksState {
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(_exerciseQuestion),
-      controllerTaskPage,
-      status,
-      errorMessage);
+  int get hashCode =>
+      Object.hash(runtimeType, controllerTaskPage, status, errorMessage);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$TasksStateImplCopyWith<_$TasksStateImpl> get copyWith =>
-      __$$TasksStateImplCopyWithImpl<_$TasksStateImpl>(this, _$identity);
+  _$$ExerciseStateImplCopyWith<_$ExerciseStateImpl> get copyWith =>
+      __$$ExerciseStateImplCopyWithImpl<_$ExerciseStateImpl>(this, _$identity);
 }
 
-abstract class _TasksState implements TasksState {
-  factory _TasksState(
-      {final List<ExerciseQuestionModel> exerciseQuestion,
-      final PageController? controllerTaskPage,
+abstract class _ExerciseState implements ExerciseState {
+  factory _ExerciseState(
+      {final PageController? controllerTaskPage,
       final Status status,
-      final String? errorMessage}) = _$TasksStateImpl;
+      final String? errorMessage}) = _$ExerciseStateImpl;
 
-  @override
-  List<ExerciseQuestionModel> get exerciseQuestion;
   @override
   PageController? get controllerTaskPage;
   @override
@@ -210,6 +175,6 @@ abstract class _TasksState implements TasksState {
   String? get errorMessage;
   @override
   @JsonKey(ignore: true)
-  _$$TasksStateImplCopyWith<_$TasksStateImpl> get copyWith =>
+  _$$ExerciseStateImplCopyWith<_$ExerciseStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

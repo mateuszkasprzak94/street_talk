@@ -2,20 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:street_talk/app/core/constants/constants.dart';
-import 'package:street_talk/app/domain/models/exercise_question_model.dart';
-import 'package:street_talk/app/features/pages/tasks_page/cubit/tasks_cubit.dart';
-import 'package:street_talk/app/widgets/tasks_listview/tasks_listview_page_one/tasks_listview_page_one_data.dart';
+import 'package:street_talk/app/features/pages/exercise_page/cubit/exercise_cubit.dart';
+import 'package:street_talk/app/utility/exercise_one.dart';
 
-class TasksOne extends StatefulWidget {
-  const TasksOne({
+class ExerciseOne extends StatefulWidget {
+  const ExerciseOne({
     super.key,
   });
 
   @override
-  State<TasksOne> createState() => _TasksOneState();
+  State<ExerciseOne> createState() => _ExerciseOneState();
 }
 
-class _TasksOneState extends State<TasksOne> {
+class _ExerciseOneState extends State<ExerciseOne> {
   List<int?> userAnswers = List.filled(9, null);
   bool showResults = false;
   bool allAnswers = false;
@@ -26,9 +25,8 @@ class _TasksOneState extends State<TasksOne> {
       children: [
         const SizedBox(height: 20),
         Container(
-          padding: const EdgeInsets.all(35),
+          padding: const EdgeInsets.all(25),
           width: double.infinity,
-          // height: 3500,
           margin: const EdgeInsets.all(10),
           decoration: BoxDecoration(
             color: Colors.white,
@@ -48,14 +46,7 @@ class _TasksOneState extends State<TasksOne> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              const SentenceOne(),
-              const SizedBox(height: 20),
-              const SentenceTwo(),
-              const SizedBox(height: 20),
-              const SentenceThree(),
-              const SizedBox(height: 20),
-              const SentenceFour(),
-              const SizedBox(height: 20),
+              ...buildExerciseOne(),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
@@ -63,7 +54,14 @@ class _TasksOneState extends State<TasksOne> {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
-                        Text(questions[i].text),
+                        Text(
+                          questions[i].text,
+                          style: const TextStyle(
+                            color: kRedSecondary,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 17,
+                          ),
+                        ),
                         for (int j = 0; j < questions[i].options.length; j++)
                           RadioListTile<int?>(
                             title: Text(questions[i].options[j]),
@@ -212,13 +210,13 @@ class _TasksOneState extends State<TasksOne> {
           children: [
             IconButton(
               onPressed: () {
-                context.read<TasksCubit>().previusPage();
+                context.read<ExerciseCubit>().previousPage();
               },
               icon: const Icon(Icons.arrow_back_ios),
             ),
             IconButton(
               onPressed: () {
-                context.read<TasksCubit>().nextPage();
+                context.read<ExerciseCubit>().nextPage();
               },
               icon: const Icon(Icons.arrow_forward_ios),
             ),
@@ -262,4 +260,20 @@ class _TasksOneState extends State<TasksOne> {
       );
     }
   }
+}
+
+List<Widget> buildExerciseOne() {
+  List<Widget> allExerciseOne = [];
+
+  for (int j = 0; j < exerciseOneDetails.length; j++) {
+    allExerciseOne.add(
+      Column(
+        children: [
+          exerciseOneDetails[j].title,
+          const SizedBox(height: 20),
+        ],
+      ),
+    );
+  }
+  return allExerciseOne;
 }

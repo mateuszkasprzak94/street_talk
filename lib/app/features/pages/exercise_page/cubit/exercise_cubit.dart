@@ -2,25 +2,38 @@ import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:street_talk/app/core/enums/enums.dart';
-import 'package:street_talk/app/domain/models/exercise_question_model.dart';
 
-part 'generated/tasks_cubit.freezed.dart';
-part 'tasks_state.dart';
+part 'generated/exercise_cubit.freezed.dart';
+part 'exercise_state.dart';
 
-class TasksCubit extends Cubit<TasksState> {
-  TasksCubit() : super(TasksState());
+class ExerciseCubit extends Cubit<ExerciseState> {
+  ExerciseCubit() : super(ExerciseState());
 
   Future<void> start() async {
     final PageController pageController = PageController(initialPage: 0);
     emit(
-      TasksState(
-        controllerTaskPage: pageController,
+      ExerciseState(
         status: Status.loading,
       ),
     );
+    try {
+      emit(
+        ExerciseState(
+          status: Status.success,
+          controllerTaskPage: pageController,
+        ),
+      );
+    } catch (error) {
+      emit(
+        ExerciseState(
+          status: Status.error,
+          errorMessage: error.toString(),
+        ),
+      );
+    }
   }
 
-  Future<void> previusPage() async {
+  Future<void> previousPage() async {
     await state.controllerTaskPage?.previousPage(
       duration: const Duration(seconds: 1),
       curve: Curves.easeInOut,

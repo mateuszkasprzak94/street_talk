@@ -28,11 +28,11 @@ import 'package:street_talk/app/domain/repositories/emotions_content_repository.
 import 'package:street_talk/app/domain/repositories/emotions_name_repository.dart'
     as _i4;
 import 'package:street_talk/app/domain/repositories/flashcards_one_repository.dart'
-    as _i6;
-import 'package:street_talk/app/domain/repositories/flashcards_three_repository.dart'
     as _i7;
-import 'package:street_talk/app/domain/repositories/flashcards_two_repository.dart'
+import 'package:street_talk/app/domain/repositories/flashcards_three_repository.dart'
     as _i8;
+import 'package:street_talk/app/domain/repositories/flashcards_two_repository.dart'
+    as _i9;
 import 'package:street_talk/app/domain/repositories/quiz_repository.dart'
     as _i16;
 import 'package:street_talk/app/domain/repositories/situations_reposiotry.dart'
@@ -53,13 +53,13 @@ import 'package:street_talk/app/features/pages/colloquialisms_page/street_page/c
     as _i27;
 import 'package:street_talk/app/features/pages/colloquialisms_page/welcome_goodbye_page/cubit/welcome_goodbye_cubit.dart'
     as _i28;
+import 'package:street_talk/app/features/pages/exercise_page/cubit/exercise_cubit.dart'
+    as _i6;
 import 'package:street_talk/app/features/pages/flashcards_page/flashcards_sets_page/flashcards_sets_page_content/set_one/cubit/set_one_cubit.dart'
-    as _i9;
-import 'package:street_talk/app/features/pages/flashcards_page/flashcards_sets_page/flashcards_sets_page_content/set_three/cubit/set_three_cubit.dart'
     as _i10;
-import 'package:street_talk/app/features/pages/flashcards_page/flashcards_sets_page/flashcards_sets_page_content/set_two/cubit/set_two_cubit.dart'
+import 'package:street_talk/app/features/pages/flashcards_page/flashcards_sets_page/flashcards_sets_page_content/set_three/cubit/set_three_cubit.dart'
     as _i11;
-import 'package:street_talk/app/features/pages/tasks_page/cubit/tasks_cubit.dart'
+import 'package:street_talk/app/features/pages/flashcards_page/flashcards_sets_page/flashcards_sets_page_content/set_two/cubit/set_two_cubit.dart'
     as _i12;
 import 'package:street_talk/app/injection_container.dart' as _i29;
 
@@ -81,23 +81,23 @@ extension GetItInjectableX on _i1.GetIt {
         remoteDataSource: gh<_i3.EmotionsNameMockedDataSource>()));
     gh.factory<_i5.EmotionsPageCubit>(() => _i5.EmotionsPageCubit(
         emotionsNameRepository: gh<_i4.EmotionsNameRepository>()));
-    gh.factory<_i6.FlashCardsOneRepository>(
-        () => _i6.FlashCardsOneRepository());
-    gh.factory<_i7.FlashCardsThreeRepository>(
-        () => _i7.FlashCardsThreeRepository());
-    gh.factory<_i8.FlashCardsTwoRepository>(
-        () => _i8.FlashCardsTwoRepository());
-    gh.factory<_i9.SetOneCubit>(() => _i9.SetOneCubit(
-        flashCardsRepository: gh<_i6.FlashCardsOneRepository>()));
-    gh.factory<_i10.SetThreeCubit>(() => _i10.SetThreeCubit(
-        flashCardsRepository: gh<_i7.FlashCardsThreeRepository>()));
-    gh.factory<_i11.SetTwoCubit>(() => _i11.SetTwoCubit(
-        flashCardsRepository: gh<_i8.FlashCardsTwoRepository>()));
+    gh.factory<_i6.ExerciseCubit>(() => _i6.ExerciseCubit());
+    gh.factory<_i7.FlashCardsOneRepository>(
+        () => _i7.FlashCardsOneRepository());
+    gh.factory<_i8.FlashCardsThreeRepository>(
+        () => _i8.FlashCardsThreeRepository());
+    gh.factory<_i9.FlashCardsTwoRepository>(
+        () => _i9.FlashCardsTwoRepository());
+    gh.factory<_i10.SetOneCubit>(() => _i10.SetOneCubit(
+        flashCardsRepository: gh<_i7.FlashCardsOneRepository>()));
+    gh.factory<_i11.SetThreeCubit>(() => _i11.SetThreeCubit(
+        flashCardsRepository: gh<_i8.FlashCardsThreeRepository>()));
+    gh.factory<_i12.SetTwoCubit>(() => _i12.SetTwoCubit(
+        flashCardsRepository: gh<_i9.FlashCardsTwoRepository>()));
     gh.factory<String>(
       () => registerModule.baseUrl,
       instanceName: 'BaseUrl',
     );
-    gh.factory<_i12.TasksCubit>(() => _i12.TasksCubit());
     gh.lazySingleton<_i13.Dio>(
         () => registerModule.dio(gh<String>(instanceName: 'BaseUrl')));
     gh.factory<_i14.EmotionsContentRetrofitDataSource>(

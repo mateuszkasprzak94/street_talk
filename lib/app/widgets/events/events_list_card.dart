@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:street_talk/app/domain/models/spanish_events_details_model.dart';
+import 'package:street_talk/app/utility/spanish_events_details.dart';
 import 'package:street_talk/app/drawer/drawer_content/spanish_events/spanish_events_content.dart';
 
 class EventsListCard extends StatelessWidget {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:street_talk/app/core/constants/constants.dart';
-import 'package:street_talk/app/domain/models/spanish_events_details_model.dart';
+import 'package:street_talk/app/utility/spanish_events_details.dart';
 import 'package:street_talk/app/widgets/events/events_list_card.dart';
 import 'package:street_talk/app/widgets/quiz/custom_close_button.dart';
 

@@ -47,7 +47,7 @@ class SetTwoCubit extends Cubit<SetTwoState> {
           });
   }
 
-  Future<void> previusPage() async {
+  Future<void> previousPage() async {
     await state.controllerFlashPage?.previousPage(
       duration: const Duration(milliseconds: 500),
       curve: Curves.easeInOut,
