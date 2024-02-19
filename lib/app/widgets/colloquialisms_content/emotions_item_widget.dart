@@ -16,7 +16,6 @@ class EmotionsItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colorGradient = getEmotionColorGradient(model.emotionId);
-    // final color = getEmotionColor(model.emotionId);
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -41,7 +40,7 @@ class EmotionsItemWidget extends StatelessWidget {
           child: Column(
             children: [
               const Padding(
-                padding: EdgeInsets.all(8.0),
+                padding: EdgeInsets.all(8),
                 child: FaIcon(
                   FontAwesomeIcons.mapPin,
                   color: Colors.green,
@@ -69,10 +68,10 @@ class EmotionsItemWidget extends StatelessWidget {
                 endIndent: 70,
               ),
               SizedBox(
-                height: 60,
-                child: Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 10),
-                  child: Center(
+                height: 85,
+                child: Center(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
                     child: AutoSizeText(
                       model.wordTranslation,
                       style: TextStyle(
@@ -81,8 +80,7 @@ class EmotionsItemWidget extends StatelessWidget {
                         fontStyle: FontStyle.italic,
                         fontWeight: FontWeight.w500,
                       ),
-                      maxLines: 3,
-                      minFontSize: 14,
+                      minFontSize: 12,
                     ),
                   ),
                 ),

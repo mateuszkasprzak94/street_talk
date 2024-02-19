@@ -17,7 +17,6 @@ class SituationItemWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
-          height: 410,
           margin: const EdgeInsets.all(10),
           width: double.infinity,
           decoration: BoxDecoration(
@@ -49,16 +48,16 @@ class SituationItemWidget extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 90,
+                height: 100,
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: Center(
                     child: AutoSizeText(
                       model.word,
                       style: const TextStyle(
                         fontSize: 35,
                       ),
-                      maxLines: 2,
+                      maxLines: 3,
                     ),
                   ),
                 ),

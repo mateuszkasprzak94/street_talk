@@ -17,7 +17,6 @@ class StreetItemWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
-          height: 430,
           margin: const EdgeInsets.all(10),
           width: double.infinity,
           decoration: BoxDecoration(
@@ -51,12 +50,12 @@ class StreetItemWidget extends StatelessWidget {
               SizedBox(
                 height: 100,
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: Center(
                     child: AutoSizeText(
                       model.word,
                       style: const TextStyle(
-                        fontSize: 30,
+                        fontSize: 35,
                       ),
                       maxLines: 2,
                     ),
@@ -70,7 +69,7 @@ class StreetItemWidget extends StatelessWidget {
                 endIndent: 50,
               ),
               SizedBox(
-                height: 50,
+                height: 85,
                 child: Center(
                   child: Container(
                     margin: const EdgeInsets.symmetric(horizontal: 10),
@@ -82,7 +81,7 @@ class StreetItemWidget extends StatelessWidget {
                         fontStyle: FontStyle.italic,
                         fontWeight: FontWeight.w500,
                       ),
-                      maxLines: 3,
+                      minFontSize: 12,
                     ),
                   ),
                 ),
