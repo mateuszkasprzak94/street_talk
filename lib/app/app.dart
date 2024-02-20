@@ -29,6 +29,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
         ),
         home: Scaffold(
+          resizeToAvoidBottomInset: false,
           body: BlocBuilder<InternetCubit, InternetState>(
             builder: (context, state) {
               if (state is InternetConnected &&

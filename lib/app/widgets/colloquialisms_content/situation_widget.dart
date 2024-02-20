@@ -63,7 +63,7 @@ class SituationItemWidget extends StatelessWidget {
                 ),
               ),
               const Divider(
-                thickness: 1,
+                thickness: 1.7,
                 color: kRedColor,
                 indent: 70,
                 endIndent: 70,
@@ -87,7 +87,7 @@ class SituationItemWidget extends StatelessWidget {
                 ),
               ),
               const Divider(
-                thickness: 1,
+                thickness: 1.7,
                 color: kRedColor,
                 indent: 70,
                 endIndent: 70,

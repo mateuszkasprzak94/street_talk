@@ -12,14 +12,15 @@ class DictionaryPage extends StatefulWidget {
   State<DictionaryPage> createState() => _DictionaryPageState();
 }
 
-final controller = TextEditingController();
+final _controller = TextEditingController();
 
 class _DictionaryPageState extends State<DictionaryPage> {
   String translated = '';
+
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
-    controller.addListener(() => setState(() {}));
+    _controller.addListener(() => setState(() {}));
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
@@ -72,17 +73,17 @@ class _DictionaryPageState extends State<DictionaryPage> {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: TextField(
-                    controller: controller,
+                    controller: _controller,
                     decoration: InputDecoration(
                       contentPadding: const EdgeInsets.all(10),
                       labelText: 'Szukaj',
                       hintText: 'Wpisz słowo, którego szukasz',
                       prefixIcon: const Icon(Icons.search),
-                      suffixIcon: controller.text.isEmpty
+                      suffixIcon: _controller.text.isEmpty
                           ? Container(width: 0)
                           : IconButton(
                               onPressed: () {
-                                controller.clear();
+                                _controller.clear();
                                 setState(() {
                                   translated = ''; // Clear translation
                                   FocusScope.of(context).unfocus();

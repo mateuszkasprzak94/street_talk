@@ -41,7 +41,7 @@ class StreetItemWidget extends StatelessWidget {
                 child: Text(
                   model.id.toString(),
                   style: const TextStyle(
-                      fontSize: 18,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
                       fontStyle: FontStyle.italic,
                       color: Colors.green),
@@ -63,7 +63,7 @@ class StreetItemWidget extends StatelessWidget {
                 ),
               ),
               const Divider(
-                thickness: 1.5,
+                thickness: 1.7,
                 color: kRedColor,
                 indent: 50,
                 endIndent: 50,
@@ -87,13 +87,13 @@ class StreetItemWidget extends StatelessWidget {
                 ),
               ),
               const Divider(
-                thickness: 1.5,
+                thickness: 1.7,
                 color: kRedColor,
                 indent: 50,
                 endIndent: 50,
               ),
               SizedBox(
-                height: 200,
+                height: 155,
                 child: Container(
                   width: double.infinity,
                   padding: const EdgeInsets.all(5),
