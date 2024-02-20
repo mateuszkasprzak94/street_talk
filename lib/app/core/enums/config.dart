@@ -6,15 +6,6 @@ enum Flavor {
 class Config {
   static Flavor appFlavor = Flavor.development;
 
-  static String get helloMessage {
-    switch (appFlavor) {
-      case Flavor.development:
-        return 'Developers version';
-      case Flavor.production:
-        return 'Users version';
-    }
-  }
-
   static String get baseUrl {
     switch (appFlavor) {
       case Flavor.development:
