@@ -28,10 +28,9 @@ final List<EventCardDetail> eventCardDetailList = [
     iconTag: 'fellas_icon',
     location: 'Walencja',
     date: '15 marca do 19 marca',
-    keyFeatures:
-        'Wielkie rzeźby, pełne życia procesje, fajerwerki, La Planta, Mascletà, La Cremà',
+    keyFeatures: 'Gigantyczne rzeźby, procesje, fajerwerki, spalenie ninots.',
     description:
-        'Las Fallas to dynamiczna celebracja w Walencji, znana z gigantycznych rzeźb, pełnych życia atmosfery i spalania ninots, symbolicznie witająca wiosnę.',
+        'Las Fallas to nie tylko festiwal sztuki, jest również manifestacją tradycji, szczęścia i wspólnoty. Jest to okazja, kiedy mieszkańcy Walencji świętują razem, oddając hołd twórczości i symbolice. Las Fallas przyciąga zarówno miłośników sztuki, jak i tych, którzy chcą poczuć wyjątkową atmosferę hiszpańskiej tradycji. To wydarzenie napełnia miasto życiem, kolorami i radością, tworząc niezapomniane chwile dla tych, którzy są świadkami tej ekscytującej celebracji.',
   ),
   EventCardDetail(
     title: 'La Tomatina',
@@ -42,7 +41,7 @@ final List<EventCardDetail> eventCardDetailList = [
     date: 'Ostatnia środa sierpnia',
     keyFeatures: 'Bitwa pomidorowa, kolorowe stroje, festynowa atmosfera',
     description:
-        'La Tomatina to światowo znany festiwal rzucania pomidorami, podczas którego uczestnicy biorą udział w zabawnej i chaotycznej bitwie pomidorowej na ulicach Buñol',
+        'La Tomatina to wyjątkowe święto, które przyciąga ludzi z całego świata do malowniczej miejscowości Buñol. Jest to nie tylko zabawna bitwa pomidorowa, jest to również okazja do łączenia się ze społecznością i doświadczenia ducha festiwalu. Uczestnicy, ubrani w kolorowe stroje, zanurzają się w tym kreatywnym szaleństwie, rzucając pomidorami i biorąc udział w spontanicznych zabawach na ulicach. La Tomatina to nie tylko festiwal jedzenia, jest to również wyjątkowy sposób na wyrażenie szczęścia, spontaniczności i wspólnoty. To zdecydowanie jedno z najbardziej nietypowych i zabawnych wydarzeń w Hiszpanii.',
   ),
   EventCardDetail(
     title: 'La Tamborrada',
@@ -52,9 +51,9 @@ final List<EventCardDetail> eventCardDetailList = [
     location: 'San Sebastián (Donostia)',
     date: '20 stycznia, start o północy',
     keyFeatures:
-        'Zespoły grające na bębnach, tradycyjne stroje, pełne życia procesje.',
+        'La Tamborrada to festiwal w San Sebastián, charakteryzujący się rytmicznymi dźwiękami bębnów, tradycyjnymi strojami nawiązującymi do napoleońskiego okresu, oraz procesjami, które tworzą festywną atmosferę 20 stycznia, składając hołd Świętemu Sebastianowi.',
     description:
-        'La Tamborrada to energetyczny festiwal perkusyjny w San Sebastián, gdzie uczestnicy ubrani jak żołnierze grają na bębnach, świętując patrona miasta',
+        'La Tamborrada to tradycyjny festiwal muzyczny i jedno z najbardziej charakterystycznych wydarzeń w hiszpańskim mieście San Sebastián. Obchodzony 20 stycznia, festiwal ten to hołd złożony Świętemu Sebastianowi, patronowi miasta. Podczas La Tamborrada miasto ożywa dźwiękiem bębnów, a mieszkańcy biorą udział w ulicznych procesjach, paradach i koncertach, tworząc niezapomnianą atmosferę radości i wspólnoty. Uczestnicy ubrani w tradycyjne stroje z okresu napoleońskiego odgrywają różnorodne role, a bębny rozbrzmiewają przez całą dobę, tworząc niepowtarzalny dźwiękowy krajobraz. To wyjątkowe święto łączy tradycję, muzykę i wspólnotę, przyciągając zarówno lokalną społeczność, jak i turystów, chcących doświadczyć niezwykłej atmosfery La Tamborrada.',
   ),
   EventCardDetail(
     title: 'Carnaval de Santa Cruz de Tenerife',
@@ -64,9 +63,9 @@ final List<EventCardDetail> eventCardDetailList = [
     location: 'Santa Cruz de Tenerife, Wyspy Kanaryjskie',
     date: 'Luty lub marzec (daty zmienne)',
     keyFeatures:
-        'Kolorowe kostiumy, pełne życia parady, różnorodne postacie, muzyka, taniec',
+        'Kolorowe kostiumy, pełne życia parady, różnorodne postacie, muzyka, taniec, konkursy',
     description:
-        'Carnaval de Santa Cruz de Tenerife to karnawał pełen kreatywnych kostiumów, radosnych parad i zabawnej atmosfery',
+        'Carnaval de Santa Cruz de Tenerife to kolorowy festiwal karnawałowy, uważany za jeden z największych na świecie, odbywający się w hiszpańskim mieście Santa Cruz de Tenerife na Wyspach Kanaryjskich. Charakteryzuje go ekscytujące połączenie tradycji, muzyki, tańca i bogatych strojów, przyciągając tłumy uczestników z różnych zakątków świata. W trakcie karnawału odbywają się liczne parady, konkursy strojów, koncerty oraz zabawy uliczne, tworząc atmosferę radosnej celebracji i luźnej, beztroskiej zabawy. Carnival Queen Pageant, konkurs wyboru królowej karnawału, stanowi jedno z najważniejszych wydarzeń, podkreślając luksus i ekstrawagancję strojów prezentowanych podczas festiwalu. Karnawał de Santa Cruz de Tenerife przyciąga miłośników kolorowej rozrywki, stając się niezapomnianym doświadczeniem kulturowym.',
   ),
   EventCardDetail(
     title: 'Danza de la muerte de Verges',
@@ -75,9 +74,10 @@ final List<EventCardDetail> eventCardDetailList = [
     iconTag: 'muerte_icon',
     location: 'Verges, Katalonia',
     date: 'Wielki Czwartek podczas Semana Santa',
-    keyFeatures: 'Tradycyjny taniec, kostiumy ze szkieletem, procesja',
+    keyFeatures:
+        'Czarne stroje i maski szkieletów, procesja, unikalny taniec, tradycja sięgająca XIV wieku, obchody Wielkiego Tygodnia, hiszpańskie miasteczko Verges, Katalonia.',
     description:
-        'Danza de la Muerte de Verges to tradycyjny taniec odbywający się w Wielki Czwartek, gdzie uczestnicy ubrani jak szkielety tworzą unikalne i uroczyste widowisko',
+        'Danza de la Muerte de Verges to tradycyjna procesja, odbywająca się w Wielki Czwartek w hiszpańskim miasteczku Verges w Katalonii. Uczestnicy w czarnych strojach i maskach szkieletów symbolizują śmierć, prezentując unikalny taniec i choreografię, które mają korzenie sięgające XIV wieku. To wyjątkowe wydarzenie przyciąga zarówno lokalną społeczność, jak i turystów, chcących doświadczyć bogactwa tradycji i kultury tego regionu.',
   ),
   EventCardDetail(
     title: 'Feria de Abril',
@@ -86,9 +86,10 @@ final List<EventCardDetail> eventCardDetailList = [
     iconTag: 'abril_icon',
     location: 'Sewilla',
     date: 'Dwa tygodnie po Wielkanocy',
-    keyFeatures: 'Casetas, suknie flamenco, zaprzęgi konne, występy taneczne',
+    keyFeatures:
+        'Feria de Abril to tradycyjne andaluzyjskie święto w Sewilli, charakteryzujące się kolorowymi dekoracjami, tradycyjnymi strojami flamenco, tańcami, paradami konnymi, muzyką flamenco i wyjątkową atmosferą festiwalowej radości.',
     description:
-        'Feria de Abril to radosne andaluzyjskie targi z kolorowymi budykami, muzyką flamenco i radosnym świętowaniem kultury Sewilli',
+        'Feria de Abril to barwne i radosne andaluzyjskie święto obchodzone w Sewilli, Hiszpania, zazwyczaj w drugiej połowie kwietnia. Uczestnicy celebrują to wydarzenie poprzez kolorowe dekoracje, tradycyjne stroje, muzykę flamenco, tańce i paradę konną. Atmosfera festiwalu jest nasycona energią, a "casetas" (namioty) stają się miejscem spotkań, tańców i świątecznej zabawy.',
   ),
   EventCardDetail(
     title: 'Castells w Tarragonie',
@@ -99,7 +100,7 @@ final List<EventCardDetail> eventCardDetailList = [
     date: 'Różne wydarzenia przez cały rok',
     keyFeatures: 'Ludzkie wieże (Castells), praca zespołowa, tradycyjne stroje',
     description:
-        'Tarragona słynie z Castells, gdzie zespoły tworzą imponujące ludzkie wieże, prezentując jedność, siłę i tradycyjną kulturę katalońską',
+        'Castells w Tarragonie to coroczne widowisko, w ramach którego zespoły, zwane "colles", tworzą imponujące ludzkie wieże, sięgające kilkunastu pięter wysokości, podczas zawodów mających miejsce w centrum katalońskiej tradycji ludowej. To spektakularne przedstawienie wymaga nie tylko siły, ale także precyzji, techniki i współpracy, stanowiąc symboliczne wyrażenie jedności społeczności oraz katalońskiej dumni i tradycji.',
   ),
   EventCardDetail(
     title: 'Batalla del vino',
@@ -108,9 +109,10 @@ final List<EventCardDetail> eventCardDetailList = [
     iconTag: 'vino_icon',
     location: 'Haro, La Rioja',
     date: 'Koniec czerwca',
-    keyFeatures: 'Bitwa wina, uczestnicy w bieli, malownicze winnice',
+    keyFeatures:
+        'Bitwa del Vino to coroczne święto w Haro, gdzie uczestnicy w białych strojach uczestniczą w radosnej bitwie czerwonym winem, celebrując lokalną kulturę winiarską regionu La Rioja.',
     description:
-        'Haro Wine Festival obejmuje kultową Bitwę Wina, gdzie uczestnicy polewają się czerwonym winem, świętując winiarską tradycję regionu',
+        'Batalla del Vino, znana również jako Bitwa Wina, to niezwykłe hiszpańskie święto, które odbywa się w miasteczku Haro w regionie La Rioja. Uczestnicy festiwalu ubrani w białe stroje biorą udział w symbolicznej bitwie, podczas której siębie nawzajem polewają czerwonym winem, tworząc jednocześnie unikalne widowisko i celebrując bogactwo kultury winiarskiej regionu La Rioja.',
   ),
   EventCardDetail(
     title: 'Fiesta de los Enharinados',
@@ -120,9 +122,9 @@ final List<EventCardDetail> eventCardDetailList = [
     location: 'Ibi, Alicante',
     date: 'Koniec sierpnia',
     keyFeatures:
-        'Bitwa mączna, uczestnicy pokryci mąką, pełne życia uliczne festiwale.',
+        'Fiesta de los Enharinados to tradycyjne hiszpańskie święto w Ibi, Alicante, charakteryzujące się chaotyczną bitwą mąką, gdzie uczestnicy w kolorowych strojach celebrują wspólnotę poprzez spontaniczną i radosną zabawę. To wyjątkowe wydarzenie podkreśla lokalną tradycję, jednocząc mieszkańców w atmosferze beztroskiej festiwalowej radości.',
     description:
-        'Fiesta de los Enharinados to unikalny festiwal w Ibi, gdzie uczestnicy biorą udział w zabawnej walce mącznej, tworząc pełną życia i radosną atmosferę',
+        'Fiesta de los Enharinados to tradycyjne hiszpańskie święto obchodzone w miejscowości Ibi w regionie Alicante. Podczas tego kolorowego festiwalu, znane także jako Bitwa na Mąkę, mieszkańcy i odwiedzający rzucają się nawzajem mąką, tworząc chaotyczną i radosną bitwę, podkreślającą ducha zabawy i wspólnoty.',
   ),
   EventCardDetail(
     title: 'San Fermín',
@@ -132,8 +134,8 @@ final List<EventCardDetail> eventCardDetailList = [
     location: 'Pamplona',
     date: '6 lipca do 14 lipca',
     keyFeatures:
-        'Biegi byków, biało-czerwona odzież, pełne adrenaliny środowisko.',
+        'Bieg przed bykami w tradycyjnych strojach, charakterystyczne czerwone szale, radosna atmosfera, a także korzenie w tradycji religijnej, upamiętniając patrona Nawarry, świętego Fermína.',
     description:
-        'San Fermín słynie z odważnych Biegów Byków, gdzie uczestnicy biegną wzdłuż wąskich ulic razem z bykami, łącząc tradycję z ekscytującym przeżyciem',
+        'San Fermín to słynne hiszpańskie święto, odbywające się w mieście Pamplona, w regionie Nawarry. Najbardziej znana jest za festiwal byków, gdzie uczestnicy, zwani "mozos", biegną przed stadem byków po ulicach miasta do areny, tworząc spektakularne i emocjonujące widowisko.',
   ),
 ];
