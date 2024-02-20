@@ -35,10 +35,14 @@ class _ExerciseThreeState extends State<ExerciseThree> {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
-    // double screenHeight = MediaQuery.of(context).size.height;
 
     return GestureDetector(
-      onTap: () => FocusScope.of(context).unfocus(),
+      onTap: () {
+        final FocusScopeNode currentScope = FocusScope.of(context);
+        if (!currentScope.hasPrimaryFocus && currentScope.hasFocus) {
+          FocusManager.instance.primaryFocus?.unfocus();
+        }
+      },
       child: ListView(
         children: [
           const SizedBox(height: 20),

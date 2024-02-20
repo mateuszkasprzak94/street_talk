@@ -22,7 +22,12 @@ class _DictionaryPageState extends State<DictionaryPage> {
     double screenWidth = MediaQuery.of(context).size.width;
     _controller.addListener(() => setState(() {}));
     return GestureDetector(
-      onTap: () => FocusScope.of(context).unfocus(),
+      onTap: () {
+        final FocusScopeNode currentScope = FocusScope.of(context);
+        if (!currentScope.hasPrimaryFocus && currentScope.hasFocus) {
+          FocusManager.instance.primaryFocus?.unfocus();
+        }
+      },
       child: Scaffold(
         appBar: AppBar(
           iconTheme: const IconThemeData(color: kRedDrawer),
