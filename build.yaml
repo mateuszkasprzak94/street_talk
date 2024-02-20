@@ -7,14 +7,10 @@ targets:
           - lib/app/data/remote_data_sources/**.dart
         options:
           build_extensions:
-            # I want this line to "work":
-            # '^lib/**/{{}}.dart': 'lib/generated/model/{{}}.g.dart'
             'lib/{{path}}/{{file}}.dart': 'lib/{{path}}/generated/{{file}}.g.dart'
       freezed:
         options:
           build_extensions:
-            # I want this line to "work":
-            # '^lib/**/{{}}.dart': 'lib/generated/model/{{}}.freezed.dart'
             'lib/{{path}}/{{file}}.dart': 'lib/{{path}}/generated/{{file}}.freezed.dart'
           field_rename: snake
           explicit_to_json: true
@@ -25,23 +21,7 @@ targets:
       injectable_generator:injectable_builder:  
         options: 
           auto_register: true  
-          # auto registers any class with a name matches the given pattern  
           class_name_pattern:  
             "Repository$|Cubit$"  
-            # auto registers any class inside a file with a  
-            # name matches the given pattern  
           file_name_pattern: "_repository$|_cubit$"  
-
-# targets:  
-#   $default:  
-#     builders:  
-#       injectable_generator:injectable_builder:  
-#         options:  
-#           auto_register: true  
-#           # auto registers any class with a name matches the given pattern  
-#           class_name_pattern:  
-#             "Repository$|Cubits$"  
-#             # auto registers any class inside a file with a  
-#             # name matches the given pattern  
-#           file_name_pattern: "_repository$|_cubit$"  
 

@@ -23,8 +23,8 @@ class InternetCubit extends Cubit<InternetState> {
     });
   }
 
-  void emitInternetConnected(ConnectionType _connectionType) =>
-      emit(InternetConnected(connectionType: _connectionType));
+  void emitInternetConnected(ConnectionType connectionType) =>
+      emit(InternetConnected(connectionType: connectionType));
 
   void emitInternetDisconnected() => emit(InternetDisconnected());
 

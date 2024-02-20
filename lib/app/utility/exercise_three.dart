@@ -40,9 +40,14 @@ final List<ExerciseThreeDetails> exerciseDetails = [
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: SizedBox(
-                height: 10,
+                height: 25,
                 width: 100,
                 child: TextField(
+                  decoration: const InputDecoration(
+                    contentPadding: EdgeInsets.symmetric(horizontal: 5),
+                    isDense: true,
+                    isCollapsed: true,
+                  ),
                   controller: textController1,
                 ),
               ),
@@ -78,9 +83,14 @@ final List<ExerciseThreeDetails> exerciseDetails = [
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: SizedBox(
-                height: 10,
+                height: 25,
                 width: 100,
                 child: TextField(
+                  decoration: const InputDecoration(
+                    contentPadding: EdgeInsets.symmetric(horizontal: 5),
+                    isDense: true,
+                    isCollapsed: true,
+                  ),
                   controller: textController2,
                 ),
               ),
@@ -116,9 +126,14 @@ final List<ExerciseThreeDetails> exerciseDetails = [
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: SizedBox(
-                height: 10,
+                height: 25,
                 width: 100,
                 child: TextField(
+                  decoration: const InputDecoration(
+                    contentPadding: EdgeInsets.symmetric(horizontal: 5),
+                    isDense: true,
+                    isCollapsed: true,
+                  ),
                   controller: textController3,
                 ),
               ),
@@ -154,9 +169,14 @@ final List<ExerciseThreeDetails> exerciseDetails = [
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: SizedBox(
-                height: 10,
+                height: 25,
                 width: 100,
                 child: TextField(
+                  decoration: const InputDecoration(
+                    contentPadding: EdgeInsets.symmetric(horizontal: 5),
+                    isDense: true,
+                    isCollapsed: true,
+                  ),
                   controller: textController4,
                 ),
               ),
@@ -192,9 +212,14 @@ final List<ExerciseThreeDetails> exerciseDetails = [
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: SizedBox(
-                height: 10,
+                height: 25,
                 width: 100,
                 child: TextField(
+                  decoration: const InputDecoration(
+                    contentPadding: EdgeInsets.symmetric(horizontal: 5),
+                    isDense: true,
+                    isCollapsed: true,
+                  ),
                   controller: textController5,
                 ),
               ),
@@ -230,9 +255,14 @@ final List<ExerciseThreeDetails> exerciseDetails = [
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: SizedBox(
-                height: 10,
+                height: 25,
                 width: 100,
                 child: TextField(
+                  decoration: const InputDecoration(
+                    contentPadding: EdgeInsets.symmetric(horizontal: 5),
+                    isDense: true,
+                    isCollapsed: true,
+                  ),
                   controller: textController6,
                 ),
               ),
@@ -258,7 +288,7 @@ final List<ExerciseThreeDetails> exerciseDetails = [
         children: [
           const TextSpan(
             text:
-                'La campaña publicitaria del nuevo producto está tan bien diseñada que sus anuncios  ',
+                'La campaña publicitaria del nuevo producto está tan bien diseñada que sus anuncios',
             style: TextStyle(
               color: Colors.black,
               fontSize: 20,
@@ -269,9 +299,14 @@ final List<ExerciseThreeDetails> exerciseDetails = [
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: SizedBox(
-                height: 10,
+                height: 25,
                 width: 100,
                 child: TextField(
+                  decoration: const InputDecoration(
+                    contentPadding: EdgeInsets.symmetric(horizontal: 5),
+                    isDense: true,
+                    isCollapsed: true,
+                  ),
                   controller: textController7,
                 ),
               ),
@@ -279,7 +314,7 @@ final List<ExerciseThreeDetails> exerciseDetails = [
           ),
           const TextSpan(
             text:
-                '; los ves en la televisión, en internet, en las redes sociales y hasta en las paradas de autobús.',
+                '. Los ves en la televisión, en internet, en las redes sociales y hasta en las paradas de autobús.',
             style: TextStyle(
               color: Colors.black,
               fontSize: 20,
@@ -309,9 +344,14 @@ final List<ExerciseThreeDetails> exerciseDetails = [
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: SizedBox(
-                height: 10,
+                height: 25,
                 width: 100,
                 child: TextField(
+                  decoration: const InputDecoration(
+                    contentPadding: EdgeInsets.symmetric(horizontal: 5),
+                    isDense: true,
+                    isCollapsed: true,
+                  ),
                   controller: textController8,
                 ),
               ),
@@ -349,9 +389,14 @@ final List<ExerciseThreeDetails> exerciseDetails = [
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: SizedBox(
-                height: 10,
-                width: 200,
+                height: 25,
+                width: 100,
                 child: TextField(
+                  decoration: const InputDecoration(
+                    contentPadding: EdgeInsets.symmetric(horizontal: 5),
+                    isDense: true,
+                    isCollapsed: true,
+                  ),
                   controller: textController9,
                 ),
               ),

@@ -87,7 +87,7 @@ class _ExerciseThreeState extends State<ExerciseThree> {
                             size: 37,
                           ),
                           Text(
-                            'Esconder na Ocultar',
+                            'Mostrar soluciones',
                             style: GoogleFonts.lora(
                                 fontSize: 15,
                                 color: kRedColor,
@@ -138,13 +138,13 @@ class Visible extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(20.0),
+      padding: const EdgeInsets.symmetric(vertical: 20),
       child: SizedBox(
         height: 25,
         child: Text(
           answer,
           style: const TextStyle(
-              color: Colors.green, fontStyle: FontStyle.italic, fontSize: 18),
+              color: Colors.green, fontStyle: FontStyle.italic, fontSize: 15),
         ),
       ),
     );

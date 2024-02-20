@@ -80,7 +80,7 @@ class _ColloquialismsPageState extends State<ColloquialismsPage> {
           ColloquialismsButtonWidget(
             image: Image.asset('assets/images/street_no_bg.png'),
             polishTitle: 'Hiszpański prosto z ulicy',
-            spanishTitle: 'Español directo de la calle',
+            spanishTitle: 'El español de la calle',
             onPressed: () {
               Navigator.of(context).push(
                 MaterialPageRoute(

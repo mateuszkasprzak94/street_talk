@@ -30,7 +30,7 @@ final List<EventCardDetail> eventCardDetailList = [
     date: '15 marca do 19 marca',
     keyFeatures: 'Gigantyczne rzeźby, procesje, fajerwerki, spalenie ninots.',
     description:
-        'Las Fallas to nie tylko festiwal sztuki, jest również manifestacją tradycji, szczęścia i wspólnoty. Jest to okazja, kiedy mieszkańcy Walencji świętują razem, oddając hołd twórczości i symbolice. Las Fallas przyciąga zarówno miłośników sztuki, jak i tych, którzy chcą poczuć wyjątkową atmosferę hiszpańskiej tradycji. To wydarzenie napełnia miasto życiem, kolorami i radością, tworząc niezapomniane chwile dla tych, którzy są świadkami tej ekscytującej celebracji.',
+        'Las Fallas de Valencia, czyli święto ognia to prawdopodobnie najbardziej znany festiwal organizowany na powitanie wiosny. Każdego roku od 15 do 19 marca Walencja tętni rytmem pokazów pirotechnicznych i rozbrzmiewa dźwiękami muzyki, przy której uczestnicy fiesty bawią się do białego rana. Głównymi aktorami święta ognia są rzeźby zrobione z różnego rodzaju tworzywa typu: karton, styropian, drewno, wosk. Niektóre z nich sięgają nawet 30 metrów i zwykle nawiązują do problemów politycznych czy społecznych. Zwieńczeniem festiwalu jest finalna La Crema, kiedy wszystkie przygotowane konstrukcje ustawione na ulicach Walencji zaczynają płonąć i wypełniają Walencję blaskiem i żarem płomieni.',
   ),
   EventCardDetail(
     title: 'La Tomatina',
@@ -41,7 +41,7 @@ final List<EventCardDetail> eventCardDetailList = [
     date: 'Ostatnia środa sierpnia',
     keyFeatures: 'Bitwa pomidorowa, kolorowe stroje, festynowa atmosfera',
     description:
-        'La Tomatina to wyjątkowe święto, które przyciąga ludzi z całego świata do malowniczej miejscowości Buñol. Jest to nie tylko zabawna bitwa pomidorowa, jest to również okazja do łączenia się ze społecznością i doświadczenia ducha festiwalu. Uczestnicy, ubrani w kolorowe stroje, zanurzają się w tym kreatywnym szaleństwie, rzucając pomidorami i biorąc udział w spontanicznych zabawach na ulicach. La Tomatina to nie tylko festiwal jedzenia, jest to również wyjątkowy sposób na wyrażenie szczęścia, spontaniczności i wspólnoty. To zdecydowanie jedno z najbardziej nietypowych i zabawnych wydarzeń w Hiszpanii.',
+        'La Tomatina to święto obchodzone w hiszpańskiej miejscowości Buñol, położonej w prowincji Walencja, podczas którego uczestnicy obrzucają się nawzajem pomidorami. Bitwa na pomidory odbywa się w ostatnią środę sierpnia, stanowiąc główny punkt trwającej cały tydzień fiesty, która co roku przyciąga tysiące turystów z całego świata. To niezwykłe i kolorowe wydarzenie stało się jedną z najbardziej rozpoznawalnych tradycji Hiszpanii. Uczestnicy zbierają się na Placu Pałacowym i oczekują na sygnał do rozpoczęcia bitwy. Kiedy sygnał zostaje wydany, ogromne ilości pomidorów są rzucone w tłum.',
   ),
   EventCardDetail(
     title: 'La Tamborrada',
