@@ -27,7 +27,7 @@ class _QuizQuestionScreenState extends State<QuizQuestionScreen> {
 
   int questionNumber = 0;
 
-  final int timerDuration = 10;
+  final int timerDuration = 15;
   List<Color> optionColor = [
     Colors.white,
     Colors.white,

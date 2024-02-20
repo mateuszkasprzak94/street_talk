@@ -58,7 +58,7 @@ class BeforeStartScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 5),
                 Text(
-                  'Quiz składa się z 10 pytań, na każde pytanie masz 10 sekund.',
+                  'Quiz składa się z 10 pytań, na każde pytanie masz 15 sekund.',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 15,

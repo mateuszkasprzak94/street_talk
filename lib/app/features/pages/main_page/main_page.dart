@@ -18,11 +18,6 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   int currentIndex = 0;
 
-  @override
-  void initState() {
-    super.initState();
-  }
-
   final screens = const [
     HomePage(),
     ColloquialismsPage(),
@@ -59,7 +54,7 @@ class _MainPageState extends State<MainPage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.assignment),
-            label: 'Ćwieczenia',
+            label: 'Ćwiczenia',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.collections_bookmark),

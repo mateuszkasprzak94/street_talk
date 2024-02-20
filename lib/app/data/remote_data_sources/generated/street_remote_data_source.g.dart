@@ -32,7 +32,7 @@ class _StreetRetrofitDataSource implements StreetRetrofitDataSource {
     )
             .compose(
               _dio.options,
-              '/eca52938c03cba140e45',
+              '/015d09380f8b4887bd68',
               queryParameters: queryParameters,
               data: _data,
             )

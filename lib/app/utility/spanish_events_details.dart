@@ -41,7 +41,7 @@ final List<EventCardDetail> eventCardDetailList = [
     date: 'Ostatnia środa sierpnia',
     keyFeatures: 'Bitwa pomidorowa, kolorowe stroje, festynowa atmosfera',
     description:
-        'La Tomatina to wyjątkowe święto, które przyciąga ludzi z całego świata do malowniczej miejscowości Buñol. Jest to nie tylko zabawna bitwa pomidorowa, jest to również okazja do łączenia się ze społecznością i doświadczenia ducha festiwalu. Uczestnicy, ubrani w kolorowe stroje, zanurzają się w tym kreatywnym szaleństwie, rzucając pomidorami i biorąc udział w spontanicznych zabawach na ulicach. La Tomatina to nie tylko festiwal jedzenia, jest to również wyjątkowy sposób na wyrażenie szczęścia, spontaniczności i wspólnoty. To zdecydowanie jedno z najbardziej nietypowych i zabawnych wydarzeń w Hiszpanii.',
+        'La Tomatina to wyjątkowe święto, które przyciąga ludzi z całego świata do malowniczej miejscowości Buñol. Jest to nie tylko zabawna bitwa pomidorowa, jest to również okazja do łączenia się ze społecznością i doświadczenia ducha festiwalu. Uczestnicy, ubrani w kolorowe stroje, zanurzają się w tym kreatywnym szaleństwie, rzucając pomidorami i biorąc udział w spontanicznych zabawach na ulicach. La Tomatina to nie tylko festiwal jedzenia, jest to również wyjątkowy sposób na wyrażenie szczęścia, spontaniczności i wspólnoty. To zdecydowanie jedno z najbardziej nietypowych i zabawnych wydarzeń w Hiszpanii.',
   ),
   EventCardDetail(
     title: 'La Tamborrada',
@@ -51,9 +51,9 @@ final List<EventCardDetail> eventCardDetailList = [
     location: 'San Sebastián (Donostia)',
     date: '20 stycznia, start o północy',
     keyFeatures:
-        'La Tamborrada to festiwal w San Sebastián, charakteryzujący się rytmicznymi dźwiękami bębnów, tradycyjnymi strojami nawiązującymi do napoleońskiego okresu, oraz procesjami, które tworzą festywną atmosferę 20 stycznia, składając hołd Świętemu Sebastianowi.',
+        'Rytmiczne dźwięki bębnów, tradycyjne stroje nawiązujące do okresu napoleońskiego, procesje, wspólnota celebrująca Świętego Sebastiana (patrona miasta), oraz całodniowa festynowa atmosfera nasycona muzyką, tańcem i radością.',
     description:
-        'La Tamborrada to tradycyjny festiwal muzyczny i jedno z najbardziej charakterystycznych wydarzeń w hiszpańskim mieście San Sebastián. Obchodzony 20 stycznia, festiwal ten to hołd złożony Świętemu Sebastianowi, patronowi miasta. Podczas La Tamborrada miasto ożywa dźwiękiem bębnów, a mieszkańcy biorą udział w ulicznych procesjach, paradach i koncertach, tworząc niezapomnianą atmosferę radości i wspólnoty. Uczestnicy ubrani w tradycyjne stroje z okresu napoleońskiego odgrywają różnorodne role, a bębny rozbrzmiewają przez całą dobę, tworząc niepowtarzalny dźwiękowy krajobraz. To wyjątkowe święto łączy tradycję, muzykę i wspólnotę, przyciągając zarówno lokalną społeczność, jak i turystów, chcących doświadczyć niezwykłej atmosfery La Tamborrada.',
+        'La Tamborrada to tradycyjny festiwal muzyczny i jedno z najbardziej charakterystycznych wydarzeń w hiszpańskim mieście San Sebastián. Ten festiwal to hołd złożony Świętemu Sebastianowi, patronowi miasta. Podczas La Tamborrada miasto ożywa dźwiękiem bębnów, a mieszkańcy biorą udział w ulicznych procesjach, paradach i koncertach, tworząc niezapomnianą atmosferę radości i wspólnoty. Uczestnicy ubrani w tradycyjne stroje z okresu napoleońskiego odgrywają różnorodne role, a bębny rozbrzmiewają przez całą dobę, tworząc niepowtarzalny dźwiękowy krajobraz. To wyjątkowe święto łączy tradycję, muzykę i wspólnotę, przyciągając zarówno lokalną społeczność, jak i turystów, chcących doświadczyć niezwykłej atmosfery La Tamborrada.',
   ),
   EventCardDetail(
     title: 'Carnaval de Santa Cruz de Tenerife',
@@ -89,7 +89,7 @@ final List<EventCardDetail> eventCardDetailList = [
     keyFeatures:
         'Feria de Abril to tradycyjne andaluzyjskie święto w Sewilli, charakteryzujące się kolorowymi dekoracjami, tradycyjnymi strojami flamenco, tańcami, paradami konnymi, muzyką flamenco i wyjątkową atmosferą festiwalowej radości.',
     description:
-        'Feria de Abril to barwne i radosne andaluzyjskie święto obchodzone w Sewilli, Hiszpania, zazwyczaj w drugiej połowie kwietnia. Uczestnicy celebrują to wydarzenie poprzez kolorowe dekoracje, tradycyjne stroje, muzykę flamenco, tańce i paradę konną. Atmosfera festiwalu jest nasycona energią, a "casetas" (namioty) stają się miejscem spotkań, tańców i świątecznej zabawy.',
+        'Feria de Abril to barwne i radosne andaluzyjskie święto obchodzone w Sewilli, zazwyczaj w drugiej połowie kwietnia. Uczestnicy celebrują to wydarzenie poprzez kolorowe dekoracje, tradycyjne stroje, muzykę flamenco, tańce i paradę konną. Atmosfera festiwalu jest nasycona energią, a "casetas" (namioty) stają się miejscem spotkań, tańców i świątecznej zabawy.',
   ),
   EventCardDetail(
     title: 'Castells w Tarragonie',
@@ -100,7 +100,7 @@ final List<EventCardDetail> eventCardDetailList = [
     date: 'Różne wydarzenia przez cały rok',
     keyFeatures: 'Ludzkie wieże (Castells), praca zespołowa, tradycyjne stroje',
     description:
-        'Castells w Tarragonie to coroczne widowisko, w ramach którego zespoły, zwane "colles", tworzą imponujące ludzkie wieże, sięgające kilkunastu pięter wysokości, podczas zawodów mających miejsce w centrum katalońskiej tradycji ludowej. To spektakularne przedstawienie wymaga nie tylko siły, ale także precyzji, techniki i współpracy, stanowiąc symboliczne wyrażenie jedności społeczności oraz katalońskiej dumni i tradycji.',
+        'Castells w Tarragonie to coroczne widowisko, w ramach którego zespoły, zwane "colles", tworzą imponujące ludzkie wieże, sięgające kilkunastu pięter wysokości, podczas zawodów mających miejsce w centrum katalońskiej tradycji ludowej. To spektakularne przedstawienie wymaga nie tylko siły, ale także precyzji, techniki i współpracy, stanowiąc symboliczne wyrażenie jedności społeczności oraz katalońskiej dumny i tradycji.',
   ),
   EventCardDetail(
     title: 'Batalla del vino',
@@ -112,7 +112,7 @@ final List<EventCardDetail> eventCardDetailList = [
     keyFeatures:
         'Bitwa del Vino to coroczne święto w Haro, gdzie uczestnicy w białych strojach uczestniczą w radosnej bitwie czerwonym winem, celebrując lokalną kulturę winiarską regionu La Rioja.',
     description:
-        'Batalla del Vino, znana również jako Bitwa Wina, to niezwykłe hiszpańskie święto, które odbywa się w miasteczku Haro w regionie La Rioja. Uczestnicy festiwalu ubrani w białe stroje biorą udział w symbolicznej bitwie, podczas której siębie nawzajem polewają czerwonym winem, tworząc jednocześnie unikalne widowisko i celebrując bogactwo kultury winiarskiej regionu La Rioja.',
+        'Batalla del Vino, znana również jako Bitwa Wina, to niezwykłe hiszpańskie święto, które odbywa się w miasteczku Haro w regionie La Rioja. Uczestnicy festiwalu ubrani w białe stroje biorą udział w symbolicznej bitwie, podczas której polewają się czerwonym winem, tworząc jednocześnie unikalne widowisko i celebrując bogactwo kultury winiarskiej regionu La Rioja.',
   ),
   EventCardDetail(
     title: 'Fiesta de los Enharinados',
@@ -122,7 +122,7 @@ final List<EventCardDetail> eventCardDetailList = [
     location: 'Ibi, Alicante',
     date: 'Koniec sierpnia',
     keyFeatures:
-        'Fiesta de los Enharinados to tradycyjne hiszpańskie święto w Ibi, Alicante, charakteryzujące się chaotyczną bitwą mąką, gdzie uczestnicy w kolorowych strojach celebrują wspólnotę poprzez spontaniczną i radosną zabawę. To wyjątkowe wydarzenie podkreśla lokalną tradycję, jednocząc mieszkańców w atmosferze beztroskiej festiwalowej radości.',
+        'Chaotyczna bitwa mąką, gdzie uczestnicy w kolorowych strojach celebrują wspólnotę poprzez spontaniczną i radosną zabawę. To wyjątkowe wydarzenie podkreśla lokalną tradycję, jednocząc mieszkańców w atmosferze beztroskiej festiwalowej radości.',
     description:
         'Fiesta de los Enharinados to tradycyjne hiszpańskie święto obchodzone w miejscowości Ibi w regionie Alicante. Podczas tego kolorowego festiwalu, znane także jako Bitwa na Mąkę, mieszkańcy i odwiedzający rzucają się nawzajem mąką, tworząc chaotyczną i radosną bitwę, podkreślającą ducha zabawy i wspólnoty.',
   ),

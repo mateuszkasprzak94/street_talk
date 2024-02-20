@@ -17,21 +17,6 @@ class ExerciseThree extends StatefulWidget {
 bool isVisible = false;
 
 class _ExerciseThreeState extends State<ExerciseThree> {
-  late TextEditingController textController;
-  String text = '';
-
-  @override
-  void initState() {
-    super.initState();
-    textController = TextEditingController();
-  }
-
-  @override
-  void dispose() {
-    textController.dispose();
-    super.dispose();
-  }
-
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
@@ -49,7 +34,6 @@ class _ExerciseThreeState extends State<ExerciseThree> {
           Container(
             padding: const EdgeInsets.all(15),
             width: screenWidth,
-            // height: screenHeight * 3,
             margin: const EdgeInsets.all(10),
             decoration: BoxDecoration(
               color: Colors.white,

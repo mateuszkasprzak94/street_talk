@@ -63,7 +63,7 @@ class _DictionaryPageState extends State<DictionaryPage> {
                       color: Colors.white, fontSize: screenWidth / 12),
                 ),
                 Text(
-                  'Niby wszystko wiem ale jednak sprawdze :)',
+                  'Niby wszystko wiem, ale jednak sprawdzę :)',
                   style: GoogleFonts.lora(color: Colors.white),
                 ),
               ]),

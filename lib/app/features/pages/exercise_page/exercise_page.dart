@@ -48,7 +48,7 @@ class ExercisePage extends StatelessWidget {
             ),
             child: Column(children: [
               Text(
-                'Ćwieczenia',
+                'Ćwiczenia',
                 style: GoogleFonts.bebasNeue(
                     color: Colors.white, fontSize: screenWidth / 12),
               ),

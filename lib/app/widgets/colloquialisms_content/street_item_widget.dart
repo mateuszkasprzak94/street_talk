@@ -69,7 +69,7 @@ class StreetItemWidget extends StatelessWidget {
                 endIndent: 50,
               ),
               SizedBox(
-                height: 85,
+                height: 50,
                 child: Center(
                   child: Container(
                     margin: const EdgeInsets.symmetric(horizontal: 10),
@@ -81,7 +81,7 @@ class StreetItemWidget extends StatelessWidget {
                         fontStyle: FontStyle.italic,
                         fontWeight: FontWeight.w500,
                       ),
-                      minFontSize: 12,
+                      maxLines: 3,
                     ),
                   ),
                 ),
@@ -93,7 +93,7 @@ class StreetItemWidget extends StatelessWidget {
                 endIndent: 50,
               ),
               SizedBox(
-                height: 155,
+                height: 190,
                 child: Container(
                   width: double.infinity,
                   padding: const EdgeInsets.all(5),

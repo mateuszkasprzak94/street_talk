@@ -3,10 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:street_talk/app/domain/models/quiz_card_details_model.dart';
 
 class ScoreScreen extends StatelessWidget {
+  const ScoreScreen({
+    Key? key,
+    required this.score,
+    required this.index,
+  }) : super(key: key);
+
   final int score;
   final int index;
-  const ScoreScreen({Key? key, required this.score, required this.index})
-      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

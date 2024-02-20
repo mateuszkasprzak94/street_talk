@@ -22,7 +22,10 @@ class StreetCubit extends Cubit<StreetState> {
     try {
       final results = await streetRepository.getStreetData();
       emit(
-        StreetState(status: Status.success, results: results),
+        StreetState(
+          status: Status.success,
+          results: results,
+        ),
       );
     } catch (error) {
       emit(

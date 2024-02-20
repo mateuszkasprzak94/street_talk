@@ -11,6 +11,6 @@ abstract class StreetRetrofitDataSource {
   @factoryMethod
   factory StreetRetrofitDataSource(Dio dio) = _StreetRetrofitDataSource;
 
-  @GET('/eca52938c03cba140e45')
+  @GET('/015d09380f8b4887bd68')
   Future<List<StreetModel>> getStreetData();
 }
