@@ -1,4 +1,4 @@
-# <p align="center">Welcome to StreetTalk: Język Hiszpański Kolokwialnie</p>
+# <p align="center">Welcome to StreetTalk: Spanish</p>
 <h3><p align="center">An application that will help you develop your Spanish language</p></h3>
 
 # <p align="center">What is this app about</p>
