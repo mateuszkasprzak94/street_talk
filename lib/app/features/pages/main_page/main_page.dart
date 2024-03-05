@@ -11,13 +11,6 @@ class MainPage extends StatefulWidget {
     super.key,
   });
 
-  @override
-  State<MainPage> createState() => _MainPageState();
-}
-
-class _MainPageState extends State<MainPage> {
-  int currentIndex = 0;
-
   final screens = const [
     HomePage(),
     ColloquialismsPage(),
@@ -27,9 +20,16 @@ class _MainPageState extends State<MainPage> {
   ];
 
   @override
+  State<MainPage> createState() => _MainPageState();
+}
+
+class _MainPageState extends State<MainPage> {
+  int currentIndex = 0;
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: screens[currentIndex],
+      body: widget.screens[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         currentIndex: currentIndex,

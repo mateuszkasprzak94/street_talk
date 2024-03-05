@@ -46,7 +46,7 @@ class _HomePageState extends State<HomePage> {
         decoration: const BoxDecoration(
           image: DecorationImage(
               image: AssetImage('assets/assets_homepage/homepage.jpg'),
-              fit: BoxFit.fitHeight),
+              fit: BoxFit.cover),
         ),
       ),
       endDrawer: const NavigationDrawerWidget(),

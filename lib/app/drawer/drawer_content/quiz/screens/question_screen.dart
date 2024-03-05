@@ -12,22 +12,21 @@ import 'package:street_talk/app/injection_container.dart';
 import 'package:street_talk/app/widgets/quiz/custom_close_button.dart';
 
 class QuizQuestionScreen extends StatefulWidget {
-  const QuizQuestionScreen({required this.categoryIndex, super.key});
+  QuizQuestionScreen({required this.categoryIndex, super.key});
 
   final int categoryIndex;
+  final CountDownController _controller = CountDownController();
+  final int timerDuration = 30;
 
   @override
   State<QuizQuestionScreen> createState() => _QuizQuestionScreenState();
 }
 
 class _QuizQuestionScreenState extends State<QuizQuestionScreen> {
-  final CountDownController _controller = CountDownController();
-
   bool isAbsorbing = false;
 
   int questionNumber = 0;
 
-  final int timerDuration = 15;
   List<Color> optionColor = [
     Colors.white,
     Colors.white,
@@ -36,6 +35,13 @@ class _QuizQuestionScreenState extends State<QuizQuestionScreen> {
   ];
 
   List<String> shuffledOptions = [];
+
+  void resetOptions() {
+    setState(() {
+      optionColor = List.filled(4, Colors.white);
+    });
+    shuffledOptions = [];
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -94,7 +100,7 @@ class _QuizQuestionScreenState extends State<QuizQuestionScreen> {
                         option: shuffledOptions[j],
                         optionColor: optionColor[j],
                         onTap: () async {
-                          _controller.pause();
+                          widget._controller.pause();
                           if (shuffledOptions[j] == model[i].correctAnswer) {
                             setState(() {
                               optionColor[j] = Colors.green;
@@ -117,7 +123,7 @@ class _QuizQuestionScreenState extends State<QuizQuestionScreen> {
                             optionColor = List.filled(4, Colors.white);
                           });
 
-                          _controller.reset();
+                          widget._controller.reset();
                           // Reset shuffledOptions for the next question
                           shuffledOptions = [];
                           setState(() {
@@ -141,7 +147,7 @@ class _QuizQuestionScreenState extends State<QuizQuestionScreen> {
                             CircularCountDownTimer(
                               width: 55,
                               height: 55,
-                              duration: timerDuration,
+                              duration: widget.timerDuration,
                               fillColor: kRedColor.withOpacity(0.7),
                               ringColor: Colors.white,
                               textStyle: const TextStyle(
@@ -151,13 +157,14 @@ class _QuizQuestionScreenState extends State<QuizQuestionScreen> {
                               ),
                               autoStart: true,
                               isReverse: true,
-                              controller: _controller,
+                              controller: widget._controller,
                               onComplete: () {
                                 if (questionNumber < 9) {
                                   setState(() {
                                     questionNumber++;
                                   });
-                                  _controller.restart();
+                                  widget._controller.restart();
+                                  resetOptions();
                                 } else {
                                   Navigator.pop(context);
                                   Navigator.pop(context);

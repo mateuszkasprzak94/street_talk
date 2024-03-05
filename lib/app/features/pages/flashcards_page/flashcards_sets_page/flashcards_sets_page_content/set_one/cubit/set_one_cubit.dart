@@ -32,7 +32,7 @@ class SetOneCubit extends Cubit<SetOneState> {
       items.shuffle();
       emit(
         SetOneState(
-          status: Status.success,
+          status: Status.error,
           items: items,
           controllerFlashPage: pageController,
         ),
