@@ -118,8 +118,14 @@ class EmotionsButtonWidget extends StatelessWidget {
         width: double.infinity,
         height: 150,
         decoration: BoxDecoration(
-          border: Border.all(color: Colors.grey),
-          color: Colors.white,
+          gradient: LinearGradient(
+            begin: Alignment.centerRight,
+            end: Alignment.centerLeft,
+            colors: getEmotionColorGradient(model.id),
+          ),
+          borderRadius: const BorderRadius.all(
+            Radius.circular(20),
+          ),
           boxShadow: [
             BoxShadow(
               color: Colors.black.withOpacity(0.1),
@@ -129,37 +135,46 @@ class EmotionsButtonWidget extends StatelessWidget {
             ),
           ],
         ),
-        child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15),
-            child: CircleAvatar(
-              foregroundImage: AssetImage(model.image),
-              radius: 50,
-            ),
-          ),
-          Expanded(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Text(
-                  model.emotion,
-                  style: GoogleFonts.lora(fontSize: screenWidth / 19),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              child: CircleAvatar(
+                radius: 52,
+                backgroundColor: Colors.white,
+                child: CircleAvatar(
+                  foregroundImage: AssetImage(model.image),
+                  radius: 50,
                 ),
-                Text(
-                  model.emotionTranslation,
-                  style: GoogleFonts.lora(
-                      fontSize: screenWidth / 21,
-                      fontStyle: FontStyle.italic,
-                      color: Colors.grey),
-                )
-              ],
+              ),
             ),
-          ),
-          const Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Icon(Icons.arrow_forward_ios),
-          )
-        ]),
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text(
+                    model.emotion,
+                    style: GoogleFonts.lora(
+                        fontSize: screenWidth / 20,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    model.emotionTranslation,
+                    style: GoogleFonts.lora(
+                        fontSize: screenWidth / 22,
+                        fontStyle: FontStyle.italic,
+                        color: Colors.white),
+                  )
+                ],
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Icon(Icons.arrow_forward_ios),
+            )
+          ],
+        ),
       ),
     );
   }

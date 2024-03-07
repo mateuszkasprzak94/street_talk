@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:street_talk/app/core/constants/constants.dart';
 import 'package:street_talk/app/domain/models/emotions_content_model.dart';
-import 'package:street_talk/app/features/pages/colloquialisms_page/emotions_page/emotions_content/emotions_content.dart';
 
 class EmotionsItemWidget extends StatelessWidget {
   const EmotionsItemWidget({
