@@ -30,8 +30,6 @@ class FirebaseApi {
     // print the token(normally you would send this to your server)
     print('Token: $fcmToken');
 
-    FirebaseMessaging.onBackgroundMessage(handleBackgroundMessage);
-
     // initialize further settings for push notification
     initPushNotification();
     initLocalNotifications();

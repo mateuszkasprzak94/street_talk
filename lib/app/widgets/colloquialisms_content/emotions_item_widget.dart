@@ -51,6 +51,7 @@ class EmotionsItemWidget extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: Center(
                     child: AutoSizeText(
+                      textAlign: TextAlign.center,
                       model.word,
                       style: const TextStyle(
                         fontSize: 35,
@@ -72,6 +73,7 @@ class EmotionsItemWidget extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 10),
                     child: AutoSizeText(
+                      textAlign: TextAlign.center,
                       model.wordTranslation,
                       style: TextStyle(
                         color: Colors.grey.shade600,
