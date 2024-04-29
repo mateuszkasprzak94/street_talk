@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:street_talk/app/core/constants/constants.dart';
 import 'package:street_talk/app/domain/models/quiz_card_details_model.dart';
+import 'package:street_talk/app/widgets/animations/animation.dart';
 import 'package:street_talk/app/widgets/quiz/custom_close_button.dart';
 import 'package:street_talk/app/widgets/quiz/list_card.dart';
 
@@ -18,39 +19,48 @@ class _QuizHomePageState extends State<QuizHomePage> {
     double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
+        leading: const FadeInAnimation(
+          delay: 1.3,
+          child: CustomCloseButton(),
+        ),
         centerTitle: true,
-        leading: const CustomCloseButton(),
         actions: const [
           Padding(
             padding: EdgeInsets.only(right: 10),
-            child: CircleAvatar(
-              radius: 30,
-              foregroundImage: AssetImage('assets/images/logo.jpg'),
+            child: FadeInAnimation(
+              delay: 1.3,
+              child: CircleAvatar(
+                radius: 30,
+                foregroundImage: AssetImage('assets/images/logo.jpg'),
+              ),
             ),
           )
         ],
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(70),
-          child: Container(
-            height: 60,
-            width: double.infinity,
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.centerLeft,
-                end: Alignment.centerRight,
-                colors: [
-                  kRedColor,
-                  kYellowColor,
-                ],
+          child: FadeInAnimation(
+            delay: 1.6,
+            child: Container(
+              height: 60,
+              width: double.infinity,
+              decoration: const BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.centerLeft,
+                  end: Alignment.centerRight,
+                  colors: [
+                    kRedColor,
+                    kYellowColor,
+                  ],
+                ),
               ),
-            ),
-            child: Center(
-              child: Text(
-                'Pora na QUIZ!',
-                style: GoogleFonts.bebasNeue(
-                    letterSpacing: 2,
-                    color: Colors.white,
-                    fontSize: screenWidth / 12),
+              child: Center(
+                child: Text(
+                  'Pora na QUIZ!',
+                  style: GoogleFonts.bebasNeue(
+                      letterSpacing: 2,
+                      color: Colors.white,
+                      fontSize: screenWidth / 12),
+                ),
               ),
             ),
           ),
@@ -64,12 +74,15 @@ class _QuizHomePageState extends State<QuizHomePage> {
             children: [
               Row(
                 children: [
-                  Text(
-                    '¡Vamos a jugar!',
-                    style: GoogleFonts.alike(
-                      fontSize: 35,
-                      fontWeight: FontWeight.w800,
-                      color: const Color.fromARGB(230, 254, 190, 0),
+                  FadeInAnimation(
+                    delay: 1.9,
+                    child: Text(
+                      '¡Vamos a jugar!',
+                      style: GoogleFonts.alike(
+                        fontSize: 35,
+                        fontWeight: FontWeight.w800,
+                        color: const Color.fromARGB(230, 254, 190, 0),
+                      ),
                     ),
                   ),
                 ],
@@ -80,7 +93,10 @@ class _QuizHomePageState extends State<QuizHomePage> {
                 physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 itemBuilder: (context, index) {
-                  return QuizListCard(index);
+                  return FadeInAnimation(
+                    delay: 2.1,
+                    child: QuizListCard(index),
+                  );
                 },
               ),
               const SizedBox(height: 20),
