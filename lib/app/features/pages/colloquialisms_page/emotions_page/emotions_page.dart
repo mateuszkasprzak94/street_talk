@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -128,7 +129,6 @@ class EmotionsButtonWidget extends StatelessWidget {
           margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 20) +
               const EdgeInsets.only(top: 10),
           width: double.infinity,
-          height: 150,
           decoration: BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.centerRight,
@@ -162,23 +162,28 @@ class EmotionsButtonWidget extends StatelessWidget {
                 ),
               ),
               Expanded(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Text(
-                      model.emotion,
-                      style: GoogleFonts.lora(
-                          fontSize: screenWidth / 20,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    Text(
-                      model.emotionTranslation,
-                      style: GoogleFonts.lora(
-                          fontSize: screenWidth / 22,
-                          fontStyle: FontStyle.italic,
-                          color: Colors.white),
-                    )
-                  ],
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 5),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      AutoSizeText(
+                        model.emotion,
+                        style: GoogleFonts.lora(
+                            fontSize: screenWidth / 20,
+                            fontWeight: FontWeight.bold),
+                        maxLines: 2,
+                      ),
+                      AutoSizeText(
+                        model.emotionTranslation,
+                        style: GoogleFonts.lora(
+                            fontSize: screenWidth / 22,
+                            fontStyle: FontStyle.italic,
+                            color: Colors.white),
+                        maxLines: 2,
+                      )
+                    ],
+                  ),
                 ),
               ),
               const Padding(
