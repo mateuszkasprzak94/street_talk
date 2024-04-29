@@ -22,26 +22,29 @@ class _HomePageState extends State<HomePage> {
           preferredSize: const Size.fromHeight(100),
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: FadeInAnimation(
-              delay: 1.3,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  Text(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                FadeInAnimation(
+                  delay: 1.3,
+                  child: Text(
                     'Mów jak native',
                     style: GoogleFonts.bebasNeue(
                         letterSpacing: 1, fontSize: 40, color: Colors.white),
                   ),
-                  Text(
+                ),
+                FadeInAnimation(
+                  delay: 1.6,
+                  child: Text(
                     'wyrażenia, które ułatwią Ci codzienną komunikację',
                     style: GoogleFonts.lora(
                       fontWeight: FontWeight.w500,
                       fontSize: 20,
                       color: Colors.white,
                     ),
-                  )
-                ],
-              ),
+                  ),
+                ),
+              ],
             ),
           ),
         ),

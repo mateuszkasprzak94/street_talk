@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -42,7 +43,6 @@ class _ColloquialismsPageState extends State<ColloquialismsPage> {
           child: FadeInAnimation(
             delay: 1.3,
             child: Container(
-              height: 70,
               width: double.infinity,
               decoration: const BoxDecoration(
                 gradient: LinearGradient(
@@ -51,27 +51,33 @@ class _ColloquialismsPageState extends State<ColloquialismsPage> {
                   colors: kRedGradient,
                 ),
               ),
-              child: Column(children: [
-                Text(
-                  'Kolokwializmy',
-                  style: GoogleFonts.bebasNeue(
-                      color: Colors.white, fontSize: screenWidth / 12),
+              child: Padding(
+                padding: const EdgeInsets.only(top: 1.5, bottom: 5),
+                child: Column(
+                  children: [
+                    Text(
+                      'Kolokwializmy',
+                      style: GoogleFonts.bebasNeue(
+                          color: Colors.white, fontSize: screenWidth / 12),
+                    ),
+                    AutoSizeText(
+                      'Tutaj nauczysz się jak kolokwialnie wyrażać emocje!',
+                      style: GoogleFonts.lora(
+                          color: Colors.white, fontSize: screenWidth / 28),
+                      maxLines: 1,
+                    ),
+                  ],
                 ),
-                Text(
-                  'Tutaj nauczysz się jak kolokwialnie wyrażać emocje !',
-                  style: GoogleFonts.lora(
-                      color: Colors.white, fontSize: screenWidth / 27),
-                ),
-              ]),
+              ),
             ),
           ),
         ),
       ),
-      body: ListView(
-        children: [
-          FadeInAnimation(
-            delay: 1.6,
-            child: ColloquialismsButtonWidget(
+      body: FadeInAnimation(
+        delay: 1.6,
+        child: ListView(
+          children: [
+            ColloquialismsButtonWidget(
               image: Image.asset('assets/images/bull_no_bg.png'),
               polishTitle: 'Jak wyrazić emocje',
               spanishTitle: 'Cómo expresar emociones',
@@ -83,10 +89,7 @@ class _ColloquialismsPageState extends State<ColloquialismsPage> {
                 );
               },
             ),
-          ),
-          FadeInAnimation(
-            delay: 1.9,
-            child: ColloquialismsButtonWidget(
+            ColloquialismsButtonWidget(
               image: Image.asset('assets/images/street_no_bg.png'),
               polishTitle: 'Hiszpański prosto z ulicy',
               spanishTitle: 'El español de la calle',
@@ -98,10 +101,7 @@ class _ColloquialismsPageState extends State<ColloquialismsPage> {
                 );
               },
             ),
-          ),
-          FadeInAnimation(
-            delay: 2.1,
-            child: ColloquialismsButtonWidget(
+            ColloquialismsButtonWidget(
               image: Image.asset('assets/images/situation_no_bg.png'),
               polishTitle: 'Na konkretną sytuacje',
               spanishTitle: 'Para una situación específica',
@@ -113,10 +113,7 @@ class _ColloquialismsPageState extends State<ColloquialismsPage> {
                 );
               },
             ),
-          ),
-          FadeInAnimation(
-            delay: 2.4,
-            child: ColloquialismsButtonWidget(
+            ColloquialismsButtonWidget(
               image: Image.asset('assets/images/goodbye.jpg'),
               polishTitle: 'Przywitania i pożegnania',
               spanishTitle: 'Saludos y despedidas',
@@ -128,9 +125,9 @@ class _ColloquialismsPageState extends State<ColloquialismsPage> {
                 );
               },
             ),
-          ),
-          const SizedBox(height: 20),
-        ],
+            const SizedBox(height: 20),
+          ],
+        ),
       ),
       endDrawer: const NavigationDrawerWidget(),
     );

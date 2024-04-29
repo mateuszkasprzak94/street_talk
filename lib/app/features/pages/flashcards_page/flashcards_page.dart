@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -35,7 +36,6 @@ class FlashCardsPage extends StatelessWidget {
           child: FadeInAnimation(
             delay: 1.3,
             child: Container(
-              height: 70,
               width: double.infinity,
               decoration: const BoxDecoration(
                 gradient: LinearGradient(
@@ -44,18 +44,24 @@ class FlashCardsPage extends StatelessWidget {
                   colors: kRedGradient,
                 ),
               ),
-              child: Column(children: [
-                Text(
-                  'Fiszki',
-                  style: GoogleFonts.bebasNeue(
-                      color: Colors.white, fontSize: screenWidth / 12),
+              child: Padding(
+                padding: const EdgeInsets.only(top: 1.5, bottom: 5),
+                child: Column(
+                  children: [
+                    Text(
+                      'Fiszki',
+                      style: GoogleFonts.bebasNeue(
+                          color: Colors.white, fontSize: screenWidth / 12),
+                    ),
+                    AutoSizeText(
+                      'Testuj swoją wiedzę - powodzenia z fiszkami!',
+                      style: GoogleFonts.lora(
+                          color: Colors.white, fontSize: screenWidth / 28),
+                      maxLines: 1,
+                    ),
+                  ],
                 ),
-                Text(
-                  'Testuj swoją wiedzę – powodzenia z fiszkami!',
-                  style: GoogleFonts.lora(
-                      color: Colors.white, fontSize: screenWidth / 28),
-                ),
-              ]),
+              ),
             ),
           ),
         ),

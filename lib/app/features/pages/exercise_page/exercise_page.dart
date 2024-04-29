@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -40,7 +41,6 @@ class ExercisePage extends StatelessWidget {
           child: FadeInAnimation(
             delay: 1.3,
             child: Container(
-              height: 70,
               width: double.infinity,
               decoration: const BoxDecoration(
                 gradient: LinearGradient(
@@ -49,18 +49,24 @@ class ExercisePage extends StatelessWidget {
                   colors: kRedGradient,
                 ),
               ),
-              child: Column(children: [
-                Text(
-                  'Ćwiczenia',
-                  style: GoogleFonts.bebasNeue(
-                      color: Colors.white, fontSize: screenWidth / 12),
+              child: Padding(
+                padding: const EdgeInsets.only(top: 1.5, bottom: 5),
+                child: Column(
+                  children: [
+                    Text(
+                      'Ćwiczenia',
+                      style: GoogleFonts.bebasNeue(
+                          color: Colors.white, fontSize: screenWidth / 12),
+                    ),
+                    AutoSizeText(
+                      'Tutaj możesz przetestować swoją wiedzę, powodzenia!',
+                      style: GoogleFonts.lora(
+                          color: Colors.white, fontSize: screenWidth / 28),
+                      maxLines: 1,
+                    ),
+                  ],
                 ),
-                Text(
-                  'Tutaj możesz przetestować swoją wiedzę, powodzenia !',
-                  style: GoogleFonts.lora(
-                      color: Colors.white, fontSize: screenWidth / 28),
-                ),
-              ]),
+              ),
             ),
           ),
         ),

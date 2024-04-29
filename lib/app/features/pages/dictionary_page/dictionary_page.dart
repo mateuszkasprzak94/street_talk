@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -50,7 +51,6 @@ class _DictionaryPageState extends State<DictionaryPage> {
             child: FadeInAnimation(
               delay: 1.3,
               child: Container(
-                height: 70,
                 width: double.infinity,
                 decoration: const BoxDecoration(
                   gradient: LinearGradient(
@@ -59,17 +59,23 @@ class _DictionaryPageState extends State<DictionaryPage> {
                     colors: kRedGradient,
                   ),
                 ),
-                child: Column(children: [
-                  Text(
-                    'Słownik',
-                    style: GoogleFonts.bebasNeue(
-                        color: Colors.white, fontSize: screenWidth / 12),
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 1.5, bottom: 5),
+                  child: Column(
+                    children: [
+                      Text(
+                        'Słownik',
+                        style: GoogleFonts.bebasNeue(
+                            color: Colors.white, fontSize: screenWidth / 12),
+                      ),
+                      AutoSizeText(
+                        'Niby wszystko wiem, ale jednak sprawdzę :)',
+                        style: GoogleFonts.lora(color: Colors.white),
+                        maxLines: 1,
+                      ),
+                    ],
                   ),
-                  Text(
-                    'Niby wszystko wiem, ale jednak sprawdzę :)',
-                    style: GoogleFonts.lora(color: Colors.white),
-                  ),
-                ]),
+                ),
               ),
             ),
           ),
