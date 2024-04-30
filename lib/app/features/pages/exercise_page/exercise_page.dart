@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -6,6 +7,7 @@ import 'package:street_talk/app/core/constants/constants.dart';
 import 'package:street_talk/app/core/enums/enums.dart';
 import 'package:street_talk/app/features/pages/exercise_page/cubit/exercise_cubit.dart';
 import 'package:street_talk/app/injection_container.dart';
+import 'package:street_talk/app/widgets/animations/animation.dart';
 import 'package:street_talk/app/widgets/drawer/drawer.dart';
 import 'package:street_talk/app/widgets/exercise_listview/exercise_listview_page_one/exercise_listview_page_one.dart';
 import 'package:street_talk/app/widgets/exercise_listview/exercise_listview_page_three/exercise_listview_page_three.dart';
@@ -31,33 +33,41 @@ class ExercisePage extends StatelessWidget {
               child: Image.asset(
                 'assets/flag/flag.png',
               ),
-            ).animate().fade(delay: 300.ms, duration: 500.ms).slideX(),
+            ).animate().fade(delay: 500.ms, duration: 500.ms).slideX(),
           ),
         ),
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(70),
-          child: Container(
-            height: 70,
-            width: double.infinity,
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: kRedGradient,
+          child: FadeInAnimation(
+            delay: 1.3,
+            child: Container(
+              width: double.infinity,
+              decoration: const BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: kRedGradient,
+                ),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.only(top: 1.5, bottom: 5),
+                child: Column(
+                  children: [
+                    Text(
+                      'Ćwiczenia',
+                      style: GoogleFonts.bebasNeue(
+                          color: Colors.white, fontSize: screenWidth / 12),
+                    ),
+                    AutoSizeText(
+                      'Tutaj możesz przetestować swoją wiedzę, powodzenia!',
+                      style: GoogleFonts.lora(
+                          color: Colors.white, fontSize: screenWidth / 28),
+                      maxLines: 1,
+                    ),
+                  ],
+                ),
               ),
             ),
-            child: Column(children: [
-              Text(
-                'Ćwiczenia',
-                style: GoogleFonts.bebasNeue(
-                    color: Colors.white, fontSize: screenWidth / 12),
-              ),
-              Text(
-                'Tutaj możesz przetestować swoją wiedzę, powodzenia !',
-                style: GoogleFonts.lora(
-                    color: Colors.white, fontSize: screenWidth / 28),
-              ),
-            ]),
           ),
         ),
       ),
@@ -75,14 +85,17 @@ class ExercisePage extends StatelessWidget {
                   child: CircularProgressIndicator(),
                 );
               case Status.success:
-                return PageView(
-                  physics: const NeverScrollableScrollPhysics(),
-                  controller: state.controllerTaskPage,
-                  children: const [
-                    ExerciseOne(),
-                    ExerciseTwo(),
-                    ExerciseThree(),
-                  ],
+                return FadeInAnimation(
+                  delay: 1.6,
+                  child: PageView(
+                    physics: const NeverScrollableScrollPhysics(),
+                    controller: state.controllerTaskPage,
+                    children: const [
+                      ExerciseOne(),
+                      ExerciseTwo(),
+                      ExerciseThree(),
+                    ],
+                  ),
                 );
               case Status.error:
                 return Center(

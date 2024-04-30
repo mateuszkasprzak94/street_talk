@@ -27,6 +27,7 @@ class _SituationPageState extends State<SituationPage> {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
         appBar: AppBar(
           leading: const CustomCloseButton(),
@@ -85,26 +86,29 @@ class _SituationPageState extends State<SituationPage> {
                       child: Text('No data found'),
                     );
                   }
-                  return Stack(
-                    alignment: Alignment.bottomCenter,
+                  return Column(
                     children: [
-                      CarouselSlider(
-                        carouselController: _controller,
-                        items: [
-                          for (final emotion in state.results)
-                            SituationItemWidget(
-                              model: emotion,
-                            ),
-                        ],
-                        options: CarouselOptions(
-                          autoPlay: false,
-                          aspectRatio: 0.65,
-                          enlargeCenterPage: true,
-                          onPageChanged: (index, reason) {
-                            setState(() {
-                              currentPage = index;
-                            });
-                          },
+                      SizedBox(
+                        height: screenHeight / 1.5,
+                        width: double.infinity,
+                        child: CarouselSlider(
+                          carouselController: _controller,
+                          items: [
+                            for (final emotion in state.results)
+                              SituationItemWidget(
+                                model: emotion,
+                              ),
+                          ],
+                          options: CarouselOptions(
+                            autoPlay: false,
+                            height: screenHeight,
+                            enlargeCenterPage: true,
+                            onPageChanged: (index, reason) {
+                              setState(() {
+                                currentPage = index;
+                              });
+                            },
+                          ),
                         ),
                       ),
                       GestureDetector(
@@ -118,7 +122,7 @@ class _SituationPageState extends State<SituationPage> {
                           _controller.animateToPage(randomPageIndex);
                         },
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 10),
+                          padding: const EdgeInsets.symmetric(vertical: 15),
                           child: Container(
                             decoration: BoxDecoration(
                               gradient: const LinearGradient(
@@ -144,6 +148,7 @@ class _SituationPageState extends State<SituationPage> {
                       ),
                     ],
                   );
+
                 case Status.error:
                   return Center(
                     child: Text(

@@ -28,6 +28,7 @@ class _EmotionsContentPageState extends State<EmotionsContentPage> {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
         appBar: AppBar(
           leading: const CustomCloseButton(),
@@ -86,26 +87,29 @@ class _EmotionsContentPageState extends State<EmotionsContentPage> {
                       child: Text('No data found'),
                     );
                   }
-                  return Stack(
-                    alignment: Alignment.bottomCenter,
+                  return Column(
                     children: [
-                      CarouselSlider(
-                        carouselController: _controller,
-                        items: [
-                          for (final emotion in state.results)
-                            EmotionsItemWidget(
-                              model: emotion,
-                            ),
-                        ],
-                        options: CarouselOptions(
-                          autoPlay: false,
-                          aspectRatio: 0.65,
-                          enlargeCenterPage: true,
-                          onPageChanged: (index, reason) {
-                            setState(() {
-                              currentPage = index;
-                            });
-                          },
+                      SizedBox(
+                        height: screenHeight / 1.5,
+                        width: double.infinity,
+                        child: CarouselSlider(
+                          carouselController: _controller,
+                          items: [
+                            for (final emotion in state.results)
+                              EmotionsItemWidget(
+                                model: emotion,
+                              ),
+                          ],
+                          options: CarouselOptions(
+                            autoPlay: false,
+                            height: screenHeight,
+                            enlargeCenterPage: true,
+                            onPageChanged: (index, reason) {
+                              setState(() {
+                                currentPage = index;
+                              });
+                            },
+                          ),
                         ),
                       ),
                       GestureDetector(
@@ -119,7 +123,7 @@ class _EmotionsContentPageState extends State<EmotionsContentPage> {
                           _controller.animateToPage(randomPageIndex);
                         },
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 10),
+                          padding: const EdgeInsets.symmetric(vertical: 15),
                           child: Container(
                             decoration: BoxDecoration(
                               gradient: LinearGradient(
@@ -158,47 +162,5 @@ class _EmotionsContentPageState extends State<EmotionsContentPage> {
             },
           ),
         ));
-  }
-}
-
-Color getEmotionColor(int emotionId) {
-  switch (emotionId) {
-    case 1:
-      return const Color.fromARGB(201, 148, 11, 153);
-    case 2:
-      return const Color.fromARGB(250, 141, 3, 17);
-    case 3:
-      return const Color.fromARGB(255, 8, 136, 25);
-    case 4:
-      return const Color.fromARGB(179, 8, 77, 141);
-    case 5:
-      return const Color.fromARGB(255, 87, 150, 36);
-    case 6:
-      return const Color.fromARGB(255, 134, 34, 8);
-    case 7:
-      return const Color.fromARGB(255, 41, 51, 87);
-    default:
-      return Colors.black;
-  }
-}
-
-List<Color> getEmotionColorGradient(int emotionId) {
-  switch (emotionId) {
-    case 1:
-      return kSurpriseGradient;
-    case 2:
-      return kAngryGradient;
-    case 3:
-      return kAgreeGradient;
-    case 4:
-      return kDissGradient;
-    case 5:
-      return kHappyGradient;
-    case 6:
-      return kBoredGradient;
-    case 7:
-      return kResiGradient;
-    default:
-      return kRedGradient;
   }
 }

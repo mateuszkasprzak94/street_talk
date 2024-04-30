@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:street_talk/app/core/constants/constants.dart';
 import 'package:street_talk/app/utility/spanish_events_details.dart';
+import 'package:street_talk/app/widgets/animations/animation.dart';
 import 'package:street_talk/app/widgets/events/events_list_card.dart';
 import 'package:street_talk/app/widgets/quiz/custom_close_button.dart';
 
@@ -19,36 +20,45 @@ class _SpanishEventsPageState extends State<SpanishEventsPage> {
 
     return Scaffold(
       appBar: AppBar(
-        leading: const CustomCloseButton(),
+        leading: const FadeInAnimation(
+          delay: 1.3,
+          child: CustomCloseButton(),
+        ),
         centerTitle: true,
         actions: const [
           Padding(
             padding: EdgeInsets.only(right: 10),
-            child: CircleAvatar(
-              radius: 30,
-              foregroundImage: AssetImage('assets/images/logo.jpg'),
+            child: FadeInAnimation(
+              delay: 1.3,
+              child: CircleAvatar(
+                radius: 30,
+                foregroundImage: AssetImage('assets/images/logo.jpg'),
+              ),
             ),
           )
         ],
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(70),
-          child: Container(
-            height: 60,
-            width: double.infinity,
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: kRedGradient,
+          child: FadeInAnimation(
+            delay: 1.6,
+            child: Container(
+              height: 60,
+              width: double.infinity,
+              decoration: const BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: kRedGradient,
+                ),
               ),
-            ),
-            child: Center(
-              child: Text(
-                'Popularne Wydarzenia',
-                style: GoogleFonts.bebasNeue(
-                    letterSpacing: 2,
-                    color: Colors.white,
-                    fontSize: screenWidth / 12),
+              child: Center(
+                child: Text(
+                  'Popularne Wydarzenia',
+                  style: GoogleFonts.bebasNeue(
+                      letterSpacing: 2,
+                      color: Colors.white,
+                      fontSize: screenWidth / 12),
+                ),
               ),
             ),
           ),
@@ -66,7 +76,10 @@ class _SpanishEventsPageState extends State<SpanishEventsPage> {
                 physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 itemBuilder: (context, index) {
-                  return EventsListCard(index);
+                  return FadeInAnimation(
+                    delay: 1.9,
+                    child: EventsListCard(index),
+                  );
                 },
               ),
               const SizedBox(height: 20),

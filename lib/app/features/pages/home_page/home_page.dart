@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:street_talk/app/core/constants/constants.dart';
+import 'package:street_talk/app/widgets/animations/animation.dart';
 import 'package:street_talk/app/widgets/drawer/drawer.dart';
 
 class HomePage extends StatefulWidget {
@@ -24,19 +25,25 @@ class _HomePageState extends State<HomePage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Text(
-                  'Mów jak native',
-                  style: GoogleFonts.bebasNeue(
-                      letterSpacing: 1, fontSize: 40, color: Colors.white),
-                ),
-                Text(
-                  'wyrażenia, które ułatwią Ci codzienną komunikację',
-                  style: GoogleFonts.lora(
-                    fontWeight: FontWeight.w500,
-                    fontSize: 20,
-                    color: Colors.white,
+                FadeInAnimation(
+                  delay: 1.3,
+                  child: Text(
+                    'Mów jak native',
+                    style: GoogleFonts.bebasNeue(
+                        letterSpacing: 1, fontSize: 40, color: Colors.white),
                   ),
-                )
+                ),
+                FadeInAnimation(
+                  delay: 1.6,
+                  child: Text(
+                    'wyrażenia, które ułatwią Ci codzienną komunikację',
+                    style: GoogleFonts.lora(
+                      fontWeight: FontWeight.w500,
+                      fontSize: 20,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
