@@ -39,9 +39,10 @@ class _SetOnePageViewContentState extends State<SetOnePageViewContent> {
                   child: Align(
                     alignment: Alignment.center,
                     child: AutoSizeText(
+                      textAlign: TextAlign.center,
                       widget.flashModel.word,
                       style: const TextStyle(fontSize: 40),
-                      maxLines: 1,
+                      maxLines: 2,
                     ),
                   ),
                 ),
@@ -134,9 +135,10 @@ class _SetTwoPageViewContentState extends State<SetTwoPageViewContent> {
                   child: Align(
                     alignment: Alignment.center,
                     child: AutoSizeText(
+                      textAlign: TextAlign.center,
                       widget.flashModel.word,
                       style: const TextStyle(fontSize: 40),
-                      maxLines: 1,
+                      maxLines: 2,
                     ),
                   ),
                 ),
@@ -229,9 +231,10 @@ class _SetThreePageViewContentState extends State<SetThreePageViewContent> {
                   child: Align(
                     alignment: Alignment.center,
                     child: AutoSizeText(
+                      textAlign: TextAlign.center,
                       widget.flashModel.word,
                       style: const TextStyle(fontSize: 40),
-                      maxLines: 1,
+                      maxLines: 2,
                     ),
                   ),
                 ),

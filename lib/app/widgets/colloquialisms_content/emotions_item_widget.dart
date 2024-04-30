@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:street_talk/app/core/constants/constants.dart';
 import 'package:street_talk/app/domain/models/emotions_content_model.dart';
-import 'package:street_talk/app/features/pages/colloquialisms_page/emotions_page/emotions_content/emotions_content.dart';
 
 class EmotionsItemWidget extends StatelessWidget {
   const EmotionsItemWidget({
@@ -15,6 +14,7 @@ class EmotionsItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final dw = MediaQuery.of(context).size.width;
     final colorGradient = getEmotionColorGradient(model.emotionId);
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -52,9 +52,10 @@ class EmotionsItemWidget extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: Center(
                     child: AutoSizeText(
+                      textAlign: TextAlign.center,
                       model.word,
-                      style: const TextStyle(
-                        fontSize: 35,
+                      style: TextStyle(
+                        fontSize: dw / 11.2,
                       ),
                       maxLines: 2,
                     ),
@@ -71,16 +72,18 @@ class EmotionsItemWidget extends StatelessWidget {
                 height: 85,
                 child: Center(
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    padding: const EdgeInsets.symmetric(horizontal: 5),
                     child: AutoSizeText(
+                      textAlign: TextAlign.center,
                       model.wordTranslation,
                       style: TextStyle(
                         color: Colors.grey.shade600,
-                        fontSize: 14,
+                        fontSize: dw / 28,
                         fontStyle: FontStyle.italic,
                         fontWeight: FontWeight.w500,
                       ),
-                      minFontSize: 12,
+                      minFontSize: 10,
+                      maxLines: 5,
                     ),
                   ),
                 ),
@@ -106,7 +109,7 @@ class EmotionsItemWidget extends StatelessWidget {
                   ),
                   child: Column(
                     children: [
-                      const Row(
+                      Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
@@ -114,7 +117,7 @@ class EmotionsItemWidget extends StatelessWidget {
                             style: TextStyle(
                                 letterSpacing: 2,
                                 fontWeight: FontWeight.bold,
-                                fontSize: 13,
+                                fontSize: dw / 30,
                                 color: Colors.black),
                           ),
                         ],
@@ -126,18 +129,26 @@ class EmotionsItemWidget extends StatelessWidget {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
+                                AutoSizeText(
                                   model.exampleOne,
-                                  style: const TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold),
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: dw / 28,
+                                  ),
+                                  minFontSize: 10,
+                                  maxLines: 3,
                                 ),
                                 const SizedBox(height: 8),
-                                Text(
+                                AutoSizeText(
                                   model.exampleTwo,
-                                  style: const TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold),
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: dw / 28,
+                                  ),
+                                  minFontSize: 10,
+                                  maxLines: 3,
                                 ),
                               ],
                             ),

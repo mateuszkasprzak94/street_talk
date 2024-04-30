@@ -53,6 +53,7 @@ class StreetItemWidget extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: Center(
                     child: AutoSizeText(
+                      textAlign: TextAlign.center,
                       model.word,
                       style: const TextStyle(
                         fontSize: 35,
@@ -74,6 +75,7 @@ class StreetItemWidget extends StatelessWidget {
                   child: Container(
                     margin: const EdgeInsets.symmetric(horizontal: 10),
                     child: AutoSizeText(
+                      textAlign: TextAlign.center,
                       model.wordTranslation,
                       style: TextStyle(
                         color: Colors.grey.shade500,

@@ -47,6 +47,7 @@ class WelcomeGoodbyeItemWidget extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: Center(
                   child: AutoSizeText(
+                    textAlign: TextAlign.center,
                     model.title,
                     style: const TextStyle(
                       fontSize: 28,
