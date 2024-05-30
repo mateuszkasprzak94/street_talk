@@ -140,89 +140,98 @@ class _QuizQuestionScreenState extends State<QuizQuestionScreen> {
                     backgroundColor: Colors.transparent,
                     body: Column(
                       children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            const CustomCloseButton(),
-                            CircularCountDownTimer(
-                              width: 55,
-                              height: 55,
-                              duration: widget.timerDuration,
-                              fillColor: kRedColor.withOpacity(0.7),
-                              ringColor: Colors.white,
-                              textStyle: const TextStyle(
-                                fontSize: 25,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                              ),
-                              autoStart: true,
-                              isReverse: true,
-                              controller: widget._controller,
-                              onComplete: () {
-                                if (questionNumber < 9) {
-                                  setState(() {
-                                    questionNumber++;
-                                  });
-                                  widget._controller.restart();
-                                  resetOptions();
-                                } else {
-                                  Navigator.pop(context);
-                                  Navigator.pop(context);
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => ScoreScreen(
-                                        score: quizCubit.getScore(),
-                                        index: widget.categoryIndex,
-                                      ),
-                                    ),
-                                  );
-                                }
-                              },
-                            ),
-                            const CircleAvatar(
-                              radius: 20,
-                              foregroundImage:
-                                  AssetImage('assets/images/logo.jpg'),
-                            )
-                          ],
-                        ),
-                        SizedBox(
-                          height: 210,
-                          width: 310,
-                          child: Image.asset(
-                            quizCardDetailList[widget.categoryIndex].iconName,
-                            fit: BoxFit.fitHeight,
-                          ),
-                        ),
-                        SizedBox(
-                          width: MediaQuery.of(context).size.width,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                        Expanded(
+                          flex: 1,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text(
-                                'Question ${(questionNumber + 1).toString()} of 10',
-                                style: TextStyle(
-                                  color: Colors.white.withOpacity(0.75),
-                                  fontSize: 20,
+                              const CustomCloseButton(),
+                              CircularCountDownTimer(
+                                width: 55,
+                                height: 55,
+                                duration: widget.timerDuration,
+                                fillColor: kRedColor.withOpacity(0.7),
+                                ringColor: Colors.white,
+                                textStyle: const TextStyle(
+                                  fontSize: 25,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
                                 ),
+                                autoStart: true,
+                                isReverse: true,
+                                controller: widget._controller,
+                                onComplete: () {
+                                  if (questionNumber < 9) {
+                                    setState(() {
+                                      questionNumber++;
+                                    });
+                                    widget._controller.restart();
+                                    resetOptions();
+                                  } else {
+                                    Navigator.pop(context);
+                                    Navigator.pop(context);
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => ScoreScreen(
+                                          score: quizCubit.getScore(),
+                                          index: widget.categoryIndex,
+                                        ),
+                                      ),
+                                    );
+                                  }
+                                },
                               ),
-                              const SizedBox(height: 10),
+                              const CircleAvatar(
+                                radius: 20,
+                                foregroundImage:
+                                    AssetImage('assets/images/logo.jpg'),
+                              )
                             ],
                           ),
                         ),
-                        SizedBox(
-                          width: double.infinity,
-                          height: 120,
-                          child: AutoSizeText(
-                            model[questionNumber].question,
-                            style: const TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 20,
-                                color: Colors.white),
+                        Expanded(
+                          flex: 3,
+                          child: SizedBox(
+                            child: Image.asset(
+                              quizCardDetailList[widget.categoryIndex].iconName,
+                              fit: BoxFit.fitHeight,
+                            ),
                           ),
                         ),
-                        ...buildOptions(questionNumber),
+                        Row(
+                          children: [
+                            Text(
+                              'Question ${(questionNumber + 1).toString()} of 10',
+                              style: TextStyle(
+                                color: Colors.white.withOpacity(0.75),
+                                fontSize: 20,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Expanded(
+                          flex: 1,
+                          child: SizedBox(
+                            width: double.infinity,
+                            child: AutoSizeText(
+                              model[questionNumber].question,
+                              style: const TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20,
+                                  color: Colors.white),
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          flex: 4,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              ...buildOptions(questionNumber),
+                            ],
+                          ),
+                        ),
                       ],
                     ),
                   );
