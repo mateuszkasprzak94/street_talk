@@ -18,7 +18,7 @@ This application is for people who want to improve their language with colloquia
   
 ![testing](https://github.com/mateuszkasprzak94/street_talk/assets/142491717/50c1d6a7-9416-4af4-8bf0-6286094cd840)
 
-# <p align="center">Technologies used in the project:</p>
+# <p align="center">💻Technologies used in the project:</p>
 
 - Flutter
 - Dart
