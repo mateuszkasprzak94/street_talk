@@ -20,10 +20,10 @@ This application is for people who want to improve their language with colloquia
 
 # <p align="center">💻Technologies used in the project:</p>
 
-- Flutter
-- Dart
-- Firebase
-- Rest API
+* Flutter
+* Dart
+* Firebase
+* Rest API
 
 # <p align="center">Dependencies & Dev_dependencies:</p>
 ![dependencies](https://github.com/mateuszkasprzak94/street_talk/assets/142491717/7da66c00-9252-4d97-8865-65a35f8ab170)
