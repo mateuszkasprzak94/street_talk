@@ -21,11 +21,10 @@ class MyApp extends StatelessWidget {
       create: (context) => InternetCubit(connectivity: connectivity),
       child: MaterialApp(
         debugShowCheckedModeBanner: Config.debugShowCheckedModeBanner,
-        title: 'Flutter Demo',
         theme: ThemeData(
           splashColor: Colors.transparent,
           highlightColor: Colors.transparent,
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrangeAccent),
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
           useMaterial3: true,
         ),
         home: Scaffold(

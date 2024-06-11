@@ -18,6 +18,8 @@ class WelcomeGoodbyePage extends StatelessWidget {
     double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          scrolledUnderElevation: 0,
           leading: const CustomCloseButton(),
           centerTitle: true,
           actions: const [

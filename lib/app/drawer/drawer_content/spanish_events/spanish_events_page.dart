@@ -20,6 +20,8 @@ class _SpanishEventsPageState extends State<SpanishEventsPage> {
 
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        scrolledUnderElevation: 0,
         leading: const FadeInAnimation(
           delay: 1.3,
           child: CustomCloseButton(),

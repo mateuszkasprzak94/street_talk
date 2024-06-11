@@ -19,6 +19,8 @@ class _QuizHomePageState extends State<QuizHomePage> {
     double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        scrolledUnderElevation: 0,
         leading: const FadeInAnimation(
           delay: 1.3,
           child: CustomCloseButton(),

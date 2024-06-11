@@ -24,6 +24,8 @@ class _ColloquialismsPageState extends State<ColloquialismsPage> {
     double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        scrolledUnderElevation: 0,
         iconTheme: const IconThemeData(color: kRedDrawer),
         centerTitle: true,
         leading: Transform.scale(
