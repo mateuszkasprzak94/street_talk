@@ -18,7 +18,7 @@ class EventsContent extends StatelessWidget {
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
-            systemOverlayStyle: SystemUiOverlayStyle.light,
+            systemOverlayStyle: SystemUiOverlayStyle.dark,
             automaticallyImplyLeading: false,
             floating: true,
             expandedHeight: 350,
