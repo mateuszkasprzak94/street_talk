@@ -5,6 +5,34 @@
 
 This application is for people who want to improve their language with colloquial vocabulary. The main reason for creating this application was to bring closer the real language that is used every day by native speakers and which you will not learn in school.
 
+<h2>🛠️ Installation Steps:</h2>
+     
+<p>1. Install Flutter SDK</p>
+
+```sh
+https://flutter.dev/docs/get-started/install
+```
+<p>2. Clone the repository</p>
+
+```sh
+git clone https://github.com/your_username/street_talk.git
+```
+<p>3. Install Flutter dependencies:</p>
+
+```sh
+flutter pub get
+```
+<p>4. Run code generators</p>
+
+```sh
+dart run build_runner build
+```
+<p>5. Run the app</p>
+
+```sh
+flutter run
+```
+
 # <p align="center">Project Screenshots</p>
 ![1 2](https://github.com/mateuszkasprzak94/street_talk/assets/142491717/24392bc4-e5d5-48af-b138-7521dc2209ec)
 ![3 4](https://github.com/mateuszkasprzak94/street_talk/assets/142491717/0b737f2e-4a38-47c9-a3f4-d8c674ea9cc0)
