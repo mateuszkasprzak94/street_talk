@@ -34,12 +34,11 @@ flutter run
 ```
 
 # <p align="center">Project Screenshots</p>
-![1 2](https://github.com/mateuszkasprzak94/street_talk/assets/142491717/24392bc4-e5d5-48af-b138-7521dc2209ec)
-![3 4](https://github.com/mateuszkasprzak94/street_talk/assets/142491717/0b737f2e-4a38-47c9-a3f4-d8c674ea9cc0)
-![5 6](https://github.com/mateuszkasprzak94/street_talk/assets/142491717/90553caa-dd4e-423e-addb-40d2d5b6a923)
-![7 8](https://github.com/mateuszkasprzak94/street_talk/assets/142491717/638980e0-cbc5-4305-a3ef-7168125265ca)
-![9 10](https://github.com/mateuszkasprzak94/street_talk/assets/142491717/4e44a945-f49a-4e48-b19d-c18698b0831d)
-![quiz](https://github.com/mateuszkasprzak94/street_talk/assets/142491717/f9c21443-d766-449c-9d38-2c1399b15ca2)
+![1 2](https://github.com/mateuszkasprzak94/street_talk/assets/142491717/fb66a191-09ac-4f22-b4bd-18b214ab2a99)
+![3 4](https://github.com/mateuszkasprzak94/street_talk/assets/142491717/3d8525a9-1ca7-41a5-87fc-b67414374136)
+![5 6](https://github.com/mateuszkasprzak94/street_talk/assets/142491717/642f6a08-0ddd-43ce-8081-a2a326e156fd)
+![7 8](https://github.com/mateuszkasprzak94/street_talk/assets/142491717/e23447bc-32a4-4efe-a32b-e755f4bca61a)
+
 
 # <p align="center">Testing:</p>
 <h3>- Unit Test</h3>
